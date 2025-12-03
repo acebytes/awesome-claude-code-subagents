@@ -20,7 +20,7 @@
         "core development"
       ],
       "agents": [
-        "api-designer.md"
+        "./api-designer.md"
       ]
     },
     {
@@ -32,7 +32,7 @@
         "core development"
       ],
       "agents": [
-        "backend-developer.md"
+        "./backend-developer.md"
       ]
     },
     {
@@ -44,7 +44,7 @@
         "core development"
       ],
       "agents": [
-        "electron-pro.md"
+        "./electron-pro.md"
       ]
     },
     {
@@ -56,7 +56,7 @@
         "core development"
       ],
       "agents": [
-        "frontend-developer.md"
+        "./frontend-developer.md"
       ]
     },
     {
@@ -68,7 +68,7 @@
         "core development"
       ],
       "agents": [
-        "fullstack-developer.md"
+        "./fullstack-developer.md"
       ]
     },
     {
@@ -80,7 +80,7 @@
         "core development"
       ],
       "agents": [
-        "graphql-architect.md"
+        "./graphql-architect.md"
       ]
     },
     {
@@ -92,7 +92,7 @@
         "core development"
       ],
       "agents": [
-        "microservices-architect.md"
+        "./microservices-architect.md"
       ]
     },
     {
@@ -104,7 +104,7 @@
         "core development"
       ],
       "agents": [
-        "mobile-developer.md"
+        "./mobile-developer.md"
       ]
     },
     {
@@ -116,7 +116,7 @@
         "core development"
       ],
       "agents": [
-        "ui-designer.md"
+        "./ui-designer.md"
       ]
     },
     {
@@ -128,7 +128,7 @@
         "core development"
       ],
       "agents": [
-        "websocket-engineer.md"
+        "./websocket-engineer.md"
       ]
     },
     {
@@ -140,7 +140,7 @@
         "language specialists"
       ],
       "agents": [
-        "angular-architect.md"
+        "./angular-architect.md"
       ]
     },
     {
@@ -152,7 +152,7 @@
         "language specialists"
       ],
       "agents": [
-        "cpp-pro.md"
+        "./cpp-pro.md"
       ]
     },
     {
@@ -164,7 +164,7 @@
         "language specialists"
       ],
       "agents": [
-        "csharp-developer.md"
+        "./csharp-developer.md"
       ]
     },
     {
@@ -176,7 +176,7 @@
         "language specialists"
       ],
       "agents": [
-        "django-developer.md"
+        "./django-developer.md"
       ]
     },
     {
@@ -188,7 +188,7 @@
         "language specialists"
       ],
       "agents": [
-        "dotnet-core-expert.md"
+        "./dotnet-core-expert.md"
       ]
     },
     {
@@ -200,7 +200,7 @@
         "language specialists"
       ],
       "agents": [
-        "dotnet-framework-4.8-expert.md"
+        "./dotnet-framework-4.8-expert.md"
       ]
     },
     {
@@ -212,7 +212,7 @@
         "language specialists"
       ],
       "agents": [
-        "flutter-expert.md"
+        "./flutter-expert.md"
       ]
     },
     {
@@ -224,7 +224,7 @@
         "language specialists"
       ],
       "agents": [
-        "golang-pro.md"
+        "./golang-pro.md"
       ]
     },
     {
@@ -236,7 +236,7 @@
         "language specialists"
       ],
       "agents": [
-        "java-architect.md"
+        "./java-architect.md"
       ]
     },
     {
@@ -248,7 +248,7 @@
         "language specialists"
       ],
       "agents": [
-        "javascript-pro.md"
+        "./javascript-pro.md"
       ]
     },
     {
@@ -260,7 +260,7 @@
         "language specialists"
       ],
       "agents": [
-        "kotlin-specialist.md"
+        "./kotlin-specialist.md"
       ]
     },
     {
@@ -272,7 +272,7 @@
         "language specialists"
       ],
       "agents": [
-        "laravel-specialist.md"
+        "./laravel-specialist.md"
       ]
     },
     {
@@ -284,7 +284,7 @@
         "language specialists"
       ],
       "agents": [
-        "nextjs-developer.md"
+        "./nextjs-developer.md"
       ]
     },
     {
@@ -296,7 +296,7 @@
         "language specialists"
       ],
       "agents": [
-        "php-pro.md"
+        "./php-pro.md"
       ]
     },
     {
@@ -308,7 +308,7 @@
         "language specialists"
       ],
       "agents": [
-        "python-pro.md"
+        "./python-pro.md"
       ]
     },
     {
@@ -320,7 +320,7 @@
         "language specialists"
       ],
       "agents": [
-        "rails-expert.md"
+        "./rails-expert.md"
       ]
     },
     {
@@ -332,7 +332,7 @@
         "language specialists"
       ],
       "agents": [
-        "react-specialist.md"
+        "./react-specialist.md"
       ]
     },
     {
@@ -344,7 +344,7 @@
         "language specialists"
       ],
       "agents": [
-        "rust-engineer.md"
+        "./rust-engineer.md"
       ]
     },
     {
@@ -356,7 +356,7 @@
         "language specialists"
       ],
       "agents": [
-        "spring-boot-engineer.md"
+        "./spring-boot-engineer.md"
       ]
     },
     {
@@ -368,7 +368,7 @@
         "language specialists"
       ],
       "agents": [
-        "sql-pro.md"
+        "./sql-pro.md"
       ]
     },
     {
@@ -380,7 +380,7 @@
         "language specialists"
       ],
       "agents": [
-        "swift-expert.md"
+        "./swift-expert.md"
       ]
     },
     {
@@ -392,7 +392,7 @@
         "language specialists"
       ],
       "agents": [
-        "typescript-pro.md"
+        "./typescript-pro.md"
       ]
     },
     {
@@ -404,7 +404,7 @@
         "language specialists"
       ],
       "agents": [
-        "vue-expert.md"
+        "./vue-expert.md"
       ]
     },
     {
@@ -416,7 +416,7 @@
         "infrastructure"
       ],
       "agents": [
-        "cloud-architect.md"
+        "./cloud-architect.md"
       ]
     },
     {
@@ -428,7 +428,7 @@
         "infrastructure"
       ],
       "agents": [
-        "database-administrator.md"
+        "./database-administrator.md"
       ]
     },
     {
@@ -440,7 +440,7 @@
         "infrastructure"
       ],
       "agents": [
-        "deployment-engineer.md"
+        "./deployment-engineer.md"
       ]
     },
     {
@@ -452,7 +452,7 @@
         "infrastructure"
       ],
       "agents": [
-        "devops-engineer.md"
+        "./devops-engineer.md"
       ]
     },
     {
@@ -464,7 +464,7 @@
         "infrastructure"
       ],
       "agents": [
-        "devops-incident-responder.md"
+        "./devops-incident-responder.md"
       ]
     },
     {
@@ -476,7 +476,7 @@
         "infrastructure"
       ],
       "agents": [
-        "incident-responder.md"
+        "./incident-responder.md"
       ]
     },
     {
@@ -488,7 +488,7 @@
         "infrastructure"
       ],
       "agents": [
-        "kubernetes-specialist.md"
+        "./kubernetes-specialist.md"
       ]
     },
     {
@@ -500,7 +500,7 @@
         "infrastructure"
       ],
       "agents": [
-        "network-engineer.md"
+        "./network-engineer.md"
       ]
     },
     {
@@ -512,7 +512,7 @@
         "infrastructure"
       ],
       "agents": [
-        "platform-engineer.md"
+        "./platform-engineer.md"
       ]
     },
     {
@@ -524,7 +524,7 @@
         "infrastructure"
       ],
       "agents": [
-        "security-engineer.md"
+        "./security-engineer.md"
       ]
     },
     {
@@ -536,7 +536,7 @@
         "infrastructure"
       ],
       "agents": [
-        "sre-engineer.md"
+        "./sre-engineer.md"
       ]
     },
     {
@@ -548,7 +548,7 @@
         "infrastructure"
       ],
       "agents": [
-        "terraform-engineer.md"
+        "./terraform-engineer.md"
       ]
     },
     {
@@ -560,7 +560,7 @@
         "quality security"
       ],
       "agents": [
-        "accessibility-tester.md"
+        "./accessibility-tester.md"
       ]
     },
     {
@@ -572,7 +572,7 @@
         "quality security"
       ],
       "agents": [
-        "architect-reviewer.md"
+        "./architect-reviewer.md"
       ]
     },
     {
@@ -584,7 +584,7 @@
         "quality security"
       ],
       "agents": [
-        "chaos-engineer.md"
+        "./chaos-engineer.md"
       ]
     },
     {
@@ -596,7 +596,7 @@
         "quality security"
       ],
       "agents": [
-        "code-reviewer.md"
+        "./code-reviewer.md"
       ]
     },
     {
@@ -608,7 +608,7 @@
         "quality security"
       ],
       "agents": [
-        "compliance-auditor.md"
+        "./compliance-auditor.md"
       ]
     },
     {
@@ -620,7 +620,7 @@
         "quality security"
       ],
       "agents": [
-        "debugger.md"
+        "./debugger.md"
       ]
     },
     {
@@ -632,7 +632,7 @@
         "quality security"
       ],
       "agents": [
-        "error-detective.md"
+        "./error-detective.md"
       ]
     },
     {
@@ -644,7 +644,7 @@
         "quality security"
       ],
       "agents": [
-        "penetration-tester.md"
+        "./penetration-tester.md"
       ]
     },
     {
@@ -656,7 +656,7 @@
         "quality security"
       ],
       "agents": [
-        "performance-engineer.md"
+        "./performance-engineer.md"
       ]
     },
     {
@@ -668,7 +668,7 @@
         "quality security"
       ],
       "agents": [
-        "qa-expert.md"
+        "./qa-expert.md"
       ]
     },
     {
@@ -680,7 +680,7 @@
         "quality security"
       ],
       "agents": [
-        "security-auditor.md"
+        "./security-auditor.md"
       ]
     },
     {
@@ -692,7 +692,7 @@
         "quality security"
       ],
       "agents": [
-        "test-automator.md"
+        "./test-automator.md"
       ]
     },
     {
@@ -704,7 +704,7 @@
         "data ai"
       ],
       "agents": [
-        "ai-engineer.md"
+        "./ai-engineer.md"
       ]
     },
     {
@@ -716,7 +716,7 @@
         "data ai"
       ],
       "agents": [
-        "data-analyst.md"
+        "./data-analyst.md"
       ]
     },
     {
@@ -728,7 +728,7 @@
         "data ai"
       ],
       "agents": [
-        "data-engineer.md"
+        "./data-engineer.md"
       ]
     },
     {
@@ -740,7 +740,7 @@
         "data ai"
       ],
       "agents": [
-        "data-scientist.md"
+        "./data-scientist.md"
       ]
     },
     {
@@ -752,7 +752,7 @@
         "data ai"
       ],
       "agents": [
-        "database-optimizer.md"
+        "./database-optimizer.md"
       ]
     },
     {
@@ -764,7 +764,7 @@
         "data ai"
       ],
       "agents": [
-        "llm-architect.md"
+        "./llm-architect.md"
       ]
     },
     {
@@ -776,7 +776,7 @@
         "data ai"
       ],
       "agents": [
-        "machine-learning-engineer.md"
+        "./machine-learning-engineer.md"
       ]
     },
     {
@@ -788,7 +788,7 @@
         "data ai"
       ],
       "agents": [
-        "ml-engineer.md"
+        "./ml-engineer.md"
       ]
     },
     {
@@ -800,7 +800,7 @@
         "data ai"
       ],
       "agents": [
-        "mlops-engineer.md"
+        "./mlops-engineer.md"
       ]
     },
     {
@@ -812,7 +812,7 @@
         "data ai"
       ],
       "agents": [
-        "nlp-engineer.md"
+        "./nlp-engineer.md"
       ]
     },
     {
@@ -824,7 +824,7 @@
         "data ai"
       ],
       "agents": [
-        "postgres-pro.md"
+        "./postgres-pro.md"
       ]
     },
     {
@@ -836,7 +836,7 @@
         "data ai"
       ],
       "agents": [
-        "prompt-engineer.md"
+        "./prompt-engineer.md"
       ]
     },
     {
@@ -848,7 +848,7 @@
         "developer experience"
       ],
       "agents": [
-        "build-engineer.md"
+        "./build-engineer.md"
       ]
     },
     {
@@ -860,7 +860,7 @@
         "developer experience"
       ],
       "agents": [
-        "cli-developer.md"
+        "./cli-developer.md"
       ]
     },
     {
@@ -872,7 +872,7 @@
         "developer experience"
       ],
       "agents": [
-        "dependency-manager.md"
+        "./dependency-manager.md"
       ]
     },
     {
@@ -884,7 +884,7 @@
         "developer experience"
       ],
       "agents": [
-        "documentation-engineer.md"
+        "./documentation-engineer.md"
       ]
     },
     {
@@ -896,7 +896,7 @@
         "developer experience"
       ],
       "agents": [
-        "dx-optimizer.md"
+        "./dx-optimizer.md"
       ]
     },
     {
@@ -908,7 +908,7 @@
         "developer experience"
       ],
       "agents": [
-        "git-workflow-manager.md"
+        "./git-workflow-manager.md"
       ]
     },
     {
@@ -920,7 +920,7 @@
         "developer experience"
       ],
       "agents": [
-        "legacy-modernizer.md"
+        "./legacy-modernizer.md"
       ]
     },
     {
@@ -932,7 +932,7 @@
         "developer experience"
       ],
       "agents": [
-        "mcp-developer.md"
+        "./mcp-developer.md"
       ]
     },
     {
@@ -944,7 +944,7 @@
         "developer experience"
       ],
       "agents": [
-        "refactoring-specialist.md"
+        "./refactoring-specialist.md"
       ]
     },
     {
@@ -956,7 +956,7 @@
         "developer experience"
       ],
       "agents": [
-        "tooling-engineer.md"
+        "./tooling-engineer.md"
       ]
     },
     {
@@ -968,7 +968,7 @@
         "specialized domains"
       ],
       "agents": [
-        "api-documenter.md"
+        "./api-documenter.md"
       ]
     },
     {
@@ -980,7 +980,7 @@
         "specialized domains"
       ],
       "agents": [
-        "blockchain-developer.md"
+        "./blockchain-developer.md"
       ]
     },
     {
@@ -992,7 +992,7 @@
         "specialized domains"
       ],
       "agents": [
-        "embedded-systems.md"
+        "./embedded-systems.md"
       ]
     },
     {
@@ -1004,7 +1004,7 @@
         "specialized domains"
       ],
       "agents": [
-        "fintech-engineer.md"
+        "./fintech-engineer.md"
       ]
     },
     {
@@ -1016,7 +1016,7 @@
         "specialized domains"
       ],
       "agents": [
-        "game-developer.md"
+        "./game-developer.md"
       ]
     },
     {
@@ -1028,7 +1028,7 @@
         "specialized domains"
       ],
       "agents": [
-        "iot-engineer.md"
+        "./iot-engineer.md"
       ]
     },
     {
@@ -1040,7 +1040,7 @@
         "specialized domains"
       ],
       "agents": [
-        "mobile-app-developer.md"
+        "./mobile-app-developer.md"
       ]
     },
     {
@@ -1052,7 +1052,7 @@
         "specialized domains"
       ],
       "agents": [
-        "payment-integration.md"
+        "./payment-integration.md"
       ]
     },
     {
@@ -1064,7 +1064,7 @@
         "specialized domains"
       ],
       "agents": [
-        "quant-analyst.md"
+        "./quant-analyst.md"
       ]
     },
     {
@@ -1076,7 +1076,7 @@
         "specialized domains"
       ],
       "agents": [
-        "risk-manager.md"
+        "./risk-manager.md"
       ]
     },
     {
@@ -1088,7 +1088,7 @@
         "specialized domains"
       ],
       "agents": [
-        "seo-specialist.md"
+        "./seo-specialist.md"
       ]
     },
     {
@@ -1100,7 +1100,7 @@
         "business product"
       ],
       "agents": [
-        "business-analyst.md"
+        "./business-analyst.md"
       ]
     },
     {
@@ -1112,7 +1112,7 @@
         "business product"
       ],
       "agents": [
-        "content-marketer.md"
+        "./content-marketer.md"
       ]
     },
     {
@@ -1124,7 +1124,7 @@
         "business product"
       ],
       "agents": [
-        "customer-success-manager.md"
+        "./customer-success-manager.md"
       ]
     },
     {
@@ -1136,7 +1136,7 @@
         "business product"
       ],
       "agents": [
-        "legal-advisor.md"
+        "./legal-advisor.md"
       ]
     },
     {
@@ -1148,7 +1148,7 @@
         "business product"
       ],
       "agents": [
-        "product-manager.md"
+        "./product-manager.md"
       ]
     },
     {
@@ -1160,7 +1160,7 @@
         "business product"
       ],
       "agents": [
-        "project-manager.md"
+        "./project-manager.md"
       ]
     },
     {
@@ -1172,7 +1172,7 @@
         "business product"
       ],
       "agents": [
-        "sales-engineer.md"
+        "./sales-engineer.md"
       ]
     },
     {
@@ -1184,7 +1184,7 @@
         "business product"
       ],
       "agents": [
-        "scrum-master.md"
+        "./scrum-master.md"
       ]
     },
     {
@@ -1196,7 +1196,7 @@
         "business product"
       ],
       "agents": [
-        "technical-writer.md"
+        "./technical-writer.md"
       ]
     },
     {
@@ -1208,7 +1208,7 @@
         "business product"
       ],
       "agents": [
-        "ux-researcher.md"
+        "./ux-researcher.md"
       ]
     },
     {
@@ -1220,7 +1220,7 @@
         "business product"
       ],
       "agents": [
-        "wordpress-master.md"
+        "./wordpress-master.md"
       ]
     },
     {
@@ -1232,7 +1232,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "agent-organizer.md"
+        "./agent-organizer.md"
       ]
     },
     {
@@ -1244,7 +1244,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "context-manager.md"
+        "./context-manager.md"
       ]
     },
     {
@@ -1256,7 +1256,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "error-coordinator.md"
+        "./error-coordinator.md"
       ]
     },
     {
@@ -1268,7 +1268,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "knowledge-synthesizer.md"
+        "./knowledge-synthesizer.md"
       ]
     },
     {
@@ -1280,7 +1280,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "multi-agent-coordinator.md"
+        "./multi-agent-coordinator.md"
       ]
     },
     {
@@ -1292,7 +1292,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "performance-monitor.md"
+        "./performance-monitor.md"
       ]
     },
     {
@@ -1304,7 +1304,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "task-distributor.md"
+        "./task-distributor.md"
       ]
     },
     {
@@ -1316,7 +1316,7 @@
         "meta orchestration"
       ],
       "agents": [
-        "workflow-orchestrator.md"
+        "./workflow-orchestrator.md"
       ]
     },
     {
@@ -1328,7 +1328,7 @@
         "research analysis"
       ],
       "agents": [
-        "competitive-analyst.md"
+        "./competitive-analyst.md"
       ]
     },
     {
@@ -1340,7 +1340,7 @@
         "research analysis"
       ],
       "agents": [
-        "data-researcher.md"
+        "./data-researcher.md"
       ]
     },
     {
@@ -1352,7 +1352,7 @@
         "research analysis"
       ],
       "agents": [
-        "market-researcher.md"
+        "./market-researcher.md"
       ]
     },
     {
@@ -1364,7 +1364,7 @@
         "research analysis"
       ],
       "agents": [
-        "research-analyst.md"
+        "./research-analyst.md"
       ]
     },
     {
@@ -1376,7 +1376,7 @@
         "research analysis"
       ],
       "agents": [
-        "search-specialist.md"
+        "./search-specialist.md"
       ]
     },
     {
@@ -1388,7 +1388,7 @@
         "research analysis"
       ],
       "agents": [
-        "trend-analyst.md"
+        "./trend-analyst.md"
       ]
     }
   ]
