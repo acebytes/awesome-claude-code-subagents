@@ -1,0 +1,189 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "code-reviewer",
+  "name": "Code Reviewer",
+  "version": "1.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert code reviewer specializing in code quality, security vulnerabilities, and best practices across multiple languages",
+    "long": "Senior code reviewer with expertise in identifying code quality issues, security vulnerabilities, and optimization opportunities. Masters static analysis, design patterns, and performance optimization with focus on maintainability and technical debt reduction."
+  },
+  "capabilities": {
+    "primaryDomain": "Code Review",
+    "languages": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "go",
+      "csharp",
+      "ruby",
+      "php",
+      "rust",
+      "kotlin"
+    ],
+    "frameworks": [
+      "ESLint",
+      "Pylint",
+      "SonarQube",
+      "CodeQL",
+      "Semgrep",
+      "PMD",
+      "Checkstyle",
+      "RuboCop"
+    ],
+    "platforms": [
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "Azure DevOps"
+    ],
+    "skills": [
+      "Code quality assessment",
+      "Security review",
+      "Performance analysis",
+      "Design patterns",
+      "SOLID principles",
+      "Test review",
+      "Documentation review",
+      "Dependency analysis",
+      "Technical debt tracking",
+      "Best practices enforcement"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Grep", "Glob", "Bash", "Edit"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write code review reports and analysis results",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Access pull requests and create review comments",
+      "required": true,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "context7",
+      "package": "@upstash/context7-mcp",
+      "purpose": "Understand codebase architecture and patterns",
+      "required": false,
+      "envVars": ["UPSTASH_VECTOR_REST_URL", "UPSTASH_VECTOR_REST_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Track review patterns and team preferences",
+      "required": false,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      },
+      {
+        "name": "Upstash Vector REST URL",
+        "envVar": "UPSTASH_VECTOR_REST_URL",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      },
+      {
+        "name": "Upstash Vector REST Token",
+        "envVar": "UPSTASH_VECTOR_REST_TOKEN",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/code-review",
+      "description": "Perform comprehensive code review on current changes",
+      "usage": "/code-review - Reviews all modified files in the current branch"
+    },
+    {
+      "name": "/security-scan",
+      "description": "Focus on security vulnerabilities and risks",
+      "usage": "/security-scan - Scans code for security issues and vulnerabilities"
+    },
+    {
+      "name": "/tech-debt",
+      "description": "Identify and prioritize technical debt items",
+      "usage": "/tech-debt - Analyzes codebase for technical debt and refactoring needs"
+    },
+    {
+      "name": "/best-practices",
+      "description": "Verify adherence to coding standards and patterns",
+      "usage": "/best-practices - Checks code against industry best practices and team standards"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "qa-expert",
+      "security-auditor",
+      "performance-engineer",
+      "architect-reviewer",
+      "test-automator"
+    ],
+    "delegatesTo": [
+      "backend-developer",
+      "frontend-developer",
+      "debugger"
+    ],
+    "receivesFrom": [
+      "fullstack-developer",
+      "backend-developer",
+      "frontend-developer"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Review the authentication module for security issues",
+      "capability": "Security-focused code review with vulnerability detection and remediation guidance"
+    },
+    {
+      "prompt": "Analyze the performance of the database query layer",
+      "capability": "Performance review identifying bottlenecks, N+1 queries, and optimization opportunities"
+    },
+    {
+      "prompt": "Check if the new API follows REST best practices",
+      "capability": "Design pattern validation and API design review"
+    },
+    {
+      "prompt": "Review test coverage and quality for the payment service",
+      "capability": "Test review including coverage analysis, edge cases, and test quality assessment"
+    },
+    {
+      "prompt": "Identify technical debt in the legacy user management code",
+      "capability": "Technical debt analysis with prioritization and refactoring recommendations"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

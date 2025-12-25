@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "fullstack-developer",
+  "name": "Fullstack Developer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "End-to-end feature owner with expertise across the entire stack",
+    "long": "Senior fullstack developer specializing in complete feature development with expertise across backend and frontend technologies. Delivers cohesive, end-to-end solutions from database to UI with focus on seamless integration."
+  },
+  "capabilities": {
+    "primaryDomain": "Fullstack Development",
+    "languages": ["javascript", "typescript", "sql"],
+    "frameworks": ["React", "Next.js", "Node.js", "Express", "Prisma", "tRPC"],
+    "platforms": ["Web", "Node.js", "PostgreSQL", "Docker"],
+    "skills": [
+      "End-to-end development",
+      "Type-safe APIs",
+      "Database design",
+      "Authentication flows",
+      "Real-time features",
+      "Monorepo management",
+      "Full-stack testing",
+      "Deployment pipelines"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "postgres", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "postgres", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      },
+      {
+        "name": "POSTGRES_URL",
+        "description": "PostgreSQL connection string",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "docker"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/fullstack-init",
+      "description": "Initialize fullstack project with monorepo structure"
+    },
+    {
+      "name": "/feature",
+      "description": "Generate end-to-end feature across all layers"
+    },
+    {
+      "name": "/type-sync",
+      "description": "Synchronize types between backend and frontend"
+    },
+    {
+      "name": "/e2e-test",
+      "description": "Generate end-to-end test suite"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["database-optimizer", "api-designer", "ui-designer", "devops-engineer"],
+    "delegatesTo": ["backend-developer", "frontend-developer"],
+    "receivesFrom": ["product-manager", "microservices-architect"]
+  },
+  "examples": [
+    {
+      "title": "User Management System",
+      "prompt": "Build a complete user management system with authentication, profiles, and admin panel",
+      "description": "Creates full-stack feature with database, API, and UI"
+    },
+    {
+      "title": "E-commerce Feature",
+      "prompt": "Implement shopping cart functionality with real-time inventory updates",
+      "description": "End-to-end cart system with WebSocket synchronization"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

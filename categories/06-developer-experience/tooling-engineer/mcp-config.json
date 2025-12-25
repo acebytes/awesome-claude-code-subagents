@@ -1,0 +1,168 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access tool configurations, package manifests, plugin directories, and template files",
+      "capabilities": {
+        "readFiles": true,
+        "writeFiles": true,
+        "listDirectories": true
+      },
+      "useCases": [
+        "Read package.json and tool manifests",
+        "Write configuration files",
+        "Manage plugin directories",
+        "Access template files for code generation",
+        "Handle build scripts and setup files",
+        "Modify CLI command definitions"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Publish tools, manage releases, and track issues for developer tooling projects",
+      "capabilities": {
+        "repositories": true,
+        "issues": true,
+        "pullRequests": true,
+        "releases": true
+      },
+      "useCases": [
+        "Publish CLI tools and packages",
+        "Create and manage releases with binaries",
+        "Track feature requests and bug reports",
+        "Review tool improvement PRs",
+        "Manage tool versioning and changelogs",
+        "Create GitHub Actions for tool distribution"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Search tool documentation, CLI patterns, plugin architectures, and build system designs",
+      "capabilities": {
+        "webSearch": true,
+        "documentationSearch": true,
+        "codeSearch": true
+      },
+      "useCases": [
+        "Find CLI framework documentation (commander, yargs, oclif)",
+        "Search plugin architecture patterns",
+        "Discover build tool implementations",
+        "Research code generation techniques",
+        "Find performance optimization strategies",
+        "Look up tool distribution best practices",
+        "Search for testing frameworks for CLI tools",
+        "Find examples of successful developer tools"
+      ]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Download tool templates, access package registries, and retrieve tool documentation",
+      "capabilities": {
+        "httpGet": true,
+        "downloadFiles": true
+      },
+      "useCases": [
+        "Download CLI tool templates and boilerplates",
+        "Access npm registry for package information",
+        "Fetch tool documentation and guides",
+        "Download example plugin implementations",
+        "Retrieve tool configuration schemas",
+        "Access build tool examples",
+        "Download linter/formatter configs",
+        "Fetch code generator templates"
+      ]
+    }
+  },
+  "toolingSpecific": {
+    "recommendedTools": [
+      "commander",
+      "yargs",
+      "oclif",
+      "inquirer",
+      "chalk",
+      "ora",
+      "boxen",
+      "cli-table3",
+      "update-notifier",
+      "pkg",
+      "nexe"
+    ],
+    "pluginSystems": [
+      "tapable",
+      "joycon",
+      "rechoir",
+      "interpret"
+    ],
+    "buildTools": [
+      "esbuild",
+      "rollup",
+      "webpack",
+      "vite",
+      "tsup"
+    ],
+    "codeGeneration": [
+      "plop",
+      "hygen",
+      "yeoman-generator",
+      "ejs",
+      "handlebars"
+    ],
+    "testing": [
+      "jest",
+      "vitest",
+      "ava",
+      "mocha",
+      "chai"
+    ],
+    "distribution": [
+      "npm",
+      "cargo",
+      "homebrew",
+      "snapcraft",
+      "chocolatey"
+    ]
+  },
+  "performanceTargets": {
+    "startupTime": "< 100ms",
+    "memoryUsage": "< 50MB baseline",
+    "installSize": "< 10MB (CLI tools)",
+    "testCoverage": "> 80%"
+  },
+  "platforms": {
+    "supported": [
+      "darwin-arm64",
+      "darwin-x64",
+      "linux-x64",
+      "linux-arm64",
+      "win32-x64"
+    ],
+    "nodeVersions": [
+      "18.x",
+      "20.x",
+      "22.x"
+    ]
+  }
+}

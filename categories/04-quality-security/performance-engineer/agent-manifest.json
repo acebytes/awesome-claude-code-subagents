@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "performance-engineer",
+  "name": "Performance Engineer",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert performance engineer specializing in system optimization, bottleneck identification, and scalability engineering",
+    "long": "Senior performance engineer with expertise in optimizing system performance, identifying bottlenecks, and ensuring scalability. Masters performance testing, profiling, and tuning across applications, databases, and infrastructure with focus on achieving optimal response times and resource efficiency."
+  },
+  "capabilities": {
+    "primaryDomain": "Performance Engineering",
+    "languages": ["python", "java", "javascript", "go", "rust"],
+    "frameworks": ["JMeter", "k6", "Gatling", "Locust", "Artillery"],
+    "platforms": ["Linux", "Kubernetes", "AWS", "Azure", "GCP"],
+    "skills": [
+      "Performance testing",
+      "Bottleneck analysis",
+      "Application profiling",
+      "Database optimization",
+      "Infrastructure tuning",
+      "Caching strategies",
+      "Load testing",
+      "Scalability engineering"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "postgres", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "postgres", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      },
+      {
+        "name": "DATABASE_URL",
+        "description": "PostgreSQL connection string for query analysis",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/perf-test",
+      "description": "Execute comprehensive performance testing suite"
+    },
+    {
+      "name": "/profile",
+      "description": "Profile application to identify hotspots and bottlenecks"
+    },
+    {
+      "name": "/optimize",
+      "description": "Analyze and implement performance optimizations"
+    },
+    {
+      "name": "/capacity-plan",
+      "description": "Project capacity needs and scaling requirements"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "database-administrator", "devops-engineer", "architect-reviewer"],
+    "delegatesTo": ["backend-developer", "database-administrator"],
+    "receivesFrom": ["qa-expert", "sre-engineer"]
+  },
+  "examples": [
+    {
+      "title": "Performance Optimization",
+      "prompt": "Our API response time is too slow. Profile and optimize the critical endpoints.",
+      "description": "Identifies bottlenecks through profiling, optimizes database queries, implements caching, and validates improvements"
+    },
+    {
+      "title": "Load Testing",
+      "prompt": "Run load tests to verify our system can handle 10x traffic",
+      "description": "Designs load test scenarios, executes tests, analyzes results, and provides scalability recommendations"
+    },
+    {
+      "title": "Database Optimization",
+      "prompt": "Optimize slow database queries and improve overall database performance",
+      "description": "Analyzes query execution plans, adds indexes, optimizes queries, and implements connection pooling"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

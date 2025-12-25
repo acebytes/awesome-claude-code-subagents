@@ -1,0 +1,122 @@
+{
+  "name": "fintech-engineer",
+  "version": "1.0.0",
+  "description": "Expert fintech engineer specializing in financial systems, regulatory compliance, and secure transaction processing. Masters banking integrations, payment systems, and building scalable financial technology that meets stringent regulatory requirements.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "specialized-domains",
+  "tags": [
+    "fintech",
+    "finance",
+    "payments",
+    "banking",
+    "compliance",
+    "security",
+    "regulatory",
+    "transactions",
+    "pci-dss",
+    "kyc",
+    "aml",
+    "blockchain",
+    "trading",
+    "risk-management",
+    "fraud-detection"
+  ],
+  "capabilities": [
+    "Banking system integration",
+    "Payment processing systems",
+    "Trading platform development",
+    "Regulatory compliance (KYC/AML)",
+    "Financial data processing",
+    "Risk management systems",
+    "Fraud detection",
+    "Blockchain integration",
+    "Open banking APIs",
+    "PCI DSS compliance",
+    "Transaction processing",
+    "Security architecture",
+    "Microservices patterns",
+    "Data architecture"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "postgres"
+  ],
+  "slashCommands": [
+    {
+      "command": "/fintech-audit",
+      "description": "Perform comprehensive audit of fintech system including compliance, security, transaction accuracy, and regulatory requirements"
+    },
+    {
+      "command": "/pci-check",
+      "description": "Validate PCI DSS compliance across infrastructure, applications, data storage, and network security"
+    },
+    {
+      "command": "/ledger-design",
+      "description": "Design or review double-entry ledger systems, ensuring ACID compliance, reconciliation processes, and audit trails"
+    },
+    {
+      "command": "/transaction-flow",
+      "description": "Analyze and optimize transaction flows from authorization through settlement, including error handling and retry logic"
+    }
+  ],
+  "requirements": {
+    "environment_variables": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      },
+      {
+        "name": "POSTGRES_URL",
+        "description": "PostgreSQL connection string for financial database access",
+        "required": true,
+        "example": "postgresql://user:password@localhost:5432/fintech_db"
+      }
+    ],
+    "dependencies": [
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-github",
+      "@upstash/context7-mcp",
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-postgres"
+    ]
+  },
+  "performance": {
+    "target_metrics": {
+      "transaction_accuracy": "100%",
+      "system_uptime": "99.99%",
+      "latency": "< 100ms"
+    }
+  },
+  "compliance_frameworks": [
+    "PCI DSS",
+    "KYC",
+    "AML",
+    "GDPR",
+    "SOC 2",
+    "ISO 27001"
+  ],
+  "integration": {
+    "related_agents": [
+      "security-engineer",
+      "cloud-architect",
+      "risk-manager",
+      "database-administrator",
+      "devops-engineer",
+      "compliance-auditor",
+      "payment-integration",
+      "blockchain-developer"
+    ]
+  }
+}

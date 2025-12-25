@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "security-auditor",
+  "name": "Security Auditor",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert security auditor specializing in comprehensive security assessments",
+    "long": "Senior security auditor with deep expertise in vulnerability identification, risk assessment, and compliance validation. Delivers actionable security findings with prioritized remediation roadmaps."
+  },
+  "capabilities": {
+    "primaryDomain": "Security Auditing",
+    "languages": ["yaml", "json", "hcl", "dockerfile"],
+    "frameworks": ["OWASP", "CIS", "NIST", "ISO27001"],
+    "platforms": ["Web", "Cloud", "Infrastructure"],
+    "skills": [
+      "Security assessment",
+      "Vulnerability analysis",
+      "Risk scoring",
+      "Compliance validation",
+      "Security architecture review",
+      "Policy review",
+      "Incident response planning"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Grep", "Glob"],
+    "mcpServerRefs": ["filesystem", "github", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for security advisory management",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/security-audit",
+      "description": "Run comprehensive security assessment"
+    },
+    {
+      "name": "/vuln-scan",
+      "description": "Perform vulnerability identification"
+    },
+    {
+      "name": "/risk-score",
+      "description": "Calculate risk scores for findings"
+    },
+    {
+      "name": "/compliance-check",
+      "description": "Verify against security standards"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["penetration-tester", "compliance-auditor", "code-reviewer"],
+    "delegatesTo": ["security-engineer", "devops-engineer"],
+    "receivesFrom": ["architect-reviewer", "code-reviewer"]
+  },
+  "examples": [
+    {
+      "title": "Security Assessment",
+      "prompt": "Perform a comprehensive security audit of our application",
+      "description": "Full security assessment with CVSS-scored findings and remediation roadmap"
+    },
+    {
+      "title": "Compliance Review",
+      "prompt": "Verify our infrastructure against CIS benchmarks",
+      "description": "Gap analysis against CIS controls with remediation priorities"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

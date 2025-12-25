@@ -1,0 +1,177 @@
+{
+  "name": "kubernetes-specialist",
+  "version": "1.0.0",
+  "description": "Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.",
+  "category": "infrastructure",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "Cluster architecture and design",
+      "Workload orchestration and management",
+      "Security hardening and compliance",
+      "Performance optimization",
+      "Multi-tenancy implementation",
+      "Service mesh integration",
+      "GitOps workflows",
+      "Storage orchestration",
+      "Network policy management",
+      "Disaster recovery and high availability"
+    ],
+    "technologies": [
+      "Kubernetes",
+      "Docker",
+      "Helm",
+      "Kustomize",
+      "Istio",
+      "Linkerd",
+      "ArgoCD",
+      "Flux",
+      "etcd",
+      "CNI plugins",
+      "CSI drivers",
+      "Prometheus",
+      "Grafana",
+      "OPA",
+      "Falco"
+    ],
+    "expertise_areas": [
+      "Control plane design",
+      "StatefulSet management",
+      "Pod security standards",
+      "Horizontal/Vertical autoscaling",
+      "Network policies",
+      "Storage classes and PVs",
+      "RBAC configuration",
+      "Admission controllers",
+      "Custom resources and operators",
+      "Multi-cluster management"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/k8s-deploy",
+      "description": "Deploy application to Kubernetes with best practices",
+      "usage": "/k8s-deploy [strategy]",
+      "parameters": {
+        "strategy": {
+          "type": "string",
+          "optional": true,
+          "options": ["rolling", "blue-green", "canary", "auto"],
+          "default": "auto",
+          "description": "Deployment strategy to use"
+        }
+      },
+      "examples": [
+        "/k8s-deploy",
+        "/k8s-deploy rolling",
+        "/k8s-deploy blue-green",
+        "/k8s-deploy canary"
+      ]
+    },
+    {
+      "command": "/k8s-scale",
+      "description": "Configure autoscaling for Kubernetes workloads",
+      "usage": "/k8s-scale [type]",
+      "parameters": {
+        "type": {
+          "type": "string",
+          "optional": true,
+          "options": ["hpa", "vpa", "cluster", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Type of autoscaling to configure"
+        }
+      },
+      "examples": [
+        "/k8s-scale",
+        "/k8s-scale hpa",
+        "/k8s-scale vpa",
+        "/k8s-scale cluster",
+        "/k8s-scale comprehensive"
+      ]
+    },
+    {
+      "command": "/k8s-secure",
+      "description": "Implement Kubernetes security hardening and compliance",
+      "usage": "/k8s-secure [framework]",
+      "parameters": {
+        "framework": {
+          "type": "string",
+          "optional": true,
+          "options": ["cis", "pss", "opa", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Security framework to implement"
+        }
+      },
+      "examples": [
+        "/k8s-secure",
+        "/k8s-secure cis",
+        "/k8s-secure pss",
+        "/k8s-secure opa",
+        "/k8s-secure comprehensive"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access Kubernetes manifests, Helm charts, and cluster configurations"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Manage GitOps workflows and track cluster deployments"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access Kubernetes documentation, best practices, and cloud-native patterns"
+    }
+  ],
+  "maturity_targets": {
+    "cis_compliance": "100%",
+    "cluster_uptime": "99.95%",
+    "pod_startup_time": "<30s",
+    "resource_utilization": ">70%",
+    "security_policies": "comprehensive",
+    "rbac_coverage": "100%",
+    "network_policies": "enforced",
+    "disaster_recovery": "tested"
+  },
+  "integration": {
+    "works_with": [
+      "devops-engineer",
+      "cloud-architect",
+      "security-engineer",
+      "platform-engineer",
+      "sre-engineer",
+      "deployment-engineer",
+      "network-engineer",
+      "terraform-engineer"
+    ]
+  },
+  "tags": [
+    "kubernetes",
+    "k8s",
+    "container-orchestration",
+    "cloud-native",
+    "docker",
+    "helm",
+    "service-mesh",
+    "istio",
+    "gitops",
+    "argocd",
+    "security",
+    "rbac",
+    "networking",
+    "storage",
+    "autoscaling",
+    "multi-tenancy",
+    "operators",
+    "crd"
+  ],
+  "license": "MIT"
+}

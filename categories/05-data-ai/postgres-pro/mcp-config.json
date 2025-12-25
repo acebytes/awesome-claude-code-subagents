@@ -1,0 +1,132 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub/claude-code-agent-marketplace",
+        "/var/log/postgresql",
+        "/etc/postgresql",
+        "/usr/local/var/postgres"
+      ],
+      "description": "Access PostgreSQL configuration files, logs, migration scripts, and backup automation scripts"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Review database schema changes in pull requests, track migration history, and document optimization decisions"
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost/postgres"
+      ],
+      "env": {
+        "PGHOST": "${PGHOST:-localhost}",
+        "PGPORT": "${PGPORT:-5432}",
+        "PGDATABASE": "${PGDATABASE:-postgres}",
+        "PGUSER": "${PGUSER:-postgres}",
+        "PGPASSWORD": "${PGPASSWORD}"
+      },
+      "description": "PRIMARY: Direct PostgreSQL access for EXPLAIN queries, pg_stat_* monitoring, administrative commands, and performance analysis"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Research PostgreSQL documentation, extension guides, performance tuning techniques, and community best practices"
+    }
+  },
+  "configVersion": "1.0",
+  "agentName": "postgres-pro",
+  "agentVersion": "1.0.0",
+  "requiredEnvVars": [
+    "PGHOST",
+    "PGPORT",
+    "PGDATABASE",
+    "PGUSER",
+    "PGPASSWORD",
+    "GITHUB_PERSONAL_ACCESS_TOKEN",
+    "CONTEXT7_API_KEY"
+  ],
+  "optionalEnvVars": [],
+  "setupInstructions": [
+    "Set PGHOST, PGPORT, PGDATABASE, PGUSER, PGPASSWORD for PostgreSQL connection",
+    "Set GITHUB_PERSONAL_ACCESS_TOKEN with repo scope for GitHub access",
+    "Set CONTEXT7_API_KEY for documentation research",
+    "Ensure PostgreSQL server is running and accessible",
+    "Install pg_stat_statements extension: CREATE EXTENSION pg_stat_statements;",
+    "Configure postgresql.conf: shared_preload_libraries = 'pg_stat_statements'",
+    "Grant necessary permissions to monitoring user",
+    "Configure pg_hba.conf for local connections"
+  ],
+  "serverPriority": {
+    "primary": "postgres",
+    "secondary": [
+      "filesystem",
+      "github",
+      "context7"
+    ]
+  },
+  "commonCommands": {
+    "analyze_performance": {
+      "description": "Analyze database performance using pg_stat_statements",
+      "mcp": "postgres",
+      "example": "SELECT query, calls, mean_exec_time, total_exec_time FROM pg_stat_statements ORDER BY total_exec_time DESC LIMIT 20;"
+    },
+    "check_replication": {
+      "description": "Check replication status and lag",
+      "mcp": "postgres",
+      "example": "SELECT * FROM pg_stat_replication;"
+    },
+    "monitor_connections": {
+      "description": "Monitor active connections and queries",
+      "mcp": "postgres",
+      "example": "SELECT pid, usename, application_name, state, query FROM pg_stat_activity WHERE state != 'idle';"
+    },
+    "check_bloat": {
+      "description": "Check table and index bloat",
+      "mcp": "postgres",
+      "example": "SELECT schemaname, tablename, n_dead_tup, n_live_tup FROM pg_stat_user_tables WHERE n_dead_tup > 1000 ORDER BY n_dead_tup DESC;"
+    },
+    "analyze_locks": {
+      "description": "Analyze lock contention",
+      "mcp": "postgres",
+      "example": "SELECT locktype, relation::regclass, mode, granted, pid FROM pg_locks WHERE NOT granted;"
+    },
+    "check_cache_hit": {
+      "description": "Check buffer cache hit ratio",
+      "mcp": "postgres",
+      "example": "SELECT sum(blks_hit)*100/sum(blks_hit+blks_read) AS cache_hit_ratio FROM pg_stat_database;"
+    },
+    "view_config": {
+      "description": "View PostgreSQL configuration file",
+      "mcp": "filesystem",
+      "example": "Read /etc/postgresql/postgresql.conf"
+    },
+    "review_logs": {
+      "description": "Review PostgreSQL error logs",
+      "mcp": "filesystem",
+      "example": "Read /var/log/postgresql/postgresql.log"
+    },
+    "research_feature": {
+      "description": "Research PostgreSQL features and best practices",
+      "mcp": "context7",
+      "example": "Search for 'PostgreSQL partitioning best practices'"
+    }
+  }
+}

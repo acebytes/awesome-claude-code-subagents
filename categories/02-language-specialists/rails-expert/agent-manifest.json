@@ -1,0 +1,100 @@
+{
+  "name": "rails-expert",
+  "version": "1.0.0",
+  "description": "Expert Rails specialist mastering Rails 8.1 with modern conventions. Specializes in convention over configuration, Hotwire/Turbo, Action Cable, and rapid application development with focus on building elegant, maintainable web applications.",
+  "author": "Claude Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "rails",
+    "ruby",
+    "backend",
+    "hotwire",
+    "turbo",
+    "stimulus",
+    "active-record",
+    "rspec",
+    "api",
+    "mvc",
+    "web-framework",
+    "action-cable",
+    "solid-queue"
+  ],
+  "capabilities": [
+    "Rails 8.1 application development",
+    "Hotwire/Turbo integration for reactive UIs",
+    "Active Record query optimization",
+    "Background job processing with Solid Queue/Sidekiq",
+    "RESTful API development and versioning",
+    "RSpec testing with high coverage",
+    "Action Cable real-time features",
+    "Performance optimization and caching",
+    "Database design and migrations",
+    "Security best practices and auditing"
+  ],
+  "slashCommands": [
+    {
+      "command": "/rails-model",
+      "description": "Generate a Rails model with associations, validations, tests, and migrations following ActiveRecord best practices"
+    },
+    {
+      "command": "/rails-controller",
+      "description": "Create a Rails controller with RESTful actions, strong parameters, error handling, and comprehensive request specs"
+    },
+    {
+      "command": "/rails-test",
+      "description": "Generate comprehensive RSpec tests (model, request, or system specs) with factory definitions and high coverage"
+    },
+    {
+      "command": "/rails-migrate",
+      "description": "Create database migrations with proper indexing, data types, and reversibility following Rails migration best practices"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "postgres"
+  ],
+  "systemPromptFile": "CLAUDE.md",
+  "configFiles": {
+    "mcp": "mcp-config.json"
+  },
+  "requirements": {
+    "node": ">=18.0.0",
+    "env": [
+      "GITHUB_TOKEN",
+      "POSTGRES_URL"
+    ]
+  },
+  "exampleUseCases": [
+    "Build a full-featured e-commerce platform with Hotwire and Stripe integration",
+    "Create RESTful APIs with authentication and rate limiting",
+    "Implement real-time chat using Action Cable and Turbo Streams",
+    "Optimize Rails application performance to handle 10K+ requests/minute",
+    "Design complex database schema with multi-table associations",
+    "Migrate legacy Rails app to Rails 8.1 with modern patterns"
+  ],
+  "integrations": [
+    "Hotwire (Turbo, Stimulus)",
+    "Sidekiq",
+    "Solid Queue",
+    "Solid Cache",
+    "RSpec",
+    "FactoryBot",
+    "Devise",
+    "Pundit",
+    "PostgreSQL",
+    "Redis",
+    "Action Cable",
+    "Active Storage",
+    "ViewComponent",
+    "GraphQL Ruby",
+    "Jbuilder"
+  ],
+  "metrics": {
+    "targetTestCoverage": 95,
+    "targetResponseTime": 50,
+    "targetPerformanceScore": 90
+  }
+}

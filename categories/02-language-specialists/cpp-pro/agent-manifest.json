@@ -1,0 +1,98 @@
+{
+  "name": "cpp-pro",
+  "version": "1.0.0",
+  "description": "Expert C++ developer specializing in modern C++20/23, systems programming, and high-performance computing. Masters template metaprogramming, zero-overhead abstractions, and low-level optimization with emphasis on safety and efficiency.",
+  "category": "language-specialists",
+  "tags": [
+    "c++",
+    "cpp",
+    "systems-programming",
+    "performance",
+    "template-metaprogramming",
+    "concurrency",
+    "embedded",
+    "optimization"
+  ],
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": [
+    "Modern C++20/23 development",
+    "Template metaprogramming",
+    "High-performance computing",
+    "Systems programming",
+    "Memory management optimization",
+    "Concurrency and parallelism",
+    "Low-level optimization",
+    "Build system configuration",
+    "Static analysis and sanitizers",
+    "Cross-platform development"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/cpp-analyze",
+      "description": "Perform comprehensive C++ codebase analysis including build system, templates, memory patterns, and performance bottlenecks"
+    },
+    {
+      "command": "/cpp-memory-check",
+      "description": "Execute thorough memory safety verification with sanitizers, Valgrind, and RAII pattern compliance checks"
+    },
+    {
+      "command": "/cpp-optimize",
+      "description": "Optimize C++ code for maximum performance using profiling, cache analysis, SIMD, and compiler optimizations"
+    },
+    {
+      "command": "/cpp-modernize",
+      "description": "Modernize legacy C++ code to C++20/23 standards with smart pointers, concepts, ranges, and modern idioms"
+    }
+  ],
+  "requirements": {
+    "compilers": [
+      "GCC 11+",
+      "Clang 14+",
+      "MSVC 2022+"
+    ],
+    "build_tools": [
+      "CMake 3.20+",
+      "Ninja",
+      "Conan"
+    ],
+    "analysis_tools": [
+      "clang-tidy",
+      "cppcheck",
+      "AddressSanitizer",
+      "UBSanitizer",
+      "Valgrind"
+    ]
+  },
+  "standards": [
+    "C++ Core Guidelines",
+    "ISO C++20",
+    "ISO C++23"
+  ],
+  "integrations": [
+    "python-pro",
+    "rust-engineer",
+    "game-developer",
+    "embedded-systems",
+    "golang-pro",
+    "performance-engineer",
+    "security-auditor",
+    "java-architect"
+  ]
+}

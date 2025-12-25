@@ -1,0 +1,201 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "error-detective",
+  "name": "Error Detective",
+  "version": "1.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert error detective specializing in complex error pattern analysis, correlation, and root cause discovery",
+    "long": "Senior error detective with expertise in analyzing complex error patterns, correlating distributed system failures, and uncovering hidden root causes. Masters log analysis, error correlation, distributed tracing, anomaly detection, cascade prevention, and predictive error analysis with focus on system-wide improvements."
+  },
+  "capabilities": {
+    "primaryDomain": "Error Analysis & Pattern Detection",
+    "languages": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "go",
+      "csharp",
+      "ruby",
+      "php",
+      "rust"
+    ],
+    "frameworks": [
+      "OpenTelemetry",
+      "Jaeger",
+      "Zipkin",
+      "ELK Stack",
+      "Prometheus",
+      "Grafana",
+      "Datadog",
+      "New Relic",
+      "Sentry"
+    ],
+    "platforms": [
+      "Web",
+      "API",
+      "Microservices",
+      "Serverless",
+      "Mobile",
+      "Distributed Systems"
+    ],
+    "skills": [
+      "Error pattern analysis",
+      "Log correlation",
+      "Distributed tracing",
+      "Anomaly detection",
+      "Root cause analysis",
+      "Cascade prevention",
+      "Predictive analysis",
+      "Error taxonomy",
+      "Impact assessment",
+      "Automated recovery"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "context7"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write error logs and analysis reports",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Track error patterns and document solutions",
+      "required": true,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Maintain error pattern history and resolutions",
+      "required": false,
+      "envVars": []
+    },
+    {
+      "name": "context7",
+      "package": "@upstash/context7-mcp",
+      "purpose": "Access system architecture for error correlation",
+      "required": false,
+      "envVars": ["UPSTASH_VECTOR_REST_URL", "UPSTASH_VECTOR_REST_TOKEN"]
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      },
+      {
+        "name": "Context7 API Key",
+        "envVar": "CONTEXT7_API_KEY",
+        "provider": "Context7",
+        "required": false,
+        "obtainUrl": "https://context7.com"
+      },
+      {
+        "name": "Upstash Vector REST URL",
+        "envVar": "UPSTASH_VECTOR_REST_URL",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      },
+      {
+        "name": "Upstash Vector REST Token",
+        "envVar": "UPSTASH_VECTOR_REST_TOKEN",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/error-analyze",
+      "description": "Analyze error patterns and identify root causes",
+      "usage": "/error-analyze - Comprehensively analyzes error patterns, correlates across services, and identifies root causes with evidence"
+    },
+    {
+      "name": "/pattern-detect",
+      "description": "Detect recurring error patterns across systems",
+      "usage": "/pattern-detect - Identifies recurring error patterns, trends, and anomalies across distributed systems"
+    },
+    {
+      "name": "/correlate",
+      "description": "Correlate errors across services and time",
+      "usage": "/correlate - Correlates errors across services, time dimensions, and user journeys to uncover hidden relationships"
+    },
+    {
+      "name": "/anomaly-find",
+      "description": "Identify anomalies and predict future errors",
+      "usage": "/anomaly-find - Detects anomalies, establishes baselines, and predicts future error patterns for proactive prevention"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "debugger",
+      "qa-expert",
+      "performance-engineer",
+      "security-auditor",
+      "sre-engineer",
+      "devops-incident-responder",
+      "backend-developer"
+    ],
+    "delegatesTo": [
+      "debugger",
+      "performance-engineer",
+      "security-auditor"
+    ],
+    "receivesFrom": [
+      "sre-engineer",
+      "devops-incident-responder",
+      "monitoring-specialist",
+      "backend-developer"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Analyze the error patterns from the last 7 days and identify the top 5 root causes",
+      "capability": "Comprehensive error pattern analysis with correlation, root cause identification, and impact assessment across distributed systems"
+    },
+    {
+      "prompt": "Find the correlation between database timeout errors and user checkout failures",
+      "capability": "Cross-service error correlation with distributed tracing, dependency mapping, and cascade effect analysis"
+    },
+    {
+      "prompt": "Detect anomalies in our error rates and predict potential outages",
+      "capability": "Anomaly detection with baseline establishment, predictive modeling, and early warning system design"
+    },
+    {
+      "prompt": "Map the error cascade when the payment service fails",
+      "capability": "Error cascade analysis with service dependency mapping, propagation paths, and circuit breaker recommendations"
+    },
+    {
+      "prompt": "Create a comprehensive error analysis report for the incident last night",
+      "capability": "Forensic error analysis with timeline reconstruction, root cause discovery, impact measurement, and prevention strategies"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "test-automator",
+  "name": "Test Automator",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert test automation engineer specializing in building robust test frameworks and CI/CD integration",
+    "long": "Senior test automation engineer with expertise in designing comprehensive test automation strategies. Specializes in framework development, UI/API/mobile automation, CI/CD integration, and achieving high test coverage with fast feedback."
+  },
+  "capabilities": {
+    "primaryDomain": "Test Automation",
+    "languages": ["javascript", "typescript", "python", "java", "csharp"],
+    "frameworks": [
+      "Selenium",
+      "Playwright",
+      "Cypress",
+      "Appium",
+      "RestAssured",
+      "Supertest",
+      "JMeter",
+      "k6",
+      "Puppeteer",
+      "WebDriverIO"
+    ],
+    "platforms": ["Web", "API", "Mobile", "Desktop"],
+    "skills": [
+      "Framework design",
+      "UI automation",
+      "API automation",
+      "Mobile automation",
+      "Performance automation",
+      "CI/CD integration",
+      "Test data management",
+      "Reporting and analytics"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      },
+      {
+        "name": "CONTEXT7_API_KEY",
+        "description": "Context7 API key for architecture context",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/test-framework",
+      "description": "Design and setup test automation framework"
+    },
+    {
+      "name": "/automate-tests",
+      "description": "Convert manual tests to automated test scripts"
+    },
+    {
+      "name": "/ci-integrate",
+      "description": "Integrate tests with CI/CD pipeline"
+    },
+    {
+      "name": "/test-report",
+      "description": "Generate test execution and coverage reports"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "qa-expert",
+      "devops-engineer",
+      "backend-developer",
+      "frontend-developer",
+      "performance-engineer"
+    ],
+    "delegatesTo": ["devops-engineer", "backend-developer", "frontend-developer"],
+    "receivesFrom": ["qa-expert", "product-manager"]
+  },
+  "examples": [
+    {
+      "title": "Setup Test Framework",
+      "prompt": "Design and implement a Playwright-based test automation framework for our e-commerce application",
+      "description": "Creates complete framework with page objects, utilities, and CI/CD integration"
+    },
+    {
+      "title": "Automate API Tests",
+      "prompt": "Automate our REST API test suite with authentication and data-driven scenarios",
+      "description": "Builds comprehensive API test automation with request validation and mocking"
+    },
+    {
+      "title": "CI/CD Integration",
+      "prompt": "Integrate our automated tests into GitHub Actions with parallel execution",
+      "description": "Configures pipeline with test execution, reporting, and failure notifications"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

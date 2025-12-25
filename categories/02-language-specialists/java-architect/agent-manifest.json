@@ -1,0 +1,143 @@
+{
+  "id": "java-architect",
+  "name": "Java Architect",
+  "version": "1.0.0",
+  "description": "Senior Java architect specializing in enterprise-grade applications, Spring ecosystem, and cloud-native development. Masters modern Java features, reactive programming, and microservices patterns with focus on scalability and maintainability.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "category": "language-specialists",
+  "tags": [
+    "java",
+    "spring-boot",
+    "microservices",
+    "reactive-programming",
+    "enterprise-architecture",
+    "spring-ecosystem",
+    "cloud-native",
+    "jvm",
+    "clean-architecture",
+    "design-patterns"
+  ],
+  "runtime": {
+    "type": "claude-agent",
+    "model": "claude-sonnet-4",
+    "temperature": 0.3
+  },
+  "capabilities": {
+    "codeGeneration": true,
+    "codeAnalysis": true,
+    "testing": true,
+    "refactoring": true,
+    "documentation": true,
+    "debugging": true,
+    "architecture": true
+  },
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "name": "java-analyze",
+      "description": "Perform comprehensive analysis of Java codebase architecture, design patterns, and potential improvements"
+    },
+    {
+      "name": "java-test",
+      "description": "Generate comprehensive test suites including unit tests (JUnit 5), integration tests (TestContainers), and performance tests (JMH)"
+    },
+    {
+      "name": "java-refactor",
+      "description": "Refactor Java code to improve maintainability, apply SOLID principles, and implement enterprise design patterns"
+    },
+    {
+      "name": "java-patterns",
+      "description": "Recommend and implement appropriate enterprise patterns (DDD, CQRS, Saga, etc.) for the current architecture"
+    }
+  ],
+  "expertise": [
+    "Java 17+ LTS",
+    "Spring Boot 3.x",
+    "Spring Cloud",
+    "Spring Security",
+    "Spring Data JPA",
+    "Spring WebFlux",
+    "Project Reactor",
+    "Microservices Architecture",
+    "Domain-Driven Design",
+    "Clean Architecture",
+    "SOLID Principles",
+    "Reactive Programming",
+    "JPA/Hibernate",
+    "Maven/Gradle",
+    "JUnit 5",
+    "TestContainers",
+    "JMH Benchmarking",
+    "GraalVM Native Image",
+    "Kubernetes",
+    "Observability"
+  ],
+  "integrations": [
+    {
+      "type": "build-tool",
+      "name": "Maven",
+      "description": "Maven build configuration and dependency management"
+    },
+    {
+      "type": "build-tool",
+      "name": "Gradle",
+      "description": "Gradle build configuration and multi-module projects"
+    },
+    {
+      "type": "testing",
+      "name": "JUnit 5",
+      "description": "Unit and integration testing framework"
+    },
+    {
+      "type": "testing",
+      "name": "TestContainers",
+      "description": "Integration testing with Docker containers"
+    },
+    {
+      "type": "quality",
+      "name": "SpotBugs",
+      "description": "Static analysis for bug detection"
+    },
+    {
+      "type": "quality",
+      "name": "SonarQube",
+      "description": "Code quality and security scanning"
+    }
+  ],
+  "requirements": {
+    "minJavaVersion": "17",
+    "recommendedJavaVersion": "21",
+    "buildTools": ["Maven 3.9+", "Gradle 8.5+"]
+  },
+  "examples": [
+    {
+      "title": "Spring Boot Microservice Setup",
+      "description": "Create a production-ready Spring Boot 3.x microservice with reactive endpoints, R2DBC data access, and full observability"
+    },
+    {
+      "title": "Domain-Driven Design Implementation",
+      "description": "Implement DDD patterns including aggregates, repositories, value objects, and domain events"
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Optimize JVM performance, query execution, and implement caching strategies with JMH benchmarking"
+    }
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,146 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub/claude-code-agent-marketplace"
+      ],
+      "description": "Access build configuration files (webpack, vite, turbo, nx configs)",
+      "usage": {
+        "primary": [
+          "Read build tool configurations",
+          "Analyze package.json build scripts",
+          "Review CI/CD workflow files",
+          "Check transpilation configs (tsconfig, babel)",
+          "Monitor .env files for environment setup"
+        ],
+        "patterns": [
+          "webpack.config.js - Webpack configuration",
+          "vite.config.ts - Vite configuration",
+          "turbo.json - Turborepo pipeline config",
+          "nx.json - Nx workspace config",
+          ".github/workflows/ - GitHub Actions workflows",
+          "rollup.config.js - Rollup bundler config",
+          "esbuild.config.js - esbuild configuration"
+        ]
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "description": "Manage CI/CD workflows and track build performance",
+      "usage": {
+        "primary": [
+          "Analyze GitHub Actions workflow files",
+          "Review build times in Actions logs",
+          "Track build metrics over time",
+          "Optimize workflow caching strategies",
+          "Create PRs for build improvements",
+          "Monitor build failures and patterns"
+        ],
+        "operations": [
+          "List workflow runs with build times",
+          "Analyze workflow logs for bottlenecks",
+          "Update workflow files for optimization",
+          "Configure build matrices efficiently",
+          "Setup artifact caching",
+          "Track build cost and usage"
+        ]
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upaya.ai/context7-mcp-server"
+      ],
+      "description": "Query build tool documentation and best practices",
+      "usage": {
+        "primary": [
+          "Webpack optimization techniques",
+          "Vite configuration best practices",
+          "esbuild performance tuning",
+          "Turbopack migration guides",
+          "Rollup plugin development",
+          "Build tool comparison and selection"
+        ],
+        "queries": [
+          "How to configure Webpack persistent caching",
+          "Vite build optimization strategies",
+          "esbuild vs SWC performance comparison",
+          "Turbopack configuration for Next.js",
+          "Rollup tree shaking configuration",
+          "Nx remote caching setup",
+          "GitHub Actions build matrix optimization"
+        ]
+      }
+    }
+  },
+  "integrationNotes": {
+    "buildConfigFiles": [
+      "webpack.config.js",
+      "vite.config.ts",
+      "vite.config.js",
+      "rollup.config.js",
+      "esbuild.config.js",
+      "turbo.json",
+      "nx.json",
+      "rush.json",
+      "lerna.json",
+      "tsconfig.json",
+      "babel.config.js",
+      "swc.config.js"
+    ],
+    "cicdFiles": [
+      ".github/workflows/*.yml",
+      ".gitlab-ci.yml",
+      ".circleci/config.yml",
+      "Jenkinsfile",
+      "azure-pipelines.yml"
+    ],
+    "monorepoConfigs": [
+      "pnpm-workspace.yaml",
+      "yarn.lock",
+      "package-lock.json",
+      "workspace.json"
+    ],
+    "optimization": {
+      "caching": [
+        "Turborepo remote caching",
+        "Nx Cloud distributed caching",
+        "GitHub Actions cache action",
+        "Webpack persistent cache",
+        "Vite dependency pre-bundling"
+      ],
+      "parallelization": [
+        "Webpack parallel plugins",
+        "Vite build.rollupOptions.parallel",
+        "Nx parallel execution",
+        "Turborepo pipeline parallelism"
+      ],
+      "bundleOptimization": [
+        "Code splitting strategies",
+        "Tree shaking configuration",
+        "Minification and compression",
+        "Dynamic imports",
+        "Lazy loading"
+      ]
+    },
+    "metrics": [
+      "Build time (cold start)",
+      "Build time (incremental)",
+      "Bundle size",
+      "Cache hit rate",
+      "Memory usage",
+      "CPU utilization"
+    ]
+  }
+}

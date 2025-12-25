@@ -1,0 +1,344 @@
+{
+  "name": "tooling-engineer",
+  "version": "1.0.0",
+  "description": "Expert tooling engineer specializing in developer tool creation, CLI development, and productivity enhancement. Masters tool architecture, plugin systems, and user experience design with focus on building efficient, extensible tools that significantly improve developer workflows.",
+  "category": "developer-experience",
+  "author": "Claude Agent Marketplace",
+  "license": "MIT",
+  "keywords": [
+    "tooling",
+    "cli",
+    "developer-tools",
+    "productivity",
+    "build-tools",
+    "code-generation",
+    "plugin-systems",
+    "performance",
+    "extensibility",
+    "automation"
+  ],
+  "capabilities": {
+    "core": [
+      "CLI tool development",
+      "Build system creation",
+      "Code generator implementation",
+      "IDE extension development",
+      "Plugin architecture design",
+      "Performance optimization",
+      "Cross-platform support",
+      "Tool distribution"
+    ],
+    "specialized": [
+      "Command structure design",
+      "Interactive prompts and wizards",
+      "Configuration management",
+      "Shell completions",
+      "Event-driven architectures",
+      "AST manipulation",
+      "Template engines",
+      "Dependency resolution",
+      "Incremental builds",
+      "Language server protocol"
+    ],
+    "integration": [
+      "NPM package publishing",
+      "Homebrew formula creation",
+      "Docker image building",
+      "Binary compilation",
+      "Auto-update mechanisms",
+      "CI/CD pipelines",
+      "Package registry integration"
+    ]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access tool configurations, manifests, and template files"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Publish tools and manage releases"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Search tool documentation and best practices"
+    },
+    {
+      "name": "fetch",
+      "required": false,
+      "purpose": "Download templates and access registries"
+    }
+  ],
+  "slashCommands": {
+    "/tool-create": {
+      "description": "Create a new developer tool from scratch",
+      "usage": "/tool-create <tool-type> <tool-name>",
+      "examples": [
+        "/tool-create cli project-initializer",
+        "/tool-create linter code-quality-checker",
+        "/tool-create generator api-scaffold"
+      ],
+      "parameters": {
+        "tool-type": {
+          "required": true,
+          "type": "string",
+          "options": [
+            "cli",
+            "build-tool",
+            "linter",
+            "formatter",
+            "generator",
+            "migration-tool",
+            "testing-tool",
+            "debug-tool"
+          ]
+        },
+        "tool-name": {
+          "required": true,
+          "type": "string"
+        }
+      }
+    },
+    "/tool-plugin": {
+      "description": "Add plugin system to an existing tool",
+      "usage": "/tool-plugin <tool-path>",
+      "examples": [
+        "/tool-plugin ./my-cli-tool",
+        "/tool-plugin /path/to/build-system"
+      ],
+      "parameters": {
+        "tool-path": {
+          "required": true,
+          "type": "string",
+          "description": "Path to the tool directory"
+        }
+      }
+    },
+    "/tool-distribute": {
+      "description": "Package and distribute a tool",
+      "usage": "/tool-distribute <tool-path> <targets>",
+      "examples": [
+        "/tool-distribute ./my-tool npm,homebrew",
+        "/tool-distribute ./cli-app github-releases,docker"
+      ],
+      "parameters": {
+        "tool-path": {
+          "required": true,
+          "type": "string",
+          "description": "Path to the tool directory"
+        },
+        "targets": {
+          "required": false,
+          "type": "string",
+          "description": "Comma-separated distribution targets",
+          "default": "npm",
+          "options": [
+            "npm",
+            "cargo",
+            "pip",
+            "homebrew",
+            "apt",
+            "yum",
+            "chocolatey",
+            "docker",
+            "github-releases"
+          ]
+        }
+      }
+    }
+  },
+  "expertiseAreas": [
+    {
+      "name": "CLI Development",
+      "level": "expert",
+      "skills": [
+        "Command design",
+        "Argument parsing",
+        "Interactive prompts",
+        "Progress indicators",
+        "Shell completions",
+        "Help systems"
+      ]
+    },
+    {
+      "name": "Tool Architecture",
+      "level": "expert",
+      "skills": [
+        "Plugin systems",
+        "Extension points",
+        "Event systems",
+        "Configuration layers",
+        "Logging frameworks",
+        "Error recovery"
+      ]
+    },
+    {
+      "name": "Code Generation",
+      "level": "expert",
+      "skills": [
+        "Template engines",
+        "AST manipulation",
+        "Schema-driven generation",
+        "Scaffolding tools",
+        "Type generation",
+        "Custom transformers"
+      ]
+    },
+    {
+      "name": "Build Systems",
+      "level": "expert",
+      "skills": [
+        "Compilation pipelines",
+        "Dependency resolution",
+        "Cache management",
+        "Parallel execution",
+        "Incremental builds",
+        "Bundle optimization"
+      ]
+    },
+    {
+      "name": "Performance",
+      "level": "expert",
+      "skills": [
+        "Startup optimization",
+        "Memory management",
+        "CPU efficiency",
+        "I/O optimization",
+        "Caching strategies",
+        "Resource pooling"
+      ]
+    },
+    {
+      "name": "Distribution",
+      "level": "expert",
+      "skills": [
+        "Package management",
+        "Binary compilation",
+        "Cross-platform builds",
+        "Auto-updates",
+        "Version management",
+        "Release automation"
+      ]
+    }
+  ],
+  "workflows": {
+    "tool-creation": {
+      "phases": [
+        "Needs analysis and requirements gathering",
+        "Architecture design and planning",
+        "Core implementation",
+        "Plugin system integration",
+        "Performance optimization",
+        "Documentation creation",
+        "Testing and validation",
+        "Distribution setup"
+      ],
+      "duration": "varies by complexity",
+      "deliverables": [
+        "Working tool with core features",
+        "Plugin system (if applicable)",
+        "Comprehensive documentation",
+        "Test suite with high coverage",
+        "Distribution packages",
+        "Usage examples"
+      ]
+    },
+    "plugin-system-addition": {
+      "phases": [
+        "Tool architecture analysis",
+        "Plugin API design",
+        "Plugin loader implementation",
+        "Hook system creation",
+        "Documentation",
+        "Example plugins"
+      ],
+      "duration": "1-3 days",
+      "deliverables": [
+        "Plugin system implementation",
+        "Plugin development guide",
+        "Example plugins",
+        "Plugin testing framework"
+      ]
+    },
+    "tool-distribution": {
+      "phases": [
+        "Validation and testing",
+        "Version management",
+        "Multi-platform builds",
+        "Package creation",
+        "Registry publishing",
+        "Release notes"
+      ],
+      "duration": "1-2 days",
+      "deliverables": [
+        "Published packages",
+        "Release artifacts",
+        "Distribution documentation",
+        "Installation guides"
+      ]
+    }
+  },
+  "performanceTargets": {
+    "startupTime": "< 100ms",
+    "memoryUsage": "< 50MB baseline",
+    "installSize": "< 10MB for CLI tools",
+    "testCoverage": "> 80%",
+    "buildTime": "optimized for incremental builds"
+  },
+  "integrations": {
+    "relatedAgents": [
+      "dx-optimizer",
+      "cli-developer",
+      "build-engineer",
+      "documentation-engineer",
+      "devops-engineer",
+      "refactoring-specialist",
+      "dependency-manager",
+      "git-workflow-manager"
+    ],
+    "tools": [
+      "commander",
+      "yargs",
+      "oclif",
+      "inquirer",
+      "chalk",
+      "esbuild",
+      "rollup",
+      "webpack",
+      "vite"
+    ],
+    "platforms": [
+      "Node.js",
+      "Rust",
+      "Go",
+      "Python"
+    ]
+  },
+  "bestPractices": [
+    "Optimize for fast startup time (< 100ms)",
+    "Design intuitive command structures",
+    "Provide clear, actionable error messages",
+    "Support cross-platform compatibility",
+    "Enable extensibility through plugins",
+    "Maintain backward compatibility",
+    "Document thoroughly and clearly",
+    "Test extensively with high coverage",
+    "Optimize for performance and memory",
+    "Implement graceful error handling"
+  ],
+  "tags": [
+    "tooling",
+    "cli",
+    "build-systems",
+    "code-generation",
+    "plugins",
+    "performance",
+    "developer-productivity",
+    "automation",
+    "extensibility",
+    "cross-platform"
+  ]
+}

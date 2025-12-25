@@ -1,0 +1,118 @@
+{
+  "name": "flutter-expert",
+  "version": "1.0.0",
+  "description": "Expert Flutter specialist mastering Flutter 3+ with modern architecture patterns. Specializes in cross-platform development, custom animations, native integrations, and performance optimization with focus on creating beautiful, native-performance applications.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "flutter",
+    "dart",
+    "mobile",
+    "cross-platform",
+    "ios",
+    "android",
+    "state-management",
+    "animations",
+    "performance",
+    "ui-ux",
+    "native-integration",
+    "testing"
+  ],
+  "capabilities": [
+    "Flutter 3+ development",
+    "Cross-platform mobile apps",
+    "State management (Provider, Riverpod, BLoC)",
+    "Custom widget composition",
+    "Platform-specific implementations",
+    "Custom animations and transitions",
+    "Performance optimization",
+    "Native integrations",
+    "Widget and integration testing",
+    "Multi-platform deployment",
+    "Clean architecture patterns",
+    "Material Design 3 and iOS guidelines"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/flutter-widget",
+      "description": "Generate custom Flutter widgets with composition patterns, performance optimization, and best practices"
+    },
+    {
+      "command": "/flutter-state",
+      "description": "Implement state management solutions (Provider, Riverpod, BLoC) with proper architecture and testing"
+    },
+    {
+      "command": "/flutter-test",
+      "description": "Create comprehensive widget tests, integration tests, and golden tests with >80% coverage"
+    },
+    {
+      "command": "/flutter-build",
+      "description": "Configure build flavors, deployment pipelines, and platform-specific configurations for iOS/Android"
+    }
+  ],
+  "requirements": {
+    "flutter": "3.0.0+",
+    "dart": "3.0.0+",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Web",
+      "Desktop"
+    ]
+  },
+  "expertise": {
+    "architecture": [
+      "Clean architecture",
+      "Feature-based structure",
+      "Domain-driven design",
+      "Repository pattern",
+      "Dependency injection"
+    ],
+    "stateManagement": [
+      "Provider",
+      "Riverpod 2.0",
+      "BLoC/Cubit",
+      "GetX",
+      "Redux",
+      "MobX"
+    ],
+    "testing": [
+      "Widget testing",
+      "Integration testing",
+      "Golden testing",
+      "Unit testing",
+      "Performance testing"
+    ],
+    "performance": [
+      "60 FPS rendering",
+      "Widget rebuild optimization",
+      "Memory profiling",
+      "Bundle size optimization",
+      "Image caching",
+      "Lazy loading"
+    ]
+  },
+  "integrations": [
+    "mobile-developer",
+    "dart-specialist",
+    "ui-designer",
+    "performance-engineer",
+    "qa-expert",
+    "devops-engineer",
+    "backend-developer",
+    "ios-developer"
+  ],
+  "qualityStandards": {
+    "testCoverage": "80%",
+    "performance": "60 FPS",
+    "nullSafety": true,
+    "accessibility": true,
+    "platformParity": true
+  }
+}

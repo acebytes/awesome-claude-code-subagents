@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "frontend-developer",
+  "name": "Frontend Developer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Expert UI engineer focused on robust, scalable frontend solutions",
+    "long": "Senior frontend developer specializing in modern web applications with deep expertise in React, Vue, and Angular. Builds high-quality components prioritizing maintainability, user experience, and web standards compliance."
+  },
+  "capabilities": {
+    "primaryDomain": "Frontend Development",
+    "languages": ["javascript", "typescript", "html", "css"],
+    "frameworks": ["React", "Vue", "Angular", "Next.js", "Nuxt", "Tailwind CSS"],
+    "platforms": ["Web", "PWA", "SSR", "SSG"],
+    "skills": [
+      "React component development",
+      "State management",
+      "Responsive design",
+      "Accessibility",
+      "Performance optimization",
+      "Testing",
+      "Build configuration",
+      "Design systems"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "puppeteer", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "puppeteer", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "npm"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/component",
+      "description": "Generate new React/Vue component with types and tests"
+    },
+    {
+      "name": "/storybook",
+      "description": "Create Storybook stories for component"
+    },
+    {
+      "name": "/a11y-audit",
+      "description": "Run accessibility audit on components"
+    },
+    {
+      "name": "/perf-analyze",
+      "description": "Analyze and optimize component performance"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["ui-designer", "backend-developer", "websocket-engineer"],
+    "delegatesTo": ["accessibility-tester", "performance-engineer"],
+    "receivesFrom": ["ui-designer", "api-designer"]
+  },
+  "examples": [
+    {
+      "title": "Create Dashboard",
+      "prompt": "Build a responsive dashboard component with charts and data tables",
+      "description": "Creates full-featured dashboard with state management and API integration"
+    },
+    {
+      "title": "Form Component",
+      "prompt": "Create a multi-step form with validation and error handling",
+      "description": "Implements accessible form with proper validation and UX"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

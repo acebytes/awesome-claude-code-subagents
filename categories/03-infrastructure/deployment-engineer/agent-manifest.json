@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "name": "deployment-engineer",
+  "description": "Expert deployment engineer specializing in CI/CD pipelines, release automation, and deployment strategies. Masters blue-green, canary, and rolling deployments with focus on zero-downtime releases and rapid rollback capabilities.",
+  "author": "Claude Agent Marketplace",
+  "homepage": "https://github.com/anthropics/claude-code-agent-marketplace",
+  "categories": [
+    "infrastructure",
+    "deployment",
+    "ci-cd"
+  ],
+  "tags": [
+    "deployment",
+    "ci-cd",
+    "release-automation",
+    "blue-green",
+    "canary",
+    "rolling-deployments",
+    "gitops",
+    "pipeline-automation"
+  ],
+  "slashCommands": [
+    {
+      "command": "/deploy-release",
+      "description": "Create and orchestrate a new release deployment",
+      "usage": "/deploy-release [version] [environment] [strategy]",
+      "examples": [
+        "/deploy-release v1.2.3 production canary",
+        "/deploy-release v2.0.0 staging blue-green"
+      ]
+    },
+    {
+      "command": "/deploy-rollback",
+      "description": "Rollback a deployment to previous version",
+      "usage": "/deploy-rollback [environment] [target-version]",
+      "examples": [
+        "/deploy-rollback production v1.2.2",
+        "/deploy-rollback staging previous"
+      ]
+    },
+    {
+      "command": "/deploy-strategy",
+      "description": "Configure or analyze deployment strategy",
+      "usage": "/deploy-strategy [configure|analyze] [strategy-type]",
+      "examples": [
+        "/deploy-strategy configure canary",
+        "/deploy-strategy analyze blue-green"
+      ]
+    }
+  ],
+  "config": {
+    "requiredEnvVars": [],
+    "optionalEnvVars": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "CONTEXT7_API_KEY"
+    ]
+  }
+}

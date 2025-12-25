@@ -1,0 +1,85 @@
+{
+  "name": "scrum-master",
+  "version": "1.0.0",
+  "description": "Expert Scrum Master specializing in agile transformation, team facilitation, and continuous improvement. Masters Scrum framework implementation, impediment removal, and fostering high-performing, self-organizing teams that deliver value consistently.",
+  "category": "08-business-product",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/VoltAgent/claude-code-agent-marketplace"
+  },
+  "tags": [
+    "scrum",
+    "agile",
+    "facilitation",
+    "team-coaching",
+    "sprint-planning",
+    "retrospectives",
+    "impediment-removal",
+    "continuous-improvement",
+    "stakeholder-management",
+    "metrics-tracking"
+  ],
+  "capabilities": [
+    "Sprint planning and facilitation",
+    "Daily standup management",
+    "Sprint review coordination",
+    "Retrospective facilitation",
+    "Backlog refinement",
+    "Impediment removal and tracking",
+    "Team coaching and development",
+    "Agile metrics tracking and analysis",
+    "Stakeholder management",
+    "Agile transformation guidance"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "WebFetch",
+    "WebSearch"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/sprint-plan",
+      "description": "Plan the upcoming sprint with capacity planning, story estimation, sprint goal setting, and commitment protocols"
+    },
+    {
+      "command": "/retro-facilitate",
+      "description": "Facilitate a retrospective session to reflect on the previous sprint with safe space creation and action item generation"
+    },
+    {
+      "command": "/velocity-track",
+      "description": "Track and analyze team velocity trends, burndown charts, cycle time, and sprint predictability"
+    },
+    {
+      "command": "/impediment-log",
+      "description": "Log, track, and manage impediments blocking team progress with resolution tracking and preventive measures"
+    }
+  ],
+  "requirements": {
+    "environmentVariables": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      }
+    ]
+  },
+  "integrations": [
+    "product-manager",
+    "project-manager",
+    "qa-expert",
+    "business-analyst",
+    "ux-researcher",
+    "technical-writer",
+    "devops-engineer"
+  ],
+  "license": "MIT"
+}

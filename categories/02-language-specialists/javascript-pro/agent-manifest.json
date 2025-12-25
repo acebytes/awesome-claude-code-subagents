@@ -1,0 +1,78 @@
+{
+  "name": "javascript-pro",
+  "version": "1.0.0",
+  "description": "Expert JavaScript developer specializing in modern ES2023+ features, asynchronous programming, and full-stack development. Masters both browser APIs and Node.js ecosystem with emphasis on performance and clean code patterns.",
+  "author": "Anthropic",
+  "license": "MIT",
+  "category": "language-specialists",
+  "tags": [
+    "javascript",
+    "nodejs",
+    "es2023",
+    "async",
+    "performance",
+    "fullstack",
+    "testing",
+    "optimization"
+  ],
+  "capabilities": [
+    "Modern JavaScript ES2023+ development",
+    "Node.js 20+ backend development",
+    "Asynchronous programming patterns",
+    "Functional programming",
+    "Performance optimization",
+    "Testing and quality assurance",
+    "Build tooling and bundling",
+    "Browser API mastery",
+    "Security best practices",
+    "Memory management"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/js-analyze",
+      "description": "Analyze JavaScript codebase for patterns, performance issues, and best practices compliance"
+    },
+    {
+      "command": "/js-test",
+      "description": "Set up or run JavaScript test suite with Jest, including coverage reports"
+    },
+    {
+      "command": "/js-optimize",
+      "description": "Optimize JavaScript code for performance, bundle size, and memory efficiency"
+    },
+    {
+      "command": "/js-debug",
+      "description": "Debug JavaScript issues including async bugs, memory leaks, and runtime errors"
+    }
+  ],
+  "requirements": {
+    "node": ">=20.0.0",
+    "environment": [
+      "GITHUB_TOKEN for GitHub MCP server"
+    ]
+  },
+  "integrations": [
+    "typescript-pro",
+    "frontend-developer",
+    "react-developer",
+    "backend-developer",
+    "webpack-specialist",
+    "performance-engineer",
+    "security-auditor",
+    "fullstack-developer"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "name": "ml-engineer",
+  "version": "1.0.0",
+  "description": "Expert ML engineer specializing in machine learning model lifecycle, production deployment, and ML system optimization. Masters both traditional ML and deep learning with focus on building scalable, reliable ML systems from training to serving.",
+  "author": "Claude Agent Marketplace",
+  "category": "data-ai",
+  "tags": [
+    "machine-learning",
+    "ml-engineering",
+    "model-training",
+    "model-deployment",
+    "mlops",
+    "feature-engineering",
+    "model-serving",
+    "ml-pipelines",
+    "model-monitoring",
+    "hyperparameter-tuning",
+    "production-ml",
+    "deep-learning",
+    "scikit-learn",
+    "tensorflow",
+    "pytorch",
+    "mlflow",
+    "model-validation",
+    "a-b-testing",
+    "model-optimization",
+    "inference"
+  ],
+  "capabilities": [
+    "ML pipeline development and orchestration",
+    "Feature engineering and feature stores",
+    "Model training and hyperparameter optimization",
+    "Production deployment (blue-green, canary)",
+    "Model monitoring and drift detection",
+    "A/B testing and experimentation",
+    "Model validation and evaluation",
+    "Real-time and batch inference",
+    "Distributed training orchestration",
+    "Model versioning and registry management",
+    "Performance optimization and scaling",
+    "ML system reliability engineering"
+  ],
+  "slashCommands": [
+    {
+      "command": "/ml-train",
+      "description": "Train a machine learning model with specified configuration",
+      "usage": "/ml-train [model_type] [data_path] [config_path]",
+      "examples": [
+        "/ml-train random_forest ./data/train.csv ./config/rf_config.yaml",
+        "/ml-train xgboost ./data/train.parquet ./config/xgb_config.json",
+        "/ml-train neural_net ./data/embeddings.h5 ./config/nn_config.yaml"
+      ]
+    },
+    {
+      "command": "/ml-evaluate",
+      "description": "Evaluate model performance on validation/test data",
+      "usage": "/ml-evaluate [model_path] [data_path] [metrics]",
+      "examples": [
+        "/ml-evaluate ./models/model_v1.pkl ./data/test.csv \"accuracy,f1,auc\"",
+        "/ml-evaluate ./models/xgb_model.json ./data/validation.parquet \"rmse,mae,r2\"",
+        "/ml-evaluate ./models/classifier.h5 ./data/test.tfrecord \"precision,recall,auc\""
+      ]
+    },
+    {
+      "command": "/ml-serve",
+      "description": "Deploy model for inference with serving infrastructure",
+      "usage": "/ml-serve [model_path] [serving_config]",
+      "examples": [
+        "/ml-serve ./models/model_v1.pkl ./config/serve_config.yaml",
+        "/ml-serve ./models/production_model.onnx ./config/rest_api_config.json",
+        "/ml-serve ./models/ensemble ./config/k8s_serving_config.yaml"
+      ]
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "fetch"
+  ],
+  "tooling": {
+    "frameworks": [
+      "scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "XGBoost",
+      "LightGBM",
+      "Keras"
+    ],
+    "experimentTracking": [
+      "MLflow",
+      "Weights & Biases",
+      "TensorBoard",
+      "Neptune"
+    ],
+    "orchestration": [
+      "Kubeflow Pipelines",
+      "Apache Airflow",
+      "Prefect",
+      "Metaflow"
+    ],
+    "hpo": [
+      "Optuna",
+      "Ray Tune",
+      "Hyperopt",
+      "Keras Tuner"
+    ],
+    "serving": [
+      "BentoML",
+      "Seldon Core",
+      "TorchServe",
+      "TensorFlow Serving"
+    ],
+    "featureStores": [
+      "Feast",
+      "Tecton",
+      "Hopsworks"
+    ],
+    "versioning": [
+      "DVC",
+      "Git",
+      "MLflow Model Registry"
+    ],
+    "distributed": [
+      "Ray",
+      "Dask",
+      "Horovod",
+      "DeepSpeed"
+    ]
+  },
+  "bestPractices": [
+    "Version everything (code, data, models, configs)",
+    "Validate data quality before training",
+    "Track all experiments with metadata",
+    "Implement automated testing for ML pipelines",
+    "Monitor model performance in production",
+    "Use feature stores for consistency",
+    "Implement gradual rollout strategies",
+    "Set up automated retraining pipelines",
+    "Maintain fallback models for reliability",
+    "Document all decisions and processes"
+  ],
+  "performanceTargets": {
+    "trainingTime": "< 4 hours",
+    "inferenceLatency": "< 50ms",
+    "modelAccuracy": "> 90%",
+    "pipelineReliability": "> 99%",
+    "dataValidation": "100%",
+    "monitoringCoverage": "100%"
+  },
+  "integrations": [
+    "data-scientist",
+    "data-engineer",
+    "mlops-engineer",
+    "backend-developer",
+    "ai-engineer",
+    "devops-engineer",
+    "performance-engineer",
+    "qa-expert"
+  ],
+  "license": "MIT"
+}

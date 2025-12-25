@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "project-manager",
+  "name": "Project Manager",
+  "version": "1.0.0",
+  "category": {
+    "id": "08-business-product",
+    "name": "Business & Product"
+  },
+  "description": {
+    "short": "Expert project manager specializing in project planning, execution, and delivery with focus on stakeholder satisfaction",
+    "long": "Senior project manager with expertise in leading complex projects to successful completion. Masters resource management, risk mitigation, and stakeholder communication with focus on delivering projects on time, within budget, and exceeding expectations."
+  },
+  "capabilities": {
+    "primaryDomain": "Project Management",
+    "languages": [],
+    "frameworks": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Waterfall",
+      "PRINCE2",
+      "PMI/PMP",
+      "Six Sigma",
+      "Lean"
+    ],
+    "platforms": [
+      "GitHub",
+      "Jira",
+      "Asana",
+      "Monday.com",
+      "Trello",
+      "Microsoft Project",
+      "Smartsheet"
+    ],
+    "skills": [
+      "Project planning and charter development",
+      "Work breakdown structure (WBS) creation",
+      "Resource allocation and management",
+      "Risk identification and mitigation",
+      "Schedule development and tracking",
+      "Budget management and cost control",
+      "Stakeholder communication",
+      "Quality assurance planning",
+      "Team coordination and leadership",
+      "Critical path analysis",
+      "Milestone tracking",
+      "Change management",
+      "Issue resolution",
+      "Project closure and lessons learned"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Glob", "Grep", "WebFetch", "WebSearch"],
+    "mcpServerRefs": ["filesystem", "github", "memory"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write project plans, status reports, risk registers, and documentation",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Track project issues, milestones, pull requests, and team collaboration",
+      "required": true,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Store project context, decisions, lessons learned, and stakeholder preferences",
+      "required": false,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/project-plan",
+      "description": "Create comprehensive project plan with WBS, timeline, and resources",
+      "usage": "/project-plan - Generates detailed project plan including work breakdown structure, schedule, and resource allocation"
+    },
+    {
+      "name": "/milestone-track",
+      "description": "Track milestone progress and identify schedule risks",
+      "usage": "/milestone-track - Reviews milestone status, identifies delays, and recommends corrective actions"
+    },
+    {
+      "name": "/resource-allocate",
+      "description": "Optimize resource allocation across project tasks",
+      "usage": "/resource-allocate - Analyzes resource capacity, balances workload, and optimizes team allocation"
+    },
+    {
+      "name": "/risk-register",
+      "description": "Maintain and update project risk register with mitigation plans",
+      "usage": "/risk-register - Updates risk register with new risks, impacts, probabilities, and mitigation strategies"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "business-analyst",
+      "product-manager",
+      "scrum-master",
+      "qa-expert",
+      "technical-lead"
+    ],
+    "delegatesTo": [
+      "backend-developer",
+      "frontend-developer",
+      "devops-engineer"
+    ],
+    "receivesFrom": [
+      "business-analyst",
+      "product-manager",
+      "stakeholder"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Create a project plan for a new e-commerce platform launch in 6 months",
+      "capability": "Comprehensive project planning including WBS, timeline, resource allocation, risk register, and communication plan"
+    },
+    {
+      "prompt": "Track milestone progress and identify risks for the current sprint",
+      "capability": "Milestone tracking with schedule performance analysis, risk identification, and corrective action recommendations"
+    },
+    {
+      "prompt": "Optimize resource allocation for the development team across multiple projects",
+      "capability": "Resource capacity analysis, workload balancing, and optimal team allocation across concurrent initiatives"
+    },
+    {
+      "prompt": "Update the risk register with recent technical debt and infrastructure concerns",
+      "capability": "Risk identification, impact assessment, probability analysis, and mitigation strategy development"
+    },
+    {
+      "prompt": "Generate executive status report for Q4 project portfolio",
+      "capability": "Executive-level reporting with KPIs, budget variance, schedule performance, and strategic insights"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VoltAgent/claude-code-agent-marketplace/schemas/agent-registry.schema.json",
+  "title": "Agent Registry Schema",
+  "description": "Schema for the central agent registry file",
+  "type": "object",
+  "required": ["version", "generatedAt", "statistics", "categories", "agents", "mcpServerCatalog"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Schema reference"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Registry schema version"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp of generation"
+    },
+    "statistics": {
+      "type": "object",
+      "required": ["totalAgents", "categories", "mcpServersUsed"],
+      "properties": {
+        "totalAgents": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of agents in registry"
+        },
+        "categories": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of categories"
+        },
+        "mcpServersUsed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of unique MCP servers"
+        },
+        "totalSlashCommands": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total slash commands across all agents"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "agentCount", "agents"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^\\d{2}-[a-z-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "agentCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "agents": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "agents": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["path", "category", "version"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Relative path to agent directory"
+          },
+          "manifest": {
+            "type": "string",
+            "default": "agent-manifest.json",
+            "description": "Manifest filename"
+          },
+          "mcpConfig": {
+            "type": "string",
+            "default": "mcp-config.json",
+            "description": "MCP config filename"
+          },
+          "instructions": {
+            "type": "string",
+            "default": "CLAUDE.md",
+            "description": "Instructions filename"
+          },
+          "readme": {
+            "type": "string",
+            "default": "README.md",
+            "description": "README filename"
+          },
+          "category": {
+            "type": "string",
+            "description": "Category ID"
+          },
+          "version": {
+            "type": "string",
+            "description": "Agent version"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description"
+          },
+          "capabilities": {
+            "type": "object",
+            "properties": {
+              "primaryDomain": { "type": "string" },
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          },
+          "mcpServers": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "MCP servers used by this agent"
+          },
+          "slashCommands": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Slash commands provided"
+          },
+          "requirements": {
+            "type": "object",
+            "properties": {
+              "apiKeys": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "cliTools": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "mcpServerCatalog": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["package", "category"],
+        "properties": {
+          "package": {
+            "type": "string",
+            "description": "npm or pip package name"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["version-control", "database", "cloud", "web", "code-analysis", "documentation", "filesystem", "integration", "ai-ml"],
+            "description": "Server category"
+          },
+          "description": {
+            "type": "string",
+            "description": "What this server does"
+          },
+          "requiredEnvVars": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Required environment variables"
+          },
+          "optionalEnvVars": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Optional environment variables"
+          },
+          "usedByAgents": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Agent IDs using this server"
+          },
+          "installCommand": {
+            "type": "string",
+            "description": "Command to install/run the server"
+          }
+        }
+      }
+    },
+    "capabilityIndex": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "description": "Map of capabilities to agent IDs"
+    },
+    "slashCommandIndex": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Map of slash commands to agent IDs"
+    }
+  }
+}

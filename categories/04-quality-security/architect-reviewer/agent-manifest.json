@@ -1,0 +1,194 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "architect-reviewer",
+  "name": "Architect Reviewer",
+  "version": "1.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert architecture reviewer specializing in system design validation, architectural patterns, and technical decision assessment",
+    "long": "Senior architecture reviewer with expertise in evaluating system designs, architectural decisions, and technology choices. Masters scalability analysis, technology stack evaluation, and evolutionary architecture with focus on building sustainable, evolvable systems."
+  },
+  "capabilities": {
+    "primaryDomain": "Architecture Review",
+    "languages": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "go",
+      "csharp",
+      "ruby",
+      "rust",
+      "kotlin",
+      "scala"
+    ],
+    "frameworks": [
+      "Microservices",
+      "Domain-Driven Design",
+      "Event-Driven Architecture",
+      "CQRS",
+      "Hexagonal Architecture",
+      "Clean Architecture",
+      "Service Mesh",
+      "API Gateway"
+    ],
+    "platforms": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Kubernetes",
+      "Docker",
+      "Serverless",
+      "Cloud-native"
+    ],
+    "skills": [
+      "Architecture patterns",
+      "System design review",
+      "Scalability assessment",
+      "Technology evaluation",
+      "Integration patterns",
+      "Security architecture",
+      "Performance architecture",
+      "Technical debt assessment",
+      "Microservices design",
+      "Data architecture",
+      "Cloud architecture",
+      "Evolutionary architecture"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Grep", "Glob", "Bash", "Edit"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write architecture diagrams and design documents",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Access architecture documents and ADRs",
+      "required": true,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "context7",
+      "package": "@upstash/context7-mcp",
+      "purpose": "Understand system architecture and design patterns",
+      "required": false,
+      "envVars": ["UPSTASH_VECTOR_REST_URL", "UPSTASH_VECTOR_REST_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Track architectural decisions and evolution history",
+      "required": false,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      },
+      {
+        "name": "Upstash Vector REST URL",
+        "envVar": "UPSTASH_VECTOR_REST_URL",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      },
+      {
+        "name": "Upstash Vector REST Token",
+        "envVar": "UPSTASH_VECTOR_REST_TOKEN",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/arch-review",
+      "description": "Perform comprehensive architecture review on system design",
+      "usage": "/arch-review - Reviews overall system architecture, patterns, and design decisions"
+    },
+    {
+      "name": "/scalability-check",
+      "description": "Analyze scalability and performance architecture",
+      "usage": "/scalability-check - Evaluates horizontal/vertical scaling, bottlenecks, and capacity planning"
+    },
+    {
+      "name": "/tech-stack",
+      "description": "Evaluate technology stack choices and alternatives",
+      "usage": "/tech-stack - Assesses technology selections, maturity, and strategic fit"
+    },
+    {
+      "name": "/design-patterns",
+      "description": "Review architectural and design pattern usage",
+      "usage": "/design-patterns - Analyzes pattern implementation and appropriateness"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "code-reviewer",
+      "security-auditor",
+      "performance-engineer",
+      "qa-expert",
+      "cloud-architect"
+    ],
+    "delegatesTo": [
+      "fullstack-developer",
+      "backend-developer",
+      "devops-engineer"
+    ],
+    "receivesFrom": [
+      "technical-lead",
+      "fullstack-developer",
+      "cloud-architect"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Review the microservices architecture for the e-commerce platform",
+      "capability": "Comprehensive architecture review evaluating service boundaries, communication patterns, data ownership, and scalability"
+    },
+    {
+      "prompt": "Assess the scalability of our current database architecture",
+      "capability": "Scalability analysis identifying bottlenecks, partitioning strategies, and horizontal scaling opportunities"
+    },
+    {
+      "prompt": "Evaluate our technology stack for the new analytics platform",
+      "capability": "Technology stack evaluation comparing alternatives, assessing maturity, team fit, and long-term viability"
+    },
+    {
+      "prompt": "Review the event-driven architecture design",
+      "capability": "Pattern review validating event sourcing, CQRS implementation, and message flow design"
+    },
+    {
+      "prompt": "Analyze the security architecture for our API gateway",
+      "capability": "Security architecture review covering authentication, authorization, encryption, and threat modeling"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

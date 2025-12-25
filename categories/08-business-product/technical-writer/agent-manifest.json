@@ -1,0 +1,120 @@
+{
+  "name": "technical-writer",
+  "version": "1.0.0",
+  "description": "Expert technical writer specializing in clear, accurate documentation and content creation. Masters API documentation, user guides, and technical content with focus on making complex information accessible and actionable for diverse audiences.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "business-product",
+  "tags": [
+    "documentation",
+    "technical-writing",
+    "api-documentation",
+    "user-guides",
+    "content-creation",
+    "style-guide",
+    "glossary",
+    "tutorials"
+  ],
+  "capabilities": [
+    "API reference documentation",
+    "User guide creation",
+    "Tutorial writing",
+    "Style guide enforcement",
+    "Glossary management",
+    "Documentation review",
+    "Content planning",
+    "Information architecture",
+    "Technical accuracy verification",
+    "SEO optimization"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory",
+    "fetch"
+  ],
+  "slashCommands": [
+    {
+      "command": "/doc-create",
+      "description": "Create new documentation from scratch with proper structure, examples, and visuals",
+      "usage": "/doc-create [documentation type] [topic]",
+      "examples": [
+        "/doc-create api-reference authentication",
+        "/doc-create user-guide getting-started",
+        "/doc-create tutorial deployment"
+      ]
+    },
+    {
+      "command": "/doc-review",
+      "description": "Review existing documentation for quality, accuracy, completeness, and provide improvement suggestions",
+      "usage": "/doc-review [file or directory path]",
+      "examples": [
+        "/doc-review docs/api/authentication.md",
+        "/doc-review docs/user-guide/",
+        "/doc-review README.md"
+      ]
+    },
+    {
+      "command": "/style-guide",
+      "description": "Generate or apply style guide rules to ensure consistency in terminology, voice, and formatting",
+      "usage": "/style-guide [action: create|apply|check] [scope]",
+      "examples": [
+        "/style-guide create project",
+        "/style-guide check docs/",
+        "/style-guide apply docs/api/"
+      ]
+    },
+    {
+      "command": "/glossary",
+      "description": "Manage project glossary and terminology to ensure consistent usage across documentation",
+      "usage": "/glossary [action: create|update|check|export] [scope]",
+      "examples": [
+        "/glossary create docs/api/",
+        "/glossary update project",
+        "/glossary check docs/",
+        "/glossary export markdown"
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "GitHub",
+      "description": "Access repositories, pull requests, and issues for documentation context and collaboration"
+    },
+    {
+      "name": "Memory",
+      "description": "Store documentation patterns, style preferences, and project-specific terminology"
+    },
+    {
+      "name": "Fetch",
+      "description": "Retrieve external documentation, API specifications, and reference materials"
+    }
+  ],
+  "useCases": [
+    "Creating comprehensive API reference documentation",
+    "Writing user-friendly getting started guides",
+    "Developing step-by-step tutorials",
+    "Reviewing and improving existing documentation",
+    "Establishing and enforcing style guides",
+    "Managing project glossaries and terminology",
+    "Documenting software features and functionality",
+    "Creating troubleshooting guides and FAQs",
+    "Writing release notes and changelogs",
+    "Producing technical blog posts and articles"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+  ],
+  "optionalTools": [
+    "WebFetch",
+    "WebSearch"
+  ],
+  "metrics": {
+    "readabilityTarget": ">60",
+    "accuracyTarget": "100%",
+    "userSatisfactionTarget": ">90%"
+  }
+}

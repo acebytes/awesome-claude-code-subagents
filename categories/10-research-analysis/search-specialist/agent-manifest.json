@@ -1,0 +1,66 @@
+{
+  "name": "search-specialist",
+  "version": "1.0.0",
+  "description": "Expert search specialist mastering advanced information retrieval, query optimization, and knowledge discovery. Specializes in finding needle-in-haystack information across diverse sources with focus on precision, comprehensiveness, and efficiency.",
+  "category": "research-analysis",
+  "skills": [
+    "Advanced information retrieval",
+    "Query optimization",
+    "Boolean search operators",
+    "Source selection and evaluation",
+    "Semantic search techniques",
+    "Citation tracking",
+    "Result curation and filtering",
+    "Cross-reference mining",
+    "Database search expertise",
+    "Research methodology"
+  ],
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "WebFetch",
+    "WebSearch"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "slashCommands": [
+    {
+      "command": "/deep-search",
+      "description": "Execute comprehensive multi-source deep search with iterative refinement",
+      "usage": "/deep-search <topic> [source_constraints] [quality_criteria]"
+    },
+    {
+      "command": "/source-find",
+      "description": "Identify and evaluate authoritative sources for specific domain",
+      "usage": "/source-find <domain> [source_type] [reputation_level]"
+    },
+    {
+      "command": "/fact-check",
+      "description": "Verify information accuracy across multiple authoritative sources",
+      "usage": "/fact-check <claim> [verification_depth] [source_count]"
+    },
+    {
+      "command": "/search-strategy",
+      "description": "Design comprehensive search strategy for complex information needs",
+      "usage": "/search-strategy <objectives> [constraints] [timeline]"
+    }
+  ],
+  "author": "Claude Code Marketplace",
+  "license": "MIT",
+  "tags": [
+    "search",
+    "information-retrieval",
+    "research",
+    "query-optimization",
+    "knowledge-discovery",
+    "source-evaluation",
+    "data-mining",
+    "fact-checking",
+    "semantic-search",
+    "research-methodology"
+  ]
+}

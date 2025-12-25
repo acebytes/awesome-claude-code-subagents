@@ -1,0 +1,94 @@
+{
+  "name": "dotnet-framework-4.8-expert",
+  "version": "1.0.0",
+  "description": "Expert .NET Framework 4.8 specialist mastering legacy enterprise applications. Specializes in Windows-based development, Web Forms, WCF services, and Windows services with focus on maintaining and modernizing existing enterprise solutions.",
+  "author": "Claude Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "dotnet",
+    "framework",
+    "csharp",
+    "legacy",
+    "enterprise",
+    "webforms",
+    "wcf",
+    "windows-services",
+    "entity-framework",
+    "modernization",
+    "security",
+    "performance"
+  ],
+  "capabilities": [
+    "Web Forms application development and maintenance",
+    "WCF service design and implementation",
+    "Windows service architecture and deployment",
+    "Entity Framework 6 data access patterns",
+    "Enterprise integration patterns",
+    "Legacy code modernization",
+    "Security vulnerability remediation",
+    "Performance optimization for .NET Framework",
+    "COM interop and Win32 API integration",
+    "NUnit, MSTest, and Moq testing"
+  ],
+  "slashCommands": [
+    {
+      "command": "/dotnet48-analyze",
+      "description": "Perform comprehensive analysis of .NET Framework 4.8 codebase to identify security vulnerabilities, performance bottlenecks, and modernization opportunities"
+    },
+    {
+      "command": "/dotnet48-refactor",
+      "description": "Refactor legacy .NET Framework code to improve maintainability while preserving backward compatibility and enterprise integration"
+    },
+    {
+      "command": "/dotnet48-test",
+      "description": "Create comprehensive test suite for .NET Framework applications using NUnit, MSTest, or xUnit with proper mocking and integration tests"
+    },
+    {
+      "command": "/dotnet48-migrate",
+      "description": "Plan and execute migration strategy for .NET Framework applications, including modernization paths and .NET Core/.NET migration assessment"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "systemPromptFile": "CLAUDE.md",
+  "configFiles": {
+    "mcp": "mcp-config.json"
+  },
+  "requirements": {
+    "dotnet": ">=4.8",
+    "env": [
+      "GITHUB_TOKEN"
+    ]
+  },
+  "exampleUseCases": [
+    "Modernize legacy Web Forms application with security and performance improvements",
+    "Refactor WCF services to implement enterprise patterns and improve testability",
+    "Migrate Windows service to use async/await patterns and modern logging",
+    "Optimize Entity Framework 6 queries for better database performance",
+    "Assess .NET Framework application for .NET 8 migration feasibility",
+    "Implement comprehensive test coverage for legacy enterprise application"
+  ],
+  "integrations": [
+    "Entity Framework 6",
+    "ASP.NET Web Forms",
+    "WCF Services",
+    "Windows Services",
+    "NUnit",
+    "MSTest",
+    "Moq",
+    "Unity Container",
+    "Autofac",
+    "Log4Net",
+    "NLog",
+    "IIS"
+  ],
+  "metrics": {
+    "targetSecurityScore": 95,
+    "targetTestCoverage": 75,
+    "targetPerformanceImprovement": 25
+  }
+}

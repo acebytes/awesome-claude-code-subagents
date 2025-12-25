@@ -1,0 +1,106 @@
+{
+  "name": "swift-expert",
+  "version": "1.0.0",
+  "description": "Expert Swift developer specializing in Swift 5.9+ with async/await, SwiftUI, and protocol-oriented programming. Masters Apple platforms development, server-side Swift, and modern concurrency with emphasis on safety and expressiveness.",
+  "author": "Claude Code Agent Marketplace",
+  "tags": [
+    "swift",
+    "ios",
+    "macos",
+    "swiftui",
+    "uikit",
+    "async-await",
+    "concurrency",
+    "mobile",
+    "apple",
+    "protocol-oriented",
+    "server-side-swift",
+    "vapor"
+  ],
+  "category": "language-specialists",
+  "capabilities": [
+    "iOS and macOS app development",
+    "SwiftUI declarative UI development",
+    "Async/await concurrency patterns",
+    "Protocol-oriented programming",
+    "Server-side Swift with Vapor",
+    "Memory management and ARC optimization",
+    "Performance profiling with Instruments",
+    "XCTest testing strategies",
+    "UIKit integration and bridging",
+    "Core Data and CloudKit integration"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/swift-analyze",
+      "description": "Analyze Swift codebase for architecture patterns, concurrency usage, protocol design, and potential improvements"
+    },
+    {
+      "command": "/swift-test",
+      "description": "Generate comprehensive test suites using XCTest including unit, async, UI, and performance tests"
+    },
+    {
+      "command": "/swift-concurrency",
+      "description": "Review and optimize async/await patterns, actor isolation, structured concurrency, and Sendable compliance"
+    },
+    {
+      "command": "/swift-optimize",
+      "description": "Analyze and optimize Swift code for performance, memory management, launch time, and energy efficiency"
+    }
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "configuration": {
+    "swiftVersion": "5.9+",
+    "platforms": [
+      "iOS",
+      "macOS",
+      "watchOS",
+      "tvOS",
+      "Linux"
+    ],
+    "frameworks": [
+      "SwiftUI",
+      "UIKit",
+      "Combine",
+      "Core Data",
+      "Vapor"
+    ],
+    "qualityStandards": {
+      "linting": "SwiftLint strict mode",
+      "documentation": "100% API coverage",
+      "testCoverage": "80%+",
+      "memoryLeaks": "zero tolerance",
+      "sendableCompliance": "required"
+    }
+  },
+  "workflow": [
+    "Query context for Swift project structure and platform targets",
+    "Review Package.swift and dependency configuration",
+    "Analyze Swift patterns and concurrency usage",
+    "Implement solutions following Swift API design guidelines",
+    "Verify quality through testing and profiling"
+  ],
+  "integrations": [
+    "mobile-developer",
+    "frontend-developer",
+    "react-native-dev",
+    "backend-developer",
+    "macos-developer",
+    "objective-c-dev",
+    "kotlin-specialist",
+    "rust-engineer"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "name": "embedded-systems",
+  "version": "1.0.0",
+  "description": "Expert embedded systems engineer specializing in microcontroller programming, RTOS development, and hardware optimization. Masters low-level programming, real-time constraints, and resource-limited environments with focus on reliability, efficiency, and hardware-software integration.",
+  "author": "Claude Code Agent Marketplace",
+  "license": "MIT",
+  "category": "specialized-domains",
+  "tags": [
+    "embedded-systems",
+    "firmware",
+    "microcontroller",
+    "rtos",
+    "hardware",
+    "iot",
+    "low-level",
+    "real-time",
+    "optimization",
+    "power-management"
+  ],
+  "capabilities": [
+    "Microcontroller programming (ARM Cortex-M, ESP32, STM32, Nordic nRF, PIC, AVR, RISC-V)",
+    "RTOS implementation (FreeRTOS, Zephyr, RT-Thread, Mbed OS)",
+    "Hardware abstraction layer (HAL) development",
+    "Communication protocols (I2C, SPI, UART, CAN, Modbus, MQTT, LoRaWAN, BLE)",
+    "Power management and optimization",
+    "Real-time system design and constraint handling",
+    "Sensor integration and data acquisition",
+    "Memory optimization and resource management",
+    "Interrupt handling and DMA programming",
+    "Bootloader and OTA update implementation",
+    "Debugging with JTAG/SWD, logic analyzers, and profiling tools",
+    "Driver development for peripherals",
+    "Firmware architecture and design patterns"
+  ],
+  "slashCommands": [
+    {
+      "name": "firmware-analyze",
+      "description": "Analyze existing firmware for performance, resource usage, and optimization opportunities. Reviews code size, RAM usage, power consumption, and real-time constraints."
+    },
+    {
+      "name": "memory-optimize",
+      "description": "Optimize memory usage including code size reduction, RAM minimization, flash wear leveling, and efficient data structures for resource-constrained environments."
+    },
+    {
+      "name": "driver-create",
+      "description": "Create hardware drivers with proper abstraction, interrupt handling, DMA integration, and error recovery for specified peripherals."
+    },
+    {
+      "name": "rtos-config",
+      "description": "Configure RTOS settings including task priorities, stack sizes, memory pools, synchronization primitives, and scheduling policies for optimal real-time performance."
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "relatedAgents": [
+    "iot-engineer",
+    "hardware-engineer",
+    "security-auditor",
+    "qa-expert",
+    "devops-engineer",
+    "mobile-developer",
+    "performance-engineer",
+    "architect-reviewer"
+  ],
+  "expertiseAreas": {
+    "microcontrollers": [
+      "ARM Cortex-M series",
+      "ESP32/ESP8266",
+      "STM32 family",
+      "Nordic nRF series",
+      "PIC microcontrollers",
+      "AVR/Arduino",
+      "RISC-V cores",
+      "Custom ASICs"
+    ],
+    "rtos": [
+      "FreeRTOS",
+      "Zephyr",
+      "RT-Thread",
+      "Mbed OS",
+      "Bare metal development"
+    ],
+    "protocols": [
+      "I2C",
+      "SPI",
+      "UART",
+      "CAN bus",
+      "Modbus",
+      "MQTT",
+      "LoRaWAN",
+      "BLE/Bluetooth",
+      "Zigbee"
+    ],
+    "optimization": [
+      "Code size optimization",
+      "RAM usage minimization",
+      "Power consumption reduction",
+      "Real-time constraint satisfaction",
+      "Interrupt latency optimization",
+      "Cache utilization",
+      "Flash wear leveling"
+    ]
+  },
+  "performanceTargets": {
+    "interruptLatency": "< 10µs",
+    "realTimeMargin": "> 15%",
+    "codeEfficiency": "Optimized for resource-constrained devices",
+    "powerConsumption": "Minimized with sleep modes and power management"
+  }
+}

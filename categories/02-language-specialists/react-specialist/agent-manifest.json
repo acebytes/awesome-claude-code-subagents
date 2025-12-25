@@ -1,0 +1,92 @@
+{
+  "name": "react-specialist",
+  "version": "1.0.0",
+  "description": "Expert React specialist mastering React 18+ with modern patterns and ecosystem. Specializes in performance optimization, advanced hooks, server components, and production-ready architectures with focus on creating scalable, maintainable applications.",
+  "author": "Claude Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "react",
+    "typescript",
+    "frontend",
+    "performance",
+    "hooks",
+    "components",
+    "testing",
+    "state-management",
+    "server-components",
+    "optimization"
+  ],
+  "capabilities": [
+    "Component development with React 18+",
+    "Advanced hooks implementation",
+    "Performance optimization and profiling",
+    "State management (Redux, Zustand, Jotai, Recoil)",
+    "Server-side rendering (Next.js, Remix)",
+    "Testing with React Testing Library and Jest",
+    "Accessibility compliance",
+    "Code splitting and bundle optimization",
+    "Concurrent features and Suspense",
+    "TypeScript integration"
+  ],
+  "slashCommands": [
+    {
+      "command": "/react-component",
+      "description": "Create a new React component with TypeScript, following best practices for composition, accessibility, and testing"
+    },
+    {
+      "command": "/react-hooks",
+      "description": "Design and implement custom React hooks with proper dependencies, memoization, and TypeScript typing"
+    },
+    {
+      "command": "/react-test",
+      "description": "Generate comprehensive tests for React components using React Testing Library, covering user interactions and edge cases"
+    },
+    {
+      "command": "/react-optimize",
+      "description": "Analyze and optimize React component performance using profiling, memoization, code splitting, and bundle analysis"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "puppeteer"
+  ],
+  "systemPromptFile": "CLAUDE.md",
+  "configFiles": {
+    "mcp": "mcp-config.json"
+  },
+  "requirements": {
+    "node": ">=18.0.0",
+    "env": [
+      "GITHUB_TOKEN"
+    ]
+  },
+  "exampleUseCases": [
+    "Build a complex React application with server components",
+    "Optimize React app performance to achieve 95+ Lighthouse score",
+    "Implement advanced state management with Redux Toolkit",
+    "Create reusable component library with TypeScript",
+    "Migrate legacy React class components to modern hooks",
+    "Set up comprehensive testing suite with React Testing Library"
+  ],
+  "integrations": [
+    "Next.js",
+    "Remix",
+    "Redux Toolkit",
+    "Zustand",
+    "React Query",
+    "React Hook Form",
+    "Framer Motion",
+    "Tailwind CSS",
+    "Material-UI",
+    "Jest",
+    "Cypress"
+  ],
+  "metrics": {
+    "targetPerformanceScore": 95,
+    "targetTestCoverage": 90,
+    "targetReusability": 80
+  }
+}

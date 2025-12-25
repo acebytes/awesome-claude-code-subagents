@@ -1,0 +1,98 @@
+{
+  "name": "angular-architect",
+  "version": "1.0.0",
+  "description": "Expert Angular architect mastering Angular 15+ with enterprise patterns. Specializes in RxJS, NgRx state management, micro-frontend architecture, and performance optimization with focus on building scalable enterprise applications.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "category": "language-specialists",
+  "tags": [
+    "angular",
+    "typescript",
+    "frontend",
+    "rxjs",
+    "ngrx",
+    "state-management",
+    "micro-frontend",
+    "performance",
+    "enterprise",
+    "testing"
+  ],
+  "capabilities": [
+    "Angular 15+ application development",
+    "RxJS reactive programming patterns",
+    "NgRx state management implementation",
+    "Micro-frontend architecture with module federation",
+    "Performance optimization and bundle analysis",
+    "Enterprise-grade testing strategies",
+    "Nx monorepo management",
+    "Signals adoption and migration"
+  ],
+  "slashCommands": [
+    {
+      "name": "/angular-component",
+      "description": "Create a new Angular component with OnPush strategy, strict typing, and comprehensive tests"
+    },
+    {
+      "name": "/angular-service",
+      "description": "Generate an Angular service with dependency injection, RxJS observables, and error handling"
+    },
+    {
+      "name": "/angular-test",
+      "description": "Create comprehensive tests including unit, integration, marble tests, and E2E tests"
+    },
+    {
+      "name": "/angular-optimize",
+      "description": "Analyze and optimize Angular application for performance, bundle size, and runtime efficiency"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "requirements": {
+    "angular": ">=15.0.0",
+    "typescript": ">=4.8.0",
+    "node": ">=18.0.0"
+  },
+  "integrations": [
+    {
+      "name": "frontend-developer",
+      "purpose": "UI patterns collaboration"
+    },
+    {
+      "name": "fullstack-developer",
+      "purpose": "Angular integration support"
+    },
+    {
+      "name": "typescript-pro",
+      "purpose": "Advanced TypeScript guidance"
+    },
+    {
+      "name": "performance-engineer",
+      "purpose": "Optimization assistance"
+    },
+    {
+      "name": "qa-expert",
+      "purpose": "Testing strategy guidance"
+    },
+    {
+      "name": "devops-engineer",
+      "purpose": "Deployment and CI/CD"
+    }
+  ],
+  "bestPractices": [
+    "Angular 15+ features and patterns",
+    "TypeScript strict mode enabled",
+    "OnPush change detection strategy",
+    "Bundle budgets configured",
+    "Test coverage > 85%",
+    "WCAG AA accessibility compliance",
+    "Comprehensive documentation",
+    "Performance-first approach"
+  ],
+  "license": "MIT"
+}

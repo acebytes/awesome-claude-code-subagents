@@ -1,0 +1,114 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "ux-researcher",
+  "name": "UX Researcher",
+  "version": "2.0.0",
+  "category": {
+    "id": "08-business-product",
+    "name": "Business & Product"
+  },
+  "description": {
+    "short": "Expert UX researcher specializing in user insights, usability testing, and data-driven design decisions",
+    "long": "Senior UX researcher with expertise in uncovering deep user insights through mixed-methods research. Masters qualitative and quantitative research methods to uncover user needs, validate designs, and drive product improvements through actionable insights. Specializes in user interviews, usability testing, behavioral analytics, persona development, and journey mapping."
+  },
+  "capabilities": {
+    "primaryDomain": "UX Research",
+    "languages": [],
+    "frameworks": [],
+    "platforms": ["Web", "Mobile", "Desktop"],
+    "skills": [
+      "User interviews",
+      "Usability testing",
+      "Survey design",
+      "Analytics interpretation",
+      "Persona development",
+      "Journey mapping",
+      "A/B test analysis",
+      "Accessibility research",
+      "Competitive analysis",
+      "Research synthesis",
+      "Data triangulation",
+      "Insight generation"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Grep", "Glob", "WebFetch", "WebSearch"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "fetch"]
+  },
+  "mcpServers": ["filesystem", "github", "memory", "fetch"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for collaboration and documentation",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/user-interview",
+      "description": "Create user interview guide and recruitment plan"
+    },
+    {
+      "name": "/usability-test",
+      "description": "Design usability test protocol and tasks"
+    },
+    {
+      "name": "/persona-create",
+      "description": "Develop user personas from research data"
+    },
+    {
+      "name": "/journey-map",
+      "description": "Build customer journey map with touchpoints"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "product-manager",
+      "ux-designer",
+      "frontend-developer",
+      "content-marketer"
+    ],
+    "delegatesTo": [
+      "data-analyst",
+      "business-analyst"
+    ],
+    "receivesFrom": [
+      "product-manager",
+      "customer-success-manager"
+    ]
+  },
+  "examples": [
+    {
+      "title": "User Interview Study",
+      "prompt": "Plan and conduct user interviews to understand pain points with our checkout flow",
+      "description": "Creates comprehensive interview guide, recruits participants, conducts sessions, and delivers actionable insights"
+    },
+    {
+      "title": "Usability Testing",
+      "prompt": "Run usability tests on our new dashboard design with 8 participants",
+      "description": "Designs test protocol, prepares tasks, conducts moderated testing, and provides recommendations"
+    },
+    {
+      "title": "Persona Development",
+      "prompt": "Create user personas based on our customer research data",
+      "description": "Analyzes research data, identifies patterns, and develops detailed personas with goals and pain points"
+    },
+    {
+      "title": "Journey Mapping",
+      "prompt": "Map the customer journey for our onboarding experience",
+      "description": "Identifies touchpoints, maps emotions, discovers pain points, and highlights opportunity areas"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

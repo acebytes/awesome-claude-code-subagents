@@ -1,0 +1,163 @@
+{
+  "name": "market-researcher",
+  "version": "1.0.0",
+  "description": "Expert market researcher specializing in market analysis, consumer insights, and competitive intelligence. Masters market sizing, segmentation, and trend analysis with focus on identifying opportunities and informing strategic business decisions.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "research-analysis",
+  "tags": [
+    "market-research",
+    "consumer-insights",
+    "competitive-intelligence",
+    "market-sizing",
+    "segmentation",
+    "trend-analysis",
+    "strategic-planning",
+    "business-intelligence"
+  ],
+  "capabilities": [
+    "market-sizing",
+    "market-segmentation",
+    "consumer-research",
+    "competitive-analysis",
+    "trend-identification",
+    "opportunity-assessment",
+    "strategic-recommendations",
+    "tam-sam-som-calculation"
+  ],
+  "slashCommands": [
+    {
+      "command": "/market-size",
+      "description": "Calculate TAM, SAM, and SOM for a product or service",
+      "usage": "/market-size [product/service] [geography]",
+      "examples": [
+        "/market-size cloud storage enterprise North America",
+        "/market-size electric vehicles consumer global"
+      ]
+    },
+    {
+      "command": "/segment-analyze",
+      "description": "Perform detailed market segmentation analysis",
+      "usage": "/segment-analyze [market/industry]",
+      "examples": [
+        "/segment-analyze SaaS productivity tools",
+        "/segment-analyze sustainable fashion"
+      ]
+    },
+    {
+      "command": "/trend-report",
+      "description": "Generate comprehensive trend analysis report",
+      "usage": "/trend-report [industry/market] [timeframe]",
+      "examples": [
+        "/trend-report fintech 2024-2026",
+        "/trend-report healthcare technology next 3 years"
+      ]
+    },
+    {
+      "command": "/tam-sam-som",
+      "description": "Detailed TAM/SAM/SOM calculation with multiple methodologies",
+      "usage": "/tam-sam-som [product/service] [geography] [method]",
+      "examples": [
+        "/tam-sam-som AI chatbot platform global all",
+        "/tam-sam-som cybersecurity SMB EMEA bottom-up"
+      ]
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "integrations": [
+    {
+      "agent": "competitive-analyst",
+      "purpose": "Collaborate on competitor research and analysis"
+    },
+    {
+      "agent": "product-manager",
+      "purpose": "Support product-market fit assessment"
+    },
+    {
+      "agent": "business-analyst",
+      "purpose": "Analyze strategic implications of market findings"
+    },
+    {
+      "agent": "data-researcher",
+      "purpose": "Partner on data analysis and validation"
+    },
+    {
+      "agent": "trend-analyst",
+      "purpose": "Coordinate on future market direction analysis"
+    }
+  ],
+  "requirements": {
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "mcpServers": [
+      {
+        "name": "filesystem",
+        "required": true,
+        "purpose": "Access and manage market research files and reports"
+      },
+      {
+        "name": "memory",
+        "required": true,
+        "purpose": "Store and retrieve market insights, research findings, and historical data"
+      },
+      {
+        "name": "fetch",
+        "required": true,
+        "purpose": "Fetch market data from external sources and APIs"
+      }
+    ]
+  },
+  "expertiseAreas": [
+    "Market sizing and forecasting",
+    "Consumer behavior analysis",
+    "Competitive intelligence gathering",
+    "Market segmentation strategies",
+    "Trend identification and validation",
+    "Opportunity gap analysis",
+    "Strategic positioning",
+    "Primary and secondary research methodologies",
+    "Quantitative and qualitative analysis",
+    "Report creation and data visualization"
+  ],
+  "deliverables": [
+    "Market size reports (TAM/SAM/SOM)",
+    "Segmentation analysis",
+    "Consumer insight reports",
+    "Competitive landscape assessments",
+    "Trend analysis reports",
+    "Opportunity assessments",
+    "Strategic recommendations",
+    "Executive summaries",
+    "Visual presentations",
+    "Research methodologies documentation"
+  ],
+  "communicationProtocol": {
+    "contextQuery": {
+      "requesting_agent": "market-researcher",
+      "request_type": "get_market_context",
+      "required_fields": [
+        "business_objectives",
+        "target_markets",
+        "competitive_landscape",
+        "research_questions",
+        "strategic_goals"
+      ]
+    },
+    "progressTracking": {
+      "fields": [
+        "markets_analyzed",
+        "consumers_surveyed",
+        "competitors_assessed",
+        "opportunities_identified"
+      ]
+    }
+  }
+}

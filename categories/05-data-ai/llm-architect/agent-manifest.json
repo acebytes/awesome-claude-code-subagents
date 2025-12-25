@@ -1,0 +1,313 @@
+{
+  "name": "llm-architect",
+  "version": "1.0.0",
+  "description": "Expert LLM architect specializing in large language model architecture, deployment, and optimization. Masters LLM system design, fine-tuning strategies, and production serving with focus on building scalable, efficient, and safe LLM applications.",
+  "category": "data-ai",
+  "metadata": {
+    "author": "Claude Code Agent Marketplace",
+    "tags": [
+      "llm",
+      "large-language-models",
+      "fine-tuning",
+      "rag",
+      "prompt-engineering",
+      "model-optimization",
+      "inference-optimization",
+      "lora",
+      "qlora",
+      "vllm",
+      "transformers",
+      "safety",
+      "cost-optimization",
+      "production-llm"
+    ],
+    "expertiseAreas": [
+      "LLM System Architecture",
+      "Fine-tuning Strategies",
+      "RAG Implementation",
+      "Production Deployment",
+      "Inference Optimization",
+      "Prompt Engineering",
+      "Safety Mechanisms",
+      "Cost Optimization",
+      "Multi-model Orchestration"
+    ],
+    "frameworks": [
+      "vLLM",
+      "TGI (Text Generation Inference)",
+      "Triton Inference Server",
+      "Transformers",
+      "LangChain",
+      "LlamaIndex",
+      "PEFT (LoRA/QLoRA)",
+      "Axolotl",
+      "DeepSpeed"
+    ],
+    "servingPatterns": [
+      "vLLM Deployment",
+      "TGI Optimization",
+      "Continuous Batching",
+      "KV Cache Optimization",
+      "Speculative Decoding",
+      "Model Sharding",
+      "Load Balancing",
+      "Multi-model Routing"
+    ],
+    "optimizationTechniques": [
+      "Quantization (4-bit, 8-bit)",
+      "LoRA/QLoRA Fine-tuning",
+      "Flash Attention",
+      "Tensor Parallelism",
+      "Pipeline Parallelism",
+      "Prompt Caching",
+      "Token Optimization",
+      "Context Compression"
+    ]
+  },
+  "capabilities": {
+    "primaryFunctions": [
+      "Design comprehensive LLM system architectures",
+      "Implement fine-tuning strategies (LoRA/QLoRA)",
+      "Build and optimize RAG systems",
+      "Deploy LLMs to production",
+      "Optimize inference performance",
+      "Engineer effective prompts",
+      "Implement safety mechanisms",
+      "Reduce operational costs"
+    ],
+    "technicalSkills": [
+      "Model selection and evaluation",
+      "Fine-tuning configuration",
+      "RAG pipeline design",
+      "Inference optimization",
+      "Prompt engineering",
+      "Safety implementation",
+      "Cost analysis and reduction",
+      "Performance benchmarking"
+    ],
+    "deliverables": [
+      "Production-ready LLM systems",
+      "Fine-tuned models",
+      "RAG implementations",
+      "Serving configurations",
+      "Prompt templates",
+      "Safety filters",
+      "Cost optimization reports",
+      "Performance benchmarks"
+    ]
+  },
+  "configuration": {
+    "mcpServers": [
+      "filesystem",
+      "github",
+      "context7",
+      "fetch"
+    ],
+    "slashCommands": [
+      {
+        "command": "/llm-design",
+        "description": "Design LLM system architecture",
+        "parameters": "[use-case] [requirements]",
+        "example": "/llm-design customer-support \"multi-language, <500ms response, 1000 qps, safety critical\""
+      },
+      {
+        "command": "/llm-optimize",
+        "description": "Optimize LLM inference performance",
+        "parameters": "[model-path] [targets]",
+        "example": "/llm-optimize ./models/llama-7b \"latency<200ms, cost-50%, throughput+100%\""
+      },
+      {
+        "command": "/llm-finetune",
+        "description": "Plan and implement LLM fine-tuning",
+        "parameters": "[base-model] [task] [dataset-path]",
+        "example": "/llm-finetune llama-2-7b \"legal-document-analysis\" ./data/legal-corpus"
+      }
+    ],
+    "environmentVariables": {
+      "optional": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ]
+    }
+  },
+  "performanceMetrics": {
+    "targets": {
+      "inferenceLatency": "<200ms P95",
+      "throughput": ">100 tokens/s",
+      "costPerToken": "<$0.0001",
+      "safetyScore": ">95%",
+      "contextUtilization": ">80%",
+      "cacheHitRate": ">60%"
+    },
+    "monitoring": [
+      "Inference latency (P50, P95, P99)",
+      "Throughput (tokens/s)",
+      "Cost per token",
+      "Safety filter triggers",
+      "Hallucination detection",
+      "Context window usage",
+      "Cache hit rates",
+      "GPU utilization",
+      "Memory usage",
+      "Request queue depth"
+    ]
+  },
+  "workflows": {
+    "llmArchitecture": {
+      "description": "Design complete LLM system architecture",
+      "phases": [
+        "Requirements analysis",
+        "Model selection (open-source vs API)",
+        "Serving infrastructure design",
+        "Fine-tuning vs RAG decision",
+        "Safety mechanism design",
+        "Monitoring and logging setup",
+        "Cost projection",
+        "Scaling strategies"
+      ]
+    },
+    "fineTuning": {
+      "description": "Implement LLM fine-tuning",
+      "phases": [
+        "Dataset preparation",
+        "LoRA/QLoRA configuration",
+        "Training infrastructure setup",
+        "Hyperparameter tuning",
+        "Training execution",
+        "Evaluation and validation",
+        "Model merging",
+        "Deployment and benchmarking"
+      ]
+    },
+    "ragImplementation": {
+      "description": "Build RAG system",
+      "phases": [
+        "Document processing pipeline",
+        "Embedding model selection",
+        "Vector store setup",
+        "Retrieval optimization",
+        "Reranking implementation",
+        "Context management",
+        "Caching strategies",
+        "Performance validation"
+      ]
+    },
+    "inferenceOptimization": {
+      "description": "Optimize LLM inference",
+      "phases": [
+        "Performance benchmarking",
+        "Quantization application",
+        "KV cache optimization",
+        "Continuous batching setup",
+        "Prompt caching",
+        "Speculative decoding",
+        "Token optimization",
+        "Validation and deployment"
+      ]
+    }
+  },
+  "integrations": {
+    "llmTools": [
+      "Hugging Face Hub",
+      "OpenAI API",
+      "Anthropic API",
+      "Together AI",
+      "Replicate",
+      "Modal",
+      "BentoML",
+      "Ray Serve"
+    ],
+    "vectorStores": [
+      "Pinecone",
+      "Weaviate",
+      "Qdrant",
+      "Milvus",
+      "ChromaDB",
+      "FAISS",
+      "pgvector"
+    ],
+    "monitoringTools": [
+      "Weights & Biases",
+      "MLflow",
+      "LangSmith",
+      "Helicone",
+      "Prometheus",
+      "Grafana"
+    ],
+    "collaborationAgents": [
+      "ai-engineer",
+      "prompt-engineer",
+      "ml-engineer",
+      "data-engineer",
+      "nlp-engineer",
+      "backend-developer",
+      "cloud-architect",
+      "security-auditor"
+    ]
+  },
+  "bestPractices": {
+    "llmArchitecture": [
+      "Start with smallest viable model",
+      "Benchmark thoroughly before scaling",
+      "Implement proper caching",
+      "Use batching effectively",
+      "Monitor costs continuously",
+      "Plan for failures",
+      "Test safety thoroughly",
+      "Document decisions"
+    ],
+    "fineTuning": [
+      "Curate high-quality datasets",
+      "Use LoRA for efficiency",
+      "Validate rigorously",
+      "Prevent overfitting",
+      "Track experiment metrics",
+      "Compare against baselines",
+      "Test generalization",
+      "Version control models"
+    ],
+    "ragSystems": [
+      "Optimize embedding models",
+      "Choose appropriate vector stores",
+      "Implement hybrid search",
+      "Add reranking",
+      "Cache frequently accessed docs",
+      "Monitor retrieval quality",
+      "Handle edge cases",
+      "Test at scale"
+    ],
+    "costOptimization": [
+      "Use appropriate model sizes",
+      "Implement aggressive caching",
+      "Optimize token usage",
+      "Batch requests effectively",
+      "Use quantization",
+      "Monitor spending",
+      "Set budget alerts",
+      "Regular cost reviews"
+    ],
+    "safety": [
+      "Implement content filters",
+      "Detect prompt injections",
+      "Validate outputs",
+      "Monitor for hallucinations",
+      "Test bias thoroughly",
+      "Protect user privacy",
+      "Maintain audit logs",
+      "Regular safety audits"
+    ]
+  },
+  "qualityStandards": {
+    "checklist": [
+      "Inference latency < 200ms P95",
+      "Throughput > 100 tokens/s",
+      "Context window utilized efficiently",
+      "Safety filters enabled",
+      "Cost per token optimized",
+      "Accuracy benchmarked",
+      "Monitoring configured",
+      "Scaling tested",
+      "Documentation complete",
+      "Team trained"
+    ]
+  }
+}

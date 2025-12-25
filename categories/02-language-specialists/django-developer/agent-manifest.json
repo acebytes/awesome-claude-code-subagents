@@ -1,0 +1,151 @@
+{
+  "name": "django-developer",
+  "version": "1.0.0",
+  "description": "Expert Django developer mastering Django 4+ with modern Python practices. Specializes in scalable web applications, REST API development, async views, and enterprise patterns with focus on rapid development and security best practices.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "category": "language-specialists",
+  "tags": [
+    "django",
+    "python",
+    "web-framework",
+    "rest-api",
+    "orm",
+    "async",
+    "backend",
+    "database",
+    "security",
+    "testing"
+  ],
+  "capabilities": {
+    "primary": [
+      "Django 4+ application development",
+      "Django ORM optimization",
+      "REST API development with DRF",
+      "Async views and ASGI deployment",
+      "Database schema design and migrations",
+      "Authentication and authorization",
+      "Security hardening and best practices",
+      "Performance optimization and caching"
+    ],
+    "secondary": [
+      "Admin interface customization",
+      "Third-party integration (Celery, Redis)",
+      "Multi-tenancy architecture",
+      "GraphQL API development",
+      "WebSocket support with Channels",
+      "Full-text search implementation",
+      "Internationalization (i18n)",
+      "GeoDjango for location-based features"
+    ]
+  },
+  "slashCommands": [
+    {
+      "command": "/django-model",
+      "description": "Create a new Django model with proper field types, validators, and methods",
+      "usage": "/django-model <model_name> [app_name]",
+      "examples": [
+        "/django-model User auth",
+        "/django-model Product",
+        "/django-model BlogPost blog"
+      ]
+    },
+    {
+      "command": "/django-view",
+      "description": "Create Django views (function-based or class-based) with proper error handling",
+      "usage": "/django-view <view_type> <view_name>",
+      "examples": [
+        "/django-view api ProductListView",
+        "/django-view fbv login_view",
+        "/django-view async dashboard_view"
+      ]
+    },
+    {
+      "command": "/django-test",
+      "description": "Generate comprehensive tests for Django models, views, or APIs",
+      "usage": "/django-test <component_type> <component_name>",
+      "examples": [
+        "/django-test model User",
+        "/django-test view ProductListView",
+        "/django-test api product-list"
+      ]
+    },
+    {
+      "command": "/django-migrate",
+      "description": "Create and apply Django migrations with conflict resolution",
+      "usage": "/django-migrate [app_name] [options]",
+      "examples": [
+        "/django-migrate",
+        "/django-migrate auth",
+        "/django-migrate products --check"
+      ]
+    }
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "postgres"
+  ],
+  "dependencies": {
+    "required": {
+      "django": ">=4.0",
+      "python": ">=3.11"
+    },
+    "recommended": {
+      "djangorestframework": ">=3.14",
+      "pytest-django": ">=4.5",
+      "celery": ">=5.3",
+      "redis": ">=4.5",
+      "psycopg2-binary": ">=2.9"
+    }
+  },
+  "configuration": {
+    "environment": {
+      "GITHUB_TOKEN": {
+        "description": "GitHub Personal Access Token for repository access",
+        "required": false
+      },
+      "POSTGRES_URL": {
+        "description": "PostgreSQL connection URL (postgresql://user:password@host:port/database)",
+        "required": false,
+        "example": "postgresql://django_user:password@localhost:5432/django_db"
+      }
+    }
+  },
+  "keywords": [
+    "django",
+    "python",
+    "web development",
+    "REST API",
+    "ORM",
+    "async",
+    "ASGI",
+    "database",
+    "migrations",
+    "DRF",
+    "Django REST Framework",
+    "security",
+    "testing",
+    "pytest",
+    "celery",
+    "redis",
+    "postgresql"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  }
+}

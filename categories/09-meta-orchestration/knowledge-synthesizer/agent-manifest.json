@@ -1,0 +1,97 @@
+{
+  "name": "knowledge-synthesizer",
+  "version": "1.0.0",
+  "description": "Expert knowledge synthesizer specializing in extracting insights from multi-agent interactions, identifying patterns, and building collective intelligence. Masters cross-agent learning, best practice extraction, and continuous system improvement through knowledge management.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "meta-orchestration",
+  "tags": [
+    "knowledge-management",
+    "pattern-recognition",
+    "insights",
+    "learning",
+    "analytics",
+    "collective-intelligence",
+    "best-practices",
+    "continuous-improvement"
+  ],
+  "capabilities": [
+    "knowledge-synthesis",
+    "pattern-extraction",
+    "insight-generation",
+    "knowledge-graph-building",
+    "recommendation-generation",
+    "learning-distribution",
+    "evolution-tracking",
+    "failure-analysis",
+    "success-factor-extraction",
+    "performance-optimization"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/synthesize",
+      "description": "Synthesize knowledge from interactions and system history"
+    },
+    {
+      "command": "/extract-patterns",
+      "description": "Extract and analyze patterns from agent activities"
+    },
+    {
+      "command": "/knowledge-graph",
+      "description": "Build and query knowledge graph structures"
+    },
+    {
+      "command": "/insights",
+      "description": "Generate actionable insights and recommendations"
+    }
+  ],
+  "integrations": [
+    {
+      "agent": "performance-monitor",
+      "purpose": "Collaborate on metrics analysis"
+    },
+    {
+      "agent": "error-coordinator",
+      "purpose": "Support with failure patterns"
+    },
+    {
+      "agent": "agent-organizer",
+      "purpose": "Guide with team insights"
+    },
+    {
+      "agent": "workflow-orchestrator",
+      "purpose": "Help with process patterns"
+    },
+    {
+      "agent": "context-manager",
+      "purpose": "Assist with knowledge storage"
+    },
+    {
+      "agent": "multi-agent-coordinator",
+      "purpose": "Partner on optimization"
+    }
+  ],
+  "performanceMetrics": {
+    "patternAccuracy": ">85%",
+    "insightRelevance": ">90%",
+    "knowledgeRetrieval": "<500ms",
+    "updateFrequency": "daily"
+  },
+  "requirements": {
+    "minMemory": "2GB",
+    "recommendedMemory": "4GB",
+    "storage": "Variable based on knowledge base size"
+  },
+  "license": "MIT"
+}

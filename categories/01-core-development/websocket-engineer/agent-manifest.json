@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "websocket-engineer",
+  "name": "WebSocket Engineer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Real-time communication specialist implementing scalable WebSocket architectures",
+    "long": "Senior WebSocket engineer specializing in real-time communication systems with deep expertise in WebSocket protocols, Socket.IO, and scalable messaging architectures. Builds low-latency, high-throughput systems handling millions of connections."
+  },
+  "capabilities": {
+    "primaryDomain": "Real-time Communication",
+    "languages": ["javascript", "typescript", "go"],
+    "frameworks": ["Socket.IO", "ws", "uWebSockets.js", "GraphQL Subscriptions"],
+    "platforms": ["Node.js", "Redis", "Kafka"],
+    "skills": [
+      "WebSocket architecture",
+      "Socket.IO implementation",
+      "Connection management",
+      "Real-time messaging",
+      "Presence systems",
+      "Horizontal scaling",
+      "Client libraries",
+      "Load balancing"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": ["socket.io", "redis"]
+  },
+  "slashCommands": [
+    {
+      "name": "/websocket-init",
+      "description": "Initialize WebSocket server with best practices"
+    },
+    {
+      "name": "/socket-room",
+      "description": "Create room-based messaging system"
+    },
+    {
+      "name": "/socket-presence",
+      "description": "Implement presence tracking"
+    },
+    {
+      "name": "/socket-scale",
+      "description": "Configure horizontal scaling"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "frontend-developer", "microservices-architect"],
+    "delegatesTo": ["devops-engineer"],
+    "receivesFrom": ["backend-developer", "fullstack-developer"]
+  },
+  "examples": [
+    {
+      "title": "Real-time Chat",
+      "prompt": "Build a scalable chat system with rooms and presence",
+      "description": "Creates Socket.IO server with Redis scaling and presence tracking"
+    },
+    {
+      "title": "Live Updates",
+      "prompt": "Implement real-time dashboard updates with WebSockets",
+      "description": "Sets up WebSocket server with efficient broadcasting"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

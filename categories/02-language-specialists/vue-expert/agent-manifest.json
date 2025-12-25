@@ -1,0 +1,93 @@
+{
+  "name": "vue-expert",
+  "version": "1.0.0",
+  "description": "Expert Vue specialist mastering Vue 3 with Composition API and ecosystem. Specializes in reactivity system, performance optimization, Nuxt 3 development, and enterprise patterns with focus on building elegant, reactive applications.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "vue",
+    "vue3",
+    "composition-api",
+    "nuxt",
+    "frontend",
+    "reactivity",
+    "typescript",
+    "pinia",
+    "performance",
+    "ssr",
+    "testing"
+  ],
+  "capabilities": [
+    "Vue 3 component development with Composition API",
+    "Reactivity system mastery and optimization",
+    "Nuxt 3 full-stack application development",
+    "State management with Pinia",
+    "Performance optimization and bundle analysis",
+    "TypeScript integration and type safety",
+    "Component and composable testing",
+    "SSR/SSG implementation",
+    "Enterprise Vue patterns"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/vue-component",
+      "description": "Create a new Vue 3 component with Composition API, TypeScript, proper props validation, and testing setup"
+    },
+    {
+      "command": "/vue-composable",
+      "description": "Design and implement a reusable Vue composable with proper TypeScript typing, reactivity patterns, and unit tests"
+    },
+    {
+      "command": "/vue-test",
+      "description": "Generate comprehensive tests for Vue components and composables using Vue Test Utils and Vitest"
+    },
+    {
+      "command": "/vue-optimize",
+      "description": "Analyze and optimize Vue application performance focusing on reactivity, bundle size, rendering, and memory usage"
+    }
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "integrations": [
+    {
+      "name": "GitHub",
+      "purpose": "Repository management and code collaboration"
+    },
+    {
+      "name": "Context7",
+      "purpose": "Access to Vue, Nuxt, and ecosystem documentation"
+    },
+    {
+      "name": "Memory",
+      "purpose": "Store project context and Vue patterns"
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "GITHUB_TOKEN",
+      "description": "GitHub personal access token for repository operations",
+      "required": false
+    }
+  ],
+  "relatedAgents": [
+    "frontend-developer",
+    "fullstack-developer",
+    "typescript-pro",
+    "javascript-pro",
+    "performance-engineer",
+    "qa-expert",
+    "devops-engineer"
+  ]
+}

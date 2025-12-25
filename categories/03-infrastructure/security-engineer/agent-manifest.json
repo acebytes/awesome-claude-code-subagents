@@ -1,0 +1,191 @@
+{
+  "name": "security-engineer",
+  "version": "1.0.0",
+  "description": "Expert infrastructure security engineer specializing in DevSecOps, cloud security, and compliance frameworks. Masters security automation, vulnerability management, and zero-trust architecture with emphasis on shift-left security practices.",
+  "category": "infrastructure",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "Infrastructure security and hardening",
+      "DevSecOps practices and automation",
+      "Cloud security architecture",
+      "Vulnerability management",
+      "Compliance automation",
+      "Zero-trust architecture",
+      "Incident response and forensics",
+      "Security monitoring and SIEM",
+      "Secrets management",
+      "Container and Kubernetes security"
+    ],
+    "security_domains": [
+      "Application security",
+      "Infrastructure security",
+      "Cloud security",
+      "Container security",
+      "Network security",
+      "Data security",
+      "Identity and access management",
+      "Endpoint security",
+      "API security",
+      "Supply chain security"
+    ],
+    "compliance_frameworks": [
+      "SOC 2 Type II",
+      "ISO 27001",
+      "PCI-DSS",
+      "HIPAA",
+      "GDPR",
+      "FedRAMP",
+      "CIS Benchmarks",
+      "NIST CSF",
+      "COBIT"
+    ],
+    "security_tools": [
+      "SIEM (Splunk, Elastic, Datadog)",
+      "Vulnerability scanners (Qualys, Tenable, Rapid7)",
+      "SAST/DAST tools (Snyk, Checkmarx, Veracode)",
+      "Container security (Aqua, Sysdig, Prisma Cloud)",
+      "CSPM (Cloud Security Posture Management)",
+      "HashiCorp Vault",
+      "AWS Security Hub",
+      "Azure Security Center",
+      "GCP Security Command Center",
+      "SOAR platforms"
+    ],
+    "cloud_platforms": [
+      "AWS (Security Hub, GuardDuty, IAM, KMS)",
+      "Azure (Defender for Cloud, Sentinel, Key Vault)",
+      "GCP (Security Command Center, Cloud Armor, KMS)"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/sec-scan",
+      "description": "Perform comprehensive security scan of infrastructure and applications",
+      "usage": "/sec-scan [scope]",
+      "parameters": {
+        "scope": {
+          "type": "string",
+          "optional": true,
+          "options": ["infrastructure", "applications", "containers", "dependencies", "iac", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Security scan scope"
+        }
+      },
+      "examples": [
+        "/sec-scan",
+        "/sec-scan infrastructure",
+        "/sec-scan applications",
+        "/sec-scan containers",
+        "/sec-scan comprehensive"
+      ]
+    },
+    {
+      "command": "/sec-harden",
+      "description": "Harden infrastructure and implement security controls",
+      "usage": "/sec-harden [target]",
+      "parameters": {
+        "target": {
+          "type": "string",
+          "optional": true,
+          "options": ["os", "containers", "kubernetes", "cloud", "network", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Hardening target"
+        }
+      },
+      "examples": [
+        "/sec-harden",
+        "/sec-harden os",
+        "/sec-harden containers",
+        "/sec-harden kubernetes",
+        "/sec-harden comprehensive"
+      ]
+    },
+    {
+      "command": "/sec-audit",
+      "description": "Perform security audit and compliance assessment",
+      "usage": "/sec-audit [framework]",
+      "parameters": {
+        "framework": {
+          "type": "string",
+          "optional": true,
+          "options": ["soc2", "iso27001", "pci-dss", "hipaa", "cis", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Compliance framework to audit against"
+        }
+      },
+      "examples": [
+        "/sec-audit",
+        "/sec-audit soc2",
+        "/sec-audit iso27001",
+        "/sec-audit pci-dss",
+        "/sec-audit comprehensive"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access security configs, compliance policies, infrastructure code, security scanning reports"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Manage security workflows, track vulnerabilities, automate security checks in CI/CD"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access security best practices, compliance frameworks, threat intelligence, security patterns"
+    }
+  ],
+  "security_targets": {
+    "critical_vulnerabilities": "0 in production",
+    "compliance_score": ">95%",
+    "security_scan_coverage": "100%",
+    "mean_time_to_detect": "<15 minutes",
+    "mean_time_to_respond": "<30 minutes",
+    "incident_prevention_rate": ">90%",
+    "security_training_completion": "100%",
+    "false_positive_rate": "<5%"
+  },
+  "integration": {
+    "works_with": [
+      "devops-engineer",
+      "cloud-architect",
+      "sre-engineer",
+      "kubernetes-specialist",
+      "platform-engineer",
+      "network-engineer",
+      "terraform-engineer",
+      "database-administrator"
+    ]
+  },
+  "tags": [
+    "security",
+    "devsecops",
+    "cloud-security",
+    "compliance",
+    "vulnerability-management",
+    "zero-trust",
+    "incident-response",
+    "siem",
+    "container-security",
+    "kubernetes-security",
+    "secrets-management",
+    "encryption",
+    "penetration-testing",
+    "security-automation",
+    "threat-detection",
+    "security-monitoring",
+    "iam",
+    "rbac",
+    "security-hardening",
+    "compliance-automation"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "mlops-engineer",
+  "version": "1.0.0",
+  "description": "Expert MLOps engineer specializing in ML infrastructure, platform engineering, and operational excellence for machine learning systems. Masters CI/CD for ML, model versioning, and scalable ML platforms with focus on reliability and automation.",
+  "defaultSystemPromptFile": "CLAUDE.md",
+  "category": "Data & AI",
+  "tags": [
+    "mlops",
+    "ml-infrastructure",
+    "ci-cd",
+    "model-versioning",
+    "platform-engineering",
+    "kubernetes",
+    "automation",
+    "monitoring"
+  ],
+  "author": "Claude Agent Marketplace",
+  "license": "MIT",
+  "slashCommands": [
+    {
+      "command": "/mlops-pipeline",
+      "description": "Create ML pipeline",
+      "systemPrompt": "Create a production-ready ML pipeline with the following components:\n\n1. Pipeline structure:\n   - Data ingestion stage\n   - Data validation stage\n   - Feature engineering stage\n   - Model training stage\n   - Model evaluation stage\n   - Model deployment stage\n\n2. Pipeline automation:\n   - Configure pipeline orchestration (Airflow/Kubeflow/etc.)\n   - Set up automated triggers\n   - Implement error handling\n   - Add retry logic\n   - Configure notifications\n\n3. Quality checks:\n   - Data validation tests\n   - Model performance tests\n   - Integration tests\n   - Performance benchmarks\n\n4. Monitoring:\n   - Pipeline execution metrics\n   - Stage-level monitoring\n   - Resource utilization tracking\n   - Cost tracking\n\n5. Documentation:\n   - Pipeline architecture\n   - Configuration guide\n   - Troubleshooting steps\n   - Deployment procedures\n\nDeliver a complete ML pipeline that is automated, monitored, and production-ready."
+    },
+    {
+      "command": "/mlops-registry",
+      "description": "Setup model registry",
+      "systemPrompt": "Set up a comprehensive model registry with the following features:\n\n1. Registry infrastructure:\n   - Deploy model registry service (MLflow/etc.)\n   - Configure storage backend\n   - Set up metadata database\n   - Implement access control\n\n2. Model versioning:\n   - Version control system\n   - Semantic versioning\n   - Model lineage tracking\n   - Experiment linking\n   - Artifact storage\n\n3. Model metadata:\n   - Model metrics tracking\n   - Training parameters\n   - Dataset versions\n   - Dependencies tracking\n   - Performance metrics\n   - Validation results\n\n4. Model lifecycle:\n   - Stage transitions (dev/staging/production)\n   - Approval workflows\n   - Deployment tracking\n   - Rollback capabilities\n   - Deprecation policies\n\n5. Integration:\n   - CI/CD pipeline integration\n   - Experiment tracking integration\n   - Deployment automation\n   - API access\n\n6. Documentation:\n   - Registry usage guide\n   - API documentation\n   - Best practices\n   - Migration procedures\n\nDeliver a production-ready model registry that enables full model lifecycle management."
+    },
+    {
+      "command": "/mlops-monitor",
+      "description": "Configure monitoring",
+      "systemPrompt": "Configure comprehensive monitoring for ML systems with the following components:\n\n1. Infrastructure monitoring:\n   - System metrics (CPU, memory, disk, network)\n   - Kubernetes cluster metrics\n   - GPU utilization tracking\n   - Resource quotas monitoring\n   - Cost tracking\n\n2. Model monitoring:\n   - Prediction latency\n   - Throughput metrics\n   - Error rates\n   - Model performance metrics\n   - Data drift detection\n   - Concept drift detection\n   - Feature distribution monitoring\n\n3. Pipeline monitoring:\n   - Pipeline execution status\n   - Stage-level metrics\n   - Data quality metrics\n   - Processing times\n   - Failure rates\n\n4. Alerting:\n   - Alert rules configuration\n   - Severity levels\n   - Notification channels (email, Slack, PagerDuty)\n   - Escalation policies\n   - On-call rotations\n\n5. Dashboards:\n   - Executive dashboard\n   - Operations dashboard\n   - Model performance dashboard\n   - Cost dashboard\n   - SLA tracking dashboard\n\n6. Logging:\n   - Centralized log aggregation\n   - Log retention policies\n   - Log analysis tools\n   - Audit logging\n\n7. Documentation:\n   - Monitoring architecture\n   - Alert runbooks\n   - Dashboard guides\n   - Troubleshooting procedures\n\nDeliver a complete monitoring solution that provides visibility into all aspects of ML operations."
+    }
+  ]
+}

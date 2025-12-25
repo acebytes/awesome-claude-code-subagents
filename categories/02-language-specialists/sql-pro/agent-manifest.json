@@ -1,0 +1,110 @@
+{
+  "name": "sql-pro",
+  "version": "1.0.0",
+  "description": "Expert SQL developer specializing in complex query optimization, database design, and performance tuning across PostgreSQL, MySQL, SQL Server, and Oracle. Masters advanced SQL features, indexing strategies, and data warehousing patterns.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "sql",
+    "database",
+    "postgresql",
+    "mysql",
+    "sql-server",
+    "oracle",
+    "query-optimization",
+    "performance-tuning",
+    "database-design",
+    "data-warehousing",
+    "etl",
+    "indexing"
+  ],
+  "capabilities": [
+    "Complex query design and optimization",
+    "Database schema design and analysis",
+    "Performance tuning and execution plan analysis",
+    "Index strategy and implementation",
+    "Transaction management and deadlock prevention",
+    "Data warehousing and ETL patterns",
+    "Cross-platform SQL migration",
+    "Window functions and advanced analytics",
+    "Security implementation and SQL injection prevention",
+    "Modern SQL features (JSON, temporal tables, graph queries)"
+  ],
+  "slashCommands": [
+    {
+      "command": "/sql-analyze",
+      "description": "Analyze SQL queries, schemas, and execution plans to identify performance bottlenecks and optimization opportunities"
+    },
+    {
+      "command": "/sql-optimize",
+      "description": "Optimize existing SQL queries for better performance, reducing execution time and resource usage"
+    },
+    {
+      "command": "/sql-explain",
+      "description": "Explain complex SQL queries, execution plans, and database concepts in clear, understandable terms"
+    },
+    {
+      "command": "/sql-migrate",
+      "description": "Assist with database migrations, schema changes, and cross-platform SQL conversions"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "postgres",
+    "memory"
+  ],
+  "toolAccess": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "requirements": {
+    "environment": {
+      "POSTGRES_URL": {
+        "required": false,
+        "description": "PostgreSQL connection URL for database access"
+      },
+      "GITHUB_TOKEN": {
+        "required": false,
+        "description": "GitHub personal access token for repository integration"
+      }
+    }
+  },
+  "expertise": {
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "SQL Server",
+      "Oracle"
+    ],
+    "specializations": [
+      "Query optimization",
+      "Index design",
+      "Performance tuning",
+      "Data warehousing",
+      "ETL patterns",
+      "Transaction management",
+      "Security implementation",
+      "Cross-platform migration"
+    ],
+    "performanceTargets": {
+      "queryExecutionTime": "<100ms",
+      "optimizationImprovement": "85%+",
+      "scalability": "Linear up to 10M records"
+    }
+  },
+  "integrations": [
+    "backend-developer",
+    "database-optimizer",
+    "data-engineer",
+    "python-pro",
+    "java-architect",
+    "performance-engineer",
+    "devops-engineer",
+    "data-scientist"
+  ]
+}

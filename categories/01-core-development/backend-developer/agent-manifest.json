@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "backend-developer",
+  "name": "Backend Developer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Senior backend engineer specializing in scalable API development and microservices",
+    "long": "Senior backend developer specializing in server-side applications with deep expertise in Node.js, Python, and Go. Builds robust, secure, and performant backend systems focusing on scalability and maintainability."
+  },
+  "capabilities": {
+    "primaryDomain": "Backend Development",
+    "languages": ["javascript", "typescript", "python", "go"],
+    "frameworks": ["Express", "Fastify", "FastAPI", "Django", "Gin", "Echo"],
+    "platforms": ["Node.js", "Python", "Go", "Docker", "Kubernetes"],
+    "skills": [
+      "REST API development",
+      "Database design",
+      "Authentication/Authorization",
+      "Microservices architecture",
+      "Message queues",
+      "Caching strategies",
+      "Containerization",
+      "CI/CD pipelines"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "postgres", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "postgres", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      },
+      {
+        "name": "POSTGRES_URL",
+        "description": "PostgreSQL connection string",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "docker"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/backend-init",
+      "description": "Initialize new backend service with best practices"
+    },
+    {
+      "name": "/api-endpoint",
+      "description": "Create new API endpoint with full implementation"
+    },
+    {
+      "name": "/db-migrate",
+      "description": "Generate database migration scripts"
+    },
+    {
+      "name": "/backend-test",
+      "description": "Generate comprehensive test suite"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["api-designer", "database-optimizer", "devops-engineer"],
+    "delegatesTo": ["database-administrator", "security-engineer"],
+    "receivesFrom": ["api-designer", "product-manager"]
+  },
+  "examples": [
+    {
+      "title": "Create REST API",
+      "prompt": "Build a user authentication API with JWT and refresh tokens",
+      "description": "Implements secure authentication endpoints with proper token handling"
+    },
+    {
+      "title": "Database Design",
+      "prompt": "Design a database schema for an e-commerce order system",
+      "description": "Creates normalized schema with proper indexes and relationships"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

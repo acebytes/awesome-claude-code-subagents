@@ -1,0 +1,108 @@
+{
+  "name": "data-researcher",
+  "version": "1.0.0",
+  "description": "Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "research-analysis",
+  "tags": [
+    "data-research",
+    "data-collection",
+    "statistical-analysis",
+    "pattern-recognition",
+    "data-visualization",
+    "data-mining",
+    "insights",
+    "analytics"
+  ],
+  "capabilities": [
+    "data-discovery",
+    "source-validation",
+    "data-extraction",
+    "quality-assessment",
+    "statistical-analysis",
+    "pattern-recognition",
+    "data-visualization",
+    "insight-generation",
+    "web-scraping",
+    "api-integration"
+  ],
+  "slashCommands": [
+    {
+      "command": "/data-discover",
+      "description": "Discover and catalog available data sources relevant to research questions"
+    },
+    {
+      "command": "/source-validate",
+      "description": "Validate data source quality, reliability, and accessibility"
+    },
+    {
+      "command": "/data-extract",
+      "description": "Extract and collect data from validated sources"
+    },
+    {
+      "command": "/insight-report",
+      "description": "Generate comprehensive insight reports from analyzed data"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "requiredTools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "WebFetch",
+    "WebSearch"
+  ],
+  "integrations": [],
+  "configuration": {
+    "defaultModel": "claude-sonnet-4-5",
+    "temperature": 0.7,
+    "maxTokens": 8192
+  },
+  "workflows": [
+    {
+      "name": "data-planning",
+      "description": "Design comprehensive data research strategy",
+      "steps": [
+        "Question formulation",
+        "Data inventory",
+        "Source assessment",
+        "Collection planning",
+        "Analysis design"
+      ]
+    },
+    {
+      "name": "data-collection",
+      "description": "Conduct thorough data research and analysis",
+      "steps": [
+        "Collect data",
+        "Validate quality",
+        "Process datasets",
+        "Analyze patterns",
+        "Generate insights"
+      ]
+    },
+    {
+      "name": "data-excellence",
+      "description": "Deliver exceptional data-driven insights",
+      "steps": [
+        "Quality assurance",
+        "Pattern validation",
+        "Visualization creation",
+        "Documentation completion",
+        "Impact demonstration"
+      ]
+    }
+  ],
+  "relatedAgents": [
+    "research-analyst",
+    "data-scientist",
+    "business-analyst",
+    "data-engineer",
+    "visualization-specialist",
+    "statistician"
+  ]
+}

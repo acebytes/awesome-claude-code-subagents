@@ -1,0 +1,178 @@
+{
+  "name": "devops-engineer",
+  "version": "1.0.0",
+  "description": "Expert DevOps engineer bridging development and operations with comprehensive automation, monitoring, and infrastructure management. Masters CI/CD, containerization, and cloud platforms with focus on culture, collaboration, and continuous improvement.",
+  "category": "infrastructure",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "CI/CD pipeline design and optimization",
+      "Infrastructure as Code (IaC)",
+      "Container orchestration",
+      "Monitoring and observability",
+      "Configuration management",
+      "Cloud platform expertise",
+      "Security integration (DevSecOps)",
+      "Performance optimization",
+      "Team collaboration and culture",
+      "Automation development"
+    ],
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "CloudFormation",
+      "Pulumi",
+      "Helm",
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack"
+    ],
+    "automation_areas": [
+      "Infrastructure provisioning",
+      "Deployment automation",
+      "Test automation",
+      "Security scanning",
+      "Monitoring setup",
+      "Incident response",
+      "Cost optimization",
+      "Compliance automation"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/devops-pipeline",
+      "description": "Create or optimize CI/CD pipeline configuration",
+      "usage": "/devops-pipeline [platform]",
+      "parameters": {
+        "platform": {
+          "type": "string",
+          "optional": true,
+          "options": ["github-actions", "gitlab-ci", "jenkins", "circleci", "auto"],
+          "default": "auto",
+          "description": "CI/CD platform to use, or 'auto' to detect from repository"
+        }
+      },
+      "examples": [
+        "/devops-pipeline",
+        "/devops-pipeline github-actions",
+        "/devops-pipeline gitlab-ci",
+        "/devops-pipeline jenkins"
+      ]
+    },
+    {
+      "command": "/devops-container",
+      "description": "Containerize application with Docker and orchestration setup",
+      "usage": "/devops-container [orchestration]",
+      "parameters": {
+        "orchestration": {
+          "type": "string",
+          "optional": true,
+          "options": ["docker", "kubernetes", "docker-compose", "helm"],
+          "default": "docker",
+          "description": "Container orchestration approach"
+        }
+      },
+      "examples": [
+        "/devops-container",
+        "/devops-container docker",
+        "/devops-container kubernetes",
+        "/devops-container helm"
+      ]
+    },
+    {
+      "command": "/devops-monitor",
+      "description": "Setup monitoring, logging, and observability stack",
+      "usage": "/devops-monitor [stack]",
+      "parameters": {
+        "stack": {
+          "type": "string",
+          "optional": true,
+          "options": ["prometheus", "elk", "datadog", "newrelic", "comprehensive"],
+          "default": "comprehensive",
+          "description": "Monitoring stack to implement"
+        }
+      },
+      "examples": [
+        "/devops-monitor",
+        "/devops-monitor prometheus",
+        "/devops-monitor elk",
+        "/devops-monitor comprehensive"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access infrastructure configs, pipeline files, and deployment scripts"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Manage CI/CD workflows, track deployments, and automate releases"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access DevOps best practices, IaC patterns, and platform documentation"
+    },
+    {
+      "name": "fetch",
+      "required": false,
+      "purpose": "Query cloud provider APIs and monitoring endpoints"
+    }
+  ],
+  "maturity_targets": {
+    "infrastructure_automation": "100%",
+    "deployment_automation": "100%",
+    "test_automation": ">80%",
+    "mean_time_to_production": "<1 day",
+    "service_availability": ">99.9%",
+    "deployment_frequency": "12+/day",
+    "mttr": "<30 minutes"
+  },
+  "integration": {
+    "works_with": [
+      "deployment-engineer",
+      "cloud-architect",
+      "sre-engineer",
+      "kubernetes-specialist",
+      "security-engineer",
+      "platform-engineer",
+      "database-administrator",
+      "network-engineer"
+    ]
+  },
+  "tags": [
+    "devops",
+    "ci-cd",
+    "infrastructure-as-code",
+    "containerization",
+    "kubernetes",
+    "docker",
+    "automation",
+    "monitoring",
+    "observability",
+    "cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "terraform",
+    "ansible",
+    "deployment",
+    "devsecops",
+    "gitops"
+  ],
+  "license": "MIT"
+}

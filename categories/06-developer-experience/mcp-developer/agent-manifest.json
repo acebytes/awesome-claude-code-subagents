@@ -1,0 +1,200 @@
+{
+  "id": "mcp-developer",
+  "name": "MCP Developer",
+  "version": "1.0.0",
+  "category": {
+    "id": "06-developer-experience",
+    "name": "Developer Experience"
+  },
+  "description": {
+    "short": "Expert MCP developer specializing in Model Context Protocol server and client development with production-ready integrations.",
+    "long": "Senior MCP (Model Context Protocol) developer with deep expertise in building servers and clients that connect AI systems with external tools and data sources. Masters protocol specification, SDK implementation (TypeScript/Python), and building production-ready integrations with emphasis on security, performance, and developer experience. Implements JSON-RPC 2.0 compliant servers, creates robust tool functions, exposes resources, and ensures comprehensive testing and monitoring."
+  },
+  "capabilities": {
+    "primaryDomain": "Model Context Protocol Development",
+    "languages": [
+      "TypeScript",
+      "Python",
+      "JavaScript"
+    ],
+    "frameworks": [
+      "@modelcontextprotocol/sdk",
+      "Node.js",
+      "Zod",
+      "Pydantic"
+    ],
+    "platforms": [
+      "Node.js 18+",
+      "Python 3.10+",
+      "Docker",
+      "Claude Desktop"
+    ],
+    "skills": [
+      "JSON-RPC 2.0 protocol implementation",
+      "MCP server development",
+      "MCP client development",
+      "Tool function creation",
+      "Resource endpoint design",
+      "Protocol compliance testing",
+      "Schema validation (Zod/Pydantic)",
+      "Authentication and authorization",
+      "Rate limiting and security",
+      "Performance optimization",
+      "Transport mechanisms (stdio, HTTP, SSE)",
+      "Error handling and logging",
+      "Integration testing",
+      "Production deployment"
+    ]
+  },
+  "tools": {
+    "builtin": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep"
+    ],
+    "mcpServerRefs": [
+      "filesystem",
+      "github",
+      "context7",
+      "fetch"
+    ]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read and write MCP server code, manage project structure, and edit configuration files during development",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Access official MCP SDK repositories, community implementations, and protocol specifications on GitHub",
+      "required": true,
+      "envVars": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ]
+    },
+    {
+      "name": "context7",
+      "package": "@uplink-online/mcp-server-context7",
+      "purpose": "Query MCP protocol documentation, JSON-RPC 2.0 standards, and schema definitions for reference during development",
+      "required": false,
+      "envVars": [
+        "CONTEXT7_API_KEY"
+      ]
+    },
+    {
+      "name": "fetch",
+      "package": "@modelcontextprotocol/server-fetch",
+      "purpose": "Test HTTP/SSE endpoints, validate server responses, and debug connection issues during development",
+      "required": true,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      },
+      {
+        "name": "Context7 API Key",
+        "envVar": "CONTEXT7_API_KEY",
+        "provider": "Context7",
+        "required": false,
+        "obtainUrl": "https://context7.ai"
+      }
+    ],
+    "cliTools": [
+      "node",
+      "npm",
+      "npx",
+      "git"
+    ],
+    "runtimeDependencies": [
+      "Node.js 18+",
+      "Python 3.10+ (for Python SDK development)"
+    ]
+  },
+  "slashCommands": [
+    {
+      "name": "/mcp-init",
+      "description": "Initialize a new MCP server project with best practices scaffolding",
+      "usage": "/mcp-init typescript my-server"
+    },
+    {
+      "name": "/mcp-tool",
+      "description": "Add a new tool function to an existing MCP server with validation",
+      "usage": "/mcp-tool search-database 'Search the database for records'"
+    },
+    {
+      "name": "/mcp-resource",
+      "description": "Add a new resource endpoint to expose data sources",
+      "usage": "/mcp-resource user-data 'user://{userId}'"
+    },
+    {
+      "name": "/mcp-test",
+      "description": "Test MCP server locally with protocol compliance validation",
+      "usage": "/mcp-test ./src/index.ts"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "api-designer",
+      "backend-developer",
+      "security-engineer",
+      "performance-engineer"
+    ],
+    "delegatesTo": [
+      "tooling-engineer",
+      "devops-engineer",
+      "documentation-engineer"
+    ],
+    "receivesFrom": [
+      "frontend-developer",
+      "fullstack-developer"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Create a new MCP server that exposes my PostgreSQL database as resources and provides query tools",
+      "capability": "Full MCP server implementation with database integration, resource endpoints, and tool functions"
+    },
+    {
+      "prompt": "Add a new tool to my existing MCP server for sending emails via SendGrid API",
+      "capability": "Extending MCP servers with new tool functions and API integrations"
+    },
+    {
+      "prompt": "Test my MCP server implementation for protocol compliance and performance",
+      "capability": "Protocol compliance testing, performance benchmarking, and validation"
+    },
+    {
+      "prompt": "Add authentication and rate limiting to my MCP server",
+      "capability": "Security implementation with auth mechanisms and rate limiting"
+    },
+    {
+      "prompt": "Debug why my MCP server tools are failing with validation errors",
+      "capability": "Debugging MCP implementations and fixing protocol issues"
+    },
+    {
+      "prompt": "Optimize my MCP server for handling 1000+ concurrent connections",
+      "capability": "Performance optimization and scalability improvements"
+    }
+  ],
+  "metadata": {
+    "author": "Claude Code Agent Marketplace",
+    "maintainer": "VoltAgent",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/claude-code-agent-marketplace",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "name": "git-workflow-manager",
+  "version": "1.0.0",
+  "description": "Expert Git workflow manager specializing in branching strategies, automation, and team collaboration. Masters Git workflows, merge conflict resolution, and repository management with focus on enabling efficient, clear, and scalable version control practices.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "developer-experience",
+  "tags": [
+    "git",
+    "workflow",
+    "version-control",
+    "branching",
+    "pull-requests",
+    "code-review",
+    "automation",
+    "ci-cd",
+    "release-management",
+    "merge-conflicts",
+    "git-hooks",
+    "github",
+    "gitlab",
+    "collaboration",
+    "devops"
+  ],
+  "expertise": {
+    "primary": [
+      "Git workflow design and optimization",
+      "Branching strategy implementation",
+      "Merge conflict resolution",
+      "Pull request automation",
+      "Code review workflows",
+      "Release management"
+    ],
+    "secondary": [
+      "Git hooks and automation",
+      "Repository maintenance",
+      "Team collaboration patterns",
+      "CI/CD integration",
+      "Monorepo strategies",
+      "Version control best practices"
+    ]
+  },
+  "capabilities": {
+    "workflowModels": [
+      "Git Flow",
+      "GitHub Flow",
+      "GitLab Flow",
+      "Trunk-based development",
+      "Feature branch workflow",
+      "Release trains"
+    ],
+    "branchManagement": [
+      "Branch naming conventions",
+      "Branch protection rules",
+      "Automated branch creation",
+      "Stale branch cleanup",
+      "Fork management"
+    ],
+    "mergeStrategies": [
+      "Merge commits",
+      "Squash and merge",
+      "Rebase and merge",
+      "Fast-forward only",
+      "Cherry-pick operations"
+    ],
+    "automation": [
+      "Git hooks (pre-commit, commit-msg, pre-push)",
+      "PR template automation",
+      "Automated code review assignment",
+      "Release automation",
+      "Changelog generation",
+      "Semantic versioning"
+    ],
+    "integrations": [
+      "GitHub platform integration",
+      "GitHub Actions workflows",
+      "CI/CD pipelines",
+      "Issue tracking",
+      "Project management"
+    ]
+  },
+  "mcpServers": {
+    "required": [
+      {
+        "name": "github",
+        "purpose": "Primary server for GitHub operations including PRs, issues, Actions, and releases",
+        "configuration": {
+          "requiresAuth": true,
+          "environmentVariables": ["GITHUB_PERSONAL_ACCESS_TOKEN"],
+          "scopes": ["repo", "workflow", "admin:repo_hook"]
+        }
+      }
+    ],
+    "optional": [
+      {
+        "name": "filesystem",
+        "purpose": "Local git operations, hooks, and configuration management",
+        "configuration": {
+          "requiresAuth": false,
+          "scopedPath": true
+        }
+      }
+    ]
+  },
+  "slashCommands": {
+    "/git-branch": {
+      "description": "Create a new branch following naming conventions",
+      "usage": "/git-branch <type> <ticket> <description>",
+      "examples": [
+        "/git-branch feature TICKET-123 \"Add user authentication\"",
+        "/git-branch bugfix TICKET-456 \"Fix login redirect\"",
+        "/git-branch hotfix \"Critical security patch\"",
+        "/git-branch release v1.2.0"
+      ],
+      "parameters": {
+        "type": {
+          "required": true,
+          "options": ["feature", "bugfix", "hotfix", "release"],
+          "description": "Type of branch to create"
+        },
+        "ticket": {
+          "required": false,
+          "description": "Ticket or issue number"
+        },
+        "description": {
+          "required": true,
+          "description": "Brief description of the branch purpose"
+        }
+      }
+    },
+    "/git-pr": {
+      "description": "Create a pull request with proper template and metadata",
+      "usage": "/git-pr <title> [options]",
+      "examples": [
+        "/git-pr \"Add user authentication feature\" --base develop",
+        "/git-pr \"Fix critical bug\" --labels bug,priority-high",
+        "/git-pr \"Release v1.2.0\" --milestone v1.2.0"
+      ],
+      "parameters": {
+        "title": {
+          "required": true,
+          "description": "Pull request title"
+        },
+        "base": {
+          "required": false,
+          "default": "main",
+          "description": "Base branch to merge into"
+        },
+        "labels": {
+          "required": false,
+          "description": "Comma-separated list of labels"
+        },
+        "milestone": {
+          "required": false,
+          "description": "Milestone to associate with PR"
+        },
+        "draft": {
+          "required": false,
+          "type": "boolean",
+          "description": "Create as draft PR"
+        }
+      }
+    },
+    "/git-sync": {
+      "description": "Synchronize current branch with upstream/base branch",
+      "usage": "/git-sync [options]",
+      "examples": [
+        "/git-sync",
+        "/git-sync --rebase",
+        "/git-sync --from develop"
+      ],
+      "parameters": {
+        "rebase": {
+          "required": false,
+          "type": "boolean",
+          "description": "Use rebase instead of merge"
+        },
+        "from": {
+          "required": false,
+          "default": "main",
+          "description": "Branch to sync from"
+        }
+      }
+    },
+    "/git-release": {
+      "description": "Prepare and create a release branch with automation",
+      "usage": "/git-release <version> [options]",
+      "examples": [
+        "/git-release v1.2.0",
+        "/git-release v2.0.0 --from develop --changelog"
+      ],
+      "parameters": {
+        "version": {
+          "required": true,
+          "description": "Version number (semantic versioning)"
+        },
+        "from": {
+          "required": false,
+          "default": "develop",
+          "description": "Branch to create release from"
+        },
+        "changelog": {
+          "required": false,
+          "type": "boolean",
+          "description": "Generate changelog automatically"
+        }
+      }
+    }
+  },
+  "workflows": {
+    "featureDevelopment": {
+      "steps": [
+        "Create feature branch from develop",
+        "Make commits following conventions",
+        "Keep branch updated with develop",
+        "Create PR when ready",
+        "Address review feedback",
+        "Squash and merge to develop"
+      ]
+    },
+    "hotfixProcess": {
+      "steps": [
+        "Create hotfix branch from main",
+        "Fix critical issue",
+        "Test thoroughly",
+        "Create PR to main",
+        "Also merge/cherry-pick to develop",
+        "Tag and deploy"
+      ]
+    },
+    "releaseProcess": {
+      "steps": [
+        "Create release branch from develop",
+        "Bump version numbers",
+        "Generate changelog",
+        "Bug fixes only on release branch",
+        "Merge to main and tag",
+        "Merge back to develop"
+      ]
+    }
+  },
+  "bestPractices": {
+    "commits": [
+      "Write clear, descriptive commit messages",
+      "Follow conventional commit format",
+      "Make atomic commits (one logical change per commit)",
+      "Test before committing",
+      "Sign commits with GPG when required"
+    ],
+    "branches": [
+      "Use descriptive branch names",
+      "Follow team naming conventions",
+      "Keep branches short-lived",
+      "Delete branches after merging",
+      "Protect important branches"
+    ],
+    "pullRequests": [
+      "Keep PRs small and focused",
+      "Write comprehensive descriptions",
+      "Link related issues",
+      "Request appropriate reviewers",
+      "Respond to feedback promptly",
+      "Ensure CI passes before merge"
+    ],
+    "codeReview": [
+      "Review your own code first",
+      "Be constructive and respectful",
+      "Focus on code, not the person",
+      "Explain reasoning for suggestions",
+      "Approve when standards are met"
+    ]
+  },
+  "integrationPoints": {
+    "collaboratesWith": [
+      {
+        "agent": "devops-engineer",
+        "purpose": "CI/CD pipeline integration and deployment automation"
+      },
+      {
+        "agent": "release-manager",
+        "purpose": "Version management and release coordination"
+      },
+      {
+        "agent": "security-auditor",
+        "purpose": "Security policies and access control"
+      },
+      {
+        "agent": "code-reviewer",
+        "purpose": "Code review standards and quality gates"
+      },
+      {
+        "agent": "documentation-engineer",
+        "purpose": "Documentation updates and changelog generation"
+      },
+      {
+        "agent": "qa-expert",
+        "purpose": "Testing integration and quality assurance workflows"
+      },
+      {
+        "agent": "team-lead",
+        "purpose": "Team workflow optimization and collaboration patterns"
+      },
+      {
+        "agent": "project-manager",
+        "purpose": "Release planning and project tracking integration"
+      }
+    ]
+  },
+  "metrics": {
+    "successIndicators": [
+      "Reduced merge conflict frequency",
+      "Faster PR review times",
+      "Increased automation coverage",
+      "Shorter time to merge",
+      "Higher build success rate",
+      "Improved deployment frequency",
+      "Better team satisfaction"
+    ],
+    "trackingPoints": [
+      "Merge conflict rate",
+      "PR review time (hours)",
+      "Time to merge (hours)",
+      "Build success rate (%)",
+      "Deployment frequency",
+      "Lead time for changes",
+      "Change failure rate",
+      "Mean time to recovery"
+    ]
+  },
+  "configurationOptions": {
+    "workflowModel": {
+      "type": "string",
+      "options": ["git-flow", "github-flow", "gitlab-flow", "trunk-based"],
+      "default": "github-flow",
+      "description": "Primary workflow model to use"
+    },
+    "defaultBranch": {
+      "type": "string",
+      "default": "main",
+      "description": "Default/production branch name"
+    },
+    "developBranch": {
+      "type": "string",
+      "default": "develop",
+      "description": "Development integration branch (Git Flow)"
+    },
+    "mergeStrategy": {
+      "type": "string",
+      "options": ["merge", "squash", "rebase"],
+      "default": "squash",
+      "description": "Default merge strategy for PRs"
+    },
+    "requireSignedCommits": {
+      "type": "boolean",
+      "default": false,
+      "description": "Require GPG signed commits"
+    },
+    "enforceConventionalCommits": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enforce conventional commit message format"
+    },
+    "autoDeleteBranches": {
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically delete merged branches"
+    },
+    "requiredReviews": {
+      "type": "number",
+      "default": 1,
+      "description": "Minimum number of required PR reviews"
+    }
+  },
+  "documentation": {
+    "quickStart": "README.md",
+    "detailedInstructions": "CLAUDE.md",
+    "examples": "README.md#examples",
+    "configuration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VoltAgent/claude-code-agent-marketplace"
+  }
+}

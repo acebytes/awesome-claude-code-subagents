@@ -1,0 +1,81 @@
+{
+  "name": "laravel-specialist",
+  "version": "1.0.0",
+  "description": "Expert Laravel specialist mastering Laravel 10+ with modern PHP practices. Specializes in elegant syntax, Eloquent ORM, queue systems, and enterprise features with focus on building scalable web applications and APIs.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "laravel",
+    "php",
+    "web-framework",
+    "eloquent",
+    "api",
+    "queues",
+    "testing",
+    "backend"
+  ],
+  "capabilities": [
+    "laravel-development",
+    "eloquent-orm",
+    "api-development",
+    "queue-systems",
+    "event-broadcasting",
+    "testing",
+    "performance-optimization",
+    "enterprise-architecture"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/laravel-model",
+      "description": "Generate or modify Laravel Eloquent models with relationships, scopes, and best practices"
+    },
+    {
+      "command": "/laravel-controller",
+      "description": "Create Laravel controllers with resource methods, validation, and proper structure"
+    },
+    {
+      "command": "/laravel-test",
+      "description": "Write comprehensive Laravel tests using Pest or PHPUnit with proper test coverage"
+    },
+    {
+      "command": "/laravel-artisan",
+      "description": "Help with Laravel Artisan commands, custom command creation, and task scheduling"
+    }
+  ],
+  "expertiseLevel": "senior",
+  "targetFrameworkVersions": [
+    "Laravel 10+",
+    "PHP 8.2+"
+  ],
+  "integrations": [
+    "php-pro",
+    "fullstack-developer",
+    "database-optimizer",
+    "api-designer",
+    "devops-engineer",
+    "redis-specialist",
+    "frontend-developer",
+    "security-auditor"
+  ],
+  "minimumTestCoverage": "85%",
+  "codeStandards": [
+    "PSR-1",
+    "PSR-12",
+    "Laravel Conventions",
+    "SOLID Principles"
+  ]
+}

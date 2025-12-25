@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "mobile-developer",
+  "name": "Mobile Developer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Cross-platform mobile specialist building performant native experiences",
+    "long": "Senior mobile developer specializing in cross-platform applications with deep expertise in React Native. Delivers native-quality mobile experiences while maximizing code reuse and optimizing for performance and battery life."
+  },
+  "capabilities": {
+    "primaryDomain": "Mobile Development",
+    "languages": ["javascript", "typescript", "swift", "kotlin"],
+    "frameworks": ["React Native", "Expo", "iOS", "Android"],
+    "platforms": ["iOS", "Android", "iPadOS"],
+    "skills": [
+      "Cross-platform development",
+      "Platform-specific UI",
+      "Native modules",
+      "Offline-first architecture",
+      "Push notifications",
+      "App store deployment",
+      "Performance optimization",
+      "Biometric authentication"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "react-native"],
+    "runtimeDependencies": ["react-native", "expo-cli"]
+  },
+  "slashCommands": [
+    {
+      "name": "/mobile-init",
+      "description": "Initialize React Native project with best practices"
+    },
+    {
+      "name": "/native-module",
+      "description": "Create native module bridge"
+    },
+    {
+      "name": "/push-notification",
+      "description": "Set up push notification system"
+    },
+    {
+      "name": "/app-store",
+      "description": "Prepare for app store submission"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "ui-designer", "qa-expert"],
+    "delegatesTo": ["backend-developer"],
+    "receivesFrom": ["api-designer", "product-manager", "ui-designer"]
+  },
+  "examples": [
+    {
+      "title": "Create Mobile App",
+      "prompt": "Build a React Native app with authentication and push notifications",
+      "description": "Creates full-featured mobile app with biometric auth and FCM/APNS"
+    },
+    {
+      "title": "Offline Support",
+      "prompt": "Implement offline-first architecture with sync",
+      "description": "Sets up local database with conflict resolution and sync"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

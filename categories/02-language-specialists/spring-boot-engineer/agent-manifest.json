@@ -1,0 +1,78 @@
+{
+  "name": "spring-boot-engineer",
+  "version": "1.0.0",
+  "description": "Expert Spring Boot engineer mastering Spring Boot 3+ with cloud-native patterns. Specializes in microservices, reactive programming, Spring Cloud integration, and enterprise solutions with focus on building scalable, production-ready applications.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "spring-boot",
+    "java",
+    "microservices",
+    "reactive",
+    "spring-cloud",
+    "enterprise",
+    "cloud-native",
+    "rest-api",
+    "spring-data",
+    "spring-security"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "name": "spring-service",
+      "description": "Generate a new Spring Boot service with controller, service layer, repository, and entity"
+    },
+    {
+      "name": "spring-controller",
+      "description": "Create a REST controller with CRUD endpoints following Spring best practices"
+    },
+    {
+      "name": "spring-test",
+      "description": "Generate comprehensive test suite including unit tests, integration tests, and Testcontainers setup"
+    },
+    {
+      "name": "spring-config",
+      "description": "Create Spring Boot configuration classes including application properties and bean definitions"
+    }
+  ],
+  "capabilities": [
+    "Spring Boot 3.x development",
+    "Microservices architecture",
+    "Reactive programming with WebFlux",
+    "Spring Cloud integration",
+    "Spring Data JPA and R2DBC",
+    "Spring Security with OAuth2/JWT",
+    "Enterprise integration patterns",
+    "Cloud-native deployment",
+    "GraalVM native compilation",
+    "Performance optimization"
+  ],
+  "integrations": [
+    "java-architect",
+    "microservices-architect",
+    "database-optimizer",
+    "devops-engineer",
+    "security-auditor",
+    "performance-engineer",
+    "api-designer",
+    "cloud-architect"
+  ],
+  "requirements": {
+    "javaVersion": "17+",
+    "springBootVersion": "3.x",
+    "testCoverage": ">85%"
+  }
+}

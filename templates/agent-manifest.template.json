@@ -1,0 +1,46 @@
+{
+  "$schema": "../schemas/agent-manifest.schema.json",
+  "id": "{{AGENT_ID}}",
+  "name": "{{AGENT_NAME}}",
+  "version": "2.0.0",
+  "category": {
+    "id": "{{CATEGORY_ID}}",
+    "name": "{{CATEGORY_NAME}}"
+  },
+  "description": {
+    "short": "{{SHORT_DESCRIPTION}}",
+    "long": "{{LONG_DESCRIPTION}}"
+  },
+  "capabilities": {
+    "primaryDomain": "{{PRIMARY_DOMAIN}}",
+    "languages": [],
+    "frameworks": [],
+    "platforms": [],
+    "skills": []
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": []
+  },
+  "mcpServers": [],
+  "requirements": {
+    "apiKeys": [],
+    "cliTools": [],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [],
+  "collaboration": {
+    "collaboratesWith": [],
+    "delegatesTo": [],
+    "receivesFrom": []
+  },
+  "examples": [],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

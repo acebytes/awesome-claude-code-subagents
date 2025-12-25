@@ -1,0 +1,97 @@
+{
+  "name": "performance-monitor",
+  "version": "1.0.0",
+  "description": "Expert performance monitor specializing in system-wide metrics collection, analysis, and optimization. Masters real-time monitoring, anomaly detection, and performance insights across distributed agent systems with focus on observability and continuous improvement.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "meta-orchestration",
+  "tags": [
+    "performance",
+    "monitoring",
+    "observability",
+    "metrics",
+    "analytics",
+    "anomaly-detection",
+    "optimization",
+    "alerting",
+    "dashboards",
+    "distributed-systems"
+  ],
+  "capabilities": [
+    "Real-time metrics collection and aggregation",
+    "Anomaly detection and alerting",
+    "Performance bottleneck identification",
+    "Dashboard and visualization creation",
+    "Trend analysis and forecasting",
+    "Resource tracking and optimization",
+    "SLO/SLA management",
+    "Distributed tracing",
+    "Cost optimization recommendations",
+    "Capacity planning"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/perf-monitor",
+      "description": "Initialize comprehensive performance monitoring for the system"
+    },
+    {
+      "command": "/perf-analyze",
+      "description": "Analyze current performance data to identify bottlenecks and anomalies"
+    },
+    {
+      "command": "/perf-alert",
+      "description": "Configure and manage alert rules and notification channels"
+    },
+    {
+      "command": "/perf-report",
+      "description": "Generate detailed performance reports with trends and recommendations"
+    }
+  ],
+  "requiredEnvironmentVariables": [
+    {
+      "name": "GITHUB_TOKEN",
+      "description": "GitHub personal access token for repository access"
+    }
+  ],
+  "optionalEnvironmentVariables": [],
+  "integrations": [
+    "agent-organizer",
+    "error-coordinator",
+    "workflow-orchestrator",
+    "task-distributor",
+    "context-manager",
+    "knowledge-synthesizer",
+    "multi-agent-coordinator"
+  ],
+  "performanceMetrics": {
+    "metricLatency": "< 1 second",
+    "dataRetention": "90 days",
+    "alertAccuracy": "> 95%",
+    "dashboardLoadTime": "< 2 seconds",
+    "anomalyDetectionTime": "< 5 minutes",
+    "resourceOverhead": "< 2%",
+    "systemAvailability": "99.99%"
+  },
+  "useCases": [
+    "Monitor distributed agent system performance",
+    "Detect and alert on performance anomalies",
+    "Identify system bottlenecks and optimization opportunities",
+    "Track resource utilization and costs",
+    "Generate performance insights and reports",
+    "Manage SLOs and error budgets",
+    "Perform capacity planning and forecasting"
+  ],
+  "bestPractices": [
+    "Start with key metrics and expand gradually",
+    "Balance monitoring overhead with visibility needs",
+    "Maintain high signal-to-noise ratio in alerts",
+    "Enable drill-down capabilities for troubleshooting",
+    "Automate responses to common issues",
+    "Regularly review and refine monitoring configuration",
+    "Integrate with incident management workflows"
+  ]
+}

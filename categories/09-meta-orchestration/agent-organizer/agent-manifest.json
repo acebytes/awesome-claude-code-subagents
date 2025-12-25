@@ -1,0 +1,187 @@
+{
+  "id": "agent-organizer",
+  "name": "Agent Organizer",
+  "version": "1.0.0",
+  "category": {
+    "id": "09-meta-orchestration",
+    "name": "Meta Orchestration"
+  },
+  "description": {
+    "short": "Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization.",
+    "long": "Senior agent organizer with expertise in assembling and coordinating multi-agent teams. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization. Analyzes task complexity, maps agent capabilities, designs efficient workflows, and ensures seamless collaboration across distributed agent systems."
+  },
+  "capabilities": {
+    "primaryDomain": "Multi-Agent Orchestration & Team Assembly",
+    "languages": [
+      "JSON",
+      "YAML",
+      "Markdown"
+    ],
+    "frameworks": [
+      "Multi-Agent Systems",
+      "Workflow Orchestration",
+      "Task Distribution",
+      "Resource Management"
+    ],
+    "platforms": [
+      "Agent Networks",
+      "Distributed Systems",
+      "Cloud Infrastructure",
+      "Coordination Platforms"
+    ],
+    "skills": [
+      "Task decomposition and analysis",
+      "Agent capability mapping",
+      "Team composition optimization",
+      "Workflow design and modeling",
+      "Dependency management",
+      "Performance optimization",
+      "Load balancing",
+      "Resource allocation",
+      "Orchestration pattern selection",
+      "Real-time monitoring and adaptation",
+      "Error recovery and failover",
+      "Cost optimization",
+      "Communication protocol design",
+      "Result aggregation and synthesis",
+      "Continuous improvement and learning"
+    ]
+  },
+  "tools": {
+    "builtin": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ],
+    "mcpServerRefs": [
+      "filesystem",
+      "github",
+      "memory"
+    ]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read agent capability files, write team composition plans, edit workflow configurations, and store orchestration results",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Access agent repositories, review team patterns, study successful orchestrations, and track agent versions",
+      "required": true,
+      "envVars": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Store successful team compositions, recall agent performance data, track optimization strategies, and learn from past orchestrations",
+      "required": true,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      }
+    ],
+    "cliTools": [
+      "node",
+      "npm",
+      "npx"
+    ],
+    "runtimeDependencies": [
+      "Node.js 18+"
+    ]
+  },
+  "slashCommands": [
+    {
+      "name": "/organize-agents",
+      "description": "Analyze a task and assemble the optimal agent team with roles, workflow, and monitoring",
+      "usage": "/organize-agents <task-description>"
+    },
+    {
+      "name": "/agent-matrix",
+      "description": "Generate a capability matrix of available agents with compatibility analysis and recommendations",
+      "usage": "/agent-matrix [filter]"
+    },
+    {
+      "name": "/team-assemble",
+      "description": "Assemble an agent team with specific budget, time, and skill constraints",
+      "usage": "/team-assemble --budget <amount> --time <deadline> --skills <required-skills>"
+    },
+    {
+      "name": "/workflow-design",
+      "description": "Design an efficient multi-agent workflow with orchestration patterns and coordination points",
+      "usage": "/workflow-design <task> --pattern <orchestration-pattern>"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "context-manager",
+      "multi-agent-coordinator",
+      "task-distributor",
+      "workflow-orchestrator",
+      "performance-monitor",
+      "error-coordinator",
+      "knowledge-synthesizer"
+    ],
+    "delegatesTo": [
+      "backend-developer",
+      "frontend-developer",
+      "devops-engineer",
+      "data-engineer",
+      "security-engineer"
+    ],
+    "receivesFrom": [
+      "context-manager",
+      "performance-monitor",
+      "error-coordinator"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Organize a team of agents to build a full-stack e-commerce application with payment integration",
+      "capability": "Task decomposition, agent selection for frontend, backend, database, payment integration, and coordination workflow design"
+    },
+    {
+      "prompt": "Create an agent capability matrix showing which agents are best for different types of tasks",
+      "capability": "Agent capability analysis, skill mapping, compatibility matrix generation, and recommendation synthesis"
+    },
+    {
+      "prompt": "Assemble a team to optimize our application performance with a budget of $500 and 2-week deadline",
+      "capability": "Constraint-based team assembly, cost optimization, timeline planning, and resource allocation"
+    },
+    {
+      "prompt": "Design a workflow for processing 10,000 data records through validation, transformation, and storage",
+      "capability": "Workflow design with map-reduce pattern, parallel processing, checkpoint optimization, and result aggregation"
+    },
+    {
+      "prompt": "Orchestrate a team to migrate a monolithic application to microservices architecture",
+      "capability": "Complex multi-phase orchestration, dependency management, risk mitigation, and phased execution planning"
+    },
+    {
+      "prompt": "Monitor and rebalance our current agent team handling customer support tickets due to bottlenecks",
+      "capability": "Real-time performance monitoring, bottleneck detection, dynamic agent reallocation, and workflow optimization"
+    }
+  ],
+  "metadata": {
+    "author": "Claude Code Agent Marketplace",
+    "maintainer": "VoltAgent",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/claude-code-agent-marketplace",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

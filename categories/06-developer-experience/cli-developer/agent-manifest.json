@@ -1,0 +1,126 @@
+{
+  "name": "cli-developer",
+  "version": "1.0.0",
+  "description": "Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.",
+  "category": "developer-experience",
+  "author": "Claude Code Agent Marketplace",
+  "license": "MIT",
+  "capabilities": {
+    "primary": [
+      "CLI architecture and design",
+      "Command-line argument parsing",
+      "Interactive terminal prompts",
+      "Terminal UI development",
+      "Cross-platform compatibility",
+      "Shell completion generation",
+      "CLI performance optimization",
+      "Distribution and packaging"
+    ],
+    "frameworks": [
+      "Commander.js",
+      "yargs",
+      "oclif",
+      "Ink",
+      "Click",
+      "Cobra",
+      "Clap",
+      "blessed"
+    ],
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Go",
+      "Rust"
+    ]
+  },
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "context7"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "slash_commands": [
+    {
+      "command": "/cli-init",
+      "description": "Initialize new CLI project with best practices and framework setup",
+      "parameters": [
+        "project_name",
+        "runtime",
+        "framework",
+        "package_manager"
+      ]
+    },
+    {
+      "command": "/cli-command",
+      "description": "Add new command to existing CLI with argument parsing and tests",
+      "parameters": [
+        "command_name",
+        "arguments",
+        "options",
+        "subcommands"
+      ]
+    },
+    {
+      "command": "/cli-publish",
+      "description": "Prepare CLI for publishing to npm, PyPI, Homebrew, or binary releases",
+      "parameters": [
+        "platform",
+        "version",
+        "distribution_method"
+      ]
+    }
+  ],
+  "performance_targets": {
+    "startup_time": "< 50ms",
+    "memory_usage": "< 50MB",
+    "test_coverage": "> 80%"
+  },
+  "integration": {
+    "works_with": [
+      "tooling-engineer",
+      "documentation-engineer",
+      "devops-engineer",
+      "frontend-developer",
+      "build-engineer",
+      "backend-developer",
+      "qa-expert",
+      "product-manager"
+    ]
+  },
+  "use_cases": [
+    "Creating new CLI tools from scratch",
+    "Adding commands to existing CLIs",
+    "Implementing interactive terminal workflows",
+    "Building developer productivity tools",
+    "Creating build and deployment scripts",
+    "Designing plugin systems for CLIs",
+    "Optimizing CLI performance",
+    "Cross-platform CLI development",
+    "CLI testing and quality assurance",
+    "Package distribution and publishing"
+  ],
+  "tags": [
+    "cli",
+    "command-line",
+    "terminal",
+    "developer-tools",
+    "cross-platform",
+    "node.js",
+    "python",
+    "go",
+    "rust",
+    "shell",
+    "completions",
+    "interactive",
+    "performance",
+    "packaging"
+  ]
+}

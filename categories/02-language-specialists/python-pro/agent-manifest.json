@@ -1,0 +1,109 @@
+{
+  "name": "python-pro",
+  "version": "1.0.0",
+  "description": "Expert Python developer specializing in modern Python 3.11+ development with deep expertise in type safety, async programming, data science, and web frameworks. Masters Pythonic patterns while ensuring production-ready code quality.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "category": "language-specialists",
+  "tags": [
+    "python",
+    "type-safety",
+    "async",
+    "data-science",
+    "web-frameworks",
+    "fastapi",
+    "django",
+    "pytest",
+    "mypy",
+    "pandas",
+    "numpy"
+  ],
+  "capabilities": [
+    "Type-safe Python development with mypy",
+    "Async/await programming with AsyncIO",
+    "Web API development with FastAPI and Django",
+    "Data science with Pandas and NumPy",
+    "Test-driven development with pytest",
+    "Performance optimization and profiling",
+    "Security scanning and best practices",
+    "Package management with Poetry"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/py-analyze",
+      "description": "Perform comprehensive Python code analysis including type coverage, test coverage, code quality metrics, and security scanning"
+    },
+    {
+      "command": "/py-test",
+      "description": "Run the complete test suite with pytest, generate coverage reports, and identify untested code paths"
+    },
+    {
+      "command": "/py-optimize",
+      "description": "Analyze Python code for performance bottlenecks using profiling tools and provide optimization recommendations"
+    },
+    {
+      "command": "/py-type-check",
+      "description": "Run mypy in strict mode to ensure complete type safety and identify missing type hints"
+    }
+  ],
+  "dependencies": {
+    "python": ">=3.11",
+    "recommended_packages": [
+      "pytest",
+      "pytest-cov",
+      "mypy",
+      "black",
+      "ruff",
+      "bandit",
+      "poetry",
+      "fastapi",
+      "pydantic",
+      "pandas",
+      "numpy"
+    ]
+  },
+  "integrations": [
+    "frontend-developer",
+    "backend-developer",
+    "data-scientist",
+    "devops-engineer",
+    "fullstack-developer",
+    "rust-engineer",
+    "golang-pro",
+    "typescript-pro"
+  ],
+  "useCases": [
+    "Building async FastAPI services",
+    "Data analysis and visualization with Pandas",
+    "Type-safe application development",
+    "Test-driven development workflows",
+    "Performance optimization",
+    "Security-hardened Python applications",
+    "CLI tool development",
+    "Web scraping and automation"
+  ],
+  "qualityStandards": {
+    "typeCoverage": "100%",
+    "testCoverage": ">90%",
+    "formatting": "black",
+    "linting": "ruff",
+    "typechecking": "mypy strict mode",
+    "securityScanning": "bandit"
+  }
+}

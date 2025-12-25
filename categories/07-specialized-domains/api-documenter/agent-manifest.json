@@ -1,0 +1,99 @@
+{
+  "name": "api-documenter",
+  "version": "1.0.0",
+  "description": "Expert API documenter specializing in creating comprehensive, developer-friendly API documentation. Masters OpenAPI/Swagger specifications, interactive documentation portals, and documentation automation with focus on clarity, completeness, and exceptional developer experience.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "specialized-domains",
+  "tags": [
+    "api",
+    "documentation",
+    "openapi",
+    "swagger",
+    "rest",
+    "graphql",
+    "sdk",
+    "integration"
+  ],
+  "capabilities": [
+    "OpenAPI 3.1 specification creation",
+    "REST API documentation",
+    "GraphQL schema documentation",
+    "Multi-language code examples",
+    "Interactive API portals",
+    "Authentication guides",
+    "Error documentation",
+    "Versioning and migration guides",
+    "SDK reference documentation",
+    "Integration tutorials"
+  ],
+  "slashCommands": [
+    {
+      "command": "/api-doc",
+      "description": "Generate comprehensive API documentation for endpoints, including request/response schemas, parameters, and examples"
+    },
+    {
+      "command": "/openapi-gen",
+      "description": "Create or update OpenAPI/Swagger specification files with complete endpoint definitions and schemas"
+    },
+    {
+      "command": "/doc-review",
+      "description": "Review existing API documentation for completeness, accuracy, and developer experience improvements"
+    },
+    {
+      "command": "/example-gen",
+      "description": "Generate code examples in multiple programming languages for API endpoints and common use cases"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "fetch"
+  ],
+  "workflow": [
+    "Query context manager for API details and documentation requirements",
+    "Review existing API endpoints, schemas, and authentication methods",
+    "Analyze documentation gaps, user feedback, and integration pain points",
+    "Create comprehensive, interactive API documentation"
+  ],
+  "integrations": [
+    {
+      "agent": "backend-developer",
+      "purpose": "Collaborate on API design"
+    },
+    {
+      "agent": "frontend-developer",
+      "purpose": "Support on integration"
+    },
+    {
+      "agent": "security-auditor",
+      "purpose": "Work on authentication documentation"
+    },
+    {
+      "agent": "qa-expert",
+      "purpose": "Guide on testing documentation"
+    },
+    {
+      "agent": "devops-engineer",
+      "purpose": "Help on deployment documentation"
+    },
+    {
+      "agent": "product-manager",
+      "purpose": "Assist on feature documentation"
+    },
+    {
+      "agent": "technical-writer",
+      "purpose": "Partner on integration guides"
+    },
+    {
+      "agent": "support-engineer",
+      "purpose": "Coordinate on FAQs"
+    }
+  ],
+  "documentation": {
+    "readme": "README.md",
+    "instructions": "CLAUDE.md",
+    "mcpConfig": "mcp-config.json"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access filesystem for reading/writing MCP server code",
+      "requiredFor": [
+        "Reading existing MCP server implementations",
+        "Writing new server files",
+        "Editing configuration files",
+        "Managing project structure"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Access GitHub repositories for MCP examples and documentation",
+      "requiredFor": [
+        "Browsing official MCP SDK repositories",
+        "Reviewing community server implementations",
+        "Accessing protocol specification documents",
+        "Checking SDK changelogs and updates"
+      ],
+      "envVarsRequired": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@uplink-online/mcp-server-context7"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Query MCP protocol documentation and specifications",
+      "requiredFor": [
+        "Referencing JSON-RPC 2.0 standards",
+        "Looking up schema definitions",
+        "Understanding protocol specifications",
+        "Researching best practices"
+      ],
+      "envVarsRequired": [
+        "CONTEXT7_API_KEY"
+      ]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Test HTTP endpoints and validate MCP server responses",
+      "requiredFor": [
+        "Testing HTTP transport endpoints",
+        "Validating server responses",
+        "Debugging connection issues",
+        "Testing SSE endpoints"
+      ]
+    }
+  },
+  "notes": {
+    "filesystem": "Provides file system access for MCP server development. Set the working directory to your MCP server project root.",
+    "github": "Requires GitHub Personal Access Token. Create one at https://github.com/settings/tokens with repo scope.",
+    "context7": "Requires Context7 API key. Sign up at https://context7.ai to obtain an API key for protocol documentation queries.",
+    "fetch": "No authentication required. Used for testing HTTP/SSE endpoints during development."
+  },
+  "setupInstructions": {
+    "step1": "Install Node.js 18 or later",
+    "step2": "Set environment variables for github and context7 servers",
+    "step3": "Run 'npx -y @modelcontextprotocol/inspector' to test server connections",
+    "step4": "Configure Claude Desktop to use these MCP servers"
+  }
+}

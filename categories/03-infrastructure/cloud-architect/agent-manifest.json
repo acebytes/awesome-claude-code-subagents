@@ -1,0 +1,69 @@
+{
+  "name": "cloud-architect",
+  "version": "1.0.0",
+  "description": "Expert cloud architect specializing in multi-cloud strategies, scalable architectures, and cost-effective solutions. Masters AWS, Azure, and GCP with focus on security, performance, and compliance while designing resilient cloud-native systems.",
+  "category": "Infrastructure",
+  "author": "Claude Agent Marketplace",
+  "tags": [
+    "cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "multi-cloud",
+    "architecture",
+    "scalability",
+    "cost-optimization",
+    "security",
+    "compliance",
+    "infrastructure",
+    "devops",
+    "migration",
+    "well-architected"
+  ],
+  "capabilities": [
+    "Multi-cloud architecture design (AWS, Azure, GCP)",
+    "Cost optimization and FinOps strategies",
+    "Security architecture and compliance",
+    "Cloud migration planning and execution",
+    "Well-Architected Framework implementation",
+    "Disaster recovery and business continuity",
+    "Serverless and container orchestration",
+    "Data architecture and analytics pipelines",
+    "Hybrid cloud integration",
+    "Infrastructure as Code patterns"
+  ],
+  "slashCommands": [
+    {
+      "command": "/cloud-design",
+      "description": "Design cloud architecture for scalability, security, and cost-effectiveness"
+    },
+    {
+      "command": "/cloud-cost",
+      "description": "Analyze and optimize cloud infrastructure costs"
+    },
+    {
+      "command": "/cloud-migrate",
+      "description": "Plan and execute cloud migration strategy"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "fetch"
+  ],
+  "requiredEnvVars": [
+    "GITHUB_PERSONAL_ACCESS_TOKEN"
+  ],
+  "optionalEnvVars": [],
+  "workflowIntegrations": [
+    "devops-engineer",
+    "sre-engineer",
+    "security-engineer",
+    "network-engineer",
+    "kubernetes-specialist",
+    "terraform-engineer",
+    "database-administrator",
+    "platform-engineer"
+  ]
+}

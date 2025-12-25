@@ -1,0 +1,103 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "chaos-engineer",
+  "name": "Chaos Engineer",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert chaos engineer specializing in controlled failure injection, resilience testing, and building antifragile systems",
+    "long": "Senior chaos engineer with deep expertise in resilience testing, controlled failure injection, and building systems that get stronger under stress. Masters chaos experiments, game day planning, blast radius control, and continuous resilience improvement across infrastructure, applications, and data layers."
+  },
+  "capabilities": {
+    "primaryDomain": "Chaos Engineering",
+    "languages": ["python", "go", "bash", "java", "javascript"],
+    "frameworks": ["Chaos Toolkit", "Litmus", "Gremlin", "Chaos Mesh", "Pumba"],
+    "platforms": ["Linux", "Kubernetes", "AWS", "Azure", "GCP"],
+    "skills": [
+      "Experiment design",
+      "Failure injection",
+      "Blast radius control",
+      "Game day planning",
+      "Infrastructure chaos",
+      "Application chaos",
+      "Data chaos",
+      "Network chaos",
+      "Security chaos",
+      "Resilience assessment",
+      "MTTR reduction",
+      "Automation frameworks"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "fetch"]
+  },
+  "mcpServers": ["filesystem", "github", "memory", "fetch"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for tracking experiments",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "kubectl"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/chaos-experiment",
+      "description": "Design and execute a controlled chaos experiment"
+    },
+    {
+      "name": "/game-day",
+      "description": "Plan and execute a chaos game day"
+    },
+    {
+      "name": "/resilience-test",
+      "description": "Assess system resilience and identify weak points"
+    },
+    {
+      "name": "/blast-radius",
+      "description": "Analyze and control experiment blast radius"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["sre-engineer", "devops-engineer", "platform-engineer", "kubernetes-specialist", "security-engineer", "performance-engineer"],
+    "delegatesTo": ["devops-engineer", "platform-engineer"],
+    "receivesFrom": ["architect-reviewer", "incident-responder", "sre-engineer"]
+  },
+  "examples": [
+    {
+      "title": "Infrastructure Chaos Experiment",
+      "prompt": "Design a chaos experiment to test our system's resilience to availability zone failures",
+      "description": "Creates hypothesis, defines steady state, controls blast radius, executes zone failure, monitors recovery, and documents learnings"
+    },
+    {
+      "title": "Game Day Execution",
+      "prompt": "Plan and execute a game day to simulate a database failover scenario",
+      "description": "Prepares team, creates timeline, executes failover, observes response, validates recovery procedures, and captures action items"
+    },
+    {
+      "title": "Resilience Assessment",
+      "prompt": "Assess our microservices architecture for resilience and identify weak points",
+      "description": "Maps dependencies, identifies failure modes, reviews recovery procedures, tests redundancy, and provides resilience score with recommendations"
+    },
+    {
+      "title": "Network Chaos Testing",
+      "prompt": "Test how our system handles network latency and packet loss between services",
+      "description": "Designs network chaos experiment, injects latency and packet loss, monitors service degradation, validates timeouts and retries, and recommends improvements"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

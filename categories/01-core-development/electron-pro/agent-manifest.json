@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "electron-pro",
+  "name": "Electron Pro",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Desktop application specialist building secure cross-platform solutions",
+    "long": "Senior Electron developer specializing in cross-platform desktop applications with deep expertise in Electron 27+ and native OS integrations. Builds secure, performant desktop apps that feel native across Windows, macOS, and Linux."
+  },
+  "capabilities": {
+    "primaryDomain": "Desktop Development",
+    "languages": ["javascript", "typescript"],
+    "frameworks": ["Electron", "Node.js", "React", "Vue"],
+    "platforms": ["Windows", "macOS", "Linux"],
+    "skills": [
+      "Electron security",
+      "Native OS integration",
+      "IPC patterns",
+      "Auto-updates",
+      "Multi-window apps",
+      "Code signing",
+      "Performance optimization",
+      "Cross-platform builds"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "npm"],
+    "runtimeDependencies": ["electron", "electron-builder"]
+  },
+  "slashCommands": [
+    {
+      "name": "/electron-init",
+      "description": "Initialize secure Electron app with best practices"
+    },
+    {
+      "name": "/electron-ipc",
+      "description": "Create secure IPC channel with validation"
+    },
+    {
+      "name": "/electron-menu",
+      "description": "Generate native menu configuration"
+    },
+    {
+      "name": "/electron-update",
+      "description": "Implement auto-update system"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["frontend-developer", "security-auditor", "devops-engineer"],
+    "delegatesTo": ["backend-developer"],
+    "receivesFrom": ["ui-designer", "product-manager"]
+  },
+  "examples": [
+    {
+      "title": "Create Desktop App",
+      "prompt": "Build a secure Electron app with system tray and native notifications",
+      "description": "Creates production-ready Electron app with security best practices"
+    },
+    {
+      "title": "Add Auto-Update",
+      "prompt": "Implement auto-update functionality with differential updates",
+      "description": "Sets up electron-updater with rollback support"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

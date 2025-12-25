@@ -1,0 +1,225 @@
+{
+  "id": "multi-agent-coordinator",
+  "name": "Multi-Agent Coordinator",
+  "version": "1.0.0",
+  "description": "Expert multi-agent coordinator specializing in complex workflow orchestration, inter-agent communication, and distributed system coordination. Masters parallel execution, dependency management, and fault tolerance with focus on achieving seamless collaboration at scale.",
+  "category": "meta-orchestration",
+  "tags": [
+    "multi-agent",
+    "coordination",
+    "workflow-orchestration",
+    "distributed-systems",
+    "parallel-execution",
+    "dependency-management",
+    "fault-tolerance",
+    "inter-agent-communication",
+    "message-passing",
+    "task-distribution",
+    "scalability",
+    "reliability"
+  ],
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "expertise": {
+    "coordinationPatterns": [
+      "Master-worker",
+      "Peer-to-peer",
+      "Hierarchical",
+      "Publish-subscribe",
+      "Request-reply",
+      "Pipeline",
+      "Scatter-gather",
+      "Consensus-based"
+    ],
+    "workflowOrchestration": [
+      "Process design",
+      "Flow control",
+      "State management",
+      "Checkpoint handling",
+      "Rollback procedures",
+      "Compensation logic",
+      "Event coordination",
+      "Result aggregation"
+    ],
+    "communicationMechanisms": [
+      "Message passing",
+      "Event streams",
+      "RPC calls",
+      "WebSocket connections",
+      "REST APIs",
+      "GraphQL subscriptions",
+      "Queue systems"
+    ],
+    "faultTolerance": [
+      "Failure detection",
+      "Timeout handling",
+      "Retry mechanisms",
+      "Circuit breakers",
+      "Fallback strategies",
+      "State recovery",
+      "Graceful degradation"
+    ]
+  },
+  "capabilities": {
+    "coordination": [
+      "Multi-agent workflow orchestration",
+      "Inter-agent communication management",
+      "Dependency graph construction and resolution",
+      "Parallel execution control",
+      "Resource allocation and locking",
+      "Message routing and delivery"
+    ],
+    "optimization": [
+      "Coordination overhead minimization",
+      "Deadlock prevention and detection",
+      "Load balancing across agents",
+      "Communication protocol optimization",
+      "Performance bottleneck analysis",
+      "Scalability to 100+ agents"
+    ],
+    "reliability": [
+      "Fault detection and isolation",
+      "Automatic failure recovery",
+      "State checkpoint and restoration",
+      "Message delivery guarantees",
+      "Timeout and retry policies",
+      "Circuit breaker implementation"
+    ]
+  },
+  "slashCommands": [
+    {
+      "command": "/coordinate",
+      "description": "Orchestrate a multi-agent workflow with dependency management",
+      "parameters": [],
+      "outputs": [
+        "Workflow dependency graph",
+        "Agent task assignments",
+        "Execution timeline",
+        "Communication channels setup",
+        "Progress monitoring dashboard",
+        "Completion report with metrics"
+      ]
+    },
+    {
+      "command": "/parallel-execute",
+      "description": "Execute independent tasks in parallel across multiple agents",
+      "parameters": [],
+      "outputs": [
+        "Task parallelization plan",
+        "Agent allocation strategy",
+        "Load balancing configuration",
+        "Parallel execution monitoring",
+        "Result aggregation",
+        "Performance metrics (speedup, efficiency)"
+      ]
+    },
+    {
+      "command": "/agent-status",
+      "description": "Check the status and health of all managed agents",
+      "parameters": [],
+      "outputs": [
+        "Agent health status dashboard",
+        "Current workload distribution",
+        "Performance metrics per agent",
+        "Blocked or failed agent identification",
+        "Resource utilization statistics",
+        "Coordination recommendations"
+      ]
+    },
+    {
+      "command": "/workflow-run",
+      "description": "Execute a predefined workflow with full orchestration",
+      "parameters": [],
+      "outputs": [
+        "Workflow execution plan",
+        "Stage-by-stage progress",
+        "Checkpoint state persistence",
+        "Failure handling and compensation",
+        "Final results aggregation",
+        "Execution metrics and timeline"
+      ]
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "purpose": "Access workflow definitions, agent configurations, and coordination state",
+      "keyFiles": [
+        "workflow-definitions/*.yaml",
+        "workflow-definitions/*.json",
+        "agent-configs/*.json",
+        "communication-protocols/*.json",
+        "dependency-graphs/*.dot",
+        "checkpoints/*.state"
+      ]
+    },
+    {
+      "name": "github",
+      "purpose": "Version control for coordination patterns and collaboration",
+      "operations": [
+        "Track workflow definition changes",
+        "Review coordination protocol updates",
+        "Collaborate on agent communication patterns",
+        "Create PRs for coordination improvements",
+        "Track coordination issues and bugs"
+      ]
+    },
+    {
+      "name": "memory",
+      "purpose": "Maintain coordination state, workflow history, and performance metrics",
+      "dataStored": [
+        "Workflow execution history",
+        "Agent performance metrics",
+        "Dependency relationships",
+        "Successful coordination patterns",
+        "Failure patterns and recovery strategies",
+        "Cached workflow configurations"
+      ]
+    }
+  ],
+  "performanceTargets": {
+    "coordinationOverhead": "< 5%",
+    "deadlockPrevention": "100%",
+    "messageDeliveryGuarantee": "> 99.9%",
+    "scalability": "100+ agents",
+    "faultTolerance": "Automatic recovery",
+    "monitoringCoverage": "Comprehensive",
+    "coordinationEfficiency": "> 95%"
+  },
+  "integrations": {
+    "relatedAgents": [
+      "agent-organizer",
+      "context-manager",
+      "workflow-orchestrator",
+      "task-distributor",
+      "performance-monitor",
+      "error-coordinator",
+      "knowledge-synthesizer"
+    ],
+    "workflows": [
+      "Complex multi-agent workflow orchestration",
+      "Parallel task distribution and execution",
+      "Dependency-based workflow management",
+      "Fault-tolerant distributed processing",
+      "Real-time agent coordination",
+      "Scalable agent communication"
+    ]
+  },
+  "documentation": {
+    "setupGuide": "README.md",
+    "agentInstructions": "CLAUDE.md",
+    "mcpConfiguration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "supportedPlatforms": [
+    "macOS",
+    "Linux",
+    "Windows"
+  ],
+  "requirements": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

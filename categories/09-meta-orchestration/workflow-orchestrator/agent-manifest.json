@@ -1,0 +1,267 @@
+{
+  "name": "workflow-orchestrator",
+  "version": "1.0.0",
+  "description": "Expert workflow orchestrator specializing in complex process design, state machine implementation, and business process automation. Masters workflow patterns, error compensation, and transaction management with focus on building reliable, flexible, and observable workflow systems.",
+  "category": "meta-orchestration",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "license": "MIT",
+  "tags": [
+    "workflow",
+    "orchestration",
+    "state-machine",
+    "business-process",
+    "automation",
+    "saga",
+    "compensation",
+    "transaction-management",
+    "event-driven",
+    "error-handling",
+    "process-modeling",
+    "bpmn",
+    "human-tasks",
+    "approval-workflows"
+  ],
+  "capabilities": {
+    "workflow_design": [
+      "Process modeling and BPMN",
+      "State machine implementation",
+      "Decision logic and routing",
+      "Parallel flows and synchronization",
+      "Loop constructs",
+      "Error boundaries and compensation",
+      "Sub-process nesting"
+    ],
+    "state_management": [
+      "State persistence and versioning",
+      "Transition validation",
+      "Consistency checks",
+      "Rollback support",
+      "Migration strategies",
+      "Recovery procedures",
+      "Audit logging"
+    ],
+    "transaction_patterns": [
+      "ACID properties",
+      "Saga pattern implementation",
+      "Two-phase commit",
+      "Compensation logic",
+      "Idempotency guarantees",
+      "Distributed transactions"
+    ],
+    "error_handling": [
+      "Exception management",
+      "Retry strategies",
+      "Compensation flows",
+      "Fallback procedures",
+      "Circuit breakers",
+      "Dead letter handling",
+      "Timeout management"
+    ],
+    "event_orchestration": [
+      "Event sourcing",
+      "Event correlation",
+      "Trigger management",
+      "Timer events",
+      "Signal handling",
+      "Message events",
+      "Escalation events"
+    ],
+    "human_tasks": [
+      "Task assignment",
+      "Approval workflows",
+      "Escalation rules",
+      "Delegation handling",
+      "Form integration",
+      "SLA tracking",
+      "Workload balancing"
+    ],
+    "monitoring": [
+      "Process metrics",
+      "State tracking",
+      "Performance analytics",
+      "Error monitoring",
+      "Bottleneck detection",
+      "SLA compliance",
+      "Audit trails"
+    ]
+  },
+  "performance_targets": {
+    "reliability": "> 99.9%",
+    "state_consistency": "100%",
+    "recovery_time": "< 30s",
+    "execution_rate": "1.2K/min",
+    "success_rate": "> 99%"
+  },
+  "slash_commands": [
+    {
+      "command": "/workflow-create",
+      "description": "Create a new workflow definition with states, transitions, and error handling",
+      "usage": "/workflow-create <workflow-name> <description>",
+      "parameters": [
+        {
+          "name": "workflow-name",
+          "type": "string",
+          "required": true,
+          "description": "Unique identifier for the workflow"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": true,
+          "description": "Human-readable description of the workflow purpose"
+        }
+      ]
+    },
+    {
+      "command": "/workflow-execute",
+      "description": "Execute a workflow instance with provided input parameters",
+      "usage": "/workflow-execute <workflow-name> [parameters]",
+      "parameters": [
+        {
+          "name": "workflow-name",
+          "type": "string",
+          "required": true,
+          "description": "Name of the workflow to execute"
+        },
+        {
+          "name": "parameters",
+          "type": "object",
+          "required": false,
+          "description": "JSON object containing workflow input parameters"
+        }
+      ]
+    },
+    {
+      "command": "/workflow-status",
+      "description": "Check the status of running workflow instances",
+      "usage": "/workflow-status [workflow-name] [instance-id]",
+      "parameters": [
+        {
+          "name": "workflow-name",
+          "type": "string",
+          "required": false,
+          "description": "Filter by workflow name"
+        },
+        {
+          "name": "instance-id",
+          "type": "string",
+          "required": false,
+          "description": "Specific instance ID to check"
+        }
+      ]
+    },
+    {
+      "command": "/workflow-rollback",
+      "description": "Rollback a workflow instance to a previous state or execute compensation",
+      "usage": "/workflow-rollback <instance-id> [checkpoint-id]",
+      "parameters": [
+        {
+          "name": "instance-id",
+          "type": "string",
+          "required": true,
+          "description": "ID of the workflow instance to rollback"
+        },
+        {
+          "name": "checkpoint-id",
+          "type": "string",
+          "required": false,
+          "description": "Specific checkpoint to rollback to (defaults to previous stable state)"
+        }
+      ]
+    }
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "agent_integrations": [
+    {
+      "agent": "agent-organizer",
+      "purpose": "Collaborate on process tasks and task organization"
+    },
+    {
+      "agent": "multi-agent-coordinator",
+      "purpose": "Support distributed workflow execution across agents"
+    },
+    {
+      "agent": "task-distributor",
+      "purpose": "Work allocation and load balancing"
+    },
+    {
+      "agent": "context-manager",
+      "purpose": "Process state and context management"
+    },
+    {
+      "agent": "performance-monitor",
+      "purpose": "Performance metrics and optimization"
+    },
+    {
+      "agent": "error-coordinator",
+      "purpose": "Error recovery and compensation flows"
+    },
+    {
+      "agent": "knowledge-synthesizer",
+      "purpose": "Pattern recognition and best practices"
+    }
+  ],
+  "process_patterns": [
+    "Sequential flow",
+    "Parallel split/join",
+    "Exclusive choice",
+    "Loops and iterations",
+    "Event-based gateway",
+    "Compensation",
+    "Sub-processes",
+    "Time-based events"
+  ],
+  "quality_standards": {
+    "workflow_reliability": "> 99.9%",
+    "state_consistency": "100%",
+    "recovery_time": "< 30s",
+    "version_compatibility": "enforced",
+    "audit_trail": "complete",
+    "performance_tracking": "continuous",
+    "monitoring": "comprehensive",
+    "flexibility": "high"
+  },
+  "use_cases": [
+    "Business process automation",
+    "Order processing workflows",
+    "Approval and review processes",
+    "Data pipeline orchestration",
+    "Microservice coordination",
+    "Long-running transactions",
+    "Human-in-the-loop workflows",
+    "Event-driven processes",
+    "Multi-step data transformations",
+    "Saga pattern implementations",
+    "Compensation-based error handling",
+    "State machine implementations"
+  ],
+  "dependencies": {
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ],
+    "mcp_servers": [
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-github",
+      "@modelcontextprotocol/server-memory"
+    ]
+  },
+  "configuration": {
+    "default_retry_attempts": 3,
+    "default_timeout": 300,
+    "checkpoint_interval": 60,
+    "audit_logging": true,
+    "performance_monitoring": true,
+    "error_tracking": true
+  }
+}

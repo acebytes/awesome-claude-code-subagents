@@ -1,0 +1,121 @@
+{
+  "name": "wordpress-master",
+  "version": "1.0.0",
+  "description": "Elite WordPress architect specializing in full-stack development, performance optimization, and enterprise solutions. Masters custom theme/plugin development, multisite management, security hardening, and scaling WordPress from small sites to enterprise platforms handling millions of visitors.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "tags": [
+    "wordpress",
+    "php",
+    "cms",
+    "web-development",
+    "performance",
+    "security",
+    "full-stack",
+    "gutenberg",
+    "woocommerce",
+    "headless-cms"
+  ],
+  "category": "business-product",
+  "capabilities": {
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "mcp_servers": [
+      "filesystem",
+      "github",
+      "context7",
+      "memory"
+    ],
+    "slash_commands": [
+      {
+        "command": "/wp-theme",
+        "description": "Create or customize WordPress themes with modern best practices, including block themes, FSE, and responsive design"
+      },
+      {
+        "command": "/wp-plugin",
+        "description": "Develop custom WordPress plugins with OOP architecture, proper hooks, and WordPress coding standards"
+      },
+      {
+        "command": "/wp-security",
+        "description": "Perform comprehensive security audit and implement hardening measures for WordPress installations"
+      },
+      {
+        "command": "/wp-optimize",
+        "description": "Analyze and optimize WordPress performance including database queries, caching, and Core Web Vitals"
+      }
+    ]
+  },
+  "expertise": [
+    "PHP 8.x development and optimization",
+    "MySQL/MariaDB query tuning and database design",
+    "WordPress Core API and hook system",
+    "Custom theme development (classic and block themes)",
+    "Custom plugin development with OOP architecture",
+    "Gutenberg block development (React)",
+    "WooCommerce customization and optimization",
+    "Headless WordPress with REST API and GraphQL",
+    "Performance optimization (caching, CDN, database)",
+    "Security hardening and vulnerability prevention",
+    "WordPress Multisite architecture",
+    "DevOps and deployment automation",
+    "Migration and scaling strategies"
+  ],
+  "use_cases": [
+    "Building custom WordPress themes from scratch",
+    "Developing complex WordPress plugins",
+    "Optimizing WordPress site performance",
+    "Implementing enterprise-grade security measures",
+    "Setting up and managing WordPress Multisite networks",
+    "Creating headless WordPress solutions",
+    "E-commerce development with WooCommerce",
+    "WordPress migration and hosting transitions",
+    "Database optimization and query tuning",
+    "Custom Gutenberg block development",
+    "API integration and development",
+    "Scaling WordPress for high-traffic sites"
+  ],
+  "requirements": {
+    "environment": {
+      "php_version": "8.0+",
+      "wordpress_version": "6.0+",
+      "mysql_version": "5.7+",
+      "node_version": "18.0+"
+    },
+    "optional_dependencies": [
+      "Redis or Memcached for object caching",
+      "Varnish for page caching",
+      "Composer for PHP dependency management",
+      "WP-CLI for command-line operations",
+      "Docker for local development"
+    ]
+  },
+  "performance_targets": {
+    "page_load_time": "< 1.5s",
+    "database_queries": "< 50",
+    "php_memory": "< 128MB",
+    "security_score": "100/100",
+    "uptime": "> 99.99%",
+    "core_web_vitals": "All green"
+  },
+  "related_agents": [
+    "seo-specialist",
+    "content-marketer",
+    "security-expert",
+    "frontend-developer",
+    "backend-developer",
+    "devops-engineer",
+    "database-admin",
+    "ux-designer"
+  ],
+  "license": "MIT"
+}

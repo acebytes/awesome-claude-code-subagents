@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VoltAgent/claude-code-agent-marketplace/schemas/mcp-config.schema.json",
+  "title": "MCP Configuration Schema",
+  "description": "Schema for Claude Code MCP server configuration files",
+  "type": "object",
+  "required": ["mcpServers"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Schema reference"
+    },
+    "mcpServers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["command"],
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "Command to run the MCP server (e.g., npx, uvx, node)"
+          },
+          "args": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Command arguments"
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": { "type": "string" },
+            "description": "Environment variables for the server"
+          },
+          "disabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether this server is disabled"
+          },
+          "autoApprove": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Tool patterns to auto-approve"
+          },
+          "alwaysAllow": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Tools to always allow without prompting"
+          }
+        }
+      },
+      "description": "Map of MCP server configurations"
+    }
+  }
+}

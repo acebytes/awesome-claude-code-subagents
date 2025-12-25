@@ -1,0 +1,107 @@
+{
+  "name": "iot-engineer",
+  "version": "1.0.0",
+  "description": "Expert IoT engineer specializing in connected device architectures, edge computing, and IoT platform development. Masters IoT protocols, device management, and data pipelines with focus on building scalable, secure, and reliable IoT solutions.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "specialized-domains",
+  "tags": [
+    "iot",
+    "embedded",
+    "edge-computing",
+    "mqtt",
+    "sensors",
+    "device-management",
+    "cloud-platforms",
+    "data-pipelines",
+    "security",
+    "scalability"
+  ],
+  "capabilities": [
+    "IoT architecture design",
+    "Device connectivity and management",
+    "Edge computing implementation",
+    "IoT protocol expertise (MQTT, CoAP, LoRaWAN)",
+    "Cloud platform integration (AWS IoT, Azure IoT, Google Cloud IoT)",
+    "Data pipeline development",
+    "Security implementation",
+    "Power optimization",
+    "Analytics integration",
+    "Firmware updates and provisioning"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/iot-protocol",
+      "description": "Analyze and recommend IoT communication protocols based on requirements (device constraints, network characteristics, data patterns, security, cost)"
+    },
+    {
+      "command": "/sensor-config",
+      "description": "Generate sensor configuration and integration code including data acquisition, calibration, power management, and validation"
+    },
+    {
+      "command": "/mqtt-setup",
+      "description": "Configure MQTT infrastructure including broker setup, topic hierarchy, QoS, security, and monitoring"
+    },
+    {
+      "command": "/edge-deploy",
+      "description": "Plan and execute edge computing deployments with containerization, update mechanisms, and offline operation"
+    }
+  ],
+  "dependencies": [],
+  "collaboratesWith": [
+    "embedded-systems",
+    "cloud-architect",
+    "data-engineer",
+    "security-auditor",
+    "devops-engineer",
+    "mobile-developer",
+    "ml-engineer",
+    "business-analyst"
+  ],
+  "useCases": [
+    "Design and implement IoT device architectures",
+    "Build edge computing solutions for data processing",
+    "Integrate devices with cloud platforms (AWS IoT, Azure IoT Hub)",
+    "Develop secure device provisioning and management systems",
+    "Optimize power consumption for battery-powered devices",
+    "Implement MQTT-based messaging infrastructure",
+    "Create data pipelines for IoT telemetry",
+    "Deploy predictive maintenance solutions",
+    "Configure sensor networks and gateways",
+    "Build scalable IoT platforms for millions of devices"
+  ],
+  "requirements": {
+    "environment": [
+      "Node.js for MCP servers",
+      "Git for version control",
+      "GITHUB_TOKEN environment variable for GitHub integration"
+    ],
+    "optional": [
+      "Docker for containerized edge deployments",
+      "MQTT broker (Mosquitto, AWS IoT Core, Azure IoT Hub)",
+      "IoT development boards (Raspberry Pi, ESP32, Arduino)",
+      "Cloud platform CLI tools (AWS CLI, Azure CLI, gcloud)"
+    ]
+  },
+  "performance": {
+    "targets": {
+      "uptime": ">99.9%",
+      "latency": "<500ms",
+      "message_throughput": "100K+ messages/second",
+      "battery_life": ">1 year",
+      "scalability": "Millions of devices"
+    }
+  }
+}

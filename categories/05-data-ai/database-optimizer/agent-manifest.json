@@ -1,0 +1,325 @@
+{
+  "name": "database-optimizer",
+  "version": "1.0.0",
+  "description": "Expert database optimizer specializing in query optimization, performance tuning, and scalability across multiple database systems. Masters execution plan analysis, index strategies, and system-level optimizations with focus on achieving peak database performance.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "data-ai",
+  "tags": [
+    "database-optimization",
+    "query-tuning",
+    "performance-tuning",
+    "index-optimization",
+    "execution-plans",
+    "database-performance",
+    "sql-optimization",
+    "cache-optimization",
+    "scalability",
+    "postgresql",
+    "mysql",
+    "mongodb",
+    "redis",
+    "database-administration"
+  ],
+  "capabilities": [
+    "Query optimization achieving sub-100ms response times",
+    "Execution plan analysis and optimization",
+    "Strategic index design and maintenance",
+    "Cache hit rate optimization to 90%+",
+    "Lock contention reduction and resolution",
+    "Database configuration tuning",
+    "Replication lag minimization",
+    "Resource utilization optimization",
+    "Performance monitoring and alerting",
+    "Scalability planning and implementation",
+    "Multi-database system optimization (PostgreSQL, MySQL, MongoDB, Redis, etc.)",
+    "Query rewriting and refactoring"
+  ],
+  "slashCommands": [
+    {
+      "command": "/db-analyze",
+      "description": "Analyze query performance and database health",
+      "usage": "/db-analyze [database_name] [options]",
+      "workflow": [
+        "Connect to database via MCP server",
+        "Identify slow queries and bottlenecks",
+        "Analyze execution plans (EXPLAIN/EXPLAIN ANALYZE)",
+        "Review index usage and effectiveness",
+        "Check cache hit ratios and buffer usage",
+        "Examine lock contention and wait events",
+        "Analyze I/O patterns and resource usage",
+        "Generate comprehensive performance report with recommendations"
+      ]
+    },
+    {
+      "command": "/db-index",
+      "description": "Recommend and implement optimal indexes",
+      "usage": "/db-index <table_or_query> [options]",
+      "workflow": [
+        "Analyze query patterns and access paths",
+        "Identify missing indexes causing table scans",
+        "Review existing index usage statistics",
+        "Design covering, partial, and expression indexes",
+        "Consider multi-column index ordering",
+        "Estimate index size and maintenance overhead",
+        "Generate index creation statements",
+        "Identify and recommend removal of redundant indexes",
+        "Validate performance improvement"
+      ]
+    },
+    {
+      "command": "/db-tune",
+      "description": "Tune database configuration for optimal performance",
+      "usage": "/db-tune [database_system] [workload_type]",
+      "workflow": [
+        "Assess current configuration and resource allocation",
+        "Analyze workload type (OLTP/OLAP/mixed)",
+        "Optimize memory settings (buffer pool, cache, work memory)",
+        "Tune checkpoint and WAL settings",
+        "Configure connection pooling parameters",
+        "Adjust autovacuum and maintenance settings",
+        "Optimize parallel execution settings",
+        "Set appropriate timeout and limit values",
+        "Generate tuned configuration with explanations",
+        "Document changes and expected impact"
+      ]
+    }
+  ],
+  "expertiseAreas": {
+    "query_optimization": {
+      "level": "expert",
+      "topics": [
+        "Execution plan analysis",
+        "Query rewriting",
+        "Join optimization",
+        "Subquery elimination",
+        "CTE optimization",
+        "Window function tuning",
+        "Aggregation strategies",
+        "Parallel execution"
+      ]
+    },
+    "index_strategy": {
+      "level": "expert",
+      "topics": [
+        "B-tree indexes",
+        "Hash indexes",
+        "GiST/GIN indexes",
+        "BRIN indexes",
+        "Covering indexes",
+        "Partial indexes",
+        "Expression indexes",
+        "Multi-column index design",
+        "Index maintenance",
+        "Bloat prevention"
+      ]
+    },
+    "performance_analysis": {
+      "level": "expert",
+      "topics": [
+        "Slow query identification",
+        "Execution plan interpretation",
+        "Wait event analysis",
+        "Lock monitoring",
+        "I/O pattern analysis",
+        "Memory usage optimization",
+        "CPU utilization",
+        "Network latency troubleshooting"
+      ]
+    },
+    "database_systems": {
+      "level": "expert",
+      "topics": [
+        "PostgreSQL tuning",
+        "MySQL optimization",
+        "MongoDB indexing",
+        "Redis optimization",
+        "Cassandra tuning",
+        "ClickHouse queries",
+        "Elasticsearch tuning",
+        "Oracle optimization"
+      ]
+    },
+    "scalability": {
+      "level": "expert",
+      "topics": [
+        "Vertical scaling",
+        "Horizontal sharding",
+        "Read replicas",
+        "Connection pooling",
+        "Query caching",
+        "Result caching",
+        "Partition strategies",
+        "Archive policies"
+      ]
+    },
+    "system_optimization": {
+      "level": "expert",
+      "topics": [
+        "Memory allocation",
+        "Buffer pool sizing",
+        "Cache configuration",
+        "Checkpoint tuning",
+        "Vacuum settings",
+        "Replication optimization",
+        "Connection management",
+        "I/O optimization"
+      ]
+    }
+  },
+  "integrations": {
+    "mcp_servers": [
+      {
+        "name": "postgres",
+        "required": false,
+        "purpose": "Direct PostgreSQL access for query analysis, EXPLAIN plans, and performance monitoring"
+      },
+      {
+        "name": "filesystem",
+        "required": true,
+        "purpose": "Access database configuration files, logs, query scripts, and optimization reports"
+      },
+      {
+        "name": "github",
+        "required": false,
+        "purpose": "Review database schema changes, track optimization history, and document performance improvements"
+      },
+      {
+        "name": "context7",
+        "required": false,
+        "purpose": "Research database optimization techniques, best practices, and vendor-specific documentation"
+      }
+    ],
+    "related_agents": [
+      "postgres-pro",
+      "backend-developer",
+      "data-engineer",
+      "devops-engineer",
+      "sre-engineer",
+      "cloud-architect",
+      "data-scientist",
+      "performance-engineer"
+    ]
+  },
+  "performanceTargets": {
+    "query_time": "< 100ms",
+    "index_usage": "> 95%",
+    "cache_hit_rate": "> 90%",
+    "lock_waits": "< 1%",
+    "bloat_percentage": "< 20%",
+    "replication_lag": "< 1s",
+    "connection_efficiency": "optimized",
+    "resource_utilization": "efficient"
+  },
+  "commonTasks": [
+    {
+      "task": "Query Performance Analysis",
+      "steps": [
+        "Identify slow queries from logs or monitoring",
+        "Run EXPLAIN/EXPLAIN ANALYZE on slow queries",
+        "Analyze execution plan and identify bottlenecks",
+        "Check index usage and table scan patterns",
+        "Review join methods and order",
+        "Propose query rewrites or index additions",
+        "Validate performance improvements"
+      ]
+    },
+    {
+      "task": "Index Optimization",
+      "steps": [
+        "Analyze query patterns and access paths",
+        "Review existing index usage statistics",
+        "Identify missing indexes for frequent queries",
+        "Find redundant or unused indexes",
+        "Design optimal index strategies",
+        "Implement indexes with appropriate options",
+        "Monitor index effectiveness and bloat"
+      ]
+    },
+    {
+      "task": "Database Configuration Tuning",
+      "steps": [
+        "Review current configuration settings",
+        "Analyze workload characteristics",
+        "Optimize memory allocation settings",
+        "Tune checkpoint and I/O parameters",
+        "Configure connection pooling",
+        "Adjust maintenance and vacuum settings",
+        "Test and validate configuration changes"
+      ]
+    },
+    {
+      "task": "Performance Monitoring Setup",
+      "steps": [
+        "Configure query statistics collection",
+        "Set up slow query logging",
+        "Enable performance monitoring extensions",
+        "Create performance dashboards",
+        "Configure alerts for performance degradation",
+        "Establish baseline metrics",
+        "Document monitoring procedures"
+      ]
+    }
+  ],
+  "optimizationChecklist": {
+    "query_performance": [
+      "Query time < 100ms achieved",
+      "Execution plans optimized",
+      "Joins efficiently ordered",
+      "Subqueries eliminated where possible",
+      "Index usage maximized"
+    ],
+    "index_health": [
+      "Index usage > 95%",
+      "No redundant indexes",
+      "Covering indexes implemented",
+      "Index bloat < 20%",
+      "Statistics up to date"
+    ],
+    "system_health": [
+      "Cache hit rate > 90%",
+      "Lock waits < 1%",
+      "Replication lag < 1s",
+      "Connection pool optimized",
+      "Resource usage balanced"
+    ],
+    "monitoring": [
+      "Performance metrics tracked",
+      "Alerts configured",
+      "Baselines established",
+      "Trends analyzed",
+      "Reports automated"
+    ]
+  },
+  "prerequisites": {
+    "software": [
+      "Database client tools (psql, mysql, mongo shell, redis-cli)",
+      "Performance analysis tools",
+      "Monitoring extensions (pg_stat_statements, performance_schema)",
+      "Query profiling tools"
+    ],
+    "access": [
+      "Database read/write access for analysis",
+      "Configuration file access",
+      "Log file access",
+      "Monitoring statistics access",
+      "Index creation permissions"
+    ],
+    "knowledge": [
+      "SQL fundamentals",
+      "Database architecture concepts",
+      "Query execution principles",
+      "Indexing strategies",
+      "Performance monitoring basics"
+    ]
+  },
+  "documentation": {
+    "setup_guide": "README.md",
+    "agent_instructions": "CLAUDE.md",
+    "mcp_configuration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/claude-code-agent-marketplace/issues",
+    "documentation": "https://github.com/claude-code-agent-marketplace"
+  }
+}

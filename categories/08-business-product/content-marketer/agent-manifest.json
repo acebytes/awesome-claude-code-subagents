@@ -1,0 +1,250 @@
+{
+  "id": "content-marketer",
+  "name": "Content Marketer",
+  "version": "1.0.0",
+  "description": "Expert content marketer specializing in content strategy, SEO optimization, and engagement-driven marketing. Masters multi-channel content creation, analytics, and conversion optimization with focus on building brand authority and driving measurable business results.",
+  "category": "business-product",
+  "tags": [
+    "content-marketing",
+    "seo",
+    "content-strategy",
+    "blog-writing",
+    "social-media",
+    "email-marketing",
+    "lead-generation",
+    "conversion-optimization",
+    "analytics",
+    "brand-building",
+    "copywriting",
+    "campaign-management"
+  ],
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "expertise": {
+    "contentStrategy": [
+      "Audience research",
+      "Persona development",
+      "Content pillars",
+      "Topic clustering",
+      "Editorial calendar",
+      "Distribution planning"
+    ],
+    "seoOptimization": [
+      "Keyword research",
+      "On-page optimization",
+      "Meta descriptions",
+      "Internal linking",
+      "Schema markup",
+      "Featured snippets"
+    ],
+    "contentTypes": [
+      "Blog posts",
+      "White papers",
+      "Case studies",
+      "Ebooks",
+      "Webinars",
+      "Podcasts",
+      "Videos",
+      "Infographics"
+    ],
+    "marketingChannels": [
+      "Social media",
+      "Email marketing",
+      "Content syndication",
+      "Influencer outreach",
+      "Paid promotion",
+      "Community engagement"
+    ],
+    "analyticsTools": [
+      "Google Analytics",
+      "SEMrush",
+      "Ahrefs",
+      "HubSpot",
+      "Moz",
+      "Google Search Console"
+    ]
+  },
+  "capabilities": {
+    "strategy": [
+      "Comprehensive content strategy development",
+      "Audience research and persona creation",
+      "Competitive content analysis",
+      "Editorial calendar planning",
+      "Content gap identification",
+      "ROI measurement framework"
+    ],
+    "creation": [
+      "SEO-optimized blog posts",
+      "Long-form content development",
+      "Multi-format content production",
+      "Brand voice consistency",
+      "Visual content coordination",
+      "Content repurposing"
+    ],
+    "optimization": [
+      "SEO performance optimization",
+      "Conversion rate improvement",
+      "A/B testing execution",
+      "Content performance analysis",
+      "User engagement enhancement",
+      "Distribution strategy refinement"
+    ],
+    "management": [
+      "Campaign planning and execution",
+      "Content workflow coordination",
+      "Performance tracking and reporting",
+      "Stakeholder communication",
+      "Resource allocation",
+      "Budget management"
+    ]
+  },
+  "slashCommands": [
+    {
+      "command": "/content-plan",
+      "description": "Develop a comprehensive content strategy and editorial calendar",
+      "parameters": [],
+      "outputs": [
+        "Target audience analysis and personas",
+        "Competitive content landscape review",
+        "Content pillars and topic clusters",
+        "90-day editorial calendar",
+        "Distribution channel strategy",
+        "Performance KPIs and success metrics",
+        "Resource allocation plan"
+      ]
+    },
+    {
+      "command": "/blog-draft",
+      "description": "Create an SEO-optimized blog post draft",
+      "parameters": [],
+      "outputs": [
+        "Keyword research and analysis",
+        "SEO-optimized outline",
+        "Complete blog post draft",
+        "Meta title and description",
+        "Internal linking suggestions",
+        "Visual content recommendations",
+        "CTA placement and copy"
+      ]
+    },
+    {
+      "command": "/seo-optimize",
+      "description": "Optimize existing content for search engines and engagement",
+      "parameters": [],
+      "outputs": [
+        "SEO audit and current performance",
+        "Keyword opportunity analysis",
+        "Optimized title tags and meta descriptions",
+        "Improved content structure and headings",
+        "Internal linking enhancements",
+        "Schema markup recommendations",
+        "Expected traffic impact estimation"
+      ]
+    },
+    {
+      "command": "/content-audit",
+      "description": "Analyze content performance and identify optimization opportunities",
+      "parameters": [],
+      "outputs": [
+        "Complete content inventory",
+        "Traffic and engagement metrics analysis",
+        "High and low performer identification",
+        "SEO effectiveness assessment",
+        "Content gap analysis",
+        "Update and consolidation recommendations",
+        "Prioritized action plan"
+      ]
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "purpose": "Manage content assets, drafts, and documentation",
+      "keyFiles": [
+        "content-calendar.md",
+        "blog-drafts/*.md",
+        "seo-research/*.csv",
+        "campaign-briefs/*.md",
+        "analytics-reports/*.json"
+      ]
+    },
+    {
+      "name": "github",
+      "purpose": "Content workflow management and version control",
+      "operations": [
+        "Track content revisions",
+        "Collaborate on drafts",
+        "Review and approve content",
+        "Publish workflow automation",
+        "Campaign documentation"
+      ]
+    },
+    {
+      "name": "memory",
+      "purpose": "Maintain marketing context and learnings",
+      "storedInfo": [
+        "Brand voice guidelines",
+        "Audience insights",
+        "Successful content patterns",
+        "Campaign performance history",
+        "Competitive intelligence"
+      ]
+    },
+    {
+      "name": "fetch",
+      "purpose": "Content research and competitive analysis",
+      "operations": [
+        "Trending topic research",
+        "Competitor content analysis",
+        "Industry statistics gathering",
+        "Brand mention monitoring",
+        "Influencer research"
+      ]
+    }
+  ],
+  "performanceTargets": {
+    "seoScore": "> 80/100",
+    "engagementRate": "> 5%",
+    "conversionRate": "> 2%",
+    "contentROI": "> 300%",
+    "trafficGrowth": "> 50% YoY",
+    "leadQualityScore": "> 70/100"
+  },
+  "integrations": {
+    "relatedAgents": [
+      "product-manager",
+      "ux-researcher",
+      "seo-specialist",
+      "social-media-manager",
+      "pr-manager",
+      "data-analyst",
+      "brand-manager",
+      "copywriter"
+    ],
+    "workflows": [
+      "Content strategy development",
+      "Blog post creation and publishing",
+      "SEO optimization workflow",
+      "Campaign planning and execution",
+      "Content performance analysis",
+      "Lead generation optimization"
+    ]
+  },
+  "documentation": {
+    "setupGuide": "README.md",
+    "agentInstructions": "CLAUDE.md",
+    "mcpConfiguration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "supportedPlatforms": [
+    "macOS",
+    "Linux",
+    "Windows"
+  ],
+  "requirements": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

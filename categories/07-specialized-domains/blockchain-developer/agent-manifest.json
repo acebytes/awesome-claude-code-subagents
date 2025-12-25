@@ -1,0 +1,163 @@
+{
+  "name": "blockchain-developer",
+  "version": "1.0.0",
+  "description": "Expert blockchain developer specializing in smart contract development, DApp architecture, and DeFi protocols. Masters Solidity, Web3 integration, and blockchain security with focus on building secure, gas-efficient, and innovative decentralized applications.",
+  "category": "specialized-domains",
+  "author": "Claude Code Agent Marketplace",
+  "tags": [
+    "blockchain",
+    "smart-contracts",
+    "solidity",
+    "web3",
+    "defi",
+    "nft",
+    "ethereum",
+    "dapp",
+    "security",
+    "gas-optimization"
+  ],
+  "capabilities": [
+    "smart-contract-development",
+    "defi-protocol-design",
+    "nft-implementation",
+    "cross-chain-development",
+    "security-auditing",
+    "gas-optimization",
+    "web3-integration",
+    "blockchain-testing",
+    "contract-deployment",
+    "upgradeable-contracts"
+  ],
+  "slashCommands": [
+    {
+      "command": "/smart-contract",
+      "description": "Generate a complete smart contract based on requirements. Includes contract code, tests, deployment script, and documentation."
+    },
+    {
+      "command": "/contract-audit",
+      "description": "Perform a comprehensive security audit of existing smart contracts. Analyzes for common vulnerabilities, gas inefficiencies, and best practice violations."
+    },
+    {
+      "command": "/deploy-contract",
+      "description": "Create deployment scripts and guides for smart contract deployment. Includes multi-network configuration, verification, and post-deployment validation."
+    },
+    {
+      "command": "/gas-optimize",
+      "description": "Analyze and optimize smart contracts for gas efficiency. Provides specific recommendations and implements optimizations to reduce transaction costs."
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "expertise": [
+    "Solidity and smart contract development",
+    "ERC token standards (ERC20, ERC721, ERC1155, ERC4626)",
+    "DeFi protocols (AMM, lending, yield farming, staking)",
+    "Security patterns and vulnerability prevention",
+    "Gas optimization techniques",
+    "Multi-chain deployment (Ethereum, Solana, Polkadot, Cosmos)",
+    "Testing strategies (unit, integration, fuzzing, invariant)",
+    "DApp architecture and Web3 integration",
+    "Cross-chain bridges and interoperability",
+    "NFT development and marketplace integration"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "integrations": [
+    {
+      "name": "Hardhat",
+      "purpose": "Ethereum development environment"
+    },
+    {
+      "name": "Foundry",
+      "purpose": "Fast Solidity testing framework"
+    },
+    {
+      "name": "OpenZeppelin",
+      "purpose": "Security-audited contract libraries"
+    },
+    {
+      "name": "The Graph",
+      "purpose": "Blockchain data indexing"
+    },
+    {
+      "name": "IPFS",
+      "purpose": "Decentralized storage"
+    },
+    {
+      "name": "Ethers.js/Web3.js",
+      "purpose": "Web3 integration libraries"
+    },
+    {
+      "name": "Slither/Mythril",
+      "purpose": "Security analysis tools"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "Smart Contract Development",
+      "steps": [
+        "Analyze requirements and design architecture",
+        "Implement contracts following security best practices",
+        "Write comprehensive tests (100% coverage)",
+        "Optimize for gas efficiency",
+        "Perform security audit",
+        "Deploy with verification",
+        "Monitor and maintain"
+      ]
+    },
+    {
+      "name": "DeFi Protocol Implementation",
+      "steps": [
+        "Design tokenomics and protocol mechanics",
+        "Implement core protocol contracts",
+        "Integrate oracles and external dependencies",
+        "Build testing suite with fork tests",
+        "Conduct security audit",
+        "Deploy with multi-sig governance",
+        "Set up monitoring and alerts"
+      ]
+    },
+    {
+      "name": "NFT Project Launch",
+      "steps": [
+        "Define metadata and storage strategy",
+        "Implement NFT contract with royalties",
+        "Build minting mechanisms",
+        "Integrate with marketplaces",
+        "Test reveal and distribution",
+        "Deploy and verify contracts",
+        "Launch and monitor activity"
+      ]
+    }
+  ],
+  "bestPractices": [
+    "Security-first development mindset",
+    "100% test coverage requirement",
+    "Gas optimization for user experience",
+    "Comprehensive documentation",
+    "External security audits",
+    "Upgradeable architecture patterns",
+    "Emergency pause mechanisms",
+    "Multi-sig governance"
+  ],
+  "relatedAgents": [
+    "security-auditor",
+    "frontend-developer",
+    "backend-developer",
+    "devops-engineer",
+    "qa-expert",
+    "architect-reviewer",
+    "fintech-engineer",
+    "legal-advisor"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Primary server for GitHub operations including pull requests, issues, Actions, branch protection, and releases",
+      "capabilities": {
+        "pullRequests": {
+          "create": "Create pull requests with title, body, base, head, labels, assignees, and reviewers",
+          "list": "List pull requests with filters (state, base, head, author, label)",
+          "get": "Get detailed PR information including commits, files, reviews, and status checks",
+          "update": "Update PR title, body, state, labels, assignees, and reviewers",
+          "merge": "Merge pull requests with configurable merge methods (merge, squash, rebase)",
+          "review": "Create, submit, and manage PR reviews and comments",
+          "requestReviewers": "Request reviews from users or teams",
+          "files": "List files changed in a pull request"
+        },
+        "issues": {
+          "create": "Create issues with title, body, labels, assignees, and milestone",
+          "list": "List issues with comprehensive filters",
+          "get": "Get detailed issue information",
+          "update": "Update issue properties",
+          "comment": "Add comments to issues",
+          "close": "Close issues",
+          "link": "Link issues to pull requests"
+        },
+        "branches": {
+          "list": "List repository branches",
+          "get": "Get branch details and protection status",
+          "create": "Create new branches from reference points",
+          "delete": "Delete branches",
+          "protection": "Configure branch protection rules, required reviews, status checks, and restrictions"
+        },
+        "repositories": {
+          "get": "Get repository information and settings",
+          "list": "List repositories for user or organization",
+          "create": "Create new repositories",
+          "update": "Update repository settings",
+          "collaborators": "Manage repository collaborators and permissions",
+          "webhooks": "Configure repository webhooks",
+          "topics": "Manage repository topics/tags"
+        },
+        "workflows": {
+          "list": "List GitHub Actions workflows",
+          "get": "Get workflow details and runs",
+          "dispatch": "Trigger workflow runs",
+          "runs": "List and manage workflow runs",
+          "jobs": "View workflow job details and logs",
+          "artifacts": "Download workflow artifacts"
+        },
+        "releases": {
+          "create": "Create releases with tag, name, body, and assets",
+          "list": "List repository releases",
+          "get": "Get release details",
+          "update": "Update release information",
+          "delete": "Delete releases",
+          "assets": "Upload and manage release assets"
+        },
+        "commits": {
+          "list": "List commits with filters",
+          "get": "Get commit details",
+          "compare": "Compare commits between refs",
+          "status": "Get and create commit statuses"
+        },
+        "files": {
+          "get": "Get file contents from repository",
+          "create": "Create new files",
+          "update": "Update existing files",
+          "delete": "Delete files"
+        }
+      },
+      "priority": "primary",
+      "usageNotes": [
+        "Requires GITHUB_PERSONAL_ACCESS_TOKEN environment variable",
+        "Token needs repo, workflow, and admin:repo_hook scopes for full functionality",
+        "Use for all GitHub platform operations",
+        "Handles PR automation, code review workflows, and release management",
+        "Manages branch protection and repository settings"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub"
+      ],
+      "description": "Local filesystem access for git repository operations and configuration",
+      "capabilities": {
+        "fileOperations": {
+          "read": "Read files including git config, hooks, and repository files",
+          "write": "Write git hooks, configuration files, and templates",
+          "list": "List directory contents including .git structure",
+          "search": "Search for files and patterns in repository"
+        },
+        "gitOperations": {
+          "config": "Read and analyze git configuration files",
+          "hooks": "Install and manage git hooks (pre-commit, commit-msg, pre-push, etc.)",
+          "templates": "Manage PR templates, issue templates, and other .github files",
+          "attributes": "Configure .gitattributes for LFS and merge strategies",
+          "ignore": "Manage .gitignore patterns"
+        }
+      },
+      "priority": "secondary",
+      "usageNotes": [
+        "Scoped to /Users/d/Documents/GitHub for security",
+        "Use for local git configuration and hooks",
+        "Complements GitHub MCP for complete workflow automation",
+        "Access .git directory for repository inspection",
+        "Manage local workflow configuration files"
+      ]
+    }
+  },
+  "toolGroups": {
+    "pullRequestManagement": {
+      "servers": ["github"],
+      "operations": [
+        "Create comprehensive PRs with auto-generated descriptions",
+        "Manage PR lifecycle from creation to merge",
+        "Automate review assignments based on CODEOWNERS",
+        "Track PR status and manage merge strategies",
+        "Link PRs to issues and milestones"
+      ]
+    },
+    "branchingWorkflow": {
+      "servers": ["github", "filesystem"],
+      "operations": [
+        "Create branches following naming conventions",
+        "Setup branch protection rules",
+        "Sync branches with upstream",
+        "Manage branch lifecycle and cleanup",
+        "Configure merge strategies"
+      ]
+    },
+    "releaseManagement": {
+      "servers": ["github", "filesystem"],
+      "operations": [
+        "Create release branches and tags",
+        "Generate changelogs from commits",
+        "Create GitHub releases with notes and assets",
+        "Automate version bumping",
+        "Coordinate release workflows"
+      ]
+    },
+    "gitAutomation": {
+      "servers": ["filesystem"],
+      "operations": [
+        "Install and configure git hooks",
+        "Setup pre-commit validation",
+        "Configure commit message templates",
+        "Manage git configuration",
+        "Create PR and issue templates"
+      ]
+    },
+    "codeReview": {
+      "servers": ["github"],
+      "operations": [
+        "Request and assign reviewers",
+        "Manage review comments and feedback",
+        "Track review status and approvals",
+        "Enforce review requirements",
+        "Automate review workflows"
+      ]
+    },
+    "workflowAutomation": {
+      "servers": ["github"],
+      "operations": [
+        "Configure GitHub Actions workflows",
+        "Setup automated checks and tests",
+        "Manage workflow triggers and events",
+        "Monitor workflow runs and status",
+        "Coordinate CI/CD pipelines"
+      ]
+    }
+  },
+  "configuration": {
+    "defaultBranch": "main",
+    "branchNamingConventions": {
+      "feature": "feature/{ticket}-{description}",
+      "bugfix": "bugfix/{ticket}-{description}",
+      "hotfix": "hotfix/{description}",
+      "release": "release/v{version}"
+    },
+    "mergeStrategies": {
+      "feature": "squash",
+      "bugfix": "squash",
+      "hotfix": "merge",
+      "release": "merge"
+    },
+    "commitConventions": {
+      "format": "type(scope): subject",
+      "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore", "perf", "ci", "build", "revert"],
+      "enforceFormat": true
+    },
+    "workflowModels": {
+      "gitFlow": {
+        "productionBranch": "main",
+        "developmentBranch": "develop",
+        "featurePrefix": "feature/",
+        "releasePrefix": "release/",
+        "hotfixPrefix": "hotfix/"
+      },
+      "githubFlow": {
+        "mainBranch": "main",
+        "featurePrefix": "feature/",
+        "deployFromMain": true
+      },
+      "trunkBased": {
+        "mainBranch": "main",
+        "shortLivedBranches": true,
+        "featureFlags": true
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "name": "data-scientist",
+  "version": "1.0.0",
+  "description": "Expert data scientist specializing in statistical analysis, machine learning, and business insights. Masters exploratory data analysis, predictive modeling, and data storytelling with focus on delivering actionable insights that drive business value.",
+  "author": "Claude Agent Marketplace",
+  "category": "data-ai",
+  "tags": [
+    "data-science",
+    "statistical-analysis",
+    "machine-learning",
+    "predictive-modeling",
+    "exploratory-data-analysis",
+    "feature-engineering",
+    "hypothesis-testing",
+    "regression-analysis",
+    "time-series-analysis",
+    "a-b-testing",
+    "data-visualization",
+    "business-intelligence",
+    "scikit-learn",
+    "pandas",
+    "numpy",
+    "xgboost",
+    "statistical-modeling",
+    "causal-inference",
+    "experimental-design",
+    "model-validation",
+    "data-storytelling"
+  ],
+  "capabilities": [
+    "Statistical analysis with rigorous hypothesis testing (p<0.05)",
+    "Machine learning model development and validation",
+    "Predictive modeling achieving 87%+ accuracy",
+    "Exploratory data analysis and pattern discovery",
+    "Feature engineering and selection",
+    "A/B testing and experimental design",
+    "Time series forecasting and trend analysis",
+    "Causal inference and impact measurement",
+    "Model interpretation and explainability",
+    "Data storytelling and business communication",
+    "Bias detection and fairness analysis",
+    "Cross-validation and performance optimization"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access datasets, analysis notebooks, model artifacts, and feature engineering pipelines"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Version control analysis code and notebooks, collaborate on data science projects, track model iterations"
+    },
+    {
+      "name": "postgres",
+      "required": false,
+      "purpose": "Query databases for exploratory analysis, extract features, validate hypotheses with SQL analytics"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Search statistical methodology docs, find ML best practices, access algorithm patterns"
+    }
+  ],
+  "slash_commands": [
+    {
+      "command": "/ds-explore",
+      "description": "Conduct comprehensive exploratory data analysis",
+      "usage": "/ds-explore <dataset_path> [options]",
+      "parameters": {
+        "dataset_path": "Path to dataset (CSV, Parquet, Excel, etc.)",
+        "options": "Optional flags: --target <column>, --categorical, --timeseries, --report"
+      },
+      "example": "/ds-explore ./data/customer_churn.csv --target churn --report"
+    },
+    {
+      "command": "/ds-model",
+      "description": "Build and validate predictive models",
+      "usage": "/ds-model <dataset_path> <target> [model_type]",
+      "parameters": {
+        "dataset_path": "Path to training dataset",
+        "target": "Target variable to predict",
+        "model_type": "Model type: regression, classification, timeseries, clustering, auto"
+      },
+      "example": "/ds-model ./data/sales.csv revenue regression"
+    },
+    {
+      "command": "/ds-insight",
+      "description": "Generate actionable insights and recommendations",
+      "usage": "/ds-insight <analysis_path> [business_context]",
+      "parameters": {
+        "analysis_path": "Path to completed analysis or model results",
+        "business_context": "Context flags: --revenue, --cost, --retention, --growth, --risk"
+      },
+      "example": "/ds-insight ./results/churn_analysis --retention"
+    }
+  ],
+  "technology_stack": {
+    "statistical_methods": [
+      "Hypothesis Testing",
+      "Regression Analysis",
+      "ANOVA/MANOVA",
+      "Time Series Models",
+      "Survival Analysis",
+      "Bayesian Methods",
+      "Causal Inference",
+      "Experimental Design"
+    ],
+    "ml_algorithms": [
+      "Linear Models",
+      "Logistic Regression",
+      "Random Forest",
+      "Gradient Boosting (XGBoost, LightGBM)",
+      "Neural Networks",
+      "Ensemble Methods",
+      "Clustering (K-Means, DBSCAN)",
+      "Dimensionality Reduction (PCA, t-SNE)"
+    ],
+    "python_libraries": [
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Scikit-learn",
+      "StatsModels",
+      "XGBoost",
+      "LightGBM",
+      "TensorFlow",
+      "PyTorch",
+      "Prophet"
+    ],
+    "visualization": [
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Altair",
+      "Bokeh"
+    ],
+    "specialized_tools": [
+      "SHAP (model interpretation)",
+      "Imbalanced-learn",
+      "NetworkX (graph analysis)",
+      "NLTK/spaCy (NLP)"
+    ]
+  },
+  "use_cases": [
+    "Customer churn prediction with 85%+ accuracy",
+    "Sales forecasting with time series models",
+    "A/B test design and statistical analysis",
+    "Market segmentation using clustering",
+    "Predictive maintenance models",
+    "Fraud detection systems",
+    "Recommendation engine development",
+    "Risk modeling and credit scoring",
+    "Price optimization and elasticity analysis",
+    "Sentiment analysis and text mining",
+    "Causal impact analysis for business decisions"
+  ],
+  "performance_metrics": {
+    "statistical_rigor": "p<0.05 significance verified",
+    "model_accuracy": "87%+ typical performance",
+    "cross_validation": "k-fold validation completed",
+    "business_impact": "$2.3M+ projected value",
+    "reproducibility": "100% reproducible results",
+    "insight_quality": "Actionable recommendations delivered"
+  },
+  "collaboration": {
+    "works_with": [
+      "data-engineer",
+      "ml-engineer",
+      "business-analyst",
+      "product-manager",
+      "ai-engineer",
+      "database-optimizer",
+      "market-researcher",
+      "financial-analyst"
+    ],
+    "provides": [
+      "Statistical insights and hypothesis validation",
+      "Predictive models for business decisions",
+      "Feature engineering for ML pipelines",
+      "A/B test design and analysis",
+      "Data-driven recommendations",
+      "Model interpretation and explainability",
+      "Business impact quantification",
+      "Reproducible analysis workflows"
+    ]
+  },
+  "best_practices": [
+    "Always verify statistical significance (p<0.05)",
+    "Test model assumptions before applying methods",
+    "Use cross-validation to prevent overfitting",
+    "Report effect sizes along with p-values",
+    "Document all preprocessing and feature engineering steps",
+    "Check for bias and fairness systematically",
+    "Ensure reproducibility with version control and seeds",
+    "Communicate insights in business context",
+    "Quantify business impact in dollars or KPIs",
+    "Be transparent about limitations and uncertainty",
+    "Start simple, add complexity as justified",
+    "Validate on holdout data before deployment",
+    "Tailor communication to audience (technical vs business)",
+    "Follow up on implementation and measure actual impact"
+  ],
+  "file_structure": {
+    "CLAUDE.md": "Enhanced agent instructions with MCP integration and comprehensive data science methodologies",
+    "mcp-config.json": "MCP server configuration for filesystem, GitHub, Postgres, and Context7",
+    "agent-manifest.json": "This file - structured metadata and capabilities",
+    "README.md": "Usage guide and quick start documentation"
+  }
+}

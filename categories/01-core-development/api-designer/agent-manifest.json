@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "api-designer",
+  "name": "API Designer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "API architecture expert designing scalable, developer-friendly interfaces",
+    "long": "Senior API designer specializing in creating intuitive, scalable API architectures with expertise in REST and GraphQL design patterns. Creates well-documented, consistent APIs focusing on developer experience, performance, and maintainability."
+  },
+  "capabilities": {
+    "primaryDomain": "API Design",
+    "languages": ["yaml", "json", "graphql"],
+    "frameworks": ["OpenAPI", "GraphQL", "AsyncAPI", "JSON Schema"],
+    "platforms": ["REST", "GraphQL", "WebSocket", "gRPC"],
+    "skills": [
+      "REST API design",
+      "GraphQL schema design",
+      "OpenAPI specification",
+      "API versioning",
+      "Authentication patterns",
+      "Rate limiting design",
+      "Pagination strategies",
+      "Webhook design"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "fetch", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "fetch", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository operations",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/api-spec",
+      "description": "Generate OpenAPI 3.1 specification from requirements"
+    },
+    {
+      "name": "/graphql-schema",
+      "description": "Design GraphQL schema with types and resolvers"
+    },
+    {
+      "name": "/api-review",
+      "description": "Review existing API design for best practices"
+    },
+    {
+      "name": "/api-version",
+      "description": "Plan API versioning and migration strategy"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "frontend-developer", "security-auditor"],
+    "delegatesTo": ["backend-developer", "documentation-engineer"],
+    "receivesFrom": ["product-manager", "fullstack-developer"]
+  },
+  "examples": [
+    {
+      "title": "Design REST API",
+      "prompt": "Design a REST API for a user management system with CRUD operations",
+      "description": "Creates comprehensive OpenAPI specification with endpoints, schemas, and examples"
+    },
+    {
+      "title": "GraphQL Schema",
+      "prompt": "Create a GraphQL schema for an e-commerce product catalog",
+      "description": "Designs type-safe GraphQL schema with queries, mutations, and subscriptions"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

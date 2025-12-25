@@ -1,0 +1,135 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access file system for reading/writing AI code, models, and configuration files"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Access GitHub for version control, collaboration, and AI model repositories"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/context7-mcp-server"
+      ],
+      "description": "Semantic code search for finding AI implementations, model architectures, and patterns"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fetch data from external APIs for model serving, monitoring, MLOps platforms, and AI services"
+    }
+  },
+  "configInfo": {
+    "agentName": "ai-engineer",
+    "category": "data-ai",
+    "purpose": "AI system design, model implementation, training pipelines, and production deployment",
+    "mcpServersUsage": {
+      "filesystem": [
+        "Read/write model code (TensorFlow, PyTorch, JAX)",
+        "Manage training scripts and pipelines",
+        "Access datasets and data preprocessing code",
+        "Save/load model checkpoints and weights",
+        "Manage configuration files for training and inference",
+        "Handle model artifacts and metadata",
+        "Organize experiment tracking files",
+        "Manage deployment configurations"
+      ],
+      "github": [
+        "Version control for model code and experiments",
+        "Collaborate on AI projects with team members",
+        "Access model repositories and benchmarks",
+        "Track issues for model improvements",
+        "Review pull requests for AI code",
+        "Share trained models and results",
+        "Manage releases for model versions",
+        "Access AI research implementations"
+      ],
+      "context7": [
+        "Search for similar model implementations",
+        "Find existing neural network architectures",
+        "Locate data preprocessing patterns",
+        "Discover training pipeline examples",
+        "Find optimization techniques in codebase",
+        "Search for evaluation metrics implementations",
+        "Locate deployment configuration examples",
+        "Find bias detection and fairness code"
+      ],
+      "fetch": [
+        "Call model serving APIs for inference",
+        "Access MLOps platforms (MLflow, Weights & Biases)",
+        "Query experiment tracking services",
+        "Fetch model registry information",
+        "Access monitoring dashboards (Prometheus, Grafana)",
+        "Call dataset APIs and data sources",
+        "Integrate with cloud ML services (SageMaker, Vertex AI)",
+        "Access model performance metrics"
+      ]
+    },
+    "typicalWorkflows": [
+      {
+        "name": "Design AI Architecture",
+        "steps": [
+          "Use context7 to find similar AI implementations",
+          "Use filesystem to review existing models and data",
+          "Use github to check model repositories and benchmarks",
+          "Use fetch to query MLOps platforms for best practices"
+        ]
+      },
+      {
+        "name": "Implement Model",
+        "steps": [
+          "Use filesystem to create model architecture code",
+          "Use context7 to find reusable components",
+          "Use github to version control model code",
+          "Use fetch to access training data from APIs"
+        ]
+      },
+      {
+        "name": "Train and Optimize",
+        "steps": [
+          "Use filesystem to run training scripts",
+          "Use fetch to log experiments to tracking platforms",
+          "Use github to save model checkpoints",
+          "Use context7 to find optimization techniques"
+        ]
+      },
+      {
+        "name": "Deploy to Production",
+        "steps": [
+          "Use filesystem to optimize model for inference",
+          "Use fetch to deploy to serving infrastructure",
+          "Use github to manage deployment configurations",
+          "Use fetch to set up monitoring and alerts"
+        ]
+      }
+    ],
+    "environmentVariables": {
+      "required": [],
+      "optional": [
+        {
+          "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "description": "GitHub API token for accessing repositories and collaboration features",
+          "usage": "Set this to enable full GitHub integration for model versioning and collaboration"
+        }
+      ]
+    }
+  }
+}

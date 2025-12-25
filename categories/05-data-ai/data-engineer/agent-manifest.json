@@ -1,0 +1,191 @@
+{
+  "name": "data-engineer",
+  "version": "1.0.0",
+  "description": "Expert data engineer specializing in building scalable data pipelines, ETL/ELT processes, and data infrastructure. Masters big data technologies and cloud platforms with focus on reliable, efficient, and cost-optimized data platforms.",
+  "author": "Claude Agent Marketplace",
+  "category": "data-ai",
+  "tags": [
+    "data-engineering",
+    "etl",
+    "elt",
+    "data-pipelines",
+    "big-data",
+    "apache-spark",
+    "apache-kafka",
+    "airflow",
+    "data-warehouse",
+    "data-lake",
+    "stream-processing",
+    "batch-processing",
+    "data-quality",
+    "data-governance",
+    "snowflake",
+    "bigquery",
+    "databricks",
+    "delta-lake"
+  ],
+  "capabilities": [
+    "Design and implement scalable data pipelines",
+    "Build ETL/ELT processes with 99.9% SLA compliance",
+    "Implement comprehensive data quality frameworks",
+    "Optimize data infrastructure costs by 50%+",
+    "Design data lake and warehouse architectures",
+    "Implement real-time stream processing",
+    "Establish data governance and lineage",
+    "Optimize query performance and resource utilization"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access pipeline configurations, ETL scripts, data quality rules, and orchestration DAGs"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Version control data pipeline code, review PRs, track schema evolution"
+    },
+    {
+      "name": "postgres",
+      "required": false,
+      "purpose": "Query data warehouse schemas, analyze table statistics, implement data quality checks"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Search data engineering docs, find best practices, access pipeline patterns"
+    }
+  ],
+  "slash_commands": [
+    {
+      "command": "/data-pipeline",
+      "description": "Create a new data pipeline with best practices",
+      "usage": "/data-pipeline <source> <destination> [options]",
+      "parameters": {
+        "source": "Source system identifier (e.g., postgres-orders, s3-logs)",
+        "destination": "Destination system identifier (e.g., snowflake-analytics, bigquery-dw)",
+        "options": "Optional flags: --incremental, --streaming, --quality-checks"
+      },
+      "example": "/data-pipeline postgres-orders snowflake-analytics --incremental --quality-checks"
+    },
+    {
+      "command": "/data-quality",
+      "description": "Implement comprehensive data quality checks",
+      "usage": "/data-quality <dataset> [rules]",
+      "parameters": {
+        "dataset": "Dataset or table to validate",
+        "rules": "Quality dimensions: --completeness, --accuracy, --consistency, --uniqueness, --freshness"
+      },
+      "example": "/data-quality customer_data --completeness --uniqueness --freshness"
+    },
+    {
+      "command": "/data-catalog",
+      "description": "Document data assets with comprehensive metadata",
+      "usage": "/data-catalog <dataset> [scope]",
+      "parameters": {
+        "dataset": "Dataset or table to document",
+        "scope": "Documentation scope: --lineage, --samples, --stats, --glossary"
+      },
+      "example": "/data-catalog sales_fact --lineage --samples --stats"
+    }
+  ],
+  "technology_stack": {
+    "big_data": [
+      "Apache Spark",
+      "Apache Kafka",
+      "Apache Flink",
+      "Apache Beam",
+      "Presto/Trino",
+      "Apache Hudi",
+      "Apache Iceberg"
+    ],
+    "cloud_platforms": [
+      "Snowflake",
+      "Google BigQuery",
+      "Amazon Redshift",
+      "Azure Synapse",
+      "Databricks",
+      "AWS Glue",
+      "Delta Lake"
+    ],
+    "orchestration": [
+      "Apache Airflow",
+      "Prefect",
+      "Dagster",
+      "Luigi",
+      "Kubernetes Jobs",
+      "AWS Step Functions",
+      "Azure Data Factory"
+    ],
+    "data_formats": [
+      "Apache Parquet",
+      "Apache ORC",
+      "Apache Avro",
+      "Delta Lake",
+      "Apache Iceberg"
+    ]
+  },
+  "use_cases": [
+    "Build scalable data pipelines processing TB-scale data",
+    "Migrate legacy ETL to modern cloud data platforms",
+    "Implement real-time streaming data pipelines",
+    "Design data lake and lakehouse architectures",
+    "Establish data quality and governance frameworks",
+    "Optimize data warehouse query performance",
+    "Reduce data infrastructure costs by 50%+",
+    "Enable self-service analytics with governed data"
+  ],
+  "performance_metrics": {
+    "pipeline_sla": "99.9% uptime maintained",
+    "data_freshness": "< 1 hour latency achieved",
+    "data_quality": "99%+ issue detection rate",
+    "cost_optimization": "50-70% cost reduction typical",
+    "processing_scale": "TB-scale daily processing"
+  },
+  "collaboration": {
+    "works_with": [
+      "data-scientist",
+      "database-optimizer",
+      "ai-engineer",
+      "backend-developer",
+      "cloud-architect",
+      "ml-engineer",
+      "devops-engineer",
+      "business-analyst"
+    ],
+    "provides": [
+      "Clean, reliable data for analytics",
+      "Feature stores for ML models",
+      "Optimized data APIs",
+      "Data lineage and governance",
+      "Real-time data streams",
+      "Cost-efficient infrastructure"
+    ]
+  },
+  "best_practices": [
+    "Design idempotent pipelines safe to re-run",
+    "Implement comprehensive error handling and retries",
+    "Use schema evolution for backward compatibility",
+    "Partition data for query optimization",
+    "Monitor data quality continuously",
+    "Document data lineage and transformations",
+    "Optimize costs through tiering and compression",
+    "Enable exactly-once processing semantics",
+    "Test pipelines with realistic data volumes",
+    "Automate everything for reliability"
+  ],
+  "file_structure": {
+    "CLAUDE.md": "Enhanced agent instructions with MCP integration and detailed methodologies",
+    "mcp-config.json": "MCP server configuration for filesystem, GitHub, Postgres, and Context7",
+    "agent-manifest.json": "This file - structured metadata and capabilities",
+    "README.md": "Usage guide and quick start documentation"
+  }
+}

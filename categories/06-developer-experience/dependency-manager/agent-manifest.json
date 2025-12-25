@@ -1,0 +1,315 @@
+{
+  "name": "dependency-manager",
+  "version": "1.0.0",
+  "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees.",
+  "category": "developer-experience",
+  "tags": [
+    "dependency-management",
+    "security",
+    "package-manager",
+    "vulnerability-scanning",
+    "npm",
+    "pip",
+    "cargo",
+    "maven",
+    "go-modules",
+    "supply-chain-security",
+    "license-compliance",
+    "version-management",
+    "monorepo",
+    "optimization"
+  ],
+  "author": {
+    "name": "Claude Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "license": "MIT",
+  "capabilities": {
+    "ecosystems": [
+      {
+        "name": "NPM/Yarn/PNPM",
+        "files": ["package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml"],
+        "commands": ["npm", "yarn", "pnpm"]
+      },
+      {
+        "name": "Python",
+        "files": ["requirements.txt", "pyproject.toml", "poetry.lock", "Pipfile"],
+        "commands": ["pip", "poetry", "pipenv"]
+      },
+      {
+        "name": "Rust",
+        "files": ["Cargo.toml", "Cargo.lock"],
+        "commands": ["cargo"]
+      },
+      {
+        "name": "Java/Maven",
+        "files": ["pom.xml"],
+        "commands": ["mvn"]
+      },
+      {
+        "name": "Java/Gradle",
+        "files": ["build.gradle", "build.gradle.kts"],
+        "commands": ["gradle"]
+      },
+      {
+        "name": "Go",
+        "files": ["go.mod", "go.sum"],
+        "commands": ["go"]
+      },
+      {
+        "name": "Ruby",
+        "files": ["Gemfile", "Gemfile.lock"],
+        "commands": ["bundle"]
+      },
+      {
+        "name": "PHP",
+        "files": ["composer.json", "composer.lock"],
+        "commands": ["composer"]
+      }
+    ],
+    "features": [
+      "Security vulnerability scanning",
+      "CVE database integration",
+      "Version conflict resolution",
+      "Dependency tree analysis",
+      "Automated updates with testing",
+      "License compliance auditing",
+      "Supply chain security",
+      "Bundle size optimization",
+      "Duplicate detection",
+      "Unused dependency removal",
+      "Monorepo workspace management",
+      "Private registry configuration",
+      "SBOM generation",
+      "Automated PR creation",
+      "Breaking change detection"
+    ],
+    "integrations": [
+      {
+        "name": "GitHub",
+        "purpose": "PR creation, Dependabot alerts, security advisories"
+      },
+      {
+        "name": "Context7",
+        "purpose": "Package registry queries, CVE data, metadata"
+      },
+      {
+        "name": "OSV",
+        "purpose": "Open source vulnerability database"
+      },
+      {
+        "name": "Snyk",
+        "purpose": "Security vulnerability intelligence"
+      },
+      {
+        "name": "Bundlephobia",
+        "purpose": "Bundle size analysis"
+      },
+      {
+        "name": "Libraries.io",
+        "purpose": "Package metadata and statistics"
+      }
+    ]
+  },
+  "slashCommands": [
+    {
+      "command": "/deps-audit",
+      "description": "Perform comprehensive security and compliance audit of all dependencies",
+      "parameters": [
+        {
+          "name": "--ecosystem",
+          "type": "enum",
+          "values": ["npm", "pip", "cargo", "maven", "go", "all"],
+          "required": false,
+          "default": "all",
+          "description": "Target specific package ecosystem or all"
+        },
+        {
+          "name": "--severity",
+          "type": "enum",
+          "values": ["critical", "high", "medium", "low"],
+          "required": false,
+          "default": "all",
+          "description": "Filter vulnerabilities by minimum severity"
+        }
+      ],
+      "examples": [
+        "/deps-audit",
+        "/deps-audit --ecosystem npm --severity critical",
+        "/deps-audit --severity high"
+      ]
+    },
+    {
+      "command": "/deps-update",
+      "description": "Safely update dependencies with automated testing and rollback capabilities",
+      "parameters": [
+        {
+          "name": "--type",
+          "type": "enum",
+          "values": ["major", "minor", "patch"],
+          "required": false,
+          "default": "patch",
+          "description": "Type of updates to perform"
+        },
+        {
+          "name": "--package",
+          "type": "string",
+          "required": false,
+          "description": "Specific package to update (omit for all)"
+        },
+        {
+          "name": "--dry-run",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Show what would be updated without making changes"
+        }
+      ],
+      "examples": [
+        "/deps-update",
+        "/deps-update --type patch --dry-run",
+        "/deps-update --package lodash --type minor",
+        "/deps-update --type major"
+      ]
+    },
+    {
+      "command": "/deps-analyze",
+      "description": "Analyze dependency tree for optimization and security insights",
+      "parameters": [
+        {
+          "name": "--depth",
+          "type": "number",
+          "required": false,
+          "default": 10,
+          "description": "Maximum depth of dependency tree to analyze"
+        },
+        {
+          "name": "--show-unused",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Identify and list unused dependencies"
+        },
+        {
+          "name": "--show-duplicates",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Find duplicate packages at different versions"
+        }
+      ],
+      "examples": [
+        "/deps-analyze",
+        "/deps-analyze --show-unused --show-duplicates",
+        "/deps-analyze --depth 5",
+        "/deps-analyze --show-duplicates"
+      ]
+    }
+  ],
+  "mcpServers": {
+    "required": [
+      "filesystem",
+      "github",
+      "context7",
+      "fetch"
+    ],
+    "optional": []
+  },
+  "environmentVariables": [
+    {
+      "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "description": "GitHub token with repo, security_events, and workflow scopes",
+      "required": true
+    },
+    {
+      "name": "CONTEXT7_API_KEY",
+      "description": "API key for Context7 package registry and vulnerability data",
+      "required": true
+    }
+  ],
+  "useCases": [
+    {
+      "title": "Security Vulnerability Remediation",
+      "description": "Scan all dependencies for known vulnerabilities, prioritize by severity, and create PRs with patches or updates",
+      "workflow": [
+        "Run /deps-audit to identify all vulnerabilities",
+        "Review CVE details and CVSS scores",
+        "Use /deps-update to patch critical and high severity issues",
+        "Verify fixes with automated tests",
+        "Create PR with detailed security changelog"
+      ]
+    },
+    {
+      "title": "Dependency Optimization",
+      "description": "Reduce bundle size and improve build times by removing unused dependencies and deduplicating versions",
+      "workflow": [
+        "Run /deps-analyze --show-unused --show-duplicates",
+        "Review unused dependencies and safe-to-remove candidates",
+        "Remove unused packages and update manifests",
+        "Deduplicate versions using package manager tools",
+        "Measure bundle size reduction and build time improvement"
+      ]
+    },
+    {
+      "title": "License Compliance Audit",
+      "description": "Ensure all dependencies comply with organizational license policies",
+      "workflow": [
+        "Scan all dependencies for license information",
+        "Check against approved license list",
+        "Flag GPL, AGPL, or other restrictive licenses",
+        "Suggest alternative packages if needed",
+        "Generate compliance report for legal review"
+      ]
+    },
+    {
+      "title": "Monorepo Dependency Management",
+      "description": "Manage shared dependencies and version synchronization across multiple packages",
+      "workflow": [
+        "Analyze all workspace packages",
+        "Identify version conflicts across workspaces",
+        "Synchronize shared dependency versions",
+        "Configure hoisting and deduplication",
+        "Optimize install times and disk usage"
+      ]
+    },
+    {
+      "title": "Automated Dependency Updates",
+      "description": "Set up automated weekly dependency updates with testing and PR creation",
+      "workflow": [
+        "Configure update schedule and policies",
+        "Run automated /deps-update weekly",
+        "Execute full test suite for each update",
+        "Create PR with changelog and breaking changes",
+        "Auto-merge if tests pass and no breaking changes",
+        "Notify team of major updates requiring review"
+      ]
+    }
+  ],
+  "bestPractices": [
+    "Run security audits daily to catch new vulnerabilities early",
+    "Update patch versions weekly, minor versions monthly, major versions quarterly",
+    "Always run full test suite before merging dependency updates",
+    "Pin exact versions in production, use ranges in development",
+    "Maintain lock files in version control for reproducible builds",
+    "Review changelogs for breaking changes before major updates",
+    "Use private registries for internal packages",
+    "Generate SBOM for compliance and security tracking",
+    "Automate dependency updates but require human review for major versions",
+    "Monitor bundle size impact of new dependencies"
+  ],
+  "relatedAgents": [
+    "security-auditor",
+    "build-engineer",
+    "devops-engineer",
+    "backend-developer",
+    "frontend-developer",
+    "tooling-engineer",
+    "dx-optimizer",
+    "architect-reviewer"
+  ],
+  "documentation": {
+    "setup": "See README.md for setup instructions",
+    "usage": "See CLAUDE.md for detailed usage and capabilities",
+    "mcpConfig": "See mcp-config.json for MCP server configuration"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub/claude-code-agent-marketplace"
+      ],
+      "description": "Access datasets, analysis notebooks, model artifacts, and feature engineering pipelines",
+      "required": true
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<your_github_token>"
+      },
+      "description": "Version control analysis code and notebooks, collaborate on data science projects, track model iterations",
+      "required": false
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost/analytics"
+      ],
+      "description": "Query databases for exploratory analysis, extract features, validate hypotheses with SQL analytics",
+      "required": false,
+      "notes": "Update connection string with your database credentials"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context7/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "<your_context7_api_key>"
+      },
+      "description": "Search statistical methodology docs, find ML best practices, access algorithm patterns and evaluation techniques",
+      "required": false
+    }
+  },
+  "integrations": {
+    "exploratory_analysis": {
+      "description": "Use Postgres MCP to query production databases for exploratory data analysis and feature extraction",
+      "example": "SELECT customer_id, COUNT(*) as purchase_count, AVG(order_value) FROM orders GROUP BY customer_id"
+    },
+    "notebook_management": {
+      "description": "Use Filesystem MCP to read/write Jupyter notebooks, analysis scripts, and model artifacts",
+      "example": "Read analysis.ipynb, update with new findings, save visualizations to results/"
+    },
+    "experiment_tracking": {
+      "description": "Use GitHub MCP to version control experiments, track model iterations, and collaborate on analyses",
+      "example": "Commit model_v2.pkl with hyperparameters and performance metrics in commit message"
+    },
+    "methodology_lookup": {
+      "description": "Use Context7 MCP to find statistical methods, ML algorithms, and data science best practices",
+      "example": "Search for 'random forest hyperparameter tuning' or 'time series cross-validation techniques'"
+    }
+  },
+  "configuration_notes": {
+    "filesystem": "Automatically configured with repository root. Use for accessing datasets, notebooks, and model artifacts.",
+    "github": "Set GITHUB_PERSONAL_ACCESS_TOKEN in your environment or .env file. Requires repo scope for private repositories.",
+    "postgres": "Update connection string format: postgresql://user:password@host:port/database. Supports multiple database connections for different data sources.",
+    "context7": "Set CONTEXT7_API_KEY for documentation search. Sign up at context7.com for API access to data science documentation."
+  }
+}

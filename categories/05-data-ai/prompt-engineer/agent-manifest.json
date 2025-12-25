@@ -1,0 +1,263 @@
+{
+  "name": "prompt-engineer",
+  "version": "1.0.0",
+  "description": "Expert prompt engineer specializing in designing, optimizing, and managing prompts for large language models. Masters prompt architecture, evaluation frameworks, and production prompt systems with focus on reliability, efficiency, and measurable outcomes.",
+  "category": "data-ai",
+  "metadata": {
+    "author": "Claude Code Agent Marketplace",
+    "tags": [
+      "prompt-engineering",
+      "llm",
+      "prompt-design",
+      "prompt-optimization",
+      "few-shot-learning",
+      "chain-of-thought",
+      "prompt-evaluation",
+      "a-b-testing",
+      "prompt-templates",
+      "token-optimization",
+      "cost-optimization",
+      "prompt-safety",
+      "production-prompts",
+      "prompt-patterns"
+    ],
+    "expertiseAreas": [
+      "Prompt Design Patterns",
+      "Evaluation Frameworks",
+      "Token Optimization",
+      "Few-shot Learning",
+      "Chain-of-thought",
+      "A/B Testing",
+      "Prompt Safety",
+      "Production Systems",
+      "Cost Management"
+    ],
+    "promptPatterns": [
+      "Zero-shot prompting",
+      "Few-shot learning",
+      "Chain-of-thought",
+      "Tree-of-thought",
+      "ReAct pattern",
+      "Constitutional AI",
+      "Instruction following",
+      "Role-based prompting"
+    ],
+    "optimizationFocus": [
+      "Token reduction",
+      "Context compression",
+      "Output formatting",
+      "Response parsing",
+      "Error handling",
+      "Cache optimization",
+      "Batch processing",
+      "Cost tracking"
+    ]
+  },
+  "capabilities": {
+    "primaryFunctions": [
+      "Design effective prompt templates and systems",
+      "Optimize prompts for accuracy and efficiency",
+      "Implement evaluation frameworks",
+      "Conduct A/B testing on prompt variations",
+      "Manage production prompt systems",
+      "Ensure prompt safety and compliance",
+      "Reduce token usage and costs",
+      "Track and improve prompt performance"
+    ],
+    "technicalSkills": [
+      "Prompt template design",
+      "Few-shot example selection",
+      "Chain-of-thought implementation",
+      "Context window management",
+      "Token optimization techniques",
+      "Statistical evaluation",
+      "A/B test design",
+      "Safety filtering"
+    ],
+    "deliverables": [
+      "Production-ready prompt templates",
+      "Evaluation test suites",
+      "Performance metrics dashboards",
+      "A/B test reports",
+      "Prompt catalogs and libraries",
+      "Best practice documentation",
+      "Cost analysis reports",
+      "Safety validation reports"
+    ]
+  },
+  "configuration": {
+    "mcpServers": [
+      "filesystem",
+      "github",
+      "context7",
+      "fetch"
+    ],
+    "slashCommands": [
+      {
+        "command": "/prompt-design",
+        "description": "Design optimized prompt template",
+        "parameters": "[use-case] [requirements]",
+        "example": "/prompt-design customer-support \"empathetic, accurate, <500 tokens\""
+      },
+      {
+        "command": "/prompt-evaluate",
+        "description": "Evaluate prompt quality and performance",
+        "parameters": "[prompt-path] [test-set] [metrics]",
+        "example": "/prompt-evaluate ./prompts/classifier.txt ./tests/100-samples.json \"accuracy,consistency\""
+      },
+      {
+        "command": "/prompt-optimize",
+        "description": "Optimize prompt for efficiency",
+        "parameters": "[prompt-path] [optimization-target]",
+        "example": "/prompt-optimize ./prompts/summarizer.txt \"reduce-tokens-30%\""
+      }
+    ],
+    "environmentVariables": {
+      "optional": [
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ]
+    }
+  },
+  "performanceMetrics": {
+    "targets": {
+      "accuracy": ">90%",
+      "tokenReduction": ">30%",
+      "latency": "<2s",
+      "costReduction": ">40%"
+    },
+    "monitoring": [
+      "Prompt accuracy",
+      "Token usage per query",
+      "Response latency",
+      "Cost per query",
+      "Consistency scores",
+      "Safety violations",
+      "Edge case handling",
+      "User satisfaction"
+    ]
+  },
+  "workflows": {
+    "promptDesign": {
+      "description": "Design effective prompt templates from requirements",
+      "phases": [
+        "Requirements analysis",
+        "Pattern selection",
+        "Template structure design",
+        "Example selection",
+        "Context optimization",
+        "Safety validation",
+        "Performance testing",
+        "Documentation"
+      ]
+    },
+    "promptEvaluation": {
+      "description": "Comprehensive prompt evaluation and testing",
+      "phases": [
+        "Test set creation",
+        "Baseline establishment",
+        "Accuracy testing",
+        "Consistency validation",
+        "Edge case testing",
+        "Statistical analysis",
+        "Performance reporting",
+        "Improvement recommendations"
+      ]
+    },
+    "promptOptimization": {
+      "description": "Optimize prompts for efficiency and cost",
+      "phases": [
+        "Current performance analysis",
+        "Token usage profiling",
+        "Compression techniques",
+        "Context pruning",
+        "Instruction refinement",
+        "Validation testing",
+        "Cost-benefit analysis",
+        "Production rollout"
+      ]
+    }
+  },
+  "integrations": {
+    "llmPlatforms": [
+      "OpenAI API",
+      "Anthropic Claude",
+      "Google Gemini",
+      "Azure OpenAI",
+      "AWS Bedrock",
+      "Cohere",
+      "HuggingFace",
+      "Local LLMs"
+    ],
+    "evaluationTools": [
+      "LangChain",
+      "LlamaIndex",
+      "PromptFlow",
+      "Custom frameworks",
+      "Statistical analysis tools"
+    ],
+    "collaborationAgents": [
+      "llm-architect",
+      "ai-engineer",
+      "data-scientist",
+      "nlp-engineer",
+      "qa-expert",
+      "product-manager",
+      "content-writer",
+      "security-auditor"
+    ]
+  },
+  "bestPractices": {
+    "promptDesign": [
+      "Start with clear objectives",
+      "Use appropriate patterns",
+      "Provide clear instructions",
+      "Include relevant examples",
+      "Specify output format",
+      "Handle edge cases",
+      "Test thoroughly",
+      "Version control prompts"
+    ],
+    "optimization": [
+      "Measure before optimizing",
+      "Compress context efficiently",
+      "Remove redundant instructions",
+      "Use concise language",
+      "Optimize example selection",
+      "Cache common patterns",
+      "Batch similar requests",
+      "Track cost metrics"
+    ],
+    "evaluation": [
+      "Create diverse test sets",
+      "Establish baselines",
+      "Use multiple metrics",
+      "Test edge cases",
+      "Measure consistency",
+      "Track performance trends",
+      "Conduct A/B tests",
+      "Document results"
+    ],
+    "safety": [
+      "Validate inputs",
+      "Filter harmful outputs",
+      "Detect bias",
+      "Prevent injection attacks",
+      "Protect privacy",
+      "Maintain audit logs",
+      "Ensure compliance",
+      "Regular reviews"
+    ]
+  },
+  "qualityStandards": {
+    "checklist": [
+      "Accuracy > 90% achieved",
+      "Token usage optimized",
+      "Latency < 2s maintained",
+      "Cost per query tracked",
+      "Safety filters enabled",
+      "Version controlled",
+      "Metrics tracked",
+      "Documentation complete"
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access dependency files (package.json, requirements.txt, Cargo.toml, pom.xml, go.mod), lock files, and configuration files for reading and updating",
+      "requiredForAgent": true
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Create dependency update PRs, manage Dependabot alerts, review security advisories, and track CI/CD results for dependency changes",
+      "requiredForAgent": true,
+      "setupInstructions": "Set GITHUB_PERSONAL_ACCESS_TOKEN environment variable with a token that has repo, security_events, and workflow scopes"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upwith/context7-mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Query package registries (npm, PyPI, crates.io, Maven Central), fetch CVE/vulnerability data, retrieve package metadata, changelogs, and license information",
+      "requiredForAgent": true,
+      "setupInstructions": "Sign up at https://context7.com and set CONTEXT7_API_KEY environment variable"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fetch data from package registry APIs, security advisory databases (OSV, Snyk, GitHub Advisory), package statistics, and SBOM sources",
+      "requiredForAgent": true,
+      "allowedUrls": [
+        "https://registry.npmjs.org/*",
+        "https://registry.npmjs.com/*",
+        "https://pypi.org/*",
+        "https://crates.io/*",
+        "https://repo.maven.apache.org/*",
+        "https://search.maven.org/*",
+        "https://proxy.golang.org/*",
+        "https://sum.golang.org/*",
+        "https://rubygems.org/*",
+        "https://packagist.org/*",
+        "https://api.github.com/*",
+        "https://osv.dev/*",
+        "https://api.osv.dev/*",
+        "https://snyk.io/vuln/*",
+        "https://api.snyk.io/*",
+        "https://nvd.nist.gov/*",
+        "https://security.snyk.io/*",
+        "https://deps.dev/*",
+        "https://api.deps.dev/*",
+        "https://libraries.io/*",
+        "https://bundlephobia.com/*",
+        "https://packagephobia.com/*"
+      ]
+    }
+  },
+  "mcpUsagePatterns": {
+    "securityAudit": {
+      "description": "Perform comprehensive security audit of dependencies",
+      "steps": [
+        "Use filesystem MCP to read package manifest files (package.json, requirements.txt, etc.)",
+        "Use filesystem MCP to read lock files for exact version information",
+        "Use context7 MCP to query vulnerability databases for each package",
+        "Use fetch MCP to retrieve additional CVE data from OSV and GitHub Advisory",
+        "Use github MCP to check for existing Dependabot alerts",
+        "Generate audit report with severity levels and remediation steps"
+      ]
+    },
+    "dependencyUpdate": {
+      "description": "Safely update dependencies with testing and PR creation",
+      "steps": [
+        "Use filesystem MCP to read current dependency versions",
+        "Use context7 MCP to fetch latest versions and changelogs from registries",
+        "Use fetch MCP to check package download statistics and community health",
+        "Use filesystem MCP to update package files and lock files",
+        "Run tests via bash to verify compatibility",
+        "Use github MCP to create pull request with detailed changelog",
+        "Use github MCP to monitor CI/CD pipeline status"
+      ]
+    },
+    "dependencyAnalysis": {
+      "description": "Analyze dependency tree for optimization opportunities",
+      "steps": [
+        "Use filesystem MCP to read all dependency files in monorepo",
+        "Use context7 MCP to fetch package metadata including bundle sizes",
+        "Use fetch MCP to query bundlephobia for size analysis",
+        "Identify duplicates, unused packages, and circular dependencies",
+        "Generate visualization and optimization recommendations",
+        "Calculate potential bundle size reduction"
+      ]
+    },
+    "licenseCompliance": {
+      "description": "Audit licenses and ensure compliance",
+      "steps": [
+        "Use filesystem MCP to read dependency manifests",
+        "Use context7 MCP to fetch license information for each package",
+        "Use fetch MCP to retrieve license texts and compatibility data",
+        "Check against organizational license policies",
+        "Generate compliance report with flagged packages",
+        "Suggest alternative packages if needed"
+      ]
+    },
+    "supplyChainSecurity": {
+      "description": "Verify package integrity and supply chain security",
+      "steps": [
+        "Use filesystem MCP to read lock files with checksums",
+        "Use fetch MCP to verify package signatures from registries",
+        "Use context7 MCP to check for known supply chain attacks",
+        "Use github MCP to review package source repositories",
+        "Check for typosquatting and dependency confusion risks",
+        "Generate supply chain security report"
+      ]
+    }
+  },
+  "agentCapabilities": {
+    "packageEcosystems": [
+      "npm",
+      "yarn",
+      "pnpm",
+      "pip",
+      "poetry",
+      "pipenv",
+      "cargo",
+      "maven",
+      "gradle",
+      "go",
+      "bundler",
+      "composer"
+    ],
+    "securityFeatures": [
+      "CVE scanning",
+      "Vulnerability assessment",
+      "Supply chain analysis",
+      "Typosquatting detection",
+      "Dependency confusion prevention",
+      "SBOM generation"
+    ],
+    "optimizationFeatures": [
+      "Bundle size analysis",
+      "Duplicate detection",
+      "Unused dependency removal",
+      "Tree shaking validation",
+      "Version deduplication",
+      "Install time optimization"
+    ],
+    "automationFeatures": [
+      "Automated security scanning",
+      "Update PR creation",
+      "CI/CD integration",
+      "Rollback procedures",
+      "Scheduled audits",
+      "Alert notifications"
+    ]
+  }
+}

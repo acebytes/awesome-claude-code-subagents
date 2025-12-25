@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "microservices-architect",
+  "name": "Microservices Architect",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Distributed systems architect designing scalable microservice ecosystems",
+    "long": "Senior microservices architect specializing in distributed system design with deep expertise in Kubernetes, service mesh technologies, and cloud-native patterns. Creates resilient, scalable architectures enabling rapid development."
+  },
+  "capabilities": {
+    "primaryDomain": "Microservices Architecture",
+    "languages": ["yaml", "go", "typescript"],
+    "frameworks": ["Kubernetes", "Istio", "Linkerd", "Kafka", "gRPC"],
+    "platforms": ["Kubernetes", "Docker", "AWS", "GCP", "Azure"],
+    "skills": [
+      "Service boundary design",
+      "Communication patterns",
+      "Resilience patterns",
+      "Service mesh",
+      "Container orchestration",
+      "Observability",
+      "Data consistency",
+      "Security architecture"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["kubectl", "docker", "helm"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/microservice-init",
+      "description": "Initialize new microservice with best practices"
+    },
+    {
+      "name": "/service-mesh",
+      "description": "Configure service mesh (Istio/Linkerd)"
+    },
+    {
+      "name": "/resilience-pattern",
+      "description": "Implement resilience patterns"
+    },
+    {
+      "name": "/observability",
+      "description": "Set up distributed tracing and monitoring"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "devops-engineer", "security-auditor"],
+    "delegatesTo": ["backend-developer", "devops-engineer"],
+    "receivesFrom": ["product-manager", "api-designer"]
+  },
+  "examples": [
+    {
+      "title": "Decompose Monolith",
+      "prompt": "Design microservices architecture for our e-commerce monolith",
+      "description": "Creates service boundaries, communication patterns, and migration plan"
+    },
+    {
+      "title": "Add Resilience",
+      "prompt": "Implement circuit breakers and retries for our payment service",
+      "description": "Configures resilience patterns with fallback mechanisms"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "name": "refactoring-specialist",
+  "version": "1.0.0",
+  "description": "Expert refactoring specialist mastering safe code transformation techniques and design pattern application. Specializes in improving code structure, reducing complexity, and enhancing maintainability while preserving behavior with focus on systematic, test-driven refactoring.",
+  "category": "developer-experience",
+  "author": "Claude Agent Marketplace",
+  "tags": [
+    "refactoring",
+    "code-quality",
+    "design-patterns",
+    "code-smells",
+    "technical-debt",
+    "clean-code",
+    "test-driven",
+    "complexity-reduction"
+  ],
+  "capabilities": [
+    "code-smell-detection",
+    "complexity-analysis",
+    "design-pattern-application",
+    "safe-transformation",
+    "test-driven-refactoring",
+    "performance-optimization",
+    "architecture-improvement",
+    "legacy-code-handling"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7"
+  ],
+  "slashCommands": [
+    {
+      "command": "/refactor-analyze",
+      "description": "Analyze code for refactoring opportunities, code smells, and complexity metrics",
+      "usage": "/refactor-analyze [file/directory]",
+      "examples": [
+        "/refactor-analyze src/services/user_service.py",
+        "/refactor-analyze src/components/",
+        "/refactor-analyze ."
+      ]
+    },
+    {
+      "command": "/refactor-pattern",
+      "description": "Apply a specific design pattern to existing code",
+      "usage": "/refactor-pattern [pattern-name] [target-file]",
+      "patterns": [
+        "strategy",
+        "factory",
+        "observer",
+        "decorator",
+        "adapter",
+        "template-method",
+        "chain-of-responsibility",
+        "composite"
+      ],
+      "examples": [
+        "/refactor-pattern strategy src/payment_processor.py",
+        "/refactor-pattern factory src/user_factory.py",
+        "/refactor-pattern observer src/event_system.py"
+      ]
+    },
+    {
+      "command": "/refactor-extract",
+      "description": "Extract method, class, or module from existing code",
+      "usage": "/refactor-extract [method|class|module] [source-file] [target-name]",
+      "examples": [
+        "/refactor-extract method user_service.py calculate_discount",
+        "/refactor-extract class payment_handler.py StripePaymentHandler",
+        "/refactor-extract module auth.py token_validation"
+      ]
+    }
+  ],
+  "integrations": {
+    "agents": [
+      "code-reviewer",
+      "legacy-modernizer",
+      "architect-reviewer",
+      "qa-expert",
+      "performance-engineer",
+      "documentation-engineer",
+      "tech-lead"
+    ],
+    "tools": [
+      "static-analysis",
+      "test-runners",
+      "code-coverage",
+      "complexity-calculators"
+    ]
+  },
+  "refactoringCatalog": {
+    "basic": [
+      "Extract Method/Function",
+      "Inline Method/Function",
+      "Extract Variable",
+      "Inline Variable",
+      "Change Function Declaration",
+      "Encapsulate Variable",
+      "Rename Variable",
+      "Introduce Parameter Object"
+    ],
+    "advanced": [
+      "Replace Conditional with Polymorphism",
+      "Replace Type Code with Subclasses",
+      "Replace Inheritance with Delegation",
+      "Extract Superclass",
+      "Extract Interface",
+      "Collapse Hierarchy",
+      "Form Template Method",
+      "Replace Constructor with Factory"
+    ]
+  },
+  "codeSmells": {
+    "method": [
+      "Long Method",
+      "Long Parameter List",
+      "Primitive Obsession",
+      "Data Clumps"
+    ],
+    "class": [
+      "Large Class",
+      "Feature Envy",
+      "Divergent Change",
+      "Shotgun Surgery"
+    ],
+    "design": [
+      "Refused Bequest",
+      "Inappropriate Intimacy",
+      "Message Chains",
+      "Middle Man"
+    ]
+  },
+  "metrics": {
+    "complexity": {
+      "cyclomatic": "< 10",
+      "cognitive": "< 15",
+      "nesting": "< 4"
+    },
+    "quality": {
+      "duplication": "< 5%",
+      "test_coverage": "> 80%",
+      "method_length": "< 30 lines"
+    }
+  },
+  "safetyPractices": [
+    "Comprehensive test coverage",
+    "Small incremental changes",
+    "Continuous integration",
+    "Version control discipline",
+    "Code review process",
+    "Performance benchmarks",
+    "Rollback procedures",
+    "Documentation updates"
+  ],
+  "workflow": [
+    "Identify smell",
+    "Write tests",
+    "Make change",
+    "Run tests",
+    "Commit",
+    "Refactor more",
+    "Update docs",
+    "Share learning"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "graphql-architect",
+  "name": "GraphQL Architect",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "GraphQL schema architect designing efficient, scalable API graphs",
+    "long": "Senior GraphQL architect specializing in schema design and distributed graph architectures with deep expertise in Apollo Federation, subscriptions, and performance optimization. Creates type-safe API graphs that scale across teams."
+  },
+  "capabilities": {
+    "primaryDomain": "GraphQL Architecture",
+    "languages": ["graphql", "typescript", "javascript"],
+    "frameworks": ["Apollo", "Apollo Federation", "GraphQL Yoga", "Pothos"],
+    "platforms": ["Node.js", "Apollo Router", "Apollo Studio"],
+    "skills": [
+      "Schema design",
+      "Federation architecture",
+      "Real-time subscriptions",
+      "Query optimization",
+      "DataLoader patterns",
+      "Schema evolution",
+      "Type system design",
+      "Client integration"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "context7", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": ["@apollo/server", "graphql"]
+  },
+  "slashCommands": [
+    {
+      "name": "/graphql-schema",
+      "description": "Generate GraphQL schema from requirements"
+    },
+    {
+      "name": "/graphql-federate",
+      "description": "Create federated subgraph architecture"
+    },
+    {
+      "name": "/graphql-resolver",
+      "description": "Implement resolvers with DataLoader"
+    },
+    {
+      "name": "/graphql-subscription",
+      "description": "Set up real-time subscriptions"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["backend-developer", "microservices-architect", "api-designer"],
+    "delegatesTo": ["backend-developer"],
+    "receivesFrom": ["api-designer", "database-optimizer"]
+  },
+  "examples": [
+    {
+      "title": "Design Federation",
+      "prompt": "Create a federated GraphQL architecture for an e-commerce platform",
+      "description": "Designs subgraphs for users, products, orders with entity relationships"
+    },
+    {
+      "title": "Add Subscriptions",
+      "prompt": "Implement real-time order status subscriptions",
+      "description": "Creates subscription system with WebSocket transport"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

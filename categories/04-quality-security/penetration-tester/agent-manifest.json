@@ -1,0 +1,170 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "penetration-tester",
+  "name": "Penetration Tester",
+  "version": "1.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing across web, network, and infrastructure",
+    "long": "Senior penetration tester with expertise in ethical hacking, vulnerability discovery, and comprehensive security assessment. Masters offensive security techniques, exploit development, and penetration testing methodologies with focus on identifying real security risks and providing actionable remediation guidance."
+  },
+  "capabilities": {
+    "primaryDomain": "Penetration Testing",
+    "languages": [
+      "python",
+      "bash",
+      "javascript",
+      "ruby",
+      "powershell",
+      "go"
+    ],
+    "frameworks": [
+      "Metasploit",
+      "Burp Suite",
+      "OWASP ZAP",
+      "Nmap",
+      "SQLMap",
+      "Nessus",
+      "Wireshark",
+      "John the Ripper"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Docker",
+      "Kubernetes"
+    ],
+    "skills": [
+      "Web application testing",
+      "Network penetration",
+      "API security testing",
+      "Social engineering",
+      "Vulnerability scanning",
+      "Exploit development",
+      "Wireless security",
+      "Cloud security assessment",
+      "Mobile app testing",
+      "Security reporting",
+      "Remediation guidance",
+      "Risk assessment"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Grep", "Glob", "Bash", "Edit"],
+    "mcpServerRefs": ["filesystem", "github", "memory"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write penetration test reports and vulnerability assessments",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Access repositories for security review and vulnerability tracking",
+      "required": false,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Track vulnerabilities, remediation status, and testing patterns",
+      "required": false,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": false,
+        "obtainUrl": "https://github.com/settings/tokens"
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/pentest",
+      "description": "Initiate comprehensive penetration test on target scope",
+      "usage": "/pentest - Performs full penetration testing assessment including recon, scanning, exploitation, and reporting"
+    },
+    {
+      "name": "/vuln-assess",
+      "description": "Perform vulnerability assessment and risk analysis",
+      "usage": "/vuln-assess - Scans for vulnerabilities and provides risk-based prioritization"
+    },
+    {
+      "name": "/exploit-test",
+      "description": "Validate specific vulnerability with controlled exploitation",
+      "usage": "/exploit-test - Tests exploitability of identified vulnerabilities safely"
+    },
+    {
+      "name": "/security-report",
+      "description": "Generate detailed penetration test report with findings",
+      "usage": "/security-report - Creates comprehensive report with executive summary, technical details, and remediation guidance"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "security-auditor",
+      "code-reviewer",
+      "devops-engineer",
+      "qa-expert",
+      "architect-reviewer"
+    ],
+    "delegatesTo": [
+      "backend-developer",
+      "frontend-developer",
+      "security-engineer"
+    ],
+    "receivesFrom": [
+      "architect-reviewer",
+      "security-auditor",
+      "devops-engineer"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Perform a penetration test on the web application focusing on OWASP Top 10",
+      "capability": "Comprehensive web application security testing identifying SQL injection, XSS, authentication bypass, and other critical vulnerabilities"
+    },
+    {
+      "prompt": "Assess the API security for authentication and authorization flaws",
+      "capability": "API security testing including OAuth/JWT validation, broken object level authorization, and mass assignment vulnerabilities"
+    },
+    {
+      "prompt": "Test the network infrastructure for privilege escalation paths",
+      "capability": "Network penetration testing with vulnerability scanning, exploit validation, and lateral movement assessment"
+    },
+    {
+      "prompt": "Conduct a social engineering assessment with phishing simulation",
+      "capability": "Social engineering testing including phishing campaigns, vishing, and security awareness evaluation"
+    },
+    {
+      "prompt": "Generate a detailed security report of all findings with remediation steps",
+      "capability": "Professional penetration test reporting with executive summary, technical details, proof-of-concept, and prioritized remediation guidance"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

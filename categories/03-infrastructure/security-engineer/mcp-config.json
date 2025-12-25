@@ -1,0 +1,115 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "metadata": {
+        "purpose": "Access security configurations, compliance policies, infrastructure code, and security scanning reports",
+        "use_cases": [
+          "Read and analyze security configuration files",
+          "Review Infrastructure as Code for security issues",
+          "Access compliance policy documents",
+          "Analyze security scan results and vulnerability reports",
+          "Manage security runbooks and incident response playbooks"
+        ]
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "metadata": {
+        "purpose": "Manage security workflows, track vulnerabilities, and automate security checks in CI/CD pipelines",
+        "use_cases": [
+          "Create and manage security scanning workflows",
+          "Track security vulnerabilities and remediation",
+          "Review pull requests for security issues",
+          "Automate security gates in CI/CD",
+          "Manage security incidents and issues",
+          "Configure branch protection and security policies"
+        ],
+        "setup_notes": "Set GITHUB_PERSONAL_ACCESS_TOKEN environment variable with a GitHub PAT that has repo, security_events, and workflow permissions"
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context7/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "metadata": {
+        "purpose": "Access security best practices, compliance frameworks, threat intelligence, and security design patterns",
+        "use_cases": [
+          "Query security best practices and standards",
+          "Access compliance framework requirements (SOC2, ISO27001, PCI-DSS)",
+          "Research threat intelligence and CVE information",
+          "Find security design patterns and architecture guidelines",
+          "Access cloud security documentation and guides",
+          "Review security tool documentation"
+        ],
+        "setup_notes": "Set CONTEXT7_API_KEY environment variable. Get your API key from https://context7.com"
+      }
+    }
+  },
+  "environment_variables": {
+    "GITHUB_PERSONAL_ACCESS_TOKEN": {
+      "description": "GitHub Personal Access Token with repo, security_events, and workflow permissions",
+      "required": false,
+      "setup_url": "https://github.com/settings/tokens"
+    },
+    "CONTEXT7_API_KEY": {
+      "description": "Context7 API key for accessing security documentation and best practices",
+      "required": false,
+      "setup_url": "https://context7.com"
+    }
+  },
+  "security_configuration": {
+    "scan_integrations": {
+      "sast": "Configure SAST tools (Snyk, Checkmarx, Semgrep) in CI/CD pipelines",
+      "dast": "Configure DAST tools (OWASP ZAP, Burp Suite) for dynamic scanning",
+      "sca": "Configure Software Composition Analysis for dependency scanning",
+      "container_scanning": "Configure container image scanning (Trivy, Grype, Aqua)",
+      "iac_scanning": "Configure IaC security scanning (Checkov, tfsec, Terrascan)",
+      "secrets_scanning": "Configure secrets detection (GitGuardian, TruffleHog, git-secrets)"
+    },
+    "monitoring_integrations": {
+      "siem": "Configure SIEM integration (Splunk, Elastic, Datadog Security Monitoring)",
+      "cloud_security": "Configure cloud security monitoring (AWS Security Hub, Azure Defender, GCP SCC)",
+      "runtime_security": "Configure runtime security (Falco, Sysdig, Aqua Runtime)",
+      "vulnerability_management": "Configure vulnerability scanners (Qualys, Tenable, Rapid7)"
+    },
+    "compliance_tools": {
+      "compliance_automation": "Configure compliance platforms (Drata, Vanta, Secureframe)",
+      "policy_enforcement": "Configure policy as code tools (OPA, Sentinel, Cloud Custodian)"
+    }
+  },
+  "recommended_setup": {
+    "step_1": "Install and configure filesystem MCP server for local security file access",
+    "step_2": "Set up GitHub MCP server with appropriate permissions for security workflow automation",
+    "step_3": "Configure Context7 MCP server for security knowledge base access",
+    "step_4": "Integrate security scanning tools in your CI/CD pipelines",
+    "step_5": "Set up security monitoring and alerting infrastructure",
+    "step_6": "Configure secrets management solution (HashiCorp Vault, AWS Secrets Manager)",
+    "step_7": "Implement security policies and compliance automation"
+  },
+  "notes": [
+    "Filesystem server is required for accessing local security configurations and reports",
+    "GitHub server is optional but recommended for automating security workflows",
+    "Context7 server is optional but helpful for accessing security best practices and documentation",
+    "Consider integrating additional security tools based on your specific requirements",
+    "Ensure proper authentication and authorization for all MCP server connections",
+    "Follow principle of least privilege when granting permissions to MCP servers"
+  ]
+}

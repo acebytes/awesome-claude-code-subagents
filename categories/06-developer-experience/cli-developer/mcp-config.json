@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access and manage CLI project files, read/write source code, navigate directory structures",
+      "capabilities": [
+        "read_files",
+        "write_files",
+        "list_directories",
+        "create_directories"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "description": "Access GitHub for CLI examples, best practices, issue tracking, and repository management",
+      "capabilities": [
+        "search_repositories",
+        "read_issues",
+        "read_pull_requests",
+        "search_code"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upwired/server-context7"
+      ],
+      "description": "Maintain CLI development context, track architectural decisions, store performance benchmarks",
+      "capabilities": [
+        "store_context",
+        "retrieve_context",
+        "search_context"
+      ]
+    }
+  }
+}

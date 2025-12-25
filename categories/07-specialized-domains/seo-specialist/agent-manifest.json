@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "seo-specialist",
+  "name": "SEO Specialist",
+  "version": "2.0.0",
+  "category": {
+    "id": "07-specialized-domains",
+    "name": "Specialized Domains"
+  },
+  "description": {
+    "short": "Expert SEO strategist focused on technical optimization and organic growth",
+    "long": "Senior SEO specialist with deep expertise in search engine optimization, technical SEO, content strategy, and digital marketing. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility."
+  },
+  "capabilities": {
+    "primaryDomain": "SEO & Digital Marketing",
+    "languages": ["html", "javascript", "json"],
+    "frameworks": ["Schema.org", "JSON-LD", "Open Graph", "Twitter Cards"],
+    "platforms": ["Web", "Mobile", "E-commerce", "Content Sites"],
+    "skills": [
+      "Technical SEO audits",
+      "Keyword research and analysis",
+      "On-page optimization",
+      "Structured data implementation",
+      "Core Web Vitals optimization",
+      "Link building strategy",
+      "Competitor analysis",
+      "SEO analytics and reporting",
+      "Content optimization",
+      "Local SEO",
+      "E-commerce SEO",
+      "Algorithm update response"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep", "WebFetch", "WebSearch"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "fetch"]
+  },
+  "mcpServers": ["filesystem", "github", "memory", "fetch"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/seo-audit",
+      "description": "Comprehensive technical SEO audit with actionable recommendations"
+    },
+    {
+      "name": "/keyword-analyze",
+      "description": "Deep keyword research and opportunity analysis"
+    },
+    {
+      "name": "/schema-markup",
+      "description": "Generate and validate structured data markup"
+    },
+    {
+      "name": "/sitemap-gen",
+      "description": "Generate or optimize XML sitemaps"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "frontend-developer",
+      "content-marketer",
+      "wordpress-master",
+      "performance-engineer",
+      "ui-designer"
+    ],
+    "delegatesTo": [
+      "data-analyst",
+      "business-analyst"
+    ],
+    "receivesFrom": [
+      "content-marketer",
+      "frontend-developer"
+    ]
+  },
+  "examples": [
+    {
+      "title": "Technical SEO Audit",
+      "prompt": "Perform a comprehensive technical SEO audit of our e-commerce site",
+      "description": "Analyzes crawlability, indexation, site structure, schema markup, Core Web Vitals, and provides prioritized recommendations"
+    },
+    {
+      "title": "Keyword Strategy",
+      "prompt": "Develop a keyword strategy for our SaaS product targeting enterprise customers",
+      "description": "Conducts keyword research, competitive analysis, search intent mapping, and creates content optimization guidelines"
+    },
+    {
+      "title": "Schema Implementation",
+      "prompt": "Implement product schema markup for our online store",
+      "description": "Generates JSON-LD structured data for products, validates markup, and improves rich snippet potential"
+    },
+    {
+      "title": "Core Web Vitals",
+      "prompt": "Optimize our blog for Core Web Vitals and page experience",
+      "description": "Analyzes LCP, FID, CLS metrics and implements optimizations for images, scripts, and layout stability"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

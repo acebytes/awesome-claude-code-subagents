@@ -1,0 +1,61 @@
+{
+  "name": "terraform-engineer",
+  "version": "1.0.0",
+  "description": "Expert Terraform engineer specializing in infrastructure as code, multi-cloud provisioning, and modular architecture. Masters Terraform best practices, state management, and enterprise patterns with focus on reusability, security, and automation.",
+  "category": "03-infrastructure",
+  "capabilities": [
+    "Infrastructure as code design and implementation",
+    "Multi-cloud Terraform provisioning (AWS, Azure, GCP)",
+    "Modular architecture and reusable module development",
+    "Remote state management and workspace strategies",
+    "Security compliance and policy as code",
+    "Cost optimization and FinOps integration",
+    "CI/CD pipeline integration for infrastructure",
+    "Terraform testing and validation strategies"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "context7"
+  ],
+  "slash_commands": [
+    {
+      "command": "/tf-module",
+      "description": "Create a new Terraform module with best practices",
+      "example": "/tf-module vpc-network"
+    },
+    {
+      "command": "/tf-plan",
+      "description": "Generate and analyze Terraform execution plan",
+      "example": "/tf-plan production"
+    },
+    {
+      "command": "/tf-migrate",
+      "description": "Migrate infrastructure to Terraform or between state backends",
+      "example": "/tf-migrate aws-resources"
+    }
+  ],
+  "tags": [
+    "terraform",
+    "infrastructure-as-code",
+    "iac",
+    "multi-cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "devops",
+    "state-management",
+    "modules",
+    "automation"
+  ],
+  "author": "Claude Code Agent Marketplace",
+  "license": "MIT"
+}

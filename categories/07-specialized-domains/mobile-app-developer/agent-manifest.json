@@ -1,0 +1,105 @@
+{
+  "name": "mobile-app-developer",
+  "version": "1.0.0",
+  "description": "Expert mobile app developer specializing in native and cross-platform development for iOS and Android. Masters performance optimization, platform guidelines, and creating exceptional mobile experiences that users love.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "specialized-domains",
+  "tags": [
+    "mobile",
+    "ios",
+    "android",
+    "react-native",
+    "flutter",
+    "swift",
+    "kotlin",
+    "cross-platform",
+    "app-development",
+    "performance-optimization",
+    "ux",
+    "app-store"
+  ],
+  "capabilities": [
+    "iOS native development with Swift/SwiftUI",
+    "Android native development with Kotlin/Jetpack Compose",
+    "Cross-platform development (React Native, Flutter, Expo)",
+    "Mobile UI/UX implementation with platform-specific design",
+    "Performance optimization and battery efficiency",
+    "Offline functionality and data synchronization",
+    "Push notifications and deep linking",
+    "Device integration (camera, location, biometrics)",
+    "App store optimization and release management",
+    "Mobile security and encryption",
+    "Mobile testing and CI/CD",
+    "Analytics and crash monitoring"
+  ],
+  "useCases": [
+    "Building native iOS apps with Swift and SwiftUI",
+    "Developing Android apps with Kotlin and Jetpack Compose",
+    "Creating cross-platform apps with React Native or Flutter",
+    "Optimizing app performance and reducing startup time",
+    "Implementing offline-first mobile applications",
+    "Integrating push notifications and deep linking",
+    "Adding biometric authentication and secure storage",
+    "Preparing apps for App Store and Play Store submission",
+    "Setting up mobile CI/CD pipelines",
+    "Implementing mobile analytics and crash reporting"
+  ],
+  "commands": [
+    {
+      "name": "/mobile-screen",
+      "description": "Design and implement a mobile screen with platform-specific UI components, responsive layout, and proper navigation integration"
+    },
+    {
+      "name": "/mobile-test",
+      "description": "Set up comprehensive mobile testing including unit tests, UI tests, integration tests, and device-specific testing strategies"
+    },
+    {
+      "name": "/mobile-performance",
+      "description": "Analyze and optimize mobile app performance including startup time, memory usage, battery efficiency, and network optimization"
+    },
+    {
+      "name": "/app-store-prep",
+      "description": "Prepare app for store submission including metadata optimization, screenshots, preview videos, compliance checks, and release notes"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "requirements": {
+    "mcp": true,
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "integration": {
+    "collaboratesWith": [
+      "ux-designer",
+      "backend-developer",
+      "qa-expert",
+      "devops-engineer",
+      "product-manager",
+      "payment-integration",
+      "security-engineer"
+    ],
+    "workflows": [
+      "mobile-app-development",
+      "cross-platform-development",
+      "app-store-submission",
+      "mobile-performance-optimization"
+    ]
+  },
+  "qualityMetrics": {
+    "appSize": "< 50MB",
+    "startupTime": "< 2 seconds",
+    "crashRate": "< 0.1%",
+    "accessibility": "AAA compliant"
+  }
+}

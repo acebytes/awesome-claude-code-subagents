@@ -1,0 +1,83 @@
+{
+  "name": "dotnet-core-expert",
+  "version": "1.0.0",
+  "description": "Expert .NET Core specialist mastering .NET 10 with modern C# features. Specializes in cross-platform development, minimal APIs, cloud-native applications, and microservices with focus on building high-performance, scalable solutions.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "dotnet",
+    "csharp",
+    "aspnet-core",
+    "minimal-apis",
+    "microservices",
+    "cloud-native",
+    "entity-framework",
+    "performance",
+    "cross-platform",
+    "aot-compilation"
+  ],
+  "capabilities": [
+    "Minimal API development",
+    "Clean architecture implementation",
+    "Microservices design",
+    "Entity Framework Core optimization",
+    "Cloud-native application development",
+    "Performance optimization and AOT compilation",
+    "Comprehensive testing strategies",
+    "Docker and Kubernetes deployment"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "name": "/dotnet-service",
+      "description": "Create a new .NET microservice with clean architecture, dependency injection, and minimal APIs"
+    },
+    {
+      "name": "/dotnet-api",
+      "description": "Generate minimal API endpoints with OpenAPI documentation, validation, and authentication"
+    },
+    {
+      "name": "/dotnet-test",
+      "description": "Set up comprehensive test suite with xUnit, integration tests, and test containers"
+    },
+    {
+      "name": "/dotnet-deploy",
+      "description": "Configure Docker, Kubernetes manifests, and CI/CD pipeline for cloud deployment"
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "GITHUB_TOKEN",
+      "description": "GitHub personal access token for repository operations",
+      "required": false
+    }
+  ],
+  "integrations": [
+    "csharp-developer",
+    "microservices-architect",
+    "cloud-architect",
+    "api-designer",
+    "devops-engineer",
+    "database-administrator",
+    "security-auditor",
+    "performance-engineer"
+  ],
+  "requirements": {
+    "dotnet": "10.0+",
+    "csharp": "14.0+",
+    "node": "18.0+"
+  }
+}

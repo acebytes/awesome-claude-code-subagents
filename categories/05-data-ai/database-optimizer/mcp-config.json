@@ -1,0 +1,214 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub/claude-code-agent-marketplace",
+        "/etc/mysql",
+        "/etc/postgresql",
+        "/var/log/mysql",
+        "/var/log/postgresql",
+        "/var/lib/mongodb",
+        "/etc/redis"
+      ],
+      "description": "Access database configuration files, query logs, slow query logs, optimization scripts, and performance reports across multiple database systems"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Review database schema changes, track query optimization history, document performance improvements, and collaborate on database architecture"
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost/postgres"
+      ],
+      "env": {
+        "PGHOST": "${PGHOST:-localhost}",
+        "PGPORT": "${PGPORT:-5432}",
+        "PGDATABASE": "${PGDATABASE:-postgres}",
+        "PGUSER": "${PGUSER:-postgres}",
+        "PGPASSWORD": "${PGPASSWORD}"
+      },
+      "description": "PRIMARY for PostgreSQL: Execute EXPLAIN queries, analyze pg_stat_statements, monitor performance, and optimize PostgreSQL databases"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Research database optimization techniques, query tuning best practices, database-specific documentation, and performance benchmarking strategies"
+    }
+  },
+  "configVersion": "1.0",
+  "agentName": "database-optimizer",
+  "agentVersion": "1.0.0",
+  "requiredEnvVars": [],
+  "optionalEnvVars": [
+    "PGHOST",
+    "PGPORT",
+    "PGDATABASE",
+    "PGUSER",
+    "PGPASSWORD",
+    "MYSQL_HOST",
+    "MYSQL_PORT",
+    "MYSQL_DATABASE",
+    "MYSQL_USER",
+    "MYSQL_PASSWORD",
+    "GITHUB_PERSONAL_ACCESS_TOKEN",
+    "CONTEXT7_API_KEY"
+  ],
+  "setupInstructions": [
+    "Configure filesystem access to database configuration and log directories",
+    "For PostgreSQL optimization: Set PGHOST, PGPORT, PGDATABASE, PGUSER, PGPASSWORD",
+    "For MySQL optimization: Set MYSQL_HOST, MYSQL_PORT, MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD",
+    "Optional: Set GITHUB_PERSONAL_ACCESS_TOKEN for version control integration",
+    "Optional: Set CONTEXT7_API_KEY for documentation research",
+    "Ensure database monitoring extensions are installed (pg_stat_statements, performance_schema)",
+    "Grant necessary permissions for performance analysis and index creation",
+    "Configure slow query logging for the target database system"
+  ],
+  "serverPriority": {
+    "primary": "filesystem",
+    "secondary": [
+      "postgres",
+      "github",
+      "context7"
+    ]
+  },
+  "commonCommands": {
+    "analyze_slow_queries": {
+      "description": "Identify and analyze slow queries",
+      "mcp": "postgres",
+      "example": "SELECT query, calls, mean_exec_time, total_exec_time, stddev_exec_time FROM pg_stat_statements ORDER BY total_exec_time DESC LIMIT 20;"
+    },
+    "explain_query": {
+      "description": "Analyze query execution plan",
+      "mcp": "postgres",
+      "example": "EXPLAIN (ANALYZE, BUFFERS, VERBOSE, COSTS, TIMING) SELECT ..."
+    },
+    "check_index_usage": {
+      "description": "Review index usage statistics",
+      "mcp": "postgres",
+      "example": "SELECT schemaname, tablename, indexname, idx_scan, idx_tup_read, idx_tup_fetch FROM pg_stat_user_indexes ORDER BY idx_scan;"
+    },
+    "find_unused_indexes": {
+      "description": "Find indexes that are never used",
+      "mcp": "postgres",
+      "example": "SELECT schemaname, tablename, indexname FROM pg_stat_user_indexes WHERE idx_scan = 0 AND indexname NOT LIKE '%_pkey';"
+    },
+    "check_cache_hit_ratio": {
+      "description": "Check buffer cache hit ratio",
+      "mcp": "postgres",
+      "example": "SELECT sum(blks_hit)*100/NULLIF(sum(blks_hit+blks_read), 0) AS cache_hit_ratio FROM pg_stat_database;"
+    },
+    "analyze_table_bloat": {
+      "description": "Estimate table bloat",
+      "mcp": "postgres",
+      "example": "SELECT schemaname, tablename, n_dead_tup, n_live_tup, round(n_dead_tup * 100.0 / NULLIF(n_live_tup + n_dead_tup, 0), 2) AS bloat_pct FROM pg_stat_user_tables WHERE n_dead_tup > 1000 ORDER BY bloat_pct DESC;"
+    },
+    "monitor_locks": {
+      "description": "Monitor lock contention",
+      "mcp": "postgres",
+      "example": "SELECT locktype, relation::regclass, mode, granted, pid, query FROM pg_locks l JOIN pg_stat_activity a ON l.pid = a.pid WHERE NOT granted;"
+    },
+    "check_replication_lag": {
+      "description": "Check replication lag",
+      "mcp": "postgres",
+      "example": "SELECT client_addr, state, sync_state, EXTRACT(EPOCH FROM (now() - pg_last_xact_replay_timestamp())) AS lag_seconds FROM pg_stat_replication;"
+    },
+    "view_database_config": {
+      "description": "Review database configuration",
+      "mcp": "filesystem",
+      "example": "Read /etc/postgresql/postgresql.conf or /etc/mysql/my.cnf"
+    },
+    "analyze_slow_query_log": {
+      "description": "Review slow query logs",
+      "mcp": "filesystem",
+      "example": "Read /var/log/postgresql/postgresql-slow.log or /var/log/mysql/mysql-slow.log"
+    },
+    "research_optimization": {
+      "description": "Research optimization techniques",
+      "mcp": "context7",
+      "example": "Search for 'PostgreSQL query optimization best practices' or 'MySQL index design strategies'"
+    },
+    "track_optimization_history": {
+      "description": "Review optimization changes in version control",
+      "mcp": "github",
+      "example": "List commits related to database optimization and performance improvements"
+    }
+  },
+  "workloadTypes": {
+    "oltp": {
+      "description": "Online Transaction Processing - high concurrency, short transactions",
+      "focus": [
+        "Index optimization",
+        "Connection pooling",
+        "Lock contention reduction",
+        "Transaction throughput"
+      ]
+    },
+    "olap": {
+      "description": "Online Analytical Processing - complex queries, large data scans",
+      "focus": [
+        "Parallel execution",
+        "Aggregation optimization",
+        "Partition pruning",
+        "Memory allocation"
+      ]
+    },
+    "mixed": {
+      "description": "Mixed workload with both OLTP and OLAP characteristics",
+      "focus": [
+        "Balanced configuration",
+        "Workload isolation",
+        "Resource prioritization",
+        "Query scheduling"
+      ]
+    }
+  },
+  "optimizationAreas": {
+    "query_level": [
+      "Rewrite inefficient queries",
+      "Optimize join order",
+      "Eliminate unnecessary subqueries",
+      "Use appropriate aggregation methods",
+      "Leverage query hints when needed"
+    ],
+    "index_level": [
+      "Create missing indexes",
+      "Remove redundant indexes",
+      "Design covering indexes",
+      "Implement partial indexes",
+      "Optimize multi-column index order"
+    ],
+    "schema_level": [
+      "Normalize/denormalize appropriately",
+      "Partition large tables",
+      "Choose optimal data types",
+      "Implement materialized views",
+      "Design efficient constraints"
+    ],
+    "system_level": [
+      "Tune memory allocation",
+      "Optimize checkpoint settings",
+      "Configure connection pooling",
+      "Adjust vacuum/maintenance",
+      "Enable parallel execution"
+    ]
+  }
+}

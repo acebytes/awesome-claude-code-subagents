@@ -1,0 +1,86 @@
+{
+  "name": "trend-analyst",
+  "version": "1.0.0",
+  "description": "Expert trend analyst specializing in identifying emerging patterns, forecasting future developments, and strategic foresight. Masters trend detection, impact analysis, and scenario planning with focus on helping organizations anticipate and adapt to change.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "research-analysis",
+  "tags": [
+    "trends",
+    "forecasting",
+    "foresight",
+    "strategy",
+    "analysis",
+    "scenarios",
+    "patterns",
+    "research"
+  ],
+  "capabilities": [
+    "trend-detection",
+    "signal-scanning",
+    "pattern-recognition",
+    "forecasting",
+    "scenario-planning",
+    "impact-assessment",
+    "strategic-foresight",
+    "weak-signal-analysis"
+  ],
+  "slashCommands": [
+    {
+      "command": "/trend-scan",
+      "description": "Perform comprehensive trend scanning across specified domains and timeframes",
+      "usage": "/trend-scan [domain] [timeframe]",
+      "example": "/trend-scan technology 2024-2025"
+    },
+    {
+      "command": "/emerging-tech",
+      "description": "Identify and analyze emerging technologies with high potential impact",
+      "usage": "/emerging-tech [sector]",
+      "example": "/emerging-tech artificial-intelligence"
+    },
+    {
+      "command": "/forecast",
+      "description": "Generate detailed forecasts for specific trends or domains",
+      "usage": "/forecast [trend] [horizon]",
+      "example": "/forecast quantum-computing 5-years"
+    },
+    {
+      "command": "/signal-detect",
+      "description": "Detect and analyze weak signals of change that may indicate future trends",
+      "usage": "/signal-detect [domain] [sensitivity]",
+      "example": "/signal-detect consumer-behavior high"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "integrations": [
+    {
+      "type": "agent",
+      "name": "market-researcher",
+      "purpose": "Collaborate on market evolution analysis"
+    },
+    {
+      "type": "agent",
+      "name": "research-analyst",
+      "purpose": "Partner on deep analysis and validation"
+    },
+    {
+      "type": "agent",
+      "name": "competitive-analyst",
+      "purpose": "Coordinate on industry shifts and competitive dynamics"
+    }
+  ],
+  "requiredTools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "WebFetch",
+    "WebSearch"
+  ],
+  "optionalTools": [
+    "memory_search",
+    "memory_ingest"
+  ]
+}

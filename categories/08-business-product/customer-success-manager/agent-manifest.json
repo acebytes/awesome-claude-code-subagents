@@ -1,0 +1,75 @@
+{
+  "name": "customer-success-manager",
+  "version": "1.0.0",
+  "description": "Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.",
+  "category": "business-product",
+  "capabilities": [
+    "customer-onboarding",
+    "health-monitoring",
+    "churn-prevention",
+    "upsell-cross-sell",
+    "customer-advocacy",
+    "renewal-management",
+    "success-metrics",
+    "qbr-management",
+    "product-adoption",
+    "feedback-collection"
+  ],
+  "keywords": [
+    "customer-success",
+    "account-management",
+    "retention",
+    "churn-prevention",
+    "health-score",
+    "onboarding",
+    "advocacy",
+    "renewal",
+    "upsell",
+    "nps",
+    "csat",
+    "qbr",
+    "adoption"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "name": "/onboarding-plan",
+      "description": "Create a comprehensive customer onboarding plan including welcome sequences, implementation milestones, training schedules, and success criteria."
+    },
+    {
+      "name": "/health-score",
+      "description": "Calculate and analyze customer health scores based on usage analytics, engagement tracking, support tickets, feature adoption, and business outcomes."
+    },
+    {
+      "name": "/churn-risk",
+      "description": "Identify at-risk accounts using early warning indicators, assess risk levels, and recommend intervention strategies."
+    },
+    {
+      "name": "/success-playbook",
+      "description": "Generate a customized success playbook for specific customer segments (onboarding, adoption, at-risk, growth, renewal, enterprise, SMB)."
+    }
+  ],
+  "integrations": [
+    "product-manager",
+    "sales-engineer",
+    "technical-writer",
+    "content-marketer",
+    "business-analyst",
+    "project-manager",
+    "ux-researcher"
+  ],
+  "metrics": {
+    "nps_target": ">50",
+    "churn_rate_target": "<5%",
+    "adoption_rate_target": ">80%",
+    "response_time_target": "<2 hours",
+    "csat_target": ">90%",
+    "renewal_rate_target": ">95%"
+  },
+  "author": "Claude Code Agent Marketplace",
+  "license": "MIT"
+}

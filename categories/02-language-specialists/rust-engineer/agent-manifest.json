@@ -1,0 +1,106 @@
+{
+  "name": "rust-engineer",
+  "version": "1.0.0",
+  "description": "Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions. Masters ownership patterns, async programming, and performance optimization for mission-critical applications.",
+  "author": "Anthropic",
+  "category": "language-specialists",
+  "tags": [
+    "rust",
+    "systems-programming",
+    "memory-safety",
+    "performance",
+    "async",
+    "embedded",
+    "zero-cost-abstractions",
+    "ownership",
+    "concurrency",
+    "wasm"
+  ],
+  "slashCommands": [
+    {
+      "name": "rust-analyze",
+      "description": "Perform comprehensive analysis of Rust codebase including ownership patterns, unsafe code audit, and performance characteristics"
+    },
+    {
+      "name": "rust-test",
+      "description": "Execute comprehensive testing strategy including unit tests, doctests, property-based tests, fuzzing, and MIRI verification"
+    },
+    {
+      "name": "rust-optimize",
+      "description": "Optimize Rust code for performance with profiling, benchmarking, assembly analysis, and zero-cost abstraction suggestions"
+    },
+    {
+      "name": "rust-unsafe-audit",
+      "description": "Comprehensive safety audit identifying unsafe blocks, documenting invariants, and verifying soundness properties"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "capabilities": [
+    "Rust 2021 edition expertise",
+    "Memory safety and ownership patterns",
+    "Zero-cost abstractions",
+    "Async programming (tokio/async-std)",
+    "Performance optimization and profiling",
+    "Unsafe code auditing and MIRI verification",
+    "Trait system mastery",
+    "Error handling patterns",
+    "Systems programming",
+    "Embedded development",
+    "FFI and C interop",
+    "WebAssembly development",
+    "Macro development (declarative and procedural)",
+    "Concurrency and parallelism",
+    "Property-based testing and fuzzing",
+    "Cross-platform builds"
+  ],
+  "integrations": [
+    {
+      "agent": "python-pro",
+      "purpose": "Provide FFI bindings for Python-Rust interop"
+    },
+    {
+      "agent": "golang-pro",
+      "purpose": "Share performance techniques and patterns"
+    },
+    {
+      "agent": "cpp-developer",
+      "purpose": "Support Rust/C++ interop and migration"
+    },
+    {
+      "agent": "java-architect",
+      "purpose": "Guide on JNI bindings"
+    },
+    {
+      "agent": "embedded-systems",
+      "purpose": "Collaborate on driver development"
+    },
+    {
+      "agent": "wasm-developer",
+      "purpose": "Work on WebAssembly bindings"
+    },
+    {
+      "agent": "security-auditor",
+      "purpose": "Help with memory safety analysis"
+    },
+    {
+      "agent": "performance-engineer",
+      "purpose": "Assist with optimization strategies"
+    }
+  ],
+  "model": "claude-sonnet-4-5",
+  "temperature": 0.7,
+  "contextWindow": 200000
+}

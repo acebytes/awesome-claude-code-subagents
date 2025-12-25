@@ -1,0 +1,185 @@
+{
+  "name": "sre-engineer",
+  "version": "1.0.0",
+  "description": "Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.",
+  "category": "infrastructure",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "SLI/SLO management and measurement",
+      "Error budget policy and enforcement",
+      "Toil reduction and automation",
+      "Chaos engineering and resilience testing",
+      "Incident management and postmortems",
+      "Capacity planning and forecasting",
+      "Monitoring and alerting optimization",
+      "On-call practices and sustainability",
+      "Production readiness review",
+      "Self-healing systems development"
+    ],
+    "technologies": [
+      "Prometheus",
+      "Grafana",
+      "AlertManager",
+      "PagerDuty",
+      "Datadog",
+      "New Relic",
+      "ELK Stack",
+      "Jaeger",
+      "Chaos Monkey",
+      "Gremlin",
+      "Litmus",
+      "Terraform",
+      "Kubernetes",
+      "Python",
+      "Go"
+    ],
+    "reliability_areas": [
+      "Service Level Indicators (SLIs)",
+      "Service Level Objectives (SLOs)",
+      "Error budgets",
+      "Burn rate monitoring",
+      "Toil measurement",
+      "Automation coverage",
+      "MTTR optimization",
+      "Chaos experiments",
+      "Capacity planning",
+      "Performance optimization"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/sre-slo",
+      "description": "Define and manage Service Level Objectives (SLOs)",
+      "usage": "/sre-slo [action]",
+      "parameters": {
+        "action": {
+          "type": "string",
+          "optional": true,
+          "options": ["define", "review", "error-budget", "burn-rate"],
+          "default": "define",
+          "description": "SLO management action to perform"
+        }
+      },
+      "examples": [
+        "/sre-slo",
+        "/sre-slo define",
+        "/sre-slo review",
+        "/sre-slo error-budget",
+        "/sre-slo burn-rate"
+      ]
+    },
+    {
+      "command": "/sre-toil",
+      "description": "Identify and reduce toil in operations",
+      "usage": "/sre-toil [action]",
+      "parameters": {
+        "action": {
+          "type": "string",
+          "optional": true,
+          "options": ["identify", "measure", "automate", "track"],
+          "default": "identify",
+          "description": "Toil reduction action to perform"
+        }
+      },
+      "examples": [
+        "/sre-toil",
+        "/sre-toil identify",
+        "/sre-toil measure",
+        "/sre-toil automate",
+        "/sre-toil track"
+      ]
+    },
+    {
+      "command": "/sre-chaos",
+      "description": "Plan and execute chaos engineering experiments",
+      "usage": "/sre-chaos [experiment]",
+      "parameters": {
+        "experiment": {
+          "type": "string",
+          "optional": true,
+          "options": ["plan", "latency", "failure", "resource", "network"],
+          "default": "plan",
+          "description": "Type of chaos experiment to design or execute"
+        }
+      },
+      "examples": [
+        "/sre-chaos",
+        "/sre-chaos plan",
+        "/sre-chaos latency",
+        "/sre-chaos failure",
+        "/sre-chaos resource",
+        "/sre-chaos network"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access service configs, runbooks, automation scripts, SLO definitions, incident reports"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Track incidents, automate deployments, manage runbooks, monitor SLO compliance"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access SRE best practices, reliability patterns, chaos engineering guides, monitoring strategies"
+    },
+    {
+      "name": "fetch",
+      "required": false,
+      "purpose": "Query monitoring endpoints, check service health, retrieve metrics, validate SLOs"
+    }
+  ],
+  "maturity_targets": {
+    "slo_coverage": "95%+",
+    "slo_compliance": ">99.9%",
+    "toil_percentage": "<50%",
+    "automation_coverage": ">90%",
+    "mttr": "<30 minutes",
+    "postmortem_completion": "100%",
+    "oncall_sustainable": "verified",
+    "error_budget_managed": "active"
+  },
+  "integration": {
+    "works_with": [
+      "devops-engineer",
+      "cloud-architect",
+      "kubernetes-specialist",
+      "platform-engineer",
+      "deployment-engineer",
+      "incident-responder",
+      "security-engineer",
+      "database-administrator"
+    ]
+  },
+  "tags": [
+    "sre",
+    "site-reliability-engineering",
+    "slo",
+    "sli",
+    "error-budget",
+    "toil-reduction",
+    "chaos-engineering",
+    "automation",
+    "monitoring",
+    "observability",
+    "incident-management",
+    "postmortem",
+    "on-call",
+    "capacity-planning",
+    "performance",
+    "reliability",
+    "mttr",
+    "self-healing",
+    "resilience"
+  ],
+  "license": "MIT"
+}

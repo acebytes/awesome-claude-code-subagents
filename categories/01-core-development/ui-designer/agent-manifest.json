@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "ui-designer",
+  "name": "UI Designer",
+  "version": "2.0.0",
+  "category": {
+    "id": "01-core-development",
+    "name": "Core Development"
+  },
+  "description": {
+    "short": "Expert visual designer creating intuitive, beautiful, accessible interfaces",
+    "long": "Senior UI designer with expertise in visual design, interaction design, and design systems. Creates beautiful, functional interfaces that delight users while maintaining consistency, accessibility, and brand alignment."
+  },
+  "capabilities": {
+    "primaryDomain": "UI Design",
+    "languages": ["css", "json"],
+    "frameworks": ["Figma", "Design Tokens", "Tailwind CSS", "CSS Variables"],
+    "platforms": ["Web", "iOS", "Android", "Desktop"],
+    "skills": [
+      "Design systems",
+      "Component libraries",
+      "Visual hierarchy",
+      "Color theory",
+      "Interaction design",
+      "Motion design",
+      "Accessibility",
+      "Cross-platform design"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "puppeteer", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "puppeteer", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/design-system",
+      "description": "Create or extend design system tokens"
+    },
+    {
+      "name": "/component-spec",
+      "description": "Generate component specifications"
+    },
+    {
+      "name": "/color-palette",
+      "description": "Design accessible color palette"
+    },
+    {
+      "name": "/design-audit",
+      "description": "Audit existing designs for consistency"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["ux-researcher", "accessibility-tester", "frontend-developer"],
+    "delegatesTo": ["frontend-developer"],
+    "receivesFrom": ["product-manager", "ux-researcher"]
+  },
+  "examples": [
+    {
+      "title": "Create Design System",
+      "prompt": "Create a design system with tokens for colors, typography, and spacing",
+      "description": "Generates comprehensive design token system"
+    },
+    {
+      "title": "Component Specs",
+      "prompt": "Design button component with all states and variants",
+      "description": "Creates detailed component specification with accessibility"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

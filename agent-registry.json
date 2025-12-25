@@ -1,0 +1,168 @@
+{
+  "$schema": "./schemas/agent-registry.schema.json",
+  "version": "2.0.0",
+  "generatedAt": "2025-12-24T15:00:00Z",
+  "statistics": {
+    "totalAgents": 115,
+    "categories": 10,
+    "mcpServersUsed": 7,
+    "totalSlashCommands": 460
+  },
+  "categories": [
+    {
+      "id": "01-core-development",
+      "name": "Core Development",
+      "description": "Fundamental development agents for building applications",
+      "agentCount": 10,
+      "agents": ["api-designer", "backend-developer", "electron-pro", "frontend-developer", "fullstack-developer", "graphql-architect", "microservices-architect", "mobile-developer", "ui-designer", "websocket-engineer"]
+    },
+    {
+      "id": "02-language-specialists",
+      "name": "Language Specialists",
+      "description": "Expert agents for specific programming languages and frameworks",
+      "agentCount": 23,
+      "agents": ["angular-architect", "cpp-pro", "csharp-developer", "django-developer", "dotnet-core-expert", "dotnet-framework-4.8-expert", "flutter-expert", "golang-pro", "java-architect", "javascript-pro", "kotlin-specialist", "laravel-specialist", "nextjs-developer", "php-pro", "python-pro", "rails-expert", "react-specialist", "rust-engineer", "spring-boot-engineer", "sql-pro", "swift-expert", "typescript-pro", "vue-expert"]
+    },
+    {
+      "id": "03-infrastructure",
+      "name": "Infrastructure",
+      "description": "Cloud, DevOps, and infrastructure management agents",
+      "agentCount": 12,
+      "agents": ["cloud-architect", "database-administrator", "deployment-engineer", "devops-engineer", "devops-incident-responder", "incident-responder", "kubernetes-specialist", "network-engineer", "platform-engineer", "security-engineer", "sre-engineer", "terraform-engineer"]
+    },
+    {
+      "id": "04-quality-security",
+      "name": "Quality & Security",
+      "description": "Testing, security auditing, and quality assurance agents",
+      "agentCount": 12,
+      "agents": ["accessibility-tester", "architect-reviewer", "chaos-engineer", "code-reviewer", "compliance-auditor", "debugger", "error-detective", "penetration-tester", "performance-engineer", "qa-expert", "security-auditor", "test-automator"]
+    },
+    {
+      "id": "05-data-ai",
+      "name": "Data & AI",
+      "description": "Data engineering, machine learning, and AI agents",
+      "agentCount": 12,
+      "agents": ["ai-engineer", "data-analyst", "data-engineer", "data-scientist", "database-optimizer", "llm-architect", "machine-learning-engineer", "ml-engineer", "mlops-engineer", "nlp-engineer", "postgres-pro", "prompt-engineer"]
+    },
+    {
+      "id": "06-developer-experience",
+      "name": "Developer Experience",
+      "description": "Tooling, documentation, and DX improvement agents",
+      "agentCount": 10,
+      "agents": ["build-engineer", "cli-developer", "dependency-manager", "documentation-engineer", "dx-optimizer", "git-workflow-manager", "legacy-modernizer", "mcp-developer", "refactoring-specialist", "tooling-engineer"]
+    },
+    {
+      "id": "07-specialized-domains",
+      "name": "Specialized Domains",
+      "description": "Domain-specific agents for fintech, gaming, IoT, etc.",
+      "agentCount": 11,
+      "agents": ["api-documenter", "blockchain-developer", "embedded-systems", "fintech-engineer", "game-developer", "iot-engineer", "mobile-app-developer", "payment-integration", "quant-analyst", "risk-manager", "seo-specialist"]
+    },
+    {
+      "id": "08-business-product",
+      "name": "Business & Product",
+      "description": "Product management, business analysis, and content agents",
+      "agentCount": 11,
+      "agents": ["business-analyst", "content-marketer", "customer-success-manager", "legal-advisor", "product-manager", "project-manager", "sales-engineer", "scrum-master", "technical-writer", "ux-researcher", "wordpress-master"]
+    },
+    {
+      "id": "09-meta-orchestration",
+      "name": "Meta & Orchestration",
+      "description": "Multi-agent coordination and workflow management",
+      "agentCount": 8,
+      "agents": ["agent-organizer", "context-manager", "error-coordinator", "knowledge-synthesizer", "multi-agent-coordinator", "performance-monitor", "task-distributor", "workflow-orchestrator"]
+    },
+    {
+      "id": "10-research-analysis",
+      "name": "Research & Analysis",
+      "description": "Market research, competitive analysis, and trend analysis",
+      "agentCount": 6,
+      "agents": ["competitive-analyst", "data-researcher", "market-researcher", "research-analyst", "search-specialist", "trend-analyst"]
+    }
+  ],
+  "agents": {},
+  "mcpServerCatalog": {
+    "filesystem": {
+      "package": "@modelcontextprotocol/server-filesystem",
+      "category": "filesystem",
+      "description": "Secure file system operations with configurable access controls",
+      "requiredEnvVars": [],
+      "usedByAgents": 115,
+      "installCommand": "npx -y @modelcontextprotocol/server-filesystem"
+    },
+    "memory": {
+      "package": "@modelcontextprotocol/server-memory",
+      "category": "integration",
+      "description": "Persistent knowledge graph for context management",
+      "requiredEnvVars": [],
+      "usedByAgents": 115,
+      "installCommand": "npx -y @modelcontextprotocol/server-memory"
+    },
+    "github": {
+      "package": "@modelcontextprotocol/server-github",
+      "category": "version-control",
+      "description": "GitHub repository operations, PRs, issues, and Actions",
+      "requiredEnvVars": ["GITHUB_TOKEN"],
+      "usedByAgents": 100,
+      "installCommand": "npx -y @modelcontextprotocol/server-github"
+    },
+    "context7": {
+      "package": "@upstash/context7-mcp",
+      "category": "documentation",
+      "description": "Up-to-date framework and library documentation",
+      "requiredEnvVars": [],
+      "usedByAgents": 70,
+      "installCommand": "npx -y @upstash/context7-mcp@latest"
+    },
+    "fetch": {
+      "package": "@modelcontextprotocol/server-fetch",
+      "category": "web",
+      "description": "Web content fetching and API interactions",
+      "requiredEnvVars": [],
+      "usedByAgents": 25,
+      "installCommand": "npx -y @modelcontextprotocol/server-fetch"
+    },
+    "postgres": {
+      "package": "@modelcontextprotocol/server-postgres",
+      "category": "database",
+      "description": "PostgreSQL database operations and queries",
+      "requiredEnvVars": ["POSTGRES_URL"],
+      "usedByAgents": 15,
+      "installCommand": "npx -y @modelcontextprotocol/server-postgres"
+    },
+    "puppeteer": {
+      "package": "@modelcontextprotocol/server-puppeteer",
+      "category": "web",
+      "description": "Browser automation and web scraping",
+      "requiredEnvVars": [],
+      "usedByAgents": 10,
+      "installCommand": "npx -y @modelcontextprotocol/server-puppeteer"
+    }
+  },
+  "capabilityIndex": {
+    "api-development": ["api-designer", "backend-developer", "graphql-architect", "api-documenter"],
+    "frontend": ["frontend-developer", "react-specialist", "vue-expert", "angular-architect", "nextjs-developer", "ui-designer"],
+    "mobile": ["mobile-developer", "flutter-expert", "swift-expert", "kotlin-specialist", "mobile-app-developer"],
+    "backend": ["backend-developer", "python-pro", "golang-pro", "java-architect", "rust-engineer", "typescript-pro"],
+    "database": ["sql-pro", "postgres-pro", "database-administrator", "database-optimizer", "data-engineer"],
+    "devops": ["devops-engineer", "deployment-engineer", "kubernetes-specialist", "terraform-engineer", "platform-engineer"],
+    "security": ["security-engineer", "security-auditor", "penetration-tester", "compliance-auditor"],
+    "testing": ["test-automator", "qa-expert", "accessibility-tester", "chaos-engineer", "performance-engineer"],
+    "ai-ml": ["ai-engineer", "ml-engineer", "llm-architect", "data-scientist", "nlp-engineer", "prompt-engineer"],
+    "documentation": ["technical-writer", "documentation-engineer", "api-documenter"],
+    "project-management": ["project-manager", "scrum-master", "product-manager", "business-analyst"],
+    "research": ["research-analyst", "market-researcher", "competitive-analyst", "trend-analyst", "data-researcher"]
+  },
+  "slashCommandIndex": {
+    "/api-spec": "api-designer",
+    "/endpoint-design": "api-designer",
+    "/code-review": "code-reviewer",
+    "/security-audit": "security-auditor",
+    "/deploy": "deployment-engineer",
+    "/test-run": "test-automator",
+    "/perf-analyze": "performance-engineer",
+    "/db-optimize": "database-optimizer",
+    "/ml-train": "ml-engineer",
+    "/doc-generate": "documentation-engineer"
+  }
+}

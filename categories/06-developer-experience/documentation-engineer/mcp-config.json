@@ -1,0 +1,95 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "File system access for reading/writing documentation files and managing documentation structure"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      },
+      "description": "GitHub integration for accessing repository documentation, managing docs PRs, and syncing docs with code changes"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upaya-ai/context7-mcp"
+      ],
+      "description": "Semantic search and context understanding for finding related documentation, identifying outdated content, and suggesting improvements"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Web fetching capabilities for retrieving external documentation, validating links, and importing API schemas"
+    }
+  },
+  "configuration": {
+    "documentation": {
+      "defaultFormat": "markdown",
+      "supportedFormats": [
+        "markdown",
+        "mdx",
+        "html",
+        "asciidoc",
+        "restructuredtext"
+      ],
+      "apiDocFormats": [
+        "openapi",
+        "swagger",
+        "graphql",
+        "jsdoc",
+        "tsdoc",
+        "rustdoc",
+        "sphinx",
+        "javadoc"
+      ],
+      "staticSiteGenerators": [
+        "docusaurus",
+        "vitepress",
+        "nextra",
+        "mkdocs",
+        "hugo",
+        "jekyll",
+        "gatsby",
+        "astro"
+      ]
+    },
+    "quality": {
+      "linkValidation": true,
+      "codeExampleTesting": true,
+      "styleGuideEnforcement": true,
+      "accessibilityChecks": true,
+      "seoOptimization": true,
+      "performanceMonitoring": true
+    },
+    "automation": {
+      "autoGenerateFromCode": true,
+      "autoUpdateOnCodeChanges": true,
+      "autoLinkRelatedDocs": true,
+      "autoGenerateExamples": false,
+      "autoScreenshots": false
+    },
+    "features": {
+      "versionManagement": true,
+      "multiLanguageSupport": true,
+      "interactivePlaygrounds": true,
+      "searchIntegration": true,
+      "analyticsTracking": true,
+      "contributionWorkflow": true
+    }
+  }
+}

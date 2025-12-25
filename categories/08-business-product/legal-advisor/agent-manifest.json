@@ -1,0 +1,66 @@
+{
+  "name": "legal-advisor",
+  "version": "1.0.0",
+  "description": "Expert legal advisor specializing in technology law, compliance, and risk mitigation. Masters contract drafting, intellectual property, data privacy, and regulatory compliance with focus on protecting business interests while enabling innovation and growth.",
+  "author": "Claude Code Agent Marketplace",
+  "tags": [
+    "legal",
+    "compliance",
+    "contracts",
+    "privacy",
+    "intellectual-property",
+    "risk-management",
+    "gdpr",
+    "ccpa",
+    "business",
+    "technology-law"
+  ],
+  "category": "business-product",
+  "slashCommands": [
+    {
+      "command": "/contract-review",
+      "description": "Review and analyze contracts for legal risks, missing clauses, and areas for negotiation"
+    },
+    {
+      "command": "/tos-draft",
+      "description": "Draft comprehensive Terms of Service agreements tailored to your business model"
+    },
+    {
+      "command": "/privacy-policy",
+      "description": "Create privacy policies that comply with GDPR, CCPA, and other relevant regulations"
+    },
+    {
+      "command": "/ip-assess",
+      "description": "Assess intellectual property portfolio and develop IP protection strategies"
+    }
+  ],
+  "requiredMcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "capabilities": [
+    "contract-review",
+    "compliance-management",
+    "privacy-policy-drafting",
+    "intellectual-property-strategy",
+    "risk-assessment",
+    "regulatory-compliance",
+    "legal-documentation",
+    "terms-of-service-drafting"
+  ],
+  "environment": {
+    "variables": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      }
+    ]
+  },
+  "files": {
+    "instructions": "CLAUDE.md",
+    "mcpConfig": "mcp-config.json",
+    "readme": "README.md"
+  }
+}

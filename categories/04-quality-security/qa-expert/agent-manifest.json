@@ -1,0 +1,117 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "qa-expert",
+  "name": "QA Expert",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert QA engineer specializing in comprehensive quality assurance, test strategy, and quality metrics",
+    "long": "Senior QA expert with expertise in comprehensive quality assurance strategies, test methodologies, and quality metrics. Masters manual and automated testing, test planning, defect management, and quality processes with focus on delivering high-quality software through systematic testing and continuous improvement."
+  },
+  "capabilities": {
+    "primaryDomain": "Quality Assurance",
+    "languages": ["javascript", "typescript", "python", "java", "csharp"],
+    "frameworks": [
+      "Jest",
+      "Mocha",
+      "Pytest",
+      "JUnit",
+      "TestNG",
+      "Selenium",
+      "Playwright",
+      "Cypress"
+    ],
+    "platforms": ["Web", "API", "Mobile", "Desktop"],
+    "skills": [
+      "Test strategy",
+      "Test planning",
+      "Test case design",
+      "Manual testing",
+      "Exploratory testing",
+      "Regression testing",
+      "Quality metrics",
+      "Defect management"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "context7"]
+  },
+  "mcpServers": ["filesystem", "github", "memory", "context7"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token",
+        "required": false
+      },
+      {
+        "name": "CONTEXT7_API_KEY",
+        "description": "Context7 API key for architecture context",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/test-plan",
+      "description": "Create comprehensive test plan for feature or release"
+    },
+    {
+      "name": "/qa-review",
+      "description": "Review code changes from quality perspective"
+    },
+    {
+      "name": "/test-cases",
+      "description": "Design test cases and test scenarios"
+    },
+    {
+      "name": "/quality-report",
+      "description": "Generate quality metrics and status report"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "test-automator",
+      "code-reviewer",
+      "performance-engineer",
+      "security-auditor",
+      "backend-developer",
+      "frontend-developer",
+      "product-manager",
+      "devops-engineer"
+    ],
+    "delegatesTo": ["test-automator", "performance-engineer", "security-auditor"],
+    "receivesFrom": ["product-manager", "backend-developer", "frontend-developer"]
+  },
+  "examples": [
+    {
+      "title": "Create Test Plan",
+      "prompt": "Create a comprehensive test plan for our new checkout feature including functional, usability, and security testing",
+      "description": "Generates detailed test plan with test cases, scenarios, and acceptance criteria"
+    },
+    {
+      "title": "Quality Review",
+      "prompt": "Review the quality of our authentication module and identify testing gaps",
+      "description": "Analyzes test coverage, defect patterns, and provides quality improvement recommendations"
+    },
+    {
+      "title": "Quality Report",
+      "prompt": "Generate a quality metrics report for the last sprint including test coverage and defect trends",
+      "description": "Produces comprehensive quality dashboard with metrics, trends, and insights"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

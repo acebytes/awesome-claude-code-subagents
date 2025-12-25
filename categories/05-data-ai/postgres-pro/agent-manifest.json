@@ -1,0 +1,266 @@
+{
+  "name": "postgres-pro",
+  "version": "1.0.0",
+  "description": "Expert PostgreSQL specialist mastering database administration, performance optimization, and high availability. Deep expertise in PostgreSQL internals, advanced features, and enterprise deployment with focus on reliability and peak performance.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "data-ai",
+  "tags": [
+    "postgresql",
+    "database",
+    "performance-optimization",
+    "high-availability",
+    "replication",
+    "backup-recovery",
+    "query-optimization",
+    "database-administration",
+    "sql",
+    "data-engineering"
+  ],
+  "capabilities": [
+    "PostgreSQL performance tuning and optimization",
+    "Advanced query analysis with EXPLAIN and pg_stat_statements",
+    "Streaming and logical replication setup",
+    "High availability and failover automation",
+    "Backup and recovery strategies (pg_dump, pg_basebackup, PITR)",
+    "Index design and optimization (B-tree, GIN, GiST, BRIN)",
+    "Partitioning implementation (range, list, hash)",
+    "Extension management (pg_stat_statements, PostGIS, TimescaleDB)",
+    "JSONB optimization and full-text search",
+    "Vacuum tuning and bloat prevention",
+    "Security hardening and row-level security",
+    "Connection pooling with PgBouncer",
+    "Monitoring and alerting setup",
+    "Database migration planning and execution"
+  ],
+  "slashCommands": [
+    {
+      "command": "/pg-analyze",
+      "description": "Comprehensive database performance analysis",
+      "usage": "/pg-analyze [database_name]",
+      "workflow": [
+        "Query pg_stat_statements for top slow queries",
+        "Check table and index bloat",
+        "Analyze buffer cache hit ratios",
+        "Review checkpoint and vacuum activity",
+        "Examine connection patterns and locks",
+        "Generate performance report with recommendations"
+      ]
+    },
+    {
+      "command": "/pg-optimize",
+      "description": "Database optimization workflow",
+      "usage": "/pg-optimize <query_or_table>",
+      "workflow": [
+        "EXPLAIN ANALYZE target queries",
+        "Identify missing or unused indexes",
+        "Review statistics and analyze tables",
+        "Tune autovacuum settings",
+        "Optimize memory and checkpoint parameters",
+        "Implement index and query improvements",
+        "Validate performance gains"
+      ]
+    },
+    {
+      "command": "/pg-migrate",
+      "description": "Create safe database migration",
+      "usage": "/pg-migrate <migration_description>",
+      "workflow": [
+        "Analyze schema change requirements",
+        "Generate migration SQL with safety checks",
+        "Include rollback procedures",
+        "Add index creation with CONCURRENTLY",
+        "Validate against production schema",
+        "Document migration steps and risks",
+        "Create testing checklist"
+      ]
+    }
+  ],
+  "expertiseAreas": {
+    "performance": {
+      "level": "expert",
+      "topics": [
+        "Query optimization",
+        "EXPLAIN analysis",
+        "Index strategies",
+        "Vacuum tuning",
+        "Checkpoint configuration",
+        "Memory allocation",
+        "Connection pooling",
+        "Parallel execution"
+      ]
+    },
+    "replication": {
+      "level": "expert",
+      "topics": [
+        "Streaming replication",
+        "Logical replication",
+        "Synchronous replication",
+        "Cascading replicas",
+        "Failover automation",
+        "Replication monitoring"
+      ]
+    },
+    "backup_recovery": {
+      "level": "expert",
+      "topics": [
+        "pg_dump strategies",
+        "pg_basebackup",
+        "WAL archiving",
+        "Point-in-time recovery",
+        "Backup validation",
+        "Recovery testing"
+      ]
+    },
+    "advanced_features": {
+      "level": "expert",
+      "topics": [
+        "JSONB optimization",
+        "Full-text search",
+        "PostGIS spatial queries",
+        "Time-series with TimescaleDB",
+        "Foreign data wrappers",
+        "Partitioning",
+        "Extensions"
+      ]
+    },
+    "high_availability": {
+      "level": "expert",
+      "topics": [
+        "Patroni setup",
+        "Automatic failover",
+        "Split-brain prevention",
+        "Load balancing",
+        "Health monitoring"
+      ]
+    },
+    "security": {
+      "level": "expert",
+      "topics": [
+        "Authentication (SCRAM-SHA-256)",
+        "SSL/TLS configuration",
+        "Row-level security",
+        "Column encryption",
+        "Audit logging",
+        "pg_hba.conf management"
+      ]
+    }
+  },
+  "integrations": {
+    "mcp_servers": [
+      {
+        "name": "postgres",
+        "required": true,
+        "purpose": "Direct PostgreSQL database access for queries, monitoring, and administration"
+      },
+      {
+        "name": "filesystem",
+        "required": true,
+        "purpose": "Access configuration files, logs, and migration scripts"
+      },
+      {
+        "name": "github",
+        "required": false,
+        "purpose": "Review schema changes and track migration history"
+      },
+      {
+        "name": "context7",
+        "required": false,
+        "purpose": "Research PostgreSQL documentation and best practices"
+      }
+    ],
+    "related_agents": [
+      "database-optimizer",
+      "backend-developer",
+      "data-engineer",
+      "devops-engineer",
+      "sre-engineer",
+      "cloud-architect",
+      "security-auditor",
+      "performance-engineer"
+    ]
+  },
+  "performanceTargets": {
+    "query_latency": "< 50ms",
+    "replication_lag": "< 500ms",
+    "backup_rpo": "< 5 minutes",
+    "recovery_rto": "< 1 hour",
+    "uptime": "> 99.95%",
+    "cache_hit_ratio": "> 95%"
+  },
+  "commonTasks": [
+    {
+      "task": "Performance Analysis",
+      "steps": [
+        "Connect to PostgreSQL via MCP",
+        "Query pg_stat_statements for slow queries",
+        "Analyze EXPLAIN plans",
+        "Check index usage statistics",
+        "Review table bloat and vacuum status",
+        "Generate optimization recommendations"
+      ]
+    },
+    {
+      "task": "Replication Setup",
+      "steps": [
+        "Configure primary for WAL archiving",
+        "Create replication user and slots",
+        "Take base backup",
+        "Configure standby with recovery settings",
+        "Verify replication status",
+        "Monitor replication lag"
+      ]
+    },
+    {
+      "task": "Backup Configuration",
+      "steps": [
+        "Set up WAL archiving",
+        "Configure pg_basebackup schedule",
+        "Implement retention policies",
+        "Test restore procedures",
+        "Automate backup validation",
+        "Document recovery runbooks"
+      ]
+    },
+    {
+      "task": "Query Optimization",
+      "steps": [
+        "Run EXPLAIN ANALYZE on slow query",
+        "Identify scan types and join methods",
+        "Check index usage and selectivity",
+        "Review statistics freshness",
+        "Propose index or query changes",
+        "Validate performance improvement"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "software": [
+      "PostgreSQL 12+ (recommended 15+)",
+      "psql client",
+      "pg_stat_statements extension",
+      "Optional: pgBouncer, Patroni, pg_auto_failover"
+    ],
+    "access": [
+      "PostgreSQL superuser or monitoring role",
+      "Read access to postgresql.conf",
+      "Read access to PostgreSQL logs",
+      "Network access to PostgreSQL port (default 5432)"
+    ],
+    "knowledge": [
+      "SQL fundamentals",
+      "Database normalization",
+      "Transaction isolation levels",
+      "Basic Linux/Unix commands"
+    ]
+  },
+  "documentation": {
+    "setup_guide": "README.md",
+    "agent_instructions": "CLAUDE.md",
+    "mcp_configuration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/claude-code-agent-marketplace/issues",
+    "documentation": "https://github.com/claude-code-agent-marketplace"
+  }
+}

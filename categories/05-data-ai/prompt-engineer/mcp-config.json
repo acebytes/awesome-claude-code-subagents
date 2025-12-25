@@ -1,0 +1,135 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access file system for reading/writing prompts, templates, and evaluation results"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Access GitHub for version control and collaboration on prompt repositories"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/context7-mcp-server"
+      ],
+      "description": "Semantic search for finding existing prompts, patterns, and implementations"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fetch data from LLM APIs for testing, evaluation, and production prompt execution"
+    }
+  },
+  "configInfo": {
+    "agentName": "prompt-engineer",
+    "category": "data-ai",
+    "purpose": "Prompt design, optimization, evaluation, and production prompt system management",
+    "mcpServersUsage": {
+      "filesystem": [
+        "Read/write prompt templates and configurations",
+        "Manage prompt catalogs and libraries",
+        "Store evaluation test sets",
+        "Save performance metrics and reports",
+        "Organize prompt versions",
+        "Handle A/B test configurations",
+        "Manage documentation and guides",
+        "Store cost analysis data"
+      ],
+      "github": [
+        "Version control for prompt templates",
+        "Collaborate on prompt development",
+        "Track prompt iterations and changes",
+        "Manage issues for prompt improvements",
+        "Review pull requests for prompt updates",
+        "Share prompt libraries across teams",
+        "Track prompt performance over time",
+        "Maintain prompt change logs"
+      ],
+      "context7": [
+        "Search for existing prompt patterns",
+        "Find similar prompt implementations",
+        "Locate prompt optimization examples",
+        "Discover evaluation frameworks",
+        "Search for few-shot examples",
+        "Find safety filter implementations",
+        "Locate A/B test configurations",
+        "Discover best practices in codebase"
+      ],
+      "fetch": [
+        "Call LLM APIs for prompt testing",
+        "Execute A/B test comparisons",
+        "Fetch evaluation metrics from services",
+        "Access prompt management platforms",
+        "Query cost tracking APIs",
+        "Integrate with monitoring dashboards",
+        "Access prompt analytics services",
+        "Call safety validation services"
+      ]
+    },
+    "typicalWorkflows": [
+      {
+        "name": "Design New Prompt",
+        "steps": [
+          "Use context7 to find similar prompt patterns",
+          "Use filesystem to read requirements and examples",
+          "Use fetch to test prompt variations with LLM APIs",
+          "Use github to version control the final prompt"
+        ]
+      },
+      {
+        "name": "Evaluate Prompt Performance",
+        "steps": [
+          "Use filesystem to load prompt and test sets",
+          "Use fetch to execute prompt against LLM APIs",
+          "Use filesystem to save evaluation results",
+          "Use github to track performance metrics over time"
+        ]
+      },
+      {
+        "name": "Optimize Existing Prompt",
+        "steps": [
+          "Use filesystem to read current prompt",
+          "Use context7 to find optimization techniques",
+          "Use fetch to test optimized variations",
+          "Use filesystem to save token usage comparisons"
+        ]
+      },
+      {
+        "name": "A/B Test Prompts",
+        "steps": [
+          "Use filesystem to load prompt variations",
+          "Use fetch to execute parallel tests",
+          "Use filesystem to analyze statistical results",
+          "Use github to document winning variation"
+        ]
+      }
+    ],
+    "environmentVariables": {
+      "required": [],
+      "optional": [
+        {
+          "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "description": "GitHub API token for accessing repositories and collaboration features",
+          "usage": "Set this to enable full GitHub integration for prompt versioning and collaboration"
+        }
+      ]
+    }
+  }
+}

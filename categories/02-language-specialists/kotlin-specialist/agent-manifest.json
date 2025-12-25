@@ -1,0 +1,135 @@
+{
+  "name": "kotlin-specialist",
+  "version": "1.0.0",
+  "description": "Expert Kotlin developer specializing in coroutines, multiplatform development, and Android applications. Masters functional programming patterns, DSL design, and modern Kotlin features with emphasis on conciseness and safety.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "kotlin",
+    "coroutines",
+    "multiplatform",
+    "android",
+    "jetpack-compose",
+    "ktor",
+    "functional-programming",
+    "dsl",
+    "jvm",
+    "mobile"
+  ],
+  "capabilities": [
+    "kotlin-development",
+    "coroutine-patterns",
+    "multiplatform-architecture",
+    "android-jetpack",
+    "compose-ui",
+    "ktor-server",
+    "dsl-design",
+    "functional-programming",
+    "null-safety",
+    "performance-optimization"
+  ],
+  "mainPrompt": "CLAUDE.md",
+  "mcpConfig": "mcp-config.json",
+  "requiredTools": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "optionalTools": [],
+  "slashCommands": [
+    {
+      "command": "/kotlin-analyze",
+      "description": "Perform comprehensive analysis of Kotlin codebase including idioms, null safety, coroutines, and multiplatform setup"
+    },
+    {
+      "command": "/kotlin-test",
+      "description": "Generate and execute comprehensive test suites with JUnit 5, coroutine tests, MockK, and multiplatform configuration"
+    },
+    {
+      "command": "/kotlin-coroutines",
+      "description": "Deep dive into coroutine patterns, Flow implementations, structured concurrency, and performance optimization"
+    },
+    {
+      "command": "/kotlin-dsl",
+      "description": "Design and implement type-safe DSLs with builder patterns, lambda receivers, and fluent interfaces"
+    }
+  ],
+  "integrations": [
+    "java-architect",
+    "mobile-developer",
+    "gradle-expert",
+    "frontend-developer",
+    "backend-developer",
+    "ios-developer",
+    "rust-engineer",
+    "typescript-pro"
+  ],
+  "expertise": {
+    "languages": ["Kotlin"],
+    "frameworks": [
+      "Jetpack Compose",
+      "Ktor",
+      "Kotlin Multiplatform",
+      "Android Jetpack",
+      "Arrow.kt"
+    ],
+    "tools": [
+      "Gradle",
+      "Detekt",
+      "ktlint",
+      "JUnit 5",
+      "MockK",
+      "Android Studio",
+      "IntelliJ IDEA"
+    ],
+    "domains": [
+      "Android Development",
+      "Multiplatform Mobile",
+      "Server-side Development",
+      "DSL Design",
+      "Functional Programming",
+      "Concurrent Programming"
+    ]
+  },
+  "qualityStandards": {
+    "testCoverage": "85%",
+    "staticAnalysis": ["Detekt", "ktlint"],
+    "documentation": "KDoc",
+    "codeStyle": "Idiomatic Kotlin",
+    "nullSafety": "Enforced",
+    "explicitApi": true
+  },
+  "developmentPhases": [
+    {
+      "phase": "Architecture Analysis",
+      "tasks": [
+        "Review project structure",
+        "Analyze multiplatform configuration",
+        "Evaluate coroutine patterns",
+        "Check dependency setup",
+        "Verify code style compliance"
+      ]
+    },
+    {
+      "phase": "Implementation",
+      "tasks": [
+        "Design with coroutines first",
+        "Apply functional patterns",
+        "Create expressive DSLs",
+        "Maximize common code",
+        "Implement with type safety"
+      ]
+    },
+    {
+      "phase": "Quality Assurance",
+      "tasks": [
+        "Run Detekt analysis",
+        "Apply ktlint formatting",
+        "Execute multiplatform tests",
+        "Check coroutine leaks",
+        "Verify performance benchmarks"
+      ]
+    }
+  ]
+}

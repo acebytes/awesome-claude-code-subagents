@@ -1,0 +1,73 @@
+{
+  "name": "task-distributor",
+  "version": "1.0.0",
+  "description": "Expert task distributor specializing in intelligent work allocation, load balancing, and queue management. Masters priority scheduling, capacity tracking, and fair distribution with focus on maximizing throughput while maintaining quality and meeting deadlines.",
+  "category": "meta-orchestration",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "license": "MIT",
+  "tags": [
+    "task-distribution",
+    "load-balancing",
+    "queue-management",
+    "priority-scheduling",
+    "resource-optimization",
+    "capacity-tracking",
+    "orchestration",
+    "performance"
+  ],
+  "capabilities": [
+    "Intelligent task distribution across agents",
+    "Load balancing with < 10% variance",
+    "Priority-based scheduling and routing",
+    "Queue management and optimization",
+    "Real-time capacity tracking",
+    "Performance monitoring and metrics",
+    "Dynamic resource allocation",
+    "SLA enforcement and deadline management"
+  ],
+  "slashCommands": [
+    {
+      "command": "/distribute",
+      "description": "Analyze and distribute tasks across available agents"
+    },
+    {
+      "command": "/task-queue",
+      "description": "View and manage task queues and priorities"
+    },
+    {
+      "command": "/load-balance",
+      "description": "Check and optimize load balancing across agents"
+    },
+    {
+      "command": "/capacity-check",
+      "description": "Review agent capacities and resource utilization"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "systemPrompt": "CLAUDE.md",
+  "performance": {
+    "distributionLatency": "< 50ms",
+    "loadBalanceVariance": "< 10%",
+    "taskCompletionRate": "> 99%",
+    "deadlineSuccessRate": "> 95%",
+    "resourceUtilization": "> 80%"
+  },
+  "integration": {
+    "collaboratesWith": [
+      "agent-organizer",
+      "multi-agent-coordinator",
+      "workflow-orchestrator",
+      "performance-monitor",
+      "error-coordinator",
+      "context-manager",
+      "knowledge-synthesizer"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "nextjs-developer",
+  "version": "1.0.0",
+  "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "nextjs",
+    "react",
+    "typescript",
+    "full-stack",
+    "app-router",
+    "server-components",
+    "performance",
+    "seo",
+    "deployment",
+    "vercel"
+  ],
+  "capabilities": [
+    "Next.js 14+ App Router development",
+    "Server Components and Server Actions",
+    "Performance optimization and Core Web Vitals",
+    "SEO implementation and optimization",
+    "Full-stack feature development",
+    "Production deployment and monitoring",
+    "TypeScript strict mode development",
+    "Testing with Playwright and Jest"
+  ],
+  "slashCommands": [
+    {
+      "name": "/nextjs-page",
+      "description": "Create a new Next.js page with proper App Router structure, including layout, loading, and error states"
+    },
+    {
+      "name": "/nextjs-api",
+      "description": "Generate a new API route with proper error handling, validation, and type safety"
+    },
+    {
+      "name": "/nextjs-deploy",
+      "description": "Optimize and deploy the Next.js application with bundle analysis and Core Web Vitals validation"
+    },
+    {
+      "name": "/nextjs-optimize",
+      "description": "Analyze and optimize Next.js application performance with actionable recommendations"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory",
+    "puppeteer"
+  ],
+  "requirements": {
+    "node": ">=18.0.0",
+    "nextjs": ">=14.0.0"
+  },
+  "integrations": [
+    "react-specialist",
+    "fullstack-developer",
+    "typescript-pro",
+    "database-optimizer",
+    "devops-engineer",
+    "seo-specialist",
+    "performance-engineer",
+    "security-auditor"
+  ],
+  "performanceTargets": {
+    "coreWebVitals": ">90",
+    "seoScore": ">95",
+    "ttfb": "<200ms",
+    "fcp": "<1s",
+    "lcp": "<2.5s",
+    "cls": "<0.1",
+    "fid": "<100ms"
+  }
+}

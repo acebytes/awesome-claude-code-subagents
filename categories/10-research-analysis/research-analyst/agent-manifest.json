@@ -1,0 +1,130 @@
+{
+  "name": "research-analyst",
+  "version": "1.0.0",
+  "description": "Expert research analyst specializing in comprehensive information gathering, synthesis, and insight generation. Masters research methodologies, data analysis, and report creation with focus on delivering actionable intelligence that drives informed decision-making.",
+  "author": "Claude Code Agent Marketplace",
+  "categories": [
+    "research-analysis"
+  ],
+  "tags": [
+    "research",
+    "analysis",
+    "data-synthesis",
+    "insight-generation",
+    "information-gathering",
+    "report-creation",
+    "trend-analysis",
+    "competitive-intelligence"
+  ],
+  "capabilities": {
+    "research_methodology": [
+      "objective-definition",
+      "source-identification",
+      "data-collection",
+      "quality-assessment",
+      "information-synthesis",
+      "pattern-recognition",
+      "insight-extraction",
+      "report-generation"
+    ],
+    "information_gathering": [
+      "primary-research",
+      "secondary-sources",
+      "expert-interviews",
+      "survey-design",
+      "data-mining",
+      "web-research",
+      "database-queries",
+      "api-integration"
+    ],
+    "source_evaluation": [
+      "credibility-assessment",
+      "bias-detection",
+      "fact-verification",
+      "cross-referencing",
+      "currency-checking",
+      "authority-validation",
+      "accuracy-confirmation",
+      "relevance-scoring"
+    ],
+    "analysis_techniques": [
+      "qualitative-analysis",
+      "quantitative-methods",
+      "mixed-methodology",
+      "comparative-analysis",
+      "historical-analysis",
+      "predictive-modeling",
+      "scenario-planning",
+      "risk-assessment"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/research-plan",
+      "description": "Create a comprehensive research strategy with objectives, methodology, sources, and timeline"
+    },
+    {
+      "command": "/literature-review",
+      "description": "Conduct systematic review of existing sources with relevance assessment and gap identification"
+    },
+    {
+      "command": "/synthesis-report",
+      "description": "Generate comprehensive research report with findings, insights, visualizations, and recommendations"
+    },
+    {
+      "command": "/methodology",
+      "description": "Document research approach including design, methods, quality controls, and validation"
+    }
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "research_domains": [
+    "market-research",
+    "technology-trends",
+    "competitive-intelligence",
+    "industry-analysis",
+    "academic-research",
+    "policy-analysis",
+    "social-trends",
+    "economic-indicators"
+  ],
+  "quality_standards": {
+    "accuracy": "Information accuracy verified thoroughly",
+    "credibility": "Sources credible maintained consistently",
+    "comprehensiveness": "Analysis comprehensive achieved properly",
+    "clarity": "Synthesis clear delivered effectively",
+    "actionability": "Insights actionable provided strategically",
+    "documentation": "Documentation complete ensured accurately",
+    "bias_control": "Bias minimized controlled continuously",
+    "value": "Value demonstrated measurably"
+  },
+  "collaboration": {
+    "related_agents": [
+      "data-researcher",
+      "market-researcher",
+      "competitive-analyst",
+      "trend-analyst",
+      "search-specialist",
+      "business-analyst",
+      "product-manager"
+    ]
+  },
+  "version_info": {
+    "created": "2025-12-24",
+    "last_updated": "2025-12-24",
+    "changelog": [
+      {
+        "version": "1.0.0",
+        "date": "2025-12-24",
+        "changes": [
+          "Initial release with comprehensive research capabilities",
+          "Added slash commands for research workflow",
+          "Integrated filesystem, memory, and fetch MCP servers"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "csharp-developer",
+  "version": "1.0.0",
+  "description": "Expert C# developer specializing in modern .NET development, ASP.NET Core, and cloud-native applications. Masters C# 12 features, Blazor, and cross-platform development with emphasis on performance and clean architecture.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "language-specialists",
+  "tags": [
+    "csharp",
+    "dotnet",
+    "aspnet-core",
+    "blazor",
+    "entity-framework",
+    "azure",
+    "cloud-native",
+    "performance",
+    "web-development",
+    "cross-platform"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slashCommands": [
+    {
+      "command": "/csharp-analyze",
+      "description": "Analyze C# code for patterns, performance issues, and best practices compliance"
+    },
+    {
+      "command": "/csharp-test",
+      "description": "Generate comprehensive xUnit tests with theories and integration tests"
+    },
+    {
+      "command": "/csharp-refactor",
+      "description": "Refactor code using modern C# patterns, records, and pattern matching"
+    },
+    {
+      "command": "/csharp-async",
+      "description": "Review and optimize async/await patterns, cancellation tokens, and task composition"
+    }
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "capabilities": [
+    ".NET 8+ development",
+    "ASP.NET Core APIs",
+    "Blazor applications",
+    "Entity Framework Core",
+    "Performance optimization",
+    "Cloud-native patterns",
+    "Azure integration",
+    "Async programming",
+    "Clean architecture",
+    "Testing excellence"
+  ],
+  "expertiseAreas": [
+    "Modern C# language features (C# 12)",
+    "Minimal APIs and middleware",
+    "Blazor WebAssembly and Server",
+    "EF Core migrations and optimization",
+    "Dependency injection patterns",
+    "gRPC and SignalR",
+    "Azure SDK integration",
+    "Performance profiling with Benchmark.NET",
+    "AOT compilation and trimming",
+    "MAUI cross-platform development"
+  ],
+  "limitations": [
+    "Requires .NET 8+ SDK installed",
+    "Azure features require valid credentials",
+    "Performance profiling requires Benchmark.NET",
+    "gRPC requires protobuf tooling"
+  ],
+  "license": "MIT"
+}

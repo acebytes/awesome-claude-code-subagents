@@ -1,0 +1,195 @@
+{
+  "id": "build-engineer",
+  "name": "Build Engineer",
+  "version": "1.0.0",
+  "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
+  "category": "developer-experience",
+  "tags": [
+    "build-optimization",
+    "webpack",
+    "vite",
+    "esbuild",
+    "turbopack",
+    "bundler",
+    "caching",
+    "performance",
+    "ci-cd",
+    "monorepo",
+    "compilation",
+    "developer-productivity"
+  ],
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "expertise": {
+    "buildTools": [
+      "Webpack",
+      "Vite",
+      "esbuild",
+      "Turbopack",
+      "Rollup",
+      "Parcel",
+      "SWC",
+      "Bun"
+    ],
+    "monorepoTools": [
+      "Turborepo",
+      "Nx",
+      "Rush",
+      "Lerna"
+    ],
+    "cicdPlatforms": [
+      "GitHub Actions",
+      "GitLab CI",
+      "CircleCI",
+      "Jenkins"
+    ],
+    "optimizationAreas": [
+      "Incremental compilation",
+      "Parallel processing",
+      "Caching strategies",
+      "Bundle optimization",
+      "Code splitting",
+      "Tree shaking"
+    ]
+  },
+  "capabilities": {
+    "analysis": [
+      "Build performance profiling",
+      "Dependency graph analysis",
+      "Cache effectiveness measurement",
+      "Bundle size analysis",
+      "Bottleneck identification"
+    ],
+    "optimization": [
+      "Build time reduction",
+      "Cache configuration",
+      "Parallel build setup",
+      "Bundle size minimization",
+      "CI/CD pipeline optimization"
+    ],
+    "implementation": [
+      "Build tool configuration",
+      "Caching layer setup",
+      "Module federation",
+      "Monorepo build orchestration",
+      "Performance monitoring"
+    ]
+  },
+  "slashCommands": [
+    {
+      "command": "/build-analyze",
+      "description": "Analyze build performance and identify bottlenecks",
+      "parameters": [],
+      "outputs": [
+        "Build time metrics (cold, incremental, hot reload)",
+        "Bundle size analysis",
+        "Cache hit rates",
+        "Dependency analysis",
+        "Performance bottlenecks",
+        "Optimization recommendations"
+      ]
+    },
+    {
+      "command": "/build-optimize",
+      "description": "Optimize build configuration for speed and efficiency",
+      "parameters": [],
+      "outputs": [
+        "Optimized build configuration",
+        "Incremental compilation setup",
+        "Parallel processing configuration",
+        "Caching implementation",
+        "Before/after metrics",
+        "Documentation"
+      ]
+    },
+    {
+      "command": "/build-cache",
+      "description": "Configure advanced build caching strategies",
+      "parameters": [],
+      "outputs": [
+        "Filesystem cache configuration",
+        "Remote cache setup (Turborepo/Nx)",
+        "Cache invalidation rules",
+        "Distributed caching strategy",
+        "CI/CD cache optimization",
+        "Expected performance improvements"
+      ]
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "purpose": "Access and analyze build configuration files",
+      "keyFiles": [
+        "webpack.config.js",
+        "vite.config.ts",
+        "turbo.json",
+        "nx.json",
+        ".github/workflows/*.yml"
+      ]
+    },
+    {
+      "name": "github",
+      "purpose": "Manage CI/CD workflows and track build performance",
+      "operations": [
+        "Workflow analysis",
+        "Build metrics tracking",
+        "Performance optimization",
+        "PR creation"
+      ]
+    },
+    {
+      "name": "context7",
+      "purpose": "Query build tool documentation and best practices",
+      "topics": [
+        "Webpack optimization",
+        "Vite configuration",
+        "esbuild tuning",
+        "Turbopack migration",
+        "Build tool comparison"
+      ]
+    }
+  ],
+  "performanceTargets": {
+    "buildTime": "< 30 seconds",
+    "rebuildTime": "< 5 seconds",
+    "cacheHitRate": "> 90%",
+    "bundleSizeReduction": "40-60%",
+    "developerSatisfaction": "> 4.5/5"
+  },
+  "integrations": {
+    "relatedAgents": [
+      "tooling-engineer",
+      "dx-optimizer",
+      "devops-engineer",
+      "frontend-developer",
+      "backend-developer",
+      "dependency-manager",
+      "refactoring-specialist",
+      "performance-engineer"
+    ],
+    "workflows": [
+      "Build optimization workflow",
+      "CI/CD pipeline optimization",
+      "Monorepo build orchestration",
+      "Performance monitoring setup"
+    ]
+  },
+  "documentation": {
+    "setupGuide": "README.md",
+    "agentInstructions": "CLAUDE.md",
+    "mcpConfiguration": "mcp-config.json"
+  },
+  "license": "MIT",
+  "supportedPlatforms": [
+    "macOS",
+    "Linux",
+    "Windows"
+  ],
+  "requirements": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

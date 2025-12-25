@@ -1,0 +1,129 @@
+{
+  "name": "machine-learning-engineer",
+  "version": "1.0.0",
+  "description": "Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.",
+  "author": "Claude Code Agent Marketplace",
+  "license": "MIT",
+  "category": "data-ai",
+  "tags": [
+    "machine-learning",
+    "model-deployment",
+    "inference",
+    "optimization",
+    "serving",
+    "scaling",
+    "production-ml",
+    "real-time",
+    "edge-deployment",
+    "mlops"
+  ],
+  "keywords": [
+    "model deployment",
+    "ml serving",
+    "inference optimization",
+    "model optimization",
+    "real-time inference",
+    "batch prediction",
+    "auto-scaling",
+    "edge deployment",
+    "model compression",
+    "production ml"
+  ],
+  "capabilities": [
+    "Model deployment and serving infrastructure setup",
+    "Real-time and batch inference pipeline development",
+    "Model optimization (quantization, pruning, distillation)",
+    "Auto-scaling configuration and tuning",
+    "Performance profiling and optimization",
+    "Multi-model serving and A/B testing",
+    "Edge deployment and model compression",
+    "Container orchestration and CI/CD integration",
+    "Monitoring and observability setup",
+    "Load balancing and traffic management"
+  ],
+  "customCommands": [
+    {
+      "command": "/mle-deploy",
+      "description": "Deploy model with optimization and infrastructure setup",
+      "usage": "/mle-deploy <model-path> [--optimization-level=<level>] [--target-latency=<ms>]",
+      "examples": [
+        "/mle-deploy models/classifier.pt --optimization-level=high --target-latency=50",
+        "/mle-deploy models/detector.onnx --gpu --batch-size=32"
+      ]
+    },
+    {
+      "command": "/mle-scale",
+      "description": "Configure auto-scaling for inference endpoints",
+      "usage": "/mle-scale <endpoint> [--min-replicas=<n>] [--max-replicas=<n>] [--target-rps=<n>]",
+      "examples": [
+        "/mle-scale prod-api --min-replicas=3 --max-replicas=20 --target-rps=1000",
+        "/mle-scale inference-endpoint --cpu-threshold=70 --memory-threshold=80"
+      ]
+    },
+    {
+      "command": "/mle-monitor",
+      "description": "Setup comprehensive monitoring and alerting for ML systems",
+      "usage": "/mle-monitor <service> [--metrics=<list>] [--alert-thresholds]",
+      "examples": [
+        "/mle-monitor model-api --metrics=latency,throughput,errors --alert-thresholds",
+        "/mle-monitor batch-predictor --track-drift --cost-monitoring"
+      ]
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "fetch"
+  ],
+  "requiredTools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "environmentVariables": [
+    {
+      "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "description": "GitHub token for repository access",
+      "required": false
+    },
+    {
+      "name": "CONTEXT7_API_KEY",
+      "description": "Context7 API key for enhanced context management",
+      "required": false
+    }
+  ],
+  "documentation": {
+    "readme": "README.md",
+    "claude": "CLAUDE.md",
+    "examples": [
+      "Deploy optimized model with auto-scaling",
+      "Setup multi-model serving with A/B testing",
+      "Configure edge deployment with model compression",
+      "Implement batch prediction pipeline",
+      "Setup real-time inference monitoring"
+    ]
+  },
+  "integration": {
+    "relatedAgents": [
+      "ml-engineer",
+      "mlops-engineer",
+      "data-engineer",
+      "devops-engineer",
+      "cloud-architect",
+      "sre-engineer",
+      "performance-engineer",
+      "ai-engineer"
+    ],
+    "workflows": [
+      "model-deployment",
+      "inference-optimization",
+      "production-scaling",
+      "edge-deployment",
+      "monitoring-setup"
+    ]
+  }
+}

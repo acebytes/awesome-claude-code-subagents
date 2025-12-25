@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VoltAgent/claude-code-agent-marketplace/schemas/agent-manifest.schema.json",
+  "title": "Agent Manifest Schema",
+  "description": "Schema for Claude Code agent manifest files",
+  "type": "object",
+  "required": ["id", "name", "version", "category", "description", "tools", "mcpServers"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique agent identifier in kebab-case"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable display name"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version number"
+    },
+    "category": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^\\d{2}-[a-z-]+$",
+          "description": "Category identifier (e.g., 01-core-development)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable category name"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "required": ["short"],
+      "properties": {
+        "short": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Brief one-line description"
+        },
+        "long": {
+          "type": "string",
+          "description": "Detailed multi-line description"
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "primaryDomain": {
+          "type": "string",
+          "description": "Main area of expertise"
+        },
+        "languages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Programming languages supported"
+        },
+        "frameworks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Frameworks and libraries"
+        },
+        "platforms": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Platforms supported"
+        },
+        "skills": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Specific skills and competencies"
+        }
+      }
+    },
+    "tools": {
+      "type": "object",
+      "required": ["builtin"],
+      "properties": {
+        "builtin": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Read", "Write", "Edit", "Bash", "Glob", "Grep", "WebFetch", "WebSearch", "TodoWrite", "Task", "NotebookEdit"]
+          },
+          "description": "Claude Code built-in tools available to this agent"
+        },
+        "mcpServerRefs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "References to MCP servers defined in mcp-config.json"
+        }
+      }
+    },
+    "mcpServers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "purpose", "required"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "MCP server identifier"
+          },
+          "package": {
+            "type": "string",
+            "description": "npm or pip package name"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Why this agent needs this server"
+          },
+          "required": {
+            "type": "boolean",
+            "description": "Whether this server is essential for core functionality"
+          },
+          "envVars": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Environment variables required"
+          }
+        }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "apiKeys": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "envVar", "required"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Human-readable key name"
+              },
+              "envVar": {
+                "type": "string",
+                "description": "Environment variable name"
+              },
+              "provider": {
+                "type": "string",
+                "description": "Service provider"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "obtainUrl": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to obtain the API key"
+              }
+            }
+          }
+        },
+        "cliTools": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Required command-line tools"
+        },
+        "runtimeDependencies": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Required runtime dependencies"
+        }
+      }
+    },
+    "slashCommands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^/[a-z-]+$",
+            "description": "Command name starting with /"
+          },
+          "description": {
+            "type": "string",
+            "description": "What the command does"
+          },
+          "usage": {
+            "type": "string",
+            "description": "Usage example"
+          }
+        }
+      }
+    },
+    "collaboration": {
+      "type": "object",
+      "properties": {
+        "collaboratesWith": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Agents this agent works alongside"
+        },
+        "delegatesTo": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Agents this agent can delegate tasks to"
+        },
+        "receivesFrom": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Agents that delegate to this agent"
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["prompt", "capability"],
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "Example user prompt"
+          },
+          "capability": {
+            "type": "string",
+            "description": "What this example demonstrates"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "author": { "type": "string" },
+        "maintainer": { "type": "string" },
+        "license": { "type": "string" },
+        "repository": { "type": "string", "format": "uri" },
+        "createdAt": { "type": "string", "format": "date" },
+        "updatedAt": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}

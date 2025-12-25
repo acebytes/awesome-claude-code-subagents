@@ -1,0 +1,126 @@
+{
+  "name": "payment-integration",
+  "version": "1.0.0",
+  "description": "Expert payment integration specialist mastering payment gateway integration, PCI compliance, and financial transaction processing. Specializes in secure payment flows, multi-currency support, and fraud prevention with focus on reliability, compliance, and seamless user experience.",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "category": "specialized-domains",
+  "tags": [
+    "payment",
+    "integration",
+    "stripe",
+    "pci-compliance",
+    "security",
+    "transactions",
+    "fraud-prevention",
+    "fintech",
+    "subscription",
+    "webhooks",
+    "multi-currency",
+    "compliance",
+    "e-commerce"
+  ],
+  "slashCommands": [
+    {
+      "command": "/payment-flow",
+      "description": "Analyze and design payment flows for your application, including checkout process, payment methods, and user experience optimization"
+    },
+    {
+      "command": "/stripe-setup",
+      "description": "Configure Stripe integration with API keys, webhooks, payment methods, and compliance settings"
+    },
+    {
+      "command": "/pci-audit",
+      "description": "Conduct PCI DSS compliance audit of payment implementation, identifying gaps and remediation steps"
+    },
+    {
+      "command": "/webhook-config",
+      "description": "Set up and configure payment gateway webhooks for reliable event handling and state synchronization"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "capabilities": [
+    "Payment gateway integration (Stripe, Braintree, Adyen, PayPal)",
+    "PCI DSS compliance implementation and auditing",
+    "Transaction processing and lifecycle management",
+    "Subscription billing and recurring payments",
+    "Fraud prevention and risk scoring",
+    "Multi-currency and internationalization support",
+    "Webhook handling and event-driven architecture",
+    "Payment security and tokenization",
+    "Chargeback and dispute management",
+    "Payment analytics and reconciliation"
+  ],
+  "useCases": [
+    "E-commerce checkout integration",
+    "Subscription and recurring billing setup",
+    "Multi-gateway payment routing",
+    "PCI compliance assessment and remediation",
+    "Fraud detection system implementation",
+    "International payment processing",
+    "Payment webhook infrastructure",
+    "Refund and dispute automation",
+    "Payment analytics and reporting",
+    "Mobile payment SDK integration"
+  ],
+  "integrations": [
+    {
+      "name": "Stripe",
+      "type": "payment-gateway",
+      "description": "Primary payment processing platform"
+    },
+    {
+      "name": "Braintree",
+      "type": "payment-gateway",
+      "description": "Alternative payment processor with PayPal support"
+    },
+    {
+      "name": "Adyen",
+      "type": "payment-gateway",
+      "description": "Global payment platform for enterprises"
+    },
+    {
+      "name": "PayPal",
+      "type": "payment-gateway",
+      "description": "Digital wallet and payment processor"
+    }
+  ],
+  "requirements": {
+    "environment": {
+      "GITHUB_TOKEN": "GitHub personal access token for repository access"
+    },
+    "optional": {
+      "STRIPE_API_KEY": "Stripe API key for payment integration",
+      "STRIPE_WEBHOOK_SECRET": "Stripe webhook signing secret"
+    }
+  },
+  "expertise": {
+    "primary": [
+      "Payment gateway integration",
+      "PCI DSS compliance",
+      "Transaction security",
+      "Fraud prevention"
+    ],
+    "secondary": [
+      "Subscription management",
+      "Multi-currency processing",
+      "Webhook architecture",
+      "Payment analytics"
+    ]
+  },
+  "collaborations": [
+    "security-auditor",
+    "backend-developer",
+    "frontend-developer",
+    "fintech-engineer",
+    "devops-engineer",
+    "qa-expert"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "name": "dx-optimizer",
+  "version": "1.0.0",
+  "description": "Expert developer experience optimizer specializing in build performance, tooling efficiency, and workflow automation. Masters development environment optimization with focus on reducing friction, accelerating feedback loops, and maximizing developer productivity and satisfaction.",
+  "category": "developer-experience",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "Build performance optimization",
+      "Development server configuration",
+      "IDE setup and tuning",
+      "Testing framework optimization",
+      "Workflow automation",
+      "Monorepo tooling",
+      "Developer metrics tracking",
+      "Tooling ecosystem evaluation"
+    ],
+    "technologies": [
+      "Webpack",
+      "Vite",
+      "Rollup",
+      "esbuild",
+      "Turbo",
+      "Nx",
+      "Jest",
+      "Vitest",
+      "TypeScript",
+      "ESLint",
+      "Prettier",
+      "Husky",
+      "Git hooks"
+    ],
+    "optimization_areas": [
+      "Build time reduction",
+      "Hot module replacement",
+      "Test execution speed",
+      "IDE performance",
+      "Developer workflows",
+      "Automation",
+      "CI/CD pipelines",
+      "Monorepo efficiency"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/dx-analyze",
+      "description": "Analyze developer workflow bottlenecks and pain points",
+      "usage": "/dx-analyze",
+      "examples": [
+        "/dx-analyze"
+      ]
+    },
+    {
+      "command": "/dx-optimize",
+      "description": "Optimize development environment for maximum productivity",
+      "usage": "/dx-optimize [target]",
+      "parameters": {
+        "target": {
+          "type": "string",
+          "optional": true,
+          "options": ["build", "test", "hmr", "ide", "all"],
+          "default": "all",
+          "description": "Specific area to optimize or 'all' for comprehensive optimization"
+        }
+      },
+      "examples": [
+        "/dx-optimize",
+        "/dx-optimize build",
+        "/dx-optimize test",
+        "/dx-optimize hmr",
+        "/dx-optimize ide"
+      ]
+    },
+    {
+      "command": "/dx-metrics",
+      "description": "Track and report developer experience metrics",
+      "usage": "/dx-metrics [period]",
+      "parameters": {
+        "period": {
+          "type": "string",
+          "optional": true,
+          "options": ["current", "daily", "weekly", "monthly"],
+          "default": "current",
+          "description": "Time period for metrics reporting"
+        }
+      },
+      "examples": [
+        "/dx-metrics",
+        "/dx-metrics current",
+        "/dx-metrics daily",
+        "/dx-metrics weekly",
+        "/dx-metrics monthly"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access build configs, package.json, and tooling setup files"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Track build performance PRs and CI/CD workflows"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access DX best practices and optimization guides"
+    }
+  ],
+  "performance_targets": {
+    "build_time": "< 30 seconds",
+    "hmr_latency": "< 100ms",
+    "test_execution": "< 2 minutes",
+    "ide_indexing": "fast and responsive",
+    "feedback_loop": "instant"
+  },
+  "integration": {
+    "works_with": [
+      "build-engineer",
+      "tooling-engineer",
+      "devops-engineer",
+      "refactoring-specialist",
+      "documentation-engineer",
+      "git-workflow-manager",
+      "legacy-modernizer",
+      "cli-developer"
+    ]
+  },
+  "tags": [
+    "developer-experience",
+    "build-optimization",
+    "tooling",
+    "performance",
+    "workflow-automation",
+    "monorepo",
+    "testing",
+    "metrics",
+    "productivity",
+    "hmr",
+    "ci-cd"
+  ],
+  "license": "MIT"
+}

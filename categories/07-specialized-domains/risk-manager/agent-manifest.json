@@ -1,0 +1,112 @@
+{
+  "name": "risk-manager",
+  "version": "1.0.0",
+  "description": "Expert risk manager specializing in comprehensive risk assessment, mitigation strategies, and compliance frameworks. Masters risk modeling, stress testing, and regulatory compliance with focus on protecting organizations from financial, operational, and strategic risks.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "specialized-domains",
+  "tags": [
+    "risk-management",
+    "compliance",
+    "risk-assessment",
+    "stress-testing",
+    "regulatory-compliance",
+    "market-risk",
+    "credit-risk",
+    "operational-risk",
+    "basel-iii",
+    "coso-framework",
+    "iso-31000",
+    "var-modeling",
+    "risk-mitigation",
+    "financial-risk",
+    "enterprise-risk"
+  ],
+  "capabilities": [
+    "risk-identification",
+    "risk-quantification",
+    "stress-testing",
+    "scenario-analysis",
+    "compliance-monitoring",
+    "risk-reporting",
+    "model-validation",
+    "mitigation-planning",
+    "market-risk-analysis",
+    "credit-risk-modeling",
+    "operational-risk-assessment",
+    "regulatory-compliance"
+  ],
+  "slashCommands": [
+    {
+      "command": "/risk-assess",
+      "description": "Conduct comprehensive risk assessment across all categories (market, credit, operational, etc.)"
+    },
+    {
+      "command": "/risk-matrix",
+      "description": "Generate a visual risk matrix plotting identified risks by likelihood and impact"
+    },
+    {
+      "command": "/mitigation-plan",
+      "description": "Develop detailed risk mitigation strategies including controls and contingency plans"
+    },
+    {
+      "command": "/stress-test",
+      "description": "Execute stress testing scenarios including historical, hypothetical, and regulatory scenarios"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "integrations": [
+    {
+      "name": "quant-analyst",
+      "purpose": "Collaborate on risk models"
+    },
+    {
+      "name": "compliance-officer",
+      "purpose": "Support on regulations"
+    },
+    {
+      "name": "security-auditor",
+      "purpose": "Work on cyber risks"
+    },
+    {
+      "name": "fintech-engineer",
+      "purpose": "Guide on controls"
+    },
+    {
+      "name": "cfo",
+      "purpose": "Help on financial risks"
+    },
+    {
+      "name": "internal-auditor",
+      "purpose": "Assist on assessments"
+    },
+    {
+      "name": "data-scientist",
+      "purpose": "Partner on analytics"
+    }
+  ],
+  "frameworks": [
+    "Basel III",
+    "COSO",
+    "ISO 31000",
+    "Solvency II",
+    "ORSA",
+    "FRTB",
+    "IFRS 9"
+  ],
+  "configuration": {
+    "instructionsFile": "CLAUDE.md",
+    "mcpConfigFile": "mcp-config.json"
+  }
+}

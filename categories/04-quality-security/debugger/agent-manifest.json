@@ -1,0 +1,191 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "debugger",
+  "name": "Debugger",
+  "version": "1.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert debugger specializing in complex issue diagnosis, root cause analysis, and systematic problem-solving",
+    "long": "Senior debugging specialist with expertise in diagnosing complex software issues, analyzing system behavior, and identifying root causes. Masters debugging tools, techniques, and methodologies across multiple languages with focus on efficient resolution and knowledge transfer."
+  },
+  "capabilities": {
+    "primaryDomain": "Debugging & Issue Resolution",
+    "languages": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "go",
+      "csharp",
+      "c",
+      "cpp",
+      "rust",
+      "ruby"
+    ],
+    "frameworks": [
+      "GDB",
+      "LLDB",
+      "Chrome DevTools",
+      "Visual Studio Debugger",
+      "pdb",
+      "delve",
+      "Valgrind",
+      "perf"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Docker",
+      "Kubernetes"
+    ],
+    "skills": [
+      "Diagnostic approach",
+      "Debugging techniques",
+      "Error analysis",
+      "Memory debugging",
+      "Concurrency issues",
+      "Performance debugging",
+      "Production debugging",
+      "Tool expertise",
+      "Root cause analysis",
+      "Postmortem creation"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"],
+    "mcpServerRefs": ["filesystem", "github", "context7", "memory"]
+  },
+  "mcpServers": [
+    {
+      "name": "filesystem",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "purpose": "Read/write debug logs and postmortem documents",
+      "required": true,
+      "envVars": []
+    },
+    {
+      "name": "github",
+      "package": "@modelcontextprotocol/server-github",
+      "purpose": "Track bugs and document resolutions",
+      "required": true,
+      "envVars": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "name": "context7",
+      "package": "@upstash/context7-mcp",
+      "purpose": "Access codebase context for debugging",
+      "required": false,
+      "envVars": ["UPSTASH_VECTOR_REST_URL", "UPSTASH_VECTOR_REST_TOKEN"]
+    },
+    {
+      "name": "memory",
+      "package": "@modelcontextprotocol/server-memory",
+      "purpose": "Maintain debugging history and patterns",
+      "required": false,
+      "envVars": []
+    }
+  ],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GitHub Personal Access Token",
+        "envVar": "GITHUB_TOKEN",
+        "provider": "GitHub",
+        "required": true,
+        "obtainUrl": "https://github.com/settings/tokens"
+      },
+      {
+        "name": "Upstash Vector REST URL",
+        "envVar": "UPSTASH_VECTOR_REST_URL",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      },
+      {
+        "name": "Upstash Vector REST Token",
+        "envVar": "UPSTASH_VECTOR_REST_TOKEN",
+        "provider": "Upstash",
+        "required": false,
+        "obtainUrl": "https://upstash.com"
+      }
+    ],
+    "cliTools": ["node", "npx", "git"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/debug",
+      "description": "Start systematic debugging session for reported issue",
+      "usage": "/debug - Initiates comprehensive debugging workflow with symptom analysis and hypothesis testing"
+    },
+    {
+      "name": "/root-cause",
+      "description": "Perform deep root cause analysis on complex bug",
+      "usage": "/root-cause - Conducts thorough investigation to identify underlying cause with evidence"
+    },
+    {
+      "name": "/trace",
+      "description": "Trace execution flow and identify failure points",
+      "usage": "/trace - Follows code execution path to pinpoint where and why failures occur"
+    },
+    {
+      "name": "/postmortem",
+      "description": "Create comprehensive postmortem document",
+      "usage": "/postmortem - Generates detailed analysis with timeline, root cause, and prevention measures"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": [
+      "qa-expert",
+      "code-reviewer",
+      "performance-engineer",
+      "security-auditor",
+      "test-automator"
+    ],
+    "delegatesTo": [
+      "backend-developer",
+      "frontend-developer",
+      "performance-engineer"
+    ],
+    "receivesFrom": [
+      "incident-responder",
+      "sre-engineer",
+      "test-automator",
+      "qa-expert"
+    ]
+  },
+  "examples": [
+    {
+      "prompt": "Debug the intermittent crash in the payment processing service",
+      "capability": "Systematic debugging of complex issues with log analysis, reproduction, and root cause identification"
+    },
+    {
+      "prompt": "Investigate memory leak causing production OOM errors",
+      "capability": "Memory debugging with heap analysis, profiling, and leak detection across multiple languages"
+    },
+    {
+      "prompt": "Find the race condition causing data corruption",
+      "capability": "Concurrency debugging including thread analysis, synchronization issues, and timing problems"
+    },
+    {
+      "prompt": "Trace why the API returns 500 errors under high load",
+      "capability": "Production debugging with distributed tracing, log correlation, and performance analysis"
+    },
+    {
+      "prompt": "Create a postmortem for yesterday's outage",
+      "capability": "Comprehensive postmortem creation with timeline, root cause analysis, and prevention strategies"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2025-12-24",
+    "updatedAt": "2025-12-24"
+  }
+}

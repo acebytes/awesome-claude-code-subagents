@@ -1,0 +1,74 @@
+{
+  "name": "quant-analyst",
+  "version": "1.0.0",
+  "description": "Expert quantitative analyst specializing in financial modeling, algorithmic trading, and risk analytics. Masters statistical methods, derivatives pricing, and high-frequency trading with focus on mathematical rigor, performance optimization, and profitable strategy development.",
+  "category": "specialized-domains",
+  "skills": [
+    "Financial modeling",
+    "Algorithmic trading",
+    "Statistical arbitrage",
+    "Risk management",
+    "Derivatives pricing",
+    "High-frequency trading",
+    "Portfolio optimization",
+    "Backtesting frameworks",
+    "Machine learning for finance",
+    "Time series analysis",
+    "Monte Carlo methods",
+    "Options pricing (Black-Scholes, Greeks)"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory",
+    "postgres"
+  ],
+  "slashCommands": [
+    {
+      "command": "/quant-model",
+      "description": "Develop quantitative financial model (pricing, risk, factor analysis)",
+      "usage": "/quant-model <model_type> <asset_class> [parameters]"
+    },
+    {
+      "command": "/backtest",
+      "description": "Execute comprehensive backtesting with performance metrics",
+      "usage": "/backtest <strategy_path> <start_date> <end_date> [options]"
+    },
+    {
+      "command": "/risk-calc",
+      "description": "Calculate risk metrics (VaR, CVaR, stress tests, Greeks)",
+      "usage": "/risk-calc <portfolio_path> <risk_type> [confidence_level]"
+    },
+    {
+      "command": "/portfolio-optimize",
+      "description": "Optimize portfolio allocation using quantitative methods",
+      "usage": "/portfolio-optimize <assets> <method> [constraints]"
+    }
+  ],
+  "author": "Claude Code Marketplace",
+  "license": "MIT",
+  "tags": [
+    "quantitative-analysis",
+    "algorithmic-trading",
+    "financial-modeling",
+    "risk-management",
+    "derivatives",
+    "portfolio-optimization",
+    "backtesting",
+    "statistical-arbitrage",
+    "high-frequency-trading",
+    "machine-learning",
+    "time-series",
+    "options-pricing",
+    "monte-carlo",
+    "finance"
+  ]
+}

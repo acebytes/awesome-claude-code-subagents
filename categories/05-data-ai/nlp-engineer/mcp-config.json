@@ -1,0 +1,140 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Access file system for reading/writing NLP code, models, datasets, and configuration files"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "Access GitHub for version control, collaboration, and NLP model repositories"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context-labs/context7-mcp-server"
+      ],
+      "description": "Semantic code search for finding NLP implementations, transformer architectures, and text processing patterns"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fetch data from external APIs for model serving, translation services, NLP platforms, and language detection APIs"
+    }
+  },
+  "configInfo": {
+    "agentName": "nlp-engineer",
+    "category": "data-ai",
+    "purpose": "Natural language processing, transformer models, text processing pipelines, and multilingual NLP systems",
+    "mcpServersUsage": {
+      "filesystem": [
+        "Read/write NLP model code (transformers, spaCy, NLTK)",
+        "Manage text preprocessing scripts",
+        "Access training datasets and corpora",
+        "Save/load model checkpoints and embeddings",
+        "Manage tokenizer configurations",
+        "Handle text data files (JSON, CSV, TXT)",
+        "Organize language resources and dictionaries",
+        "Manage evaluation scripts and test sets"
+      ],
+      "github": [
+        "Version control for NLP model code",
+        "Collaborate on text processing pipelines",
+        "Access pre-trained model repositories",
+        "Track issues for model improvements",
+        "Review pull requests for NLP code",
+        "Share trained models and tokenizers",
+        "Manage releases for model versions",
+        "Access NLP research implementations"
+      ],
+      "context7": [
+        "Search for similar NLP implementations",
+        "Find existing transformer model code",
+        "Locate text preprocessing patterns",
+        "Discover tokenization strategies",
+        "Find evaluation metric implementations",
+        "Search for multilingual model examples",
+        "Locate API endpoint implementations",
+        "Find bias detection and mitigation code"
+      ],
+      "fetch": [
+        "Call NLP model serving APIs",
+        "Access translation services (DeepL, Google Translate)",
+        "Query language detection APIs",
+        "Fetch pre-trained model metadata from Hugging Face",
+        "Access NLP platform APIs (AWS Comprehend, Azure)",
+        "Call sentiment analysis services",
+        "Integrate with text annotation tools",
+        "Access linguistic databases and resources"
+      ]
+    },
+    "typicalWorkflows": [
+      {
+        "name": "Create NLP Pipeline",
+        "steps": [
+          "Use context7 to find similar NLP pipeline implementations",
+          "Use filesystem to review existing preprocessing code",
+          "Use fetch to access language detection and translation APIs",
+          "Use github to version control pipeline code"
+        ]
+      },
+      {
+        "name": "Train NLP Model",
+        "steps": [
+          "Use filesystem to load training data and corpora",
+          "Use context7 to find model architecture examples",
+          "Use fetch to download pre-trained models from Hugging Face",
+          "Use github to save model checkpoints and training logs"
+        ]
+      },
+      {
+        "name": "Evaluate Model",
+        "steps": [
+          "Use filesystem to load test data",
+          "Use context7 to find evaluation metric implementations",
+          "Use fetch to access external benchmarks",
+          "Use github to commit evaluation results and reports"
+        ]
+      },
+      {
+        "name": "Deploy NLP API",
+        "steps": [
+          "Use filesystem to optimize model for inference",
+          "Use fetch to set up model serving endpoints",
+          "Use github to manage deployment configurations",
+          "Use fetch to monitor API performance"
+        ]
+      }
+    ],
+    "environmentVariables": {
+      "required": [],
+      "optional": [
+        {
+          "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "description": "GitHub API token for accessing repositories and collaboration features",
+          "usage": "Set this to enable full GitHub integration for model versioning and collaboration"
+        },
+        {
+          "name": "HUGGINGFACE_TOKEN",
+          "description": "Hugging Face API token for accessing private models and datasets",
+          "usage": "Set this to download private models and upload trained models to Hugging Face Hub"
+        }
+      ]
+    }
+  }
+}

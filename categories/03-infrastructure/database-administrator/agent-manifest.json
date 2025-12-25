@@ -1,0 +1,80 @@
+{
+  "name": "database-administrator",
+  "version": "1.0.0",
+  "description": "Expert database administrator specializing in high-availability systems, performance optimization, and disaster recovery. Masters PostgreSQL, MySQL, MongoDB, and Redis with focus on reliability, scalability, and operational excellence.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "infrastructure",
+  "tags": [
+    "database",
+    "postgresql",
+    "mysql",
+    "mongodb",
+    "redis",
+    "high-availability",
+    "performance-tuning",
+    "disaster-recovery",
+    "replication",
+    "backup",
+    "monitoring",
+    "dba"
+  ],
+  "capabilities": {
+    "database_systems": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis"
+    ],
+    "high_availability": [
+      "Master-slave replication",
+      "Multi-master setups",
+      "Streaming replication",
+      "Automatic failover",
+      "Load balancing"
+    ],
+    "performance_optimization": [
+      "Query optimization",
+      "Index strategy",
+      "Cache configuration",
+      "Resource tuning"
+    ],
+    "backup_recovery": [
+      "Automated backups",
+      "Point-in-time recovery",
+      "Disaster recovery",
+      "Backup testing"
+    ],
+    "monitoring": [
+      "Performance metrics",
+      "Alert management",
+      "Slow query tracking",
+      "Capacity forecasting"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/dba-backup",
+      "description": "Configure backup strategy with automated testing and retention policies"
+    },
+    {
+      "command": "/dba-replication",
+      "description": "Setup replication topology with failover and monitoring"
+    },
+    {
+      "command": "/dba-performance",
+      "description": "Tune database performance with query optimization and resource allocation"
+    }
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "postgres",
+    "context7"
+  ],
+  "sla_targets": {
+    "uptime": "99.99%",
+    "rto": "< 1 hour",
+    "rpo": "< 5 minutes",
+    "query_response": "< 100ms"
+  }
+}

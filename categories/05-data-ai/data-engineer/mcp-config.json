@@ -1,0 +1,73 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/d/Documents/GitHub/claude-code-agent-marketplace"
+      ],
+      "description": "Access pipeline configurations, ETL scripts, data quality rules, and orchestration DAGs",
+      "required": true
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<your_github_token>"
+      },
+      "description": "Version control data pipeline code, review PRs, track schema evolution",
+      "required": false
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost/analytics"
+      ],
+      "description": "Query data warehouse schemas, analyze table statistics, implement data quality checks",
+      "required": false,
+      "notes": "Update connection string with your database credentials"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@context7/mcp-server"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "<your_context7_api_key>"
+      },
+      "description": "Search data engineering docs, find best practices, access pipeline patterns and optimization techniques",
+      "required": false
+    }
+  },
+  "integrations": {
+    "data_quality_checks": {
+      "description": "Use Postgres MCP to run validation queries and data quality checks directly on databases",
+      "example": "SELECT COUNT(*) FROM orders WHERE order_date IS NULL"
+    },
+    "schema_documentation": {
+      "description": "Use Filesystem MCP to read/write schema definitions and data dictionaries",
+      "example": "Read schema.yml, update with new fields and constraints"
+    },
+    "pipeline_version_control": {
+      "description": "Use GitHub MCP to manage pipeline code versions and collaborate on changes",
+      "example": "Review PR for new Airflow DAG, track changes to transformation logic"
+    },
+    "best_practices_lookup": {
+      "description": "Use Context7 MCP to find data engineering patterns and optimization techniques",
+      "example": "Search for 'Spark partition optimization' or 'Kafka exactly-once semantics'"
+    }
+  },
+  "configuration_notes": {
+    "filesystem": "Automatically configured with repository root. Use for accessing pipeline code and configs.",
+    "github": "Set GITHUB_PERSONAL_ACCESS_TOKEN in your environment or .env file. Requires repo scope for private repositories.",
+    "postgres": "Update connection string format: postgresql://user:password@host:port/database. Supports multiple database connections.",
+    "context7": "Set CONTEXT7_API_KEY for documentation search. Sign up at context7.com for API access."
+  }
+}

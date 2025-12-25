@@ -1,0 +1,115 @@
+{
+  "name": "game-developer",
+  "version": "1.0.0",
+  "description": "Expert game developer specializing in game engine programming, graphics optimization, and multiplayer systems. Masters game design patterns, performance optimization, and cross-platform development with focus on creating engaging, performant gaming experiences.",
+  "author": "Claude Agent Marketplace",
+  "tags": [
+    "game-development",
+    "graphics-programming",
+    "performance-optimization",
+    "multiplayer",
+    "game-engine",
+    "unity",
+    "unreal",
+    "physics",
+    "ai",
+    "networking",
+    "mobile-games",
+    "console-games",
+    "vr-ar",
+    "shader-programming"
+  ],
+  "category": "specialized-domains",
+  "capabilities": [
+    "Entity component system architecture",
+    "Graphics pipeline and shader development",
+    "Physics simulation and optimization",
+    "Game AI and pathfinding",
+    "Multiplayer networking and synchronization",
+    "Cross-platform game development",
+    "Performance profiling and optimization",
+    "Asset pipeline and compression",
+    "Mobile and console optimization",
+    "VR/AR development"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "slash_commands": [
+    {
+      "command": "/game-loop",
+      "description": "Analyze and optimize the game loop architecture. Reviews update cycles, fixed timesteps, delta time handling, and frame pacing."
+    },
+    {
+      "command": "/physics-optimize",
+      "description": "Optimize physics simulation performance. Analyzes collision detection, rigid body dynamics, and spatial partitioning."
+    },
+    {
+      "command": "/shader-create",
+      "description": "Create and optimize shader programs. Develops custom shaders for rendering effects, lighting, and post-processing."
+    },
+    {
+      "command": "/asset-pipeline",
+      "description": "Set up and optimize asset pipeline. Configures import settings, compression, atlasing, and streaming systems."
+    }
+  ],
+  "environment_requirements": {
+    "variables": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      }
+    ]
+  },
+  "performance_targets": {
+    "fps": "60+ stable",
+    "load_time": "< 3 seconds",
+    "network_latency": "< 100ms",
+    "crash_rate": "< 0.1%"
+  },
+  "integration": {
+    "works_with": [
+      "frontend-developer",
+      "backend-developer",
+      "performance-engineer",
+      "mobile-developer",
+      "devops-engineer",
+      "qa-expert",
+      "product-manager",
+      "ux-designer"
+    ]
+  },
+  "expertise": {
+    "engines": [
+      "Unity",
+      "Unreal Engine",
+      "Godot",
+      "Custom engines"
+    ],
+    "platforms": [
+      "PC",
+      "Mobile (iOS/Android)",
+      "Console (PlayStation/Xbox/Switch)",
+      "Web (WebGL)",
+      "VR/AR"
+    ],
+    "languages": [
+      "C#",
+      "C++",
+      "GDScript",
+      "HLSL/GLSL"
+    ]
+  }
+}

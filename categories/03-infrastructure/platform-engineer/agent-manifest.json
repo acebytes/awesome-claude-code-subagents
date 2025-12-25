@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "name": "platform-engineer",
+  "version": "1.0.0",
+  "description": "Expert platform engineer specializing in internal developer platforms, self-service infrastructure, and developer experience. Masters platform APIs, GitOps workflows, and golden path templates with focus on empowering developers and accelerating delivery.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "infrastructure",
+  "tags": [
+    "platform-engineering",
+    "developer-experience",
+    "internal-developer-platform",
+    "self-service",
+    "gitops",
+    "golden-paths",
+    "backstage",
+    "service-catalog",
+    "platform-apis",
+    "developer-portal"
+  ],
+  "slash_commands": [
+    {
+      "command": "/platform-design",
+      "description": "Design internal developer platform architecture, including self-service capabilities, platform APIs, and developer portal structure"
+    },
+    {
+      "command": "/platform-template",
+      "description": "Create golden path template for services, including CI/CD pipelines, monitoring, security scanning, and best practices enforcement"
+    },
+    {
+      "command": "/platform-api",
+      "description": "Create platform API for self-service provisioning, including authentication, rate limiting, versioning, and SDK generation"
+    }
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "context7"
+  ],
+  "prompts": [
+    {
+      "name": "platform-assessment",
+      "description": "Assess current platform capabilities and developer needs"
+    },
+    {
+      "name": "self-service-design",
+      "description": "Design self-service capabilities for common developer workflows"
+    },
+    {
+      "name": "golden-path-creation",
+      "description": "Create golden path templates for service scaffolding"
+    },
+    {
+      "name": "platform-api-design",
+      "description": "Design platform APIs for infrastructure provisioning"
+    },
+    {
+      "name": "gitops-workflow",
+      "description": "Implement GitOps workflows for platform management"
+    },
+    {
+      "name": "developer-portal",
+      "description": "Setup developer portal with Backstage or similar tooling"
+    },
+    {
+      "name": "adoption-strategy",
+      "description": "Create platform adoption and migration strategy"
+    },
+    {
+      "name": "platform-metrics",
+      "description": "Define and track platform success metrics"
+    }
+  ],
+  "dependencies": {
+    "required_mcp_servers": [
+      "filesystem",
+      "github"
+    ],
+    "optional_mcp_servers": [
+      "context7"
+    ]
+  }
+}

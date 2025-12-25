@@ -1,0 +1,265 @@
+{
+  "name": "documentation-engineer",
+  "version": "1.0.0",
+  "description": "Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use.",
+  "category": "developer-experience",
+  "tags": [
+    "documentation",
+    "technical-writing",
+    "api-docs",
+    "documentation-as-code",
+    "openapi",
+    "swagger",
+    "developer-experience",
+    "content-strategy",
+    "documentation-automation",
+    "static-site-generation"
+  ],
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "API documentation generation",
+      "Technical writing and editing",
+      "Documentation architecture design",
+      "Code example management",
+      "Multi-version documentation",
+      "Search optimization",
+      "Documentation testing and validation",
+      "Contribution workflow setup"
+    ],
+    "apiDocumentation": [
+      "OpenAPI/Swagger integration",
+      "GraphQL schema documentation",
+      "JSDoc/TSDoc generation",
+      "Sphinx documentation",
+      "Rustdoc integration",
+      "Interactive API playgrounds",
+      "Request/response examples",
+      "Authentication guides"
+    ],
+    "contentManagement": [
+      "Tutorial creation",
+      "Quick start guides",
+      "Reference documentation",
+      "Troubleshooting guides",
+      "Migration guides",
+      "Changelog management",
+      "FAQ sections",
+      "Developer onboarding"
+    ],
+    "automation": [
+      "Documentation-as-code",
+      "Auto-generation from code",
+      "Link validation",
+      "Code example testing",
+      "Screenshot automation",
+      "SEO optimization",
+      "Accessibility testing",
+      "Performance monitoring"
+    ],
+    "tools": [
+      "Static site generators (Docusaurus, VitePress, MkDocs, etc.)",
+      "API documentation tools (Swagger UI, Redoc, Stoplight)",
+      "Diagramming (Mermaid, PlantUML)",
+      "Code formatters",
+      "Link validators",
+      "Analytics platforms"
+    ]
+  },
+  "mcp": {
+    "required": [
+      "filesystem"
+    ],
+    "recommended": [
+      "github",
+      "context7",
+      "fetch"
+    ],
+    "optional": []
+  },
+  "commands": {
+    "docs-generate": {
+      "description": "Generate documentation from code using available documentation generators",
+      "parameters": [
+        {
+          "name": "source-path",
+          "type": "string",
+          "required": true,
+          "description": "Path to source code or API spec"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "required": false,
+          "options": ["api", "component", "cli"],
+          "description": "Type of documentation to generate"
+        },
+        {
+          "name": "format",
+          "type": "string",
+          "required": false,
+          "options": ["markdown", "html", "pdf"],
+          "description": "Output format"
+        },
+        {
+          "name": "template",
+          "type": "string",
+          "required": false,
+          "description": "Documentation template to use"
+        },
+        {
+          "name": "include-examples",
+          "type": "boolean",
+          "required": false,
+          "description": "Generate code examples"
+        },
+        {
+          "name": "auto-link",
+          "type": "boolean",
+          "required": false,
+          "description": "Auto-link related documentation"
+        }
+      ]
+    },
+    "docs-api": {
+      "description": "Create comprehensive API reference documentation",
+      "parameters": [
+        {
+          "name": "api-spec-or-code",
+          "type": "string",
+          "required": true,
+          "description": "Path to API specification or source code"
+        },
+        {
+          "name": "spec-format",
+          "type": "string",
+          "required": false,
+          "options": ["openapi", "graphql", "jsdoc", "typescript", "python", "rust"],
+          "description": "Input format"
+        },
+        {
+          "name": "include-examples",
+          "type": "boolean",
+          "required": false,
+          "description": "Generate request/response examples"
+        },
+        {
+          "name": "interactive",
+          "type": "boolean",
+          "required": false,
+          "description": "Create interactive API playground"
+        },
+        {
+          "name": "auth-guide",
+          "type": "boolean",
+          "required": false,
+          "description": "Include authentication documentation"
+        },
+        {
+          "name": "error-codes",
+          "type": "boolean",
+          "required": false,
+          "description": "Document error codes and handling"
+        }
+      ]
+    },
+    "docs-review": {
+      "description": "Review documentation quality and suggest improvements",
+      "parameters": [
+        {
+          "name": "docs-path",
+          "type": "string",
+          "required": true,
+          "description": "Path to documentation to review"
+        },
+        {
+          "name": "check-links",
+          "type": "boolean",
+          "required": false,
+          "description": "Validate all links"
+        },
+        {
+          "name": "check-examples",
+          "type": "boolean",
+          "required": false,
+          "description": "Test code examples"
+        },
+        {
+          "name": "check-style",
+          "type": "boolean",
+          "required": false,
+          "description": "Verify style guide compliance"
+        },
+        {
+          "name": "check-accessibility",
+          "type": "boolean",
+          "required": false,
+          "description": "Run accessibility checks"
+        },
+        {
+          "name": "check-seo",
+          "type": "boolean",
+          "required": false,
+          "description": "Analyze SEO optimization"
+        },
+        {
+          "name": "suggest-improvements",
+          "type": "boolean",
+          "required": false,
+          "description": "Provide improvement suggestions"
+        }
+      ]
+    }
+  },
+  "integrations": {
+    "agents": [
+      "frontend-developer",
+      "api-designer",
+      "backend-developer",
+      "technical-writer",
+      "devops-engineer",
+      "product-manager",
+      "qa-expert",
+      "cli-developer"
+    ],
+    "tools": [
+      "Docusaurus",
+      "VitePress",
+      "Nextra",
+      "MkDocs",
+      "Swagger UI",
+      "Redoc",
+      "Stoplight",
+      "Mermaid",
+      "PlantUML"
+    ]
+  },
+  "useCases": [
+    "Generate API documentation from OpenAPI specs",
+    "Create comprehensive developer documentation",
+    "Set up documentation-as-code workflows",
+    "Build interactive API playgrounds",
+    "Establish multi-version documentation systems",
+    "Implement documentation testing and validation",
+    "Optimize documentation search and navigation",
+    "Create developer onboarding guides",
+    "Set up contribution workflows for documentation",
+    "Migrate documentation to modern platforms"
+  ],
+  "requirements": {
+    "minClaudeVersion": "3.5",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "license": "MIT"
+}

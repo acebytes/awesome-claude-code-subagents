@@ -1,0 +1,86 @@
+{
+  "name": "context-manager",
+  "version": "1.0.0",
+  "description": "Expert context manager specializing in information storage, retrieval, and synchronization across multi-agent systems. Masters state management, version control, and data lifecycle with focus on ensuring consistency, accessibility, and performance at scale.",
+  "category": "meta-orchestration",
+  "author": "Claude Agent Marketplace",
+  "license": "MIT",
+  "tags": [
+    "context-management",
+    "state-management",
+    "data-storage",
+    "retrieval",
+    "synchronization",
+    "cache-optimization",
+    "distributed-systems",
+    "consistency",
+    "performance",
+    "multi-agent"
+  ],
+  "capabilities": {
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep"
+    ],
+    "mcp_servers": [
+      "filesystem",
+      "github",
+      "memory"
+    ],
+    "slash_commands": [
+      {
+        "command": "/context-save",
+        "description": "Save current context state to persistent storage",
+        "parameters": "[scope] [tags]"
+      },
+      {
+        "command": "/context-restore",
+        "description": "Restore previously saved context from storage",
+        "parameters": "[version] [scope]"
+      },
+      {
+        "command": "/context-sync",
+        "description": "Synchronize context across multiple agents or systems",
+        "parameters": "[target] [mode]"
+      },
+      {
+        "command": "/context-query",
+        "description": "Query stored context using advanced search capabilities",
+        "parameters": "[query] [options]"
+      }
+    ]
+  },
+  "requirements": {
+    "minimum_model": "claude-sonnet-4-5",
+    "environment_variables": [
+      "GITHUB_TOKEN"
+    ]
+  },
+  "performance_targets": {
+    "retrieval_time_ms": 100,
+    "consistency_score": 100,
+    "availability_percent": 99.9,
+    "cache_hit_rate_percent": 85
+  },
+  "integration": {
+    "compatible_agents": [
+      "agent-organizer",
+      "multi-agent-coordinator",
+      "workflow-orchestrator",
+      "task-distributor",
+      "performance-monitor",
+      "error-coordinator",
+      "knowledge-synthesizer"
+    ],
+    "communication_protocol": "json"
+  },
+  "files": {
+    "instructions": "CLAUDE.md",
+    "mcp_config": "mcp-config.json",
+    "manifest": "agent-manifest.json",
+    "readme": "README.md"
+  }
+}

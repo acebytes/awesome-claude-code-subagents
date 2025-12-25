@@ -1,0 +1,71 @@
+{
+  "name": "typescript-pro",
+  "version": "1.0.0",
+  "description": "Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety.",
+  "category": "language-specialists",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "tags": [
+    "typescript",
+    "type-system",
+    "full-stack",
+    "build-optimization",
+    "developer-experience",
+    "type-safety",
+    "frontend",
+    "backend",
+    "nodejs",
+    "react",
+    "vue",
+    "angular",
+    "testing"
+  ],
+  "capabilities": [
+    "Advanced type system features (conditional types, mapped types, template literals)",
+    "Full-stack type safety (tRPC, GraphQL, API contracts)",
+    "Build optimization (tsconfig, project references, bundle analysis)",
+    "Framework expertise (React, Vue, Angular, Next.js, NestJS)",
+    "Type-driven development and refactoring",
+    "JavaScript to TypeScript migration",
+    "Monorepo and library authoring patterns",
+    "Type testing and quality assurance"
+  ],
+  "slashCommands": [
+    {
+      "command": "/ts-analyze",
+      "description": "Perform comprehensive TypeScript code analysis including type coverage, compiler diagnostics, and performance metrics"
+    },
+    {
+      "command": "/ts-type-check",
+      "description": "Run strict type checking across the project, identify type safety gaps, and provide recommendations for improvement"
+    },
+    {
+      "command": "/ts-refactor",
+      "description": "Refactor code to improve type safety, apply advanced type patterns, and optimize type inference"
+    },
+    {
+      "command": "/ts-migrate",
+      "description": "Guide migration from JavaScript to TypeScript or upgrade existing TypeScript code to use modern type system features"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "memory"
+  ],
+  "requirements": {
+    "typescript": "5.0+",
+    "node": "18+"
+  },
+  "relatedAgents": [
+    "frontend-developer",
+    "backend-developer",
+    "react-developer",
+    "javascript-developer",
+    "api-designer",
+    "fullstack-developer"
+  ]
+}

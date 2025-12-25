@@ -1,0 +1,69 @@
+{
+  "name": "network-engineer",
+  "version": "1.0.0",
+  "description": "Expert network engineer specializing in cloud and hybrid network architectures, security, and performance optimization. Masters network design, troubleshooting, and automation with focus on reliability, scalability, and zero-trust principles.",
+  "category": "Infrastructure",
+  "author": "Claude Agent Marketplace",
+  "tags": [
+    "network",
+    "networking",
+    "vpc",
+    "security",
+    "zero-trust",
+    "load-balancing",
+    "dns",
+    "vpn",
+    "firewall",
+    "performance",
+    "cloud-networking",
+    "hybrid-cloud",
+    "sd-wan",
+    "infrastructure"
+  ],
+  "capabilities": [
+    "Network architecture design and topology planning",
+    "Zero-trust security implementation",
+    "Cloud networking (VPC, subnets, routing, NAT gateways)",
+    "Hybrid connectivity (VPN, Direct Connect, SD-WAN)",
+    "Load balancing (Layer 4/7, health checks, SSL termination)",
+    "DNS architecture (GeoDNS, DNSSEC, failover)",
+    "Network security (firewalls, IDS/IPS, micro-segmentation)",
+    "Performance optimization (latency, bandwidth, QoS)",
+    "Network monitoring and troubleshooting",
+    "Network automation and Infrastructure as Code"
+  ],
+  "slashCommands": [
+    {
+      "command": "/net-design",
+      "description": "Design network architecture for cloud/hybrid environments"
+    },
+    {
+      "command": "/net-secure",
+      "description": "Implement network security and zero-trust architecture"
+    },
+    {
+      "command": "/net-troubleshoot",
+      "description": "Diagnose and resolve network performance issues"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "context7",
+    "fetch"
+  ],
+  "requiredEnvVars": [
+    "GITHUB_PERSONAL_ACCESS_TOKEN"
+  ],
+  "optionalEnvVars": [],
+  "workflowIntegrations": [
+    "cloud-architect",
+    "security-engineer",
+    "kubernetes-specialist",
+    "devops-engineer",
+    "sre-engineer",
+    "platform-engineer",
+    "terraform-engineer",
+    "incident-responder"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "competitive-analyst",
+  "version": "1.0.0",
+  "description": "Expert competitive analyst specializing in competitor intelligence, strategic analysis, and market positioning. Masters competitive benchmarking, SWOT analysis, and strategic recommendations with focus on creating sustainable competitive advantages.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "research-analysis",
+  "tags": [
+    "competitive-intelligence",
+    "market-analysis",
+    "swot-analysis",
+    "benchmarking",
+    "strategic-analysis",
+    "market-positioning",
+    "competitor-research",
+    "business-intelligence"
+  ],
+  "capabilities": [
+    "Competitor identification and profiling",
+    "Competitive intelligence gathering",
+    "SWOT analysis execution",
+    "Market positioning analysis",
+    "Feature comparison and benchmarking",
+    "Strategic recommendations development",
+    "Continuous competitor monitoring",
+    "Financial and product analysis"
+  ],
+  "commands": {
+    "/competitor-scan": {
+      "description": "Conduct comprehensive competitor scanning and profiling across the market landscape",
+      "usage": "/competitor-scan [market/industry]",
+      "examples": [
+        "/competitor-scan SaaS CRM market",
+        "/competitor-scan e-commerce platforms",
+        "/competitor-scan fintech startups"
+      ]
+    },
+    "/swot-analysis": {
+      "description": "Perform thorough SWOT analysis for specified competitors or market positions",
+      "usage": "/swot-analysis [competitor/company]",
+      "examples": [
+        "/swot-analysis Salesforce",
+        "/swot-analysis our current position",
+        "/swot-analysis top 3 competitors"
+      ]
+    },
+    "/market-position": {
+      "description": "Analyze market positioning across competitors with differentiation analysis",
+      "usage": "/market-position [scope]",
+      "examples": [
+        "/market-position enterprise segment",
+        "/market-position vs top competitors",
+        "/market-position SMB market"
+      ]
+    },
+    "/feature-compare": {
+      "description": "Execute detailed feature-by-feature comparison across competing products",
+      "usage": "/feature-compare [products/features]",
+      "examples": [
+        "/feature-compare our platform vs competitors",
+        "/feature-compare pricing models",
+        "/feature-compare integration capabilities"
+      ]
+    }
+  },
+  "mcpServers": [
+    "filesystem",
+    "memory",
+    "fetch"
+  ],
+  "integrations": {
+    "agents": [
+      "market-researcher",
+      "product-manager",
+      "business-analyst",
+      "research-analyst"
+    ],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "requirements": {
+    "nodejs": ">=18.0.0",
+    "mcp": ">=1.0.0"
+  },
+  "configuration": {
+    "analysis_depth": "comprehensive",
+    "update_frequency": "continuous",
+    "ethical_guidelines": "strict",
+    "data_validation": "multi-source"
+  }
+}

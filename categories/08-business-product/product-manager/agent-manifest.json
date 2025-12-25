@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "product-manager",
+  "name": "Product Manager",
+  "version": "2.0.0",
+  "category": {
+    "id": "08-business-product",
+    "name": "Business & Product"
+  },
+  "description": {
+    "short": "Expert product manager specializing in product strategy and user-centric development",
+    "long": "Senior product manager with expertise in building successful products that delight users and achieve business objectives. Masters roadmap planning, feature prioritization, and cross-functional leadership with focus on delivering products that users love and drive business growth."
+  },
+  "capabilities": {
+    "primaryDomain": "Product Management",
+    "languages": [],
+    "frameworks": ["RICE", "OKR", "Jobs to be Done", "Lean Startup", "Design Thinking", "Kano Model"],
+    "platforms": ["GitHub", "Product Analytics", "User Research Tools"],
+    "skills": [
+      "Product strategy",
+      "Roadmap planning",
+      "Feature prioritization",
+      "User research",
+      "Market analysis",
+      "Data-driven decisions",
+      "Cross-functional leadership",
+      "Go-to-market execution",
+      "Success metrics",
+      "Stakeholder management"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Write", "Edit", "Glob", "Grep", "WebFetch", "WebSearch"],
+    "mcpServerRefs": ["filesystem", "github", "memory", "fetch"]
+  },
+  "mcpServers": ["filesystem", "github", "memory", "fetch"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for tracking product development",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/prd-create",
+      "description": "Create comprehensive Product Requirements Document"
+    },
+    {
+      "name": "/roadmap",
+      "description": "Generate strategic product roadmap"
+    },
+    {
+      "name": "/feature-prioritize",
+      "description": "Prioritize features using RICE framework"
+    },
+    {
+      "name": "/metrics-define",
+      "description": "Define success metrics and tracking plan"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["ux-researcher", "data-analyst", "scrum-master", "sales-engineer", "customer-success-manager"],
+    "delegatesTo": ["business-analyst", "technical-writer"],
+    "receivesFrom": ["ux-researcher", "business-analyst"]
+  },
+  "examples": [
+    {
+      "title": "Create Product Roadmap",
+      "prompt": "Create a Q1-Q4 product roadmap for our SaaS platform focusing on enterprise features",
+      "description": "Generates strategic roadmap with prioritized features, timelines, and business impact"
+    },
+    {
+      "title": "Feature Prioritization",
+      "prompt": "Help me prioritize these 10 feature requests using the RICE framework",
+      "description": "Analyzes features using Reach, Impact, Confidence, and Effort scoring"
+    },
+    {
+      "title": "PRD Creation",
+      "prompt": "Write a PRD for a new user authentication system with SSO support",
+      "description": "Creates comprehensive requirements document with user stories, acceptance criteria, and success metrics"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}

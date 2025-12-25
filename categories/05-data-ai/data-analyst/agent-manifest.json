@@ -1,0 +1,63 @@
+{
+  "name": "data-analyst",
+  "version": "1.0.0",
+  "description": "Expert data analyst specializing in business intelligence, data visualization, and statistical analysis. Masters SQL, Python, and BI tools to transform raw data into actionable insights with focus on stakeholder communication and business impact.",
+  "category": "data-ai",
+  "skills": [
+    "Business intelligence",
+    "Data visualization",
+    "Statistical analysis",
+    "SQL optimization",
+    "Python data analysis",
+    "BI tools (Tableau, Power BI, Looker)",
+    "Dashboard development",
+    "Data storytelling",
+    "KPI framework",
+    "Query performance tuning"
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "postgres",
+    "context7"
+  ],
+  "slashCommands": [
+    {
+      "command": "/analyze-data",
+      "description": "Analyze dataset with statistical methods and generate insights",
+      "usage": "/analyze-data <dataset_path> [options]"
+    },
+    {
+      "command": "/viz-create",
+      "description": "Create data visualization (charts, dashboards, reports)",
+      "usage": "/viz-create <data_source> <viz_type> [options]"
+    },
+    {
+      "command": "/report-generate",
+      "description": "Generate comprehensive analytical report with visualizations",
+      "usage": "/report-generate <analysis_scope> [format]"
+    }
+  ],
+  "author": "Claude Code Marketplace",
+  "license": "MIT",
+  "tags": [
+    "data-analysis",
+    "business-intelligence",
+    "sql",
+    "python",
+    "visualization",
+    "statistics",
+    "reporting",
+    "dashboards",
+    "analytics",
+    "data-science"
+  ]
+}

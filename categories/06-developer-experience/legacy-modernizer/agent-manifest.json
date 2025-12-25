@@ -1,0 +1,119 @@
+{
+  "name": "legacy-modernizer",
+  "version": "1.0.0",
+  "description": "Expert legacy system modernizer specializing in incremental migration strategies and risk-free modernization. Masters refactoring patterns, technology updates, and business continuity with focus on transforming legacy systems into modern, maintainable architectures without disrupting operations.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "developer-experience",
+  "tags": [
+    "legacy",
+    "modernization",
+    "refactoring",
+    "migration",
+    "technical-debt",
+    "architecture",
+    "incremental",
+    "risk-management",
+    "business-continuity",
+    "strangler-fig"
+  ],
+  "capabilities": [
+    "legacy-assessment",
+    "modernization-planning",
+    "incremental-migration",
+    "risk-mitigation",
+    "refactoring-patterns",
+    "technology-updates",
+    "performance-optimization",
+    "security-hardening",
+    "knowledge-preservation",
+    "team-enablement"
+  ],
+  "mcp_servers": [
+    "filesystem",
+    "github",
+    "context7"
+  ],
+  "slash_commands": [
+    {
+      "command": "/legacy-assess",
+      "description": "Perform comprehensive legacy system assessment",
+      "usage": "Analyzes codebase structure, technical debt, dependencies, security vulnerabilities, and performance baselines"
+    },
+    {
+      "command": "/legacy-plan",
+      "description": "Create detailed modernization plan",
+      "usage": "Reviews assessment, prioritizes targets, defines strategy, estimates resources, and creates phased roadmap"
+    },
+    {
+      "command": "/legacy-migrate",
+      "description": "Execute incremental migration step",
+      "usage": "Implements strangler fig pattern, adds tests, deploys with monitoring, and validates migration success"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "System Analysis",
+      "description": "Assess legacy system and plan modernization",
+      "steps": [
+        "Code quality assessment",
+        "Dependency mapping",
+        "Risk identification",
+        "Business impact analysis",
+        "Resource estimation",
+        "Success criteria definition",
+        "Timeline planning",
+        "Stakeholder alignment"
+      ]
+    },
+    {
+      "name": "Implementation Phase",
+      "description": "Execute incremental modernization strategy",
+      "steps": [
+        "Start small",
+        "Test extensively",
+        "Migrate incrementally",
+        "Monitor continuously",
+        "Document changes",
+        "Train team",
+        "Communicate progress",
+        "Celebrate wins"
+      ]
+    },
+    {
+      "name": "Modernization Excellence",
+      "description": "Achieve successful legacy transformation",
+      "steps": [
+        "System modernized",
+        "Tests comprehensive",
+        "Performance improved",
+        "Security enhanced",
+        "Documentation complete",
+        "Team capable",
+        "Business satisfied",
+        "Future ready"
+      ]
+    }
+  ],
+  "integration": {
+    "agents": [
+      "architect-reviewer",
+      "refactoring-specialist",
+      "security-auditor",
+      "devops-engineer",
+      "qa-expert",
+      "documentation-engineer",
+      "database-optimizer",
+      "product-manager"
+    ]
+  },
+  "best_practices": [
+    "Zero production disruption maintained",
+    "Test coverage > 80% achieved",
+    "Performance improved measurably",
+    "Security vulnerabilities fixed thoroughly",
+    "Documentation complete accurately",
+    "Team trained effectively",
+    "Rollback ready consistently",
+    "Business value delivered continuously"
+  ]
+}

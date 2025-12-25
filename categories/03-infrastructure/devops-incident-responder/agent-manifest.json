@@ -1,0 +1,171 @@
+{
+  "name": "devops-incident-responder",
+  "version": "1.0.0",
+  "description": "Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.",
+  "category": "infrastructure",
+  "author": {
+    "name": "Claude Code Agent Marketplace",
+    "url": "https://github.com/anthropics/claude-code-agent-marketplace"
+  },
+  "capabilities": {
+    "core": [
+      "Rapid incident detection and triage",
+      "Root cause analysis",
+      "Production issue resolution",
+      "Automated remediation",
+      "Observability and monitoring",
+      "Alert management and optimization",
+      "Postmortem facilitation",
+      "Runbook creation and automation",
+      "On-call coordination",
+      "Communication management"
+    ],
+    "technologies": [
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "Datadog",
+      "New Relic",
+      "PagerDuty",
+      "Splunk",
+      "Jaeger",
+      "Zipkin",
+      "Sentry",
+      "CloudWatch",
+      "Azure Monitor",
+      "Google Cloud Monitoring",
+      "Loki",
+      "Tempo"
+    ],
+    "incident_areas": [
+      "Service degradation",
+      "Outages and downtime",
+      "Performance issues",
+      "Error spikes",
+      "Security incidents",
+      "Database failures",
+      "Network disruptions",
+      "Deployment failures"
+    ]
+  },
+  "slash_commands": [
+    {
+      "command": "/ops-detect",
+      "description": "Detect and analyze production issues using monitoring data",
+      "usage": "/ops-detect [service]",
+      "parameters": {
+        "service": {
+          "type": "string",
+          "optional": true,
+          "default": "all",
+          "description": "Specific service to analyze, or 'all' for system-wide detection"
+        }
+      },
+      "examples": [
+        "/ops-detect",
+        "/ops-detect api-service",
+        "/ops-detect database",
+        "/ops-detect all"
+      ]
+    },
+    {
+      "command": "/ops-diagnose",
+      "description": "Perform root cause analysis on identified issues",
+      "usage": "/ops-diagnose [incident-id]",
+      "parameters": {
+        "incident-id": {
+          "type": "string",
+          "optional": true,
+          "description": "Specific incident ID to analyze, or current active incident"
+        }
+      },
+      "examples": [
+        "/ops-diagnose",
+        "/ops-diagnose INC-2024-001",
+        "/ops-diagnose current"
+      ]
+    },
+    {
+      "command": "/ops-remediate",
+      "description": "Execute automated remediation for known issue patterns",
+      "usage": "/ops-remediate [action]",
+      "parameters": {
+        "action": {
+          "type": "string",
+          "optional": true,
+          "options": ["auto", "rollback", "scale", "restart", "circuit-breaker"],
+          "default": "auto",
+          "description": "Remediation action to take, or 'auto' to determine from analysis"
+        }
+      },
+      "examples": [
+        "/ops-remediate",
+        "/ops-remediate auto",
+        "/ops-remediate rollback",
+        "/ops-remediate scale",
+        "/ops-remediate restart"
+      ]
+    }
+  ],
+  "mcp_servers": [
+    {
+      "name": "filesystem",
+      "required": true,
+      "purpose": "Access logs, runbooks, incident reports, and monitoring configurations"
+    },
+    {
+      "name": "github",
+      "required": false,
+      "purpose": "Track incidents, manage postmortems, and coordinate team responses"
+    },
+    {
+      "name": "context7",
+      "required": false,
+      "purpose": "Access incident response playbooks, SRE best practices, and troubleshooting guides"
+    },
+    {
+      "name": "fetch",
+      "required": false,
+      "purpose": "Query monitoring APIs, health endpoints, and metrics systems"
+    }
+  ],
+  "maturity_targets": {
+    "mttd": "<5 minutes",
+    "mtta": "<5 minutes",
+    "mttr": "<30 minutes",
+    "postmortem_completion": "48 hours",
+    "runbook_coverage": ">80%",
+    "auto_remediation": ">40%",
+    "alert_accuracy": ">95%"
+  },
+  "integration": {
+    "works_with": [
+      "sre-engineer",
+      "devops-engineer",
+      "cloud-architect",
+      "deployment-engineer",
+      "security-engineer",
+      "platform-engineer",
+      "network-engineer",
+      "database-administrator"
+    ]
+  },
+  "tags": [
+    "incident-response",
+    "incident-management",
+    "observability",
+    "monitoring",
+    "alerting",
+    "root-cause-analysis",
+    "automated-remediation",
+    "on-call",
+    "postmortem",
+    "runbooks",
+    "mttr",
+    "sre",
+    "reliability",
+    "production-support",
+    "troubleshooting"
+  ],
+  "license": "MIT"
+}

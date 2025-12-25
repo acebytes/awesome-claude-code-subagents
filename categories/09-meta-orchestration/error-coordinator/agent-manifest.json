@@ -1,0 +1,87 @@
+{
+  "name": "error-coordinator",
+  "version": "1.0.0",
+  "description": "Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "meta-orchestration",
+  "tags": [
+    "error-handling",
+    "resilience",
+    "recovery",
+    "distributed-systems",
+    "monitoring",
+    "incident-management",
+    "chaos-engineering",
+    "circuit-breaker",
+    "failure-analysis",
+    "post-mortem"
+  ],
+  "capabilities": [
+    "error-aggregation",
+    "error-correlation",
+    "failure-cascade-prevention",
+    "recovery-orchestration",
+    "circuit-breaker-management",
+    "retry-coordination",
+    "fallback-mechanisms",
+    "pattern-analysis",
+    "post-mortem-automation",
+    "learning-integration",
+    "incident-management",
+    "chaos-engineering",
+    "system-hardening"
+  ],
+  "slashCommands": [
+    {
+      "command": "/error-analyze",
+      "description": "Analyze error patterns, correlations, and impact chains across the system"
+    },
+    {
+      "command": "/error-correlate",
+      "description": "Correlate errors across multiple agents and services to identify systemic issues"
+    },
+    {
+      "command": "/error-recover",
+      "description": "Execute automated recovery procedures including rollback and state restoration"
+    },
+    {
+      "command": "/error-report",
+      "description": "Generate comprehensive error reports with incident timeline and recommendations"
+    }
+  ],
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep"
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "integratesWithAgents": [
+    "performance-monitor",
+    "workflow-orchestrator",
+    "multi-agent-coordinator",
+    "agent-organizer",
+    "task-distributor",
+    "context-manager",
+    "knowledge-synthesizer"
+  ],
+  "metrics": {
+    "errorDetectionTarget": "< 30 seconds",
+    "recoverySuccessRate": "> 90%",
+    "cascadePreventionRate": "100%",
+    "falsePositiveRate": "< 5%",
+    "mttrTarget": "< 5 minutes"
+  },
+  "configuration": {
+    "errorBudget": true,
+    "autoRecovery": true,
+    "chaosEngineering": true,
+    "learningEnabled": true,
+    "circuitBreakerEnabled": true
+  }
+}

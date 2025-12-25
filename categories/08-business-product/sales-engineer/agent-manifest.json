@@ -1,0 +1,123 @@
+{
+  "name": "sales-engineer",
+  "version": "1.0.0",
+  "description": "Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.",
+  "author": "Claude Code Agent Marketplace",
+  "category": "business-product",
+  "tags": [
+    "sales",
+    "pre-sales",
+    "solution-architecture",
+    "proof-of-concept",
+    "technical-demonstrations",
+    "rfp-response",
+    "competitive-analysis",
+    "customer-success"
+  ],
+  "capabilities": [
+    "technical-demonstrations",
+    "proof-of-concept-development",
+    "solution-architecture",
+    "rfp-rfi-responses",
+    "technical-objection-handling",
+    "integration-planning",
+    "performance-benchmarking",
+    "security-assessments",
+    "custom-configurations",
+    "partner-enablement"
+  ],
+  "slashCommands": [
+    {
+      "command": "/demo-prep",
+      "description": "Prepare for a product demonstration with environment setup, scenarios, and talking points"
+    },
+    {
+      "command": "/poc-design",
+      "description": "Design a proof of concept with success criteria, scope, and implementation plan"
+    },
+    {
+      "command": "/rfp-response",
+      "description": "Create technical RFP/RFI response with requirements mapping and architecture"
+    },
+    {
+      "command": "/technical-proposal",
+      "description": "Generate comprehensive technical proposal with architecture, timeline, and ROI"
+    }
+  ],
+  "mcpServers": [
+    "filesystem",
+    "github",
+    "memory"
+  ],
+  "requirements": {
+    "environment": {
+      "GITHUB_TOKEN": {
+        "description": "GitHub personal access token for repository access",
+        "required": false
+      }
+    }
+  },
+  "metrics": {
+    "demo_success_rate": {
+      "target": "> 80%",
+      "description": "Percentage of successful product demonstrations"
+    },
+    "poc_conversion": {
+      "target": "> 70%",
+      "description": "Percentage of POCs that convert to sales"
+    },
+    "technical_accuracy": {
+      "target": "100%",
+      "description": "Accuracy of technical information provided"
+    },
+    "response_time": {
+      "target": "< 24 hours",
+      "description": "Average response time to technical questions"
+    }
+  },
+  "workflow": {
+    "phases": [
+      {
+        "name": "discovery",
+        "description": "Understand prospect needs and technical environment",
+        "steps": [
+          "Gather business requirements",
+          "Assess technical requirements",
+          "Analyze current architecture",
+          "Identify pain points and success criteria"
+        ]
+      },
+      {
+        "name": "implementation",
+        "description": "Deliver technical value through demonstrations and POCs",
+        "steps": [
+          "Prepare demo scenarios",
+          "Build POC environment",
+          "Create custom demonstrations",
+          "Develop integrations and benchmarks"
+        ]
+      },
+      {
+        "name": "excellence",
+        "description": "Ensure technical success drives business outcomes",
+        "steps": [
+          "Validate requirements",
+          "Architect solution",
+          "Demonstrate value",
+          "Complete handoff"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "agents": [
+      "product-manager",
+      "solution-architect",
+      "customer-success-manager",
+      "technical-writer",
+      "security-engineer",
+      "devops-engineer",
+      "project-manager"
+    ]
+  }
+}

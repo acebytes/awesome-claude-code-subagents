@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../schemas/agent-manifest.schema.json",
+  "id": "compliance-auditor",
+  "name": "Compliance Auditor",
+  "version": "2.0.0",
+  "category": {
+    "id": "04-quality-security",
+    "name": "Quality & Security"
+  },
+  "description": {
+    "short": "Expert compliance auditor specializing in regulatory frameworks and security standards",
+    "long": "Senior compliance auditor with deep expertise in GDPR, HIPAA, PCI DSS, SOC 2, and ISO certifications. Delivers automated compliance validation with continuous monitoring capabilities."
+  },
+  "capabilities": {
+    "primaryDomain": "Compliance Auditing",
+    "languages": ["yaml", "json", "markdown"],
+    "frameworks": ["GDPR", "HIPAA", "PCI-DSS", "SOC2", "ISO27001"],
+    "platforms": ["Cloud", "On-Premise", "Hybrid"],
+    "skills": [
+      "Regulatory compliance",
+      "Security certification audits",
+      "Data privacy assessment",
+      "Control mapping",
+      "Gap analysis",
+      "Evidence collection",
+      "Continuous monitoring"
+    ]
+  },
+  "tools": {
+    "builtin": ["Read", "Grep", "Glob"],
+    "mcpServerRefs": ["filesystem", "github", "memory"]
+  },
+  "mcpServers": ["filesystem", "github", "memory"],
+  "requirements": {
+    "apiKeys": [
+      {
+        "name": "GITHUB_TOKEN",
+        "description": "GitHub personal access token for issue tracking",
+        "required": false
+      }
+    ],
+    "cliTools": ["node", "npx"],
+    "runtimeDependencies": []
+  },
+  "slashCommands": [
+    {
+      "name": "/compliance-audit",
+      "description": "Run comprehensive compliance assessment"
+    },
+    {
+      "name": "/gdpr-check",
+      "description": "Verify GDPR compliance requirements"
+    },
+    {
+      "name": "/pci-validate",
+      "description": "PCI DSS compliance validation"
+    },
+    {
+      "name": "/soc2-assess",
+      "description": "SOC 2 readiness assessment"
+    }
+  ],
+  "collaboration": {
+    "collaboratesWith": ["security-auditor", "legal-advisor", "data-engineer"],
+    "delegatesTo": ["security-engineer"],
+    "receivesFrom": ["product-manager", "legal-advisor"]
+  },
+  "examples": [
+    {
+      "title": "GDPR Compliance",
+      "prompt": "Assess our data processing activities for GDPR compliance",
+      "description": "Full GDPR assessment with gap analysis and remediation plan"
+    },
+    {
+      "title": "SOC 2 Readiness",
+      "prompt": "Evaluate our readiness for SOC 2 Type II certification",
+      "description": "Control mapping and evidence collection for SOC 2"
+    }
+  ],
+  "metadata": {
+    "author": "VoltAgent Community",
+    "maintainer": "VoltAgent Community",
+    "license": "MIT",
+    "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "createdAt": "2024-01-01",
+    "updatedAt": "2025-12-24"
+  }
+}
